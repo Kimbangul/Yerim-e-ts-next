@@ -9,14 +9,41 @@ const windowSize = {
   'lt-l': '(max-width: 1440px)',
 };
 
+const fontSize = {
+  body: {
+    xs: '1.2rem',
+    sm: '1.4rem',
+    rg: '1.6rem',
+    md: '1.8rem',
+    lg: '2rem',
+  },
+  head: {
+    xs: '2.4rem',
+    sm: '2.8rem',
+    rg: '3.2rem',
+    md: '3.6rem',
+    lg: '4.2rem',
+    xl: '4.8rem',
+  },
+};
+
+// const fontWeight = {
+
+// }
+
+const maxWidth = '1200px';
+
 const color = {
-  bgColor: '#2F333E',
-  headerColor: '#0E101D',
+  bgColor: 'linear-gradient(180deg, #355C7D 0%, #725A7A 100%)',
+  headerColor: '#2A3950',
+  mainColor: '#2A3950',
 };
 
 const theme = {
   windowSize,
   color,
+  maxWidth,
+  fontSize,
 };
 
 export default theme;
