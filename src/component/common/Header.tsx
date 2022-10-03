@@ -56,6 +56,18 @@ const Header: React.FC = () => {
             </a>
           </Link>
         </h1>
+        <ul className='Header__social'>
+          <li>
+            <Link href='https://github.com/Kimbangul' target='_blank'>
+              <a>GIthub</a>
+            </Link>
+          </li>
+          <li>
+            <Link href='mailto:highcolor_12@g.hongik.ac.kr' target='_blank'>
+              <a>Mail</a>
+            </Link>
+          </li>
+        </ul>
       </div>
     </Container>
   );

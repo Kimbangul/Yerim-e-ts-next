@@ -16,8 +16,8 @@ const HeaderInfo = () => {
         property='og:description'
         content='박예림 개인 포트폴리오 사이트입니다.'
       />
-      <link rel='shortcut icon' href='icon.png' type='image/x-icon' />
-      <link rel='icon' href='icon.png' type='image/x-icon' />
+      <link rel='shortcut icon' href='favicon.png' type='image/x-icon' />
+      <link rel='icon' href='favicon.png' type='image/x-icon' />
     </Head>
   );
 };
