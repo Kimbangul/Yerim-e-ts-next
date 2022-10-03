@@ -25,12 +25,12 @@ const GlobalStyle = createGlobalStyle`
     border: none;
   }
   body{
-    font-family: 'Pretendard', 'sans-serif';
+    font-family: 'Poppins', 'Pretendard', 'sans-serif';
     font-size: 1.4rem;
     background-color: #2A3950;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Pretendard', 'sans-serif';
+    font-family: 'Poppins', 'Pretendard', 'sans-serif';
   }
 
   /* NOTE fullpage setting */

@@ -4,6 +4,7 @@ import React from 'react';
 import Main from 'src/component/Main/Main';
 import About from 'src/component/About/About';
 import Tech from 'src/component/Tech/Tech';
+import Work from 'src/component/Work/Work';
 import { Container, SectionCategoryTitle } from 'styles/Common';
 
 const FullpageWrapper: React.FC = () => {
@@ -19,6 +20,7 @@ const FullpageWrapper: React.FC = () => {
             <Main />
             <About />
             <Tech />
+            <Work />
           </ReactFullpage.Wrapper>
         );
       }}

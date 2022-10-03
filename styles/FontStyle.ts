@@ -9,7 +9,7 @@ const FontStyles = createGlobalStyle`
   src: url(fonts/Pretendard-Light.otf) format("opentype");
 }
 
-  @font-face {
+@font-face {
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 400;
@@ -43,6 +43,38 @@ const FontStyles = createGlobalStyle`
   font-weight: 900;
   src: url(fonts/Pretendard-ExtraBold.otf) format("opentype");
 }
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/Poppins-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url(fonts/Poppins-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url(fonts/Poppins-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/Poppins-ExtraBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url(fonts/Poppins-Black.ttf) format("truetype");
+}
+
 `;
 
 export default FontStyles;

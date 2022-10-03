@@ -10,26 +10,56 @@ type TechListProps = {
   techName: TechTypeParams;
 };
 
+const TechListCategory = styled.li`
+  margin-top: 4.8rem;
+  &:first-child {
+    margin-top: 0;
+  }
+  .Tech__tech {
+    &-list {
+      margin-top: 1.6rem;
+    }
+    &-tag-list {
+      display: flex;
+      margin-top: 1.6rem;
+    }
+  }
+`;
+
+const TechListTitle = styled.h4`
+  color: ${({ theme }) => theme.color.f_bodyColor_3};
+  font-size: ${({ theme }) => theme.fontSize.head.sm};
+  font-weight: 600;
+`;
+
+const TechListItem = styled.li`
+  color: ${({ theme }) => theme.color.f_bodyColor_2};
+  font-size: ${({ theme }) => theme.fontSize.body.rg};
+`;
+
 // COMPONENT tech tag
 const TechTag = styled.li`
-  padding: 0.6rem 1.2rem;
+  padding: 0.4rem 1.2rem;
   color: ${({ theme }) => theme.color.f_bodyColor_3};
   background: ${({ theme }) => theme.color.secondaryDark};
   font-size: ${({ theme }) => theme.fontSize.body.sm};
   border-radius: 10rem;
+  margin-right: 0.8rem;
 `;
 
 // COMPONENT tech list
 const TechList: React.FC<TechListProps> = ({ techName }) => {
   return (
-    <li className='Tech__tech-list-category'>
-      <h4 className='Tech__tech-list-category-name'>{techName.title}</h4>
+    <TechListCategory className='Tech__tech-list-category'>
+      <TechListTitle className='Tech__tech-list-category-name'>
+        {techName.title}
+      </TechListTitle>
       <ul className='Tech__tech-list'>
         {techName.content.map((el: string, idx: number) => {
           return (
-            <li className='Tech__tech-list-item' key={`desc${idx}`}>
+            <TechListItem className='Tech__tech-list-item' key={`desc${idx}`}>
               {el}
-            </li>
+            </TechListItem>
           );
         })}
       </ul>
@@ -38,7 +68,7 @@ const TechList: React.FC<TechListProps> = ({ techName }) => {
           return <TechTag key={el}>{el}</TechTag>;
         })}
       </ul>
-    </li>
+    </TechListCategory>
   );
 };
 

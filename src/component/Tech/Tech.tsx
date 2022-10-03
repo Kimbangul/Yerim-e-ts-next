@@ -19,7 +19,7 @@ const TechContainer = styled(Container)`
     }
     &__title {
       font-size: ${({ theme }) => theme.fontSize.head.xl};
-      color: ${({ theme }) => theme.color.pointPink};
+      color: ${({ theme }) => theme.color.f_bodyColor_3};
       &--light {
         font-weight: 300;
       }
@@ -32,12 +32,6 @@ const TechContainer = styled(Container)`
       margin-top: 2.4rem;
       &--point {
         color: ${({ theme }) => theme.color.pointPink};
-      }
-    }
-    &__tech-tag {
-      &-list {
-        display: flex;
-        align-items: center;
       }
     }
     &__button {
