@@ -29,6 +29,8 @@ const fontSize = {
 
 const maxWidth = '1200px';
 
+const padding = '3.2rem';
+
 const color = {
   bgColor: 'linear-gradient(180deg, #355C7D 0%, #725A7A 100%)',
   headerColor: '#2A3950',
@@ -37,11 +39,15 @@ const color = {
   secondaryPurple: '#725a7a',
   secondaryPink: '#c56c86',
   pointPink: '#FF7582',
+  f_headColor: '#fff',
+  f_bodyColor: '#fffffff0',
+  f_bodyColor_2: '#ffffffca',
 };
 
 const theme = {
   windowSize,
   color,
+  padding,
   maxWidth,
   fontSize,
 };

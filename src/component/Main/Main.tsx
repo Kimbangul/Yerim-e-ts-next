@@ -1,24 +1,11 @@
 import styled, { css } from 'styled-components';
 import React from 'react';
 
-import ReactFullpage from '@fullpage/react-fullpage';
 import MainVideo from 'src/component/Main/MainVideo';
 import MainParticle from 'src/component/Main/MainParticle';
-import theme from 'styles/Theme';
+import { Container, SectionCategoryTitle } from 'styles/Common';
 
-// COMPONENT style component
-const Container = styled.main`
-  width: 100%;
-  height: 100vh;
-  padding: ${({ theme }) => theme.padding};
-  padding-top: 7.2rem;
-  overflow: hidden;
-  background: ${({ theme }) => theme.color.bgColor};
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+const MainContainer = styled(Container)`
   .Main {
     &__video {
       position: absolute;
@@ -72,44 +59,17 @@ const Container = styled.main`
 // COMPONENT main
 const Main: React.FC = () => {
   return (
-    <Container className='section'>
+    <MainContainer className='section'>
       <MainVideo />
       <MainParticle />
       <div className='Main__container'>
+        <SectionCategoryTitle>Main</SectionCategoryTitle>
         <div className='Main__text-container'>
           <h2 className='Main__title'>YERIM.e</h2>
           <p className='Main__desc'>Web Developer Portfolio</p>
         </div>
       </div>
-    </Container>
-    // <ReactFullpage
-    //   //fullpage options
-    //   licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
-    //   scrollingSpeed={1000}
-    //   responsiveWidth={1000}
-    //   render={() => {
-    //     return (
-    //       <ReactFullpage.Wrapper>
-    //         <Container className='section'>
-    //           <MainVideo />
-    //           <MainParticle />
-    //           <div className='Main__container'>
-    //             <div className='Main__text-container'>
-    //               <h2 className='Main__title'>YERIM.e</h2>
-    //               <p className='Main__desc'>Web Developer Portfolio</p>
-    //             </div>
-    //           </div>
-    //         </Container>
-    //         <Container className='section' style={{ background: '#2A3950' }}>
-    //           <p>안녕하세요</p>
-    //         </Container>
-    //         <Container className='section' style={{ background: '#2A3950' }}>
-    //           <p>반갑습니다.</p>
-    //         </Container>
-    //       </ReactFullpage.Wrapper>
-    //     );
-    //   }}
-    // />
+    </MainContainer>
   );
 };
 

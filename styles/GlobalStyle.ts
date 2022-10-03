@@ -19,6 +19,11 @@ const GlobalStyle = createGlobalStyle`
   a, img{
     display: block;
   }
+  button{
+    outline: none;
+    appearance: none;
+    border: none;
+  }
   body{
     font-family: 'Pretendard', 'sans-serif';
     font-size: 1.4rem;
@@ -52,7 +57,9 @@ const GlobalStyle = createGlobalStyle`
       z-index: 1;
     }
   }
-
+.fp-overflow{
+  overflow-x: hidden;
+}
   .fp-warning, .fp-watermark{
   display: none;
 }
