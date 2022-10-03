@@ -27,16 +27,16 @@ const fontSize = {
   },
 };
 
-// const fontWeight = {
-
-// }
-
 const maxWidth = '1200px';
 
 const color = {
   bgColor: 'linear-gradient(180deg, #355C7D 0%, #725A7A 100%)',
   headerColor: '#2A3950',
   mainColor: '#2A3950',
+  secondaryBlue: '#355c7d',
+  secondaryPurple: '#725a7a',
+  secondaryPink: '#c56c86',
+  pointPink: '#FF7582',
 };
 
 const theme = {

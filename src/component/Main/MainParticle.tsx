@@ -17,7 +17,7 @@ const particleOption: RecursivePartial<IOptions> = {
       onhover: {
         enable: true,
         mode: 'repulse',
-        parallax: { enable: true, force: 200, smooth: 10 },
+        parallax: { enable: true, force: 70, smooth: 10 },
       },
       onclick: {
         enable: true,

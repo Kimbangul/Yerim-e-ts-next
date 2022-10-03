@@ -1,13 +1,13 @@
 import type { NextPage } from 'next';
 
 import Header from 'src/component/common/Header';
-import Main from 'src/component/Main/Main';
+import FullpageWrapper from 'src/component/common/FullpageWrapper';
 
 const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <Main />
+      <FullpageWrapper />
     </>
   );
 };

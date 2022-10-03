@@ -10,7 +10,7 @@ import theme from 'styles/Theme';
 const Container = styled.main`
   width: 100%;
   height: 100vh;
-  padding: 3.2rem;
+  padding: ${({ theme }) => theme.padding};
   padding-top: 7.2rem;
   overflow: hidden;
   background: ${({ theme }) => theme.color.bgColor};
@@ -38,9 +38,13 @@ const Container = styled.main`
       position: relative;
       z-index: 2;
       margin: 0 auto;
-      /* display: flex;
-      align-items: center;
-      justify-content: center; */
+      transition: width 0.3s, padding 0.3s;
+
+      @media (${({ theme }) => theme.windowSize['lt-m']}) {
+        width: calc(100vw - 6.4rem);
+        padding: 0 40px;
+        overflow: hidden;
+      }
     }
     &__text-container {
       text-align: justify;
@@ -51,7 +55,6 @@ const Container = styled.main`
       color: #fff;
       font-size: 7rem;
       font-style: italic;
-      /* font-size: ${({ theme }) => theme.fontSize.head.xl}; */
       font-weight: 900;
       letter-spacing: 0.4rem;
     }
@@ -60,6 +63,7 @@ const Container = styled.main`
       font-size: ${({ theme }) => theme.fontSize.body.md};
       font-weight: 300;
       margin-top: 0.8rem;
+      margin-left: 1.4rem;
       letter-spacing: 0.8rem;
     }
   }
@@ -68,32 +72,44 @@ const Container = styled.main`
 // COMPONENT main
 const Main: React.FC = () => {
   return (
-    <ReactFullpage
-      //fullpage options
-      licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
-      scrollingSpeed={1000}
-      responsiveWidth={1000}
-      render={() => {
-        return (
-          <ReactFullpage.Wrapper>
-            <Container className='section'>
-              <MainVideo />
-              <MainParticle />
-              <div className='Main__container'>
-                <div className='Main__text-container'>
-                  <h2 className='Main__title'>YERIM.e</h2>
-                  <p className='Main__desc'>Web Developer Portfolio</p>
-                </div>
-              </div>
-            </Container>
-            <Container
-              className='section'
-              style={{ background: '#2A3950' }}
-            ></Container>
-          </ReactFullpage.Wrapper>
-        );
-      }}
-    />
+    <Container className='section'>
+      <MainVideo />
+      <MainParticle />
+      <div className='Main__container'>
+        <div className='Main__text-container'>
+          <h2 className='Main__title'>YERIM.e</h2>
+          <p className='Main__desc'>Web Developer Portfolio</p>
+        </div>
+      </div>
+    </Container>
+    // <ReactFullpage
+    //   //fullpage options
+    //   licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
+    //   scrollingSpeed={1000}
+    //   responsiveWidth={1000}
+    //   render={() => {
+    //     return (
+    //       <ReactFullpage.Wrapper>
+    //         <Container className='section'>
+    //           <MainVideo />
+    //           <MainParticle />
+    //           <div className='Main__container'>
+    //             <div className='Main__text-container'>
+    //               <h2 className='Main__title'>YERIM.e</h2>
+    //               <p className='Main__desc'>Web Developer Portfolio</p>
+    //             </div>
+    //           </div>
+    //         </Container>
+    //         <Container className='section' style={{ background: '#2A3950' }}>
+    //           <p>안녕하세요</p>
+    //         </Container>
+    //         <Container className='section' style={{ background: '#2A3950' }}>
+    //           <p>반갑습니다.</p>
+    //         </Container>
+    //       </ReactFullpage.Wrapper>
+    //     );
+    //   }}
+    // />
   );
 };
 
