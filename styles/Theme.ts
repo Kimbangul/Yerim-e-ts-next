@@ -24,6 +24,7 @@ const fontSize = {
     md: '3.6rem',
     lg: '4.2rem',
     xl: '4.8rem',
+    ul: '5.6rem',
   },
 };
 
@@ -33,8 +34,9 @@ const padding = '3.2rem';
 
 const color = {
   bgColor: 'linear-gradient(180deg, #355C7D 0%, #725A7A 100%)',
-  headerColor: '#2A3950',
+  headerColor: 'rgba(0,0,0,0.24)',
   mainColor: '#2A3950',
+  secondaryDark: '#0C1A31',
   secondaryBlue: '#355c7d',
   secondaryPurple: '#725a7a',
   secondaryPink: '#c56c86',
@@ -42,6 +44,7 @@ const color = {
   f_headColor: '#fff',
   f_bodyColor: '#fffffff0',
   f_bodyColor_2: '#ffffffca',
+  f_bodyColor_3: '#799FDA',
 };
 
 const theme = {

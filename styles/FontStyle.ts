@@ -1,13 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-import PretendardThin from 'src/assets/fonts/Pretendard-Thin.otf';
-import PretendardLight from 'src/assets/fonts/Pretendard-Light.otf';
-import PretendardRegular from 'src/assets/fonts/Pretendard-Regular.otf';
-import PretendardMedium from 'src/assets/fonts/Pretendard-Medium.otf';
-import PretendardSemiBold from 'src/assets/fonts/Pretendard-SemiBold.otf';
-import PretendardBold from 'src/assets/fonts/Pretendard-Bold.otf';
-import PretendardExtraBold from 'src/assets/fonts/Pretendard-ExtraBold.otf';
-
 const FontStyles = createGlobalStyle`
 
 @font-face {

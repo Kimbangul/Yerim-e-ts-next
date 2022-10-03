@@ -8,7 +8,7 @@ const AboutContainer = styled(Container)`
       color: ${({ theme }) => theme.color.f_headColor};
     }
     &__title {
-      font-size: ${({ theme }) => theme.fontSize.head.rg};
+      font-size: ${({ theme }) => theme.fontSize.head.xl};
       text-transform: uppercase;
       color: ${({ theme }) => theme.color.pointPink};
       &--light {

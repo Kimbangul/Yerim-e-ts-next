@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import styled, { css } from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import LOGO from 'src/assets/image/logo.svg';
 
@@ -42,6 +46,33 @@ const Container = styled.header`
         }
       }
     }
+    &__social {
+      display: flex;
+      align-items: center;
+      &-item {
+        a {
+          width: 2.4rem;
+          margin: 0 1.2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: ${({ theme }) => theme.fontSize.body.lg};
+          color: ${({ theme }) => theme.color.f_bodyColor};
+          transition: color 0.3s;
+          &:hover {
+            color: ${({ theme }) => theme.color.pointPink};
+          }
+        }
+        &--sound-only {
+          visibility: hidden;
+          font-size: 0;
+          width: 0;
+          height: 0;
+          position: absolute;
+          pointer-events: none;
+        }
+      }
+    }
   }
 `;
 
@@ -57,14 +88,20 @@ const Header: React.FC = () => {
           </Link>
         </h1>
         <ul className='Header__social'>
-          <li>
+          <li className='Header__social-item'>
             <Link href='https://github.com/Kimbangul' target='_blank'>
-              <a>GIthub</a>
+              <a>
+                <span className='Header__social-item--sound-only'>GIthub</span>
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
             </Link>
           </li>
-          <li>
+          <li className='Header__social-item'>
             <Link href='mailto:highcolor_12@g.hongik.ac.kr' target='_blank'>
-              <a>Mail</a>
+              <a>
+                <span className='Header__social-item--sound-only'>Mail</span>
+                <FontAwesomeIcon icon={faEnvelope} />
+              </a>
             </Link>
           </li>
         </ul>

@@ -3,6 +3,7 @@ import React from 'react';
 
 import Main from 'src/component/Main/Main';
 import About from 'src/component/About/About';
+import Tech from 'src/component/Tech/Tech';
 import { Container, SectionCategoryTitle } from 'styles/Common';
 
 const FullpageWrapper: React.FC = () => {
@@ -17,9 +18,7 @@ const FullpageWrapper: React.FC = () => {
           <ReactFullpage.Wrapper>
             <Main />
             <About />
-            <Container className='section' style={{ background: '#2A3950' }}>
-              <p>반갑습니다.</p>
-            </Container>
+            <Tech />
           </ReactFullpage.Wrapper>
         );
       }}
