@@ -52,11 +52,12 @@ const Button = styled.button<{ width?: string; bgColor?: string }>`
   cursor: pointer;
   min-width: ${(props) => (props.width ? props.width : '18rem')};
   padding: 0 1.6rem;
-  height: 4.4rem;
+  height: 5.6rem;
   border-radius: 0.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10rem;
   background-color: ${(props) =>
     props.bgColor
       ? handleColorType(props.bgColor)

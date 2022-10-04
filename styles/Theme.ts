@@ -44,7 +44,10 @@ const color = {
   f_headColor: '#fff',
   f_bodyColor: '#fffffff0',
   f_bodyColor_2: '#ffffffca',
-  f_bodyColor_3: '#799FDA',
+  f_bodyColor_3: '#ddd',
+  f_bodyColor_4: '#aaa',
+  f_bodyColor_5: '#888',
+  f_bodyColor_6: '#666',
 };
 
 const theme = {

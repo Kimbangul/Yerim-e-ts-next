@@ -7,7 +7,8 @@ import About from 'src/component/About/About';
 import Tech from 'src/component/Tech/Tech';
 import Work from 'src/component/Work/Work';
 import Design from 'src/component/Design/Design';
-
+import Contact from 'src/component/Contact/Contact';
+import Footer from 'src/component/common/Footer';
 import { Container, SectionCategoryTitle } from 'styles/Common';
 
 const FullpageWrapper: React.FC = () => {
@@ -27,6 +28,8 @@ const FullpageWrapper: React.FC = () => {
               <Tech />
               <Work />
               <Design />
+              <Contact />
+              <Footer />
             </ReactFullpage.Wrapper>
           </>
         );
