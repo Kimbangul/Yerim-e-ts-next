@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Container, SectionCategoryTitle, Button } from 'styles/Common';
 
 const AboutContainer = styled(Container)`
-  background: ${({ theme }) => theme.color.mainColor};
+  /* background: ${({ theme }) => theme.color.mainColor}; */
   .About {
     &__text-container {
       color: ${({ theme }) => theme.color.f_headColor};

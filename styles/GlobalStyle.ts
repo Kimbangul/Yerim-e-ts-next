@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   body{
     font-family: 'Poppins', 'Pretendard', 'sans-serif';
     font-size: 1.4rem;
-    background-color: #2A3950;
+    background-color: #222;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', 'Pretendard', 'sans-serif';
@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* NOTE fullpage setting */
   @media (min-width: 1001px) {
-    .fullpage-wrapper {
+    /* .fullpage-wrapper {
 	width: 100%!important;
 	transform: none!important;
     }
@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
       visibility: visible;
       opacity: 1;
       z-index: 1;
-    }
+    } */
   }
 .fp-overflow{
   overflow-x: hidden;

@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
 const WorkContainer = styled(Container)`
-  background: ${({ theme }) => theme.color.mainColor};
+  /* background: ${({ theme }) => theme.color.mainColor}; */
   .Work {
     &__container {
     }

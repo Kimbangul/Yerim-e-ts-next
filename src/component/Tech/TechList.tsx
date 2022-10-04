@@ -18,6 +18,7 @@ const TechListCategory = styled.li`
   .Tech__tech {
     &-list {
       margin-top: 1.6rem;
+      line-height: 1.7;
     }
     &-tag-list {
       display: flex;

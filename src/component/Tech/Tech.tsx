@@ -6,7 +6,7 @@ import { techList } from 'src/data/data';
 import TechList from 'src/component/Tech/TechList';
 
 const TechContainer = styled(Container)`
-  background: ${({ theme }) => theme.color.mainColor};
+  /* background: ${({ theme }) => theme.color.mainColor}; */
   .Tech {
     &__container {
       display: flex;

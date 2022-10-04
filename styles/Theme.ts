@@ -35,7 +35,7 @@ const padding = '3.2rem';
 const color = {
   bgColor: 'linear-gradient(180deg, #355C7D 0%, #725A7A 100%)',
   headerColor: 'rgba(0,0,0,0.24)',
-  mainColor: '#2A3950',
+  mainColor: '#222',
   secondaryDark: '#0C1A31',
   secondaryBlue: '#355c7d',
   secondaryPurple: '#725a7a',

@@ -26,7 +26,8 @@ const Container = styled.section`
   padding: ${({ theme }) => theme.padding};
   padding-top: 7.2rem;
   overflow: hidden;
-  background: ${({ theme }) => theme.color.mainColor};
+  background: transparent;
+  /* background: ${({ theme }) => theme.color.mainColor}; */
   position: relative;
   display: flex;
   justify-content: center;

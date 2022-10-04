@@ -1,3 +1,8 @@
+import DESIGN01 from 'src/assets/image/design/design01.png';
+import DESIGN01_2 from 'src/assets/image/design/design01_2.png';
+import DESIGN02 from 'src/assets/image/design/design02.png';
+import DESIGN02_2 from 'src/assets/image/design/design02_2.png';
+
 const techList = {
   design: {
     title: 'Design Tech.',
@@ -32,5 +37,11 @@ const techList = {
     ],
   },
 };
+
+const designList = [
+  {
+    thumb: '',
+  },
+];
 
 export { techList };
