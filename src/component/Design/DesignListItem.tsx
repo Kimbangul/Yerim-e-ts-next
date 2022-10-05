@@ -9,6 +9,7 @@ const Item = styled.li<{ duration: number }>`
   border-radius: 0.4rem;
   cursor: pointer;
   flex-basis: calc(20% - 3.2rem);
+
   &:hover {
     img {
       transform: scale(1.12);
@@ -17,6 +18,15 @@ const Item = styled.li<{ duration: number }>`
   }
 
   a {
+    @keyframes up-down-ani {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(1rem);
+      }
+    }
     width: 18rem;
     height: 18rem;
     position: relative;
@@ -24,6 +34,7 @@ const Item = styled.li<{ duration: number }>`
     overflow: hidden;
     border-radius: 0.8rem;
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+    animation: up-down-ani 1.7s ease-in-out 0s infinite alternate both;
     img {
       border-radius: 0.8rem;
       transition: transform 0.3s, filter 0.3s;

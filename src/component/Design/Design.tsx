@@ -10,20 +10,10 @@ const DesignContainer = styled(Container)`
       width: ${({ theme }) => theme.maxWidth};
     }
     &__list {
-      @keyframes up-down-ani {
-        0% {
-          transform: translateY(0);
-        }
-
-        100% {
-          transform: translateY(1rem);
-        }
-      }
       display: flex;
       flex-wrap: wrap;
       gap: 4.8rem 1.6rem;
       justify-content: center;
-      animation: up-down-ani 1.7s ease-in-out 0s infinite alternate both;
     }
     &__desc {
       text-align: center;
