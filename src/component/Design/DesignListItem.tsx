@@ -54,7 +54,12 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
       case 9:
         return;
       default:
-        return <DesignModal srcNum={num} />;
+        return (
+          <DesignModal
+            srcNum={num}
+            handleCloseModal={() => setIsOpenModal(false)}
+          />
+        );
     }
   };
 
@@ -69,7 +74,6 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
         );
         return;
       default:
-        console.log(num);
         setIsOpenModal(true);
         return;
     }
