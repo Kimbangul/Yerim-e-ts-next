@@ -4,34 +4,6 @@ import { useRef } from 'react';
 import styled from 'styled-components';
 import { Container } from 'styles/Common';
 
-const Modal = styled.div`
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999999;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.6);
-  .Modal {
-    &__container {
-      width: 100rem;
-      height: 70vh;
-      /* padding: 3.2rem; */
-      background: #fff;
-      overflow-y: auto;
-      border-radius: 1.6rem;
-    }
-    &__inner {
-      width: 100%;
-      min-height: 100%;
-      position: relative;
-    }
-  }
-`;
-
 // PARAM type
 type DesignModalType = {
   srcNum: number;
@@ -73,5 +45,34 @@ const DesignModal: React.FC<DesignModalType> = (props) => {
     </Modal>
   );
 };
+
+// COMPONENT style
+const Modal = styled.div`
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  .Modal {
+    &__container {
+      width: 100rem;
+      height: 70vh;
+      /* padding: 3.2rem; */
+      background: #fff;
+      overflow-y: auto;
+      border-radius: 1.6rem;
+    }
+    &__inner {
+      width: 100%;
+      min-height: 100%;
+      position: relative;
+    }
+  }
+`;
 
 export default DesignModal;

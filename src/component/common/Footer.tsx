@@ -1,5 +1,21 @@
 import styled, { css } from 'styled-components';
 
+const Footer: React.FC = () => {
+  return (
+    <FooterContainer className='section fp-auto-height'>
+      <div className='Footer__container'>
+        <p className='Footer__desc'>
+          Made with Next.js <br />본 페이지는 상업적 목적이 아닌 개인
+          포트폴리오용으로 제작되었습니다.
+        </p>
+        <span className='Footer__copy'>
+          © 2022 Park-Ye-Rim. All Rights Reserved.
+        </span>
+      </div>
+    </FooterContainer>
+  );
+};
+
 const FooterContainer = styled.footer`
   background: ${({ theme }) => theme.color.headerColor};
   .Footer {
@@ -21,21 +37,5 @@ const FooterContainer = styled.footer`
     }
   }
 `;
-
-const Footer: React.FC = () => {
-  return (
-    <FooterContainer className='section fp-auto-height'>
-      <div className='Footer__container'>
-        <p className='Footer__desc'>
-          Made with Next.js <br />본 페이지는 상업적 목적이 아닌 개인
-          포트폴리오용으로 제작되었습니다.
-        </p>
-        <span className='Footer__copy'>
-          © 2022 Park-Ye-Rim. All Rights Reserved.
-        </span>
-      </div>
-    </FooterContainer>
-  );
-};
 
 export default Footer;

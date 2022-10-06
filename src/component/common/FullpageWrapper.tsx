@@ -17,7 +17,7 @@ const FullpageWrapper: React.FC = () => {
       // PARAM fullpage options
       licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
       scrollingSpeed={1000}
-      scrollOverflow={false}
+      scrollOverflow={true}
       responsiveWidth={1000}
       normalScrollElements={'.Modal'}
       render={() => {

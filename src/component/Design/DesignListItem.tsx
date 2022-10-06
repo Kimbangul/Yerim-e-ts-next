@@ -5,43 +5,6 @@ import styled, { css } from 'styled-components';
 import DesignModal from 'src/component/Design/DesignModal';
 import JSXStyle from 'styled-jsx/style';
 
-const Item = styled.li<{ duration: number }>`
-  border-radius: 0.4rem;
-  cursor: pointer;
-  flex-basis: calc(20% - 3.2rem);
-
-  &:hover {
-    img {
-      transform: scale(1.12);
-      filter: saturate(1);
-    }
-  }
-
-  a {
-    @keyframes up-down-ani {
-      0% {
-        transform: translateY(0);
-      }
-
-      100% {
-        transform: translateY(1rem);
-      }
-    }
-    width: 18rem;
-    height: 18rem;
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 0.8rem;
-    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
-    animation: up-down-ani 1.7s ease-in-out 0s infinite alternate both;
-    img {
-      border-radius: 0.8rem;
-      transition: transform 0.3s, filter 0.3s;
-      filter: saturate(0);
-    }
-  }
-`;
 // PARAM type
 type DesignListItemProps = {
   idx: number;
@@ -111,5 +74,44 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
     </>
   );
 };
+
+// COMPONENT style
+const Item = styled.li<{ duration: number }>`
+  border-radius: 0.4rem;
+  cursor: pointer;
+  flex-basis: calc(20% - 3.2rem);
+
+  &:hover {
+    img {
+      transform: scale(1.12);
+      filter: saturate(1);
+    }
+  }
+
+  a {
+    @keyframes up-down-ani {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(1rem);
+      }
+    }
+    width: 18rem;
+    height: 18rem;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+    animation: up-down-ani 1.7s ease-in-out 0s infinite alternate both;
+    img {
+      border-radius: 0.8rem;
+      transition: transform 0.3s, filter 0.3s;
+      filter: saturate(0);
+    }
+  }
+`;
 
 export default DesignListItem;

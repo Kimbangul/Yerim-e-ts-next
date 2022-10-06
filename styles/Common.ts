@@ -47,7 +47,7 @@ const SectionCategoryTitle = styled.h2`
 // COMPONENT button
 const Button = styled.button<{ width?: string; bgColor?: string }>`
   font-family: 'Pretendard', 'sans-serif';
-  font-size: ${({ theme }) => theme.fontSize.body.rg};
+  font-size: ${({ theme }) => theme.fontSize.body.md};
   font-weight: 400;
   cursor: pointer;
   min-width: ${(props) => (props.width ? props.width : '18rem')};
@@ -71,4 +71,13 @@ const Button = styled.button<{ width?: string; bgColor?: string }>`
   }
 `;
 
-export { Container, SectionCategoryTitle, Button };
+// COMPONENT profile image container
+const ProfileImgContainer = styled.div`
+  width: 34rem;
+  height: 46rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.4rem;
+`;
+
+export { Container, SectionCategoryTitle, Button, ProfileImgContainer };

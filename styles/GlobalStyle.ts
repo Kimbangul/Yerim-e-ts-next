@@ -64,6 +64,12 @@ const GlobalStyle = createGlobalStyle`
   display: none;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+::selection{
+  background-color: #666;
+}
 
 `;
 
