@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import theme from 'styles/Theme';
 
 const GlobalStyle = createGlobalStyle`
  html{
@@ -26,8 +27,8 @@ const GlobalStyle = createGlobalStyle`
   }
   body{
     font-family: 'Poppins', 'Pretendard', 'sans-serif';
-    font-size: 1.4rem;
-    background-color: #222;
+    font-size: ${theme.fontSize.body.sm};
+    background-color: ${theme.color.main};
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', 'Pretendard', 'sans-serif';
@@ -68,7 +69,7 @@ const GlobalStyle = createGlobalStyle`
   display: none;
 }
 ::selection{
-  background-color: #666;
+  background-color: ${theme.color.text_6};
 }
 
 `;

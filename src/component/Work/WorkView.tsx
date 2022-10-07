@@ -7,16 +7,16 @@ import { Container, SectionCategoryTitle } from 'styles/Common';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
-const Work: React.FC = () => {
+const WorkView: React.FC = () => {
   return (
-    <WorkContainer className='section'>
+    <Work.Page className='section'>
       <SectionCategoryTitle>Work</SectionCategoryTitle>
-      <div className='Work__container'>
-        <div className='Work__text-container'>
-          <h3 className='Work__title'>Work</h3>
-          <p className='Work__desc'>작업물들</p>
-        </div>
-        <div className='Work__list-container'>
+      <Work.Container className='Work__container'>
+        <Work.Text.Container className='Work__text-container'>
+          <Work.Text.Title className='Work__title'>Work</Work.Text.Title>
+          <Work.Text.Desc className='Work__desc'>작업물들</Work.Text.Desc>
+        </Work.Text.Container>
+        <Work.List.Container className='Work__list-container'>
           <Swiper
             effect={'coverflow'}
             grabCursor={true}
@@ -37,10 +37,35 @@ const Work: React.FC = () => {
             <SwiperSlide>2</SwiperSlide>
             <SwiperSlide>3</SwiperSlide>
           </Swiper>
-        </div>
-      </div>
-    </WorkContainer>
+        </Work.List.Container>
+      </Work.Container>
+    </Work.Page>
   );
+};
+
+// COMPONENT style
+const Work = {
+  Page: styled(Container)``,
+  Container: styled.div``,
+  Text: {
+    Container: styled.div`
+      color: ${({ theme }) => theme.color.f_headColor};
+    `,
+    Title: styled.h3`
+      font-size: ${({ theme }) => theme.fontSize.head.xl};
+      color: ${({ theme }) => theme.color.pointPink};
+    `,
+    Desc: styled.p`
+      font-size: ${({ theme }) => theme.fontSize.body.md};
+      line-height: 1.5;
+      font-weight: 300;
+      color: ${({ theme }) => theme.color.text};
+      margin-top: 2.4rem;
+    `,
+  },
+  List: {
+    Container: styled.div``,
+  },
 };
 
 // COMPONENT style
@@ -72,4 +97,4 @@ const WorkContainer = styled(Container)`
   }
 `;
 
-export default Work;
+export default WorkView;

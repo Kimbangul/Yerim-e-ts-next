@@ -1,7 +1,10 @@
-const MainVideo: React.FC = () => {
+import styled from 'styled-components';
+
+// COMPONENT main component
+const MainVideoView: React.FC = () => {
   return (
-    <video
-      className='Main__video'
+    <MainVideo.Container
+      className='Main__MainVideo'
       playsInline={true}
       webkit-playsinline='true'
       id='video-bg'
@@ -14,8 +17,25 @@ const MainVideo: React.FC = () => {
         src='https://media.githubusercontent.com/media/kimbangul/yerim.e/master/img/smoke_bg2.mp4'
         type='video/mp4'
       />
-    </video>
+    </MainVideo.Container>
   );
 };
 
-export default MainVideo;
+// COMPONENT style
+const MainVideo = {
+  Container: styled.video`
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.3;
+  `,
+};
+
+export default MainVideoView;

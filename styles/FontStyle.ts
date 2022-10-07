@@ -74,7 +74,6 @@ const FontStyles = createGlobalStyle`
   font-weight: 900;
   src: url(fonts/Poppins-Black.ttf) format("truetype");
 }
-
 `;
 
 export default FontStyles;

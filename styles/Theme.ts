@@ -33,21 +33,21 @@ const maxWidth = '1200px';
 const padding = '3.2rem';
 
 const color = {
-  bgColor: 'linear-gradient(180deg, #355C7D 0%, #725A7A 100%)',
-  headerColor: 'rgba(0,0,0,0.24)',
-  mainColor: '#222',
+  bg: 'linear-gradient(180deg, #355C7D 0%, #725A7A 100%)',
+  header: 'rgba(0,0,0,0.24)',
+  main: '#222',
   secondaryDark: '#0C1A31',
   secondaryBlue: '#355c7d',
   secondaryPurple: '#725a7a',
   secondaryPink: '#c56c86',
   pointPink: '#FF7582',
   f_headColor: '#fff',
-  f_bodyColor: '#fffffff0',
-  f_bodyColor_2: '#ffffffca',
-  f_bodyColor_3: '#ddd',
-  f_bodyColor_4: '#aaa',
-  f_bodyColor_5: '#888',
-  f_bodyColor_6: '#666',
+  text: '#fffffff0',
+  text_2: '#ffffffca',
+  text_3: '#ddd',
+  text_4: '#aaa',
+  text_5: '#888',
+  text_6: '#666',
 };
 
 const theme = {
