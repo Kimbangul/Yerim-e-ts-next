@@ -23,15 +23,15 @@ const DesignModal: React.FC<DesignModalType> = (props) => {
   };
 
   return (
-    <Modal
+    <Modal.Page
       className='Modal'
       ref={dimmerRef}
       onClick={(e) => {
         handleClickOutSide(e);
       }}
     >
-      <div className='Modal__container'>
-        <div className='Modal__inner'>
+      <Modal.Container className='Modal__container'>
+        <Modal.Inner className='Modal__inner'>
           <Image
             alt={'design detail'}
             layout='fill'
@@ -40,39 +40,39 @@ const DesignModal: React.FC<DesignModalType> = (props) => {
             objectFit='cover'
             src={require(`src/assets/image/design/design0${props.srcNum}_2.png`)}
           />
-        </div>
-      </div>
-    </Modal>
+        </Modal.Inner>
+      </Modal.Container>
+    </Modal.Page>
   );
 };
 
 // COMPONENT style
-const Modal = styled.div`
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999999;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.6);
-  .Modal {
-    &__container {
-      width: 100rem;
-      height: 70vh;
-      /* padding: 3.2rem; */
-      background: #fff;
-      overflow-y: auto;
-      border-radius: 1.6rem;
-    }
-    &__inner {
-      width: 100%;
-      min-height: 100%;
-      position: relative;
-    }
-  }
-`;
+const Modal = {
+  Page: styled.div`
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+  `,
+  Container: styled.div`
+    width: 100rem;
+    height: 70vh;
+    /* padding: 3.2rem; */
+    background: #fff;
+    overflow-y: auto;
+    border-radius: 1.6rem;
+  `,
+  Inner: styled.div`
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+  `,
+};
 
 export default DesignModal;

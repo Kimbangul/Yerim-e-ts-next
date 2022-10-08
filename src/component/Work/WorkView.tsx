@@ -68,33 +68,4 @@ const Work = {
   },
 };
 
-// COMPONENT style
-const WorkContainer = styled(Container)`
-  /* background: ${({ theme }) => theme.color.mainColor}; */
-  .Work {
-    &__container {
-    }
-    &__text-container {
-      color: ${({ theme }) => theme.color.f_headColor};
-    }
-    &__title {
-      font-size: ${({ theme }) => theme.fontSize.head.xl};
-      color: ${({ theme }) => theme.color.pointPink};
-      &--light {
-        font-weight: 300;
-      }
-    }
-    &__desc {
-      font-size: ${({ theme }) => theme.fontSize.body.md};
-      line-height: 1.5;
-      font-weight: 300;
-      color: ${({ theme }) => theme.color.f_bodyColor};
-      margin-top: 2.4rem;
-      &--point {
-        color: ${({ theme }) => theme.color.pointPink};
-      }
-    }
-  }
-`;
-
 export default WorkView;

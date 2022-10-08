@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import styled, { css } from 'styled-components';
 
-import Header from 'src/component/common/Header';
+import Header from 'src/component/common/HeaderView';
 import FullpageWrapper from 'src/component/common/FullpageWrapper';
 import Particle from 'src/component/common/Particle';
 

@@ -30,11 +30,11 @@ const TechListView: React.FC<TechListProps> = ({ techName }) => {
             );
           })}
         </TechList.Contents.List>
-        <TechList.Tag.Item className='Tech__tech-tag-list'>
+        <TechList.Tag.List className='Tech__tech-tag-list'>
           {techName.tag.map((el: string) => {
             return <TechList.Tag.Item key={el}>#{el}</TechList.Tag.Item>;
           })}
-        </TechList.Tag.Item>
+        </TechList.Tag.List>
       </TechList.Contents.Container>
     </TechList.Category>
   );

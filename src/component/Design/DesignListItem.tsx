@@ -55,40 +55,40 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
 
   return (
     <>
-      <Item duration={props.idx}>
-        <a
+      <Item.Container duration={props.idx}>
+        <Item.Link
           href='#'
           onClick={(e) => {
             onClickItem(e, props.idx + 1);
           }}
         >
           <Image
-            alt={'design'}
+            alt='design'
             layout='fill'
             objectFit='cover'
             src={require(`src/assets/image/design/design0${props.idx + 1}.png`)}
           />
-        </a>
-      </Item>
+        </Item.Link>
+      </Item.Container>
       {isOpenModal && handleDetail(props.idx + 1)}
     </>
   );
 };
 
 // COMPONENT style
-const Item = styled.li<{ duration: number }>`
-  border-radius: 0.4rem;
-  cursor: pointer;
-  flex-basis: calc(20% - 3.2rem);
-
-  &:hover {
-    img {
-      transform: scale(1.12);
-      filter: saturate(1);
+const Item = {
+  Container: styled.li<{ duration: number }>`
+    border-radius: 0.4rem;
+    cursor: pointer;
+    flex-basis: calc(20% - 3.2rem);
+    &:hover {
+      img {
+        transform: scale(1.12);
+        filter: saturate(1);
+      }
     }
-  }
-
-  a {
+  `,
+  Link: styled.a`
     @keyframes up-down-ani {
       0% {
         transform: translateY(0);
@@ -111,7 +111,6 @@ const Item = styled.li<{ duration: number }>`
       transition: transform 0.3s, filter 0.3s;
       filter: saturate(0);
     }
-  }
-`;
-
+  `,
+};
 export default DesignListItem;

@@ -8,7 +8,7 @@ import {
   ProfileImgContainer,
 } from 'styles/Common';
 
-import PROFILE from 'src/assets/image/contact/profile.jpg';
+import PROFILE from '../../assets/image/contact/profile.jpg';
 
 const ContactView: React.FC = () => {
   return (
