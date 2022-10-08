@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styled, { css } from 'styled-components';
 import {
   Container,
@@ -58,7 +59,11 @@ const AboutView = () => {
               className='About__button'
               bgColor='secondaryBlue'
             >
-              이력서 보기
+              <Link href='https://meadow-touch-c48.notion.site/fefaf8401a0f489b8c3e111db4e263ba'>
+                <a target='_blank' rel='noreferrer'>
+                  이력서 보기
+                </a>
+              </Link>
             </About.Button.Button>
             <About.Button.Button
               className='About__button'

@@ -3,6 +3,7 @@ import { useRef } from 'react';
 
 import styled from 'styled-components';
 import { Container } from 'styles/Common';
+import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 
 // PARAM type
 type DesignModalType = {
@@ -32,14 +33,18 @@ const DesignModal: React.FC<DesignModalType> = (props) => {
     >
       <Modal.Container className='Modal__container'>
         <Modal.Inner className='Modal__inner'>
-          <Image
+          <AutoHeightImageView
+            alt={'design detail'}
+            src={require(`src/assets/image/design/design0${props.srcNum}_2.png`)}
+          />
+          {/* <Image
             alt={'design detail'}
             layout='fill'
             width='100%'
             // height='auto'
             objectFit='cover'
             src={require(`src/assets/image/design/design0${props.srcNum}_2.png`)}
-          />
+          /> */}
         </Modal.Inner>
       </Modal.Container>
     </Modal.Page>
