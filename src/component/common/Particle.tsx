@@ -29,11 +29,11 @@ const particleOption: RecursivePartial<IOptions> = {
       bubble: {
         distance: 500,
         duration: 0.3,
-        opacity: 1,
+        opacity: 0.2,
         size: 2,
         speed: 3,
       },
-      grab: { distance: 200, line_linked: { opacity: 0.8 } },
+      grab: { distance: 200, line_linked: { opacity: 0.3 } },
       push: { particles_nb: 4 },
       remove: { particles_nb: 2 },
       repulse: { distance: 30, duration: 0.4 },
@@ -42,7 +42,7 @@ const particleOption: RecursivePartial<IOptions> = {
   particles: {
     // color: { value: ['#2EB67D', '#ECB22E', '#E01E5B', '#36C5F0'] },
     color: {
-      value: '#fff',
+      value: '#ffffff20',
     },
     links: {
       color: '#ffffff',
@@ -68,7 +68,7 @@ const particleOption: RecursivePartial<IOptions> = {
     number: { density: { enable: true, area: 1000 }, value: 80 },
     opacity: {
       random: true,
-      value: 0.6,
+      value: 0.2,
       animation: {
         enable: true,
         opacity_min: 0.3,

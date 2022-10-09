@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import MAIN_VIDEO from 'src/assets/video/main_video.mp4';
+
 // COMPONENT main component
 const MainVideoView: React.FC = () => {
   return (
@@ -13,10 +15,7 @@ const MainVideoView: React.FC = () => {
       muted={true}
       data-keepplaying
     >
-      <source
-        src='https://media.githubusercontent.com/media/kimbangul/yerim.e/master/img/smoke_bg2.mp4'
-        type='video/mp4'
-      />
+      <source src={MAIN_VIDEO} type='video/mp4' />
     </MainVideo.Container>
   );
 };

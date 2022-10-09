@@ -22,8 +22,6 @@ const WorkList: React.FC<WorkListType> = (props) => {
   // FUNCTION set active index
   const onChangeIndex = ({ activeIndex, ...swiper }: SwiperBaseType) => {
     props.setCurrentIdx(swiper.realIndex);
-    console.log('idx' + swiper.realIndex);
-    console.log(swiper);
     return;
   };
 
@@ -53,7 +51,6 @@ const WorkList: React.FC<WorkListType> = (props) => {
         className='mySwiper'
       >
         {workList.map((el) => {
-          console.log('workListLength', workList.length);
           return (
             <SwiperSlide key={el.title}>
               <WorkListItem
