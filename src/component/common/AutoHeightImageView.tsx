@@ -12,6 +12,7 @@ const AutoHeightImageView = ({ ...props }: ImageProps): React.ReactElement => {
 
 const AutoHeightImage = styled.div`
   width: 100%;
+  position: relative;
   span {
     position: unset !important;
   }

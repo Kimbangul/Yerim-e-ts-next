@@ -1,5 +1,5 @@
 import ReactFullpage from '@fullpage/react-fullpage';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 
 import Main from 'src/component/Main/MainView';
@@ -12,30 +12,43 @@ import Footer from 'src/component/common/FooterView';
 import { Container, SectionCategoryTitle } from 'styles/Common';
 
 const FullpageWrapper: React.FC = () => {
+  const [isReady, setIsReady] = useState(false);
+
+  // FUNCTION window load check
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsReady(true);
+    }
+    return;
+  }, [typeof window]);
+
   return (
-    <ReactFullpage
-      // PARAM fullpage options
-      licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
-      scrollingSpeed={1000}
-      scrollOverflow={true}
-      responsiveWidth={1000}
-      normalScrollElements={'.Modal'}
-      render={() => {
-        return (
-          <>
-            <ReactFullpage.Wrapper>
-              <Main />
-              <About />
-              <Tech />
-              <Work />
-              <Design />
-              <Contact />
-              <Footer />
-            </ReactFullpage.Wrapper>
-          </>
-        );
-      }}
-    />
+    <>
+      {isReady && (
+        <ReactFullpage
+          // PARAM fullpage options
+          licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
+          scrollingSpeed={1000}
+          scrollOverflow={true}
+          responsiveWidth={1000}
+          normalScrollElements={'.Modal'}
+          lazyLoading={true}
+          render={() => {
+            return (
+              <ReactFullpage.Wrapper>
+                <Main />
+                <About />
+                <Tech />
+                <Work />
+                <Design />
+                <Contact />
+                <Footer />
+              </ReactFullpage.Wrapper>
+            );
+          }}
+        />
+      )}
+    </>
   );
 };
 

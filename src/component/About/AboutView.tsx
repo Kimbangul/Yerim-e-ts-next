@@ -96,7 +96,7 @@ const About = {
       Text: styled.h3`
         font-size: ${({ theme }) => theme.fontSize.head.xl};
         text-transform: uppercase;
-        color: ${({ theme }) => theme.color.pointPink};
+        color: ${({ theme }) => theme.color.f_headColor};
         margin-top: 2.4rem;
       `,
       Light: styled.span`
@@ -108,11 +108,11 @@ const About = {
         font-size: ${({ theme }) => theme.fontSize.body.md};
         line-height: 1.5;
         font-weight: 300;
-        color: ${({ theme }) => theme.color.textColor};
+        color: ${({ theme }) => theme.color.text_4};
         margin-top: 2.4rem;
       `,
       Point: styled.span`
-        color: ${({ theme }) => theme.color.pointPink};
+        color: ${({ theme }) => theme.color.f_headColor};
       `,
     },
   },

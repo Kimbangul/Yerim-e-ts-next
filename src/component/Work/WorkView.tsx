@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination } from 'swiper';
 
 import { Container, SectionCategoryTitle } from 'styles/Common';
+import WorkList from 'src/component/Work/WorkList';
+import WorkListItem from 'src/component/Work/WorkListItem';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -16,28 +16,7 @@ const WorkView: React.FC = () => {
           <Work.Text.Title className='Work__title'>Work</Work.Text.Title>
           <Work.Text.Desc className='Work__desc'>작업물들</Work.Text.Desc>
         </Work.Text.Container>
-        <Work.List.Container className='Work__list-container'>
-          <Swiper
-            effect={'coverflow'}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={20}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            pagination={true}
-            modules={[EffectCoverflow, Pagination]}
-            className='mySwiper'
-          >
-            <SwiperSlide>1</SwiperSlide>
-            <SwiperSlide>2</SwiperSlide>
-            <SwiperSlide>3</SwiperSlide>
-          </Swiper>
-        </Work.List.Container>
+        <WorkList />
       </Work.Container>
     </Work.Page>
   );
@@ -45,10 +24,13 @@ const WorkView: React.FC = () => {
 
 // COMPONENT style
 const Work = {
-  Page: styled(Container)``,
+  // Page: styled(Container)``,
+  Page: styled.div``,
   Container: styled.div``,
   Text: {
     Container: styled.div`
+      width: ${({ theme }) => theme.maxWidth};
+      margin: 0 auto;
       color: ${({ theme }) => theme.color.f_headColor};
     `,
     Title: styled.h3`
@@ -62,9 +44,6 @@ const Work = {
       color: ${({ theme }) => theme.color.text};
       margin-top: 2.4rem;
     `,
-  },
-  List: {
-    Container: styled.div``,
   },
 };
 
