@@ -8,7 +8,7 @@ import {
   ProfileImgContainer,
 } from 'styles/Common';
 
-import PROFILE from '../../assets/image/contact/profile.jpg';
+import PROFILE from 'src/assets/image/contact/profile.jpg';
 
 const ContactView: React.FC = () => {
   return (
@@ -107,42 +107,5 @@ const Contact = {
     `,
   },
 };
-const ContactContainer = styled(Container)`
-  flex-direction: column;
-  .Contact {
-    &__container {
-      width: ${({ theme }) => theme.maxWidth};
-      display: flex;
-      /* justify-content: space-between; */
-      gap: 5.6rem;
-    }
-    &__text-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    &__blockquote {
-      font-size: ${({ theme }) => theme.fontSize.head.sm};
-      color: ${({ theme }) => theme.color.f_bodyColor};
-      font-weight: 600;
-      margin-top: 2.4rem;
-    }
-    &__desc {
-      font-size: ${({ theme }) => theme.fontSize.body.md};
-      color: ${({ theme }) => theme.color.f_bodyColor_4};
-      margin-top: 2.4rem;
-    }
-    &__button {
-      margin-right: 1.6rem;
-      &:last-child {
-        margin-left: 0;
-      }
-      &-wrap {
-        display: flex;
-        margin-top: 4.8rem;
-      }
-    }
-  }
-`;
 
 export default ContactView;

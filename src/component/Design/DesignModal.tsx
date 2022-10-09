@@ -2,12 +2,13 @@ import Image from 'next/image';
 import { useRef } from 'react';
 
 import styled from 'styled-components';
-import { Container } from 'styles/Common';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
+
+import CLOSE_24 from 'src/assets/icon/close_24.svg';
 
 // PARAM type
 type DesignModalType = {
-  srcNum: number;
+  modalImg: string | false;
   handleCloseModal: () => void;
 };
 
@@ -18,8 +19,14 @@ const DesignModal: React.FC<DesignModalType> = (props) => {
   // FUNCTION 모달 바깥 클릭 시 닫기
   const handleClickOutSide = (e: React.MouseEvent) => {
     if (e.target === dimmerRef.current) {
-      props.handleCloseModal();
+      onClickCloseBtn();
     }
+    return;
+  };
+
+  // FUNCTION 모달 닫기 버튼 눌렀을 때
+  const onClickCloseBtn = () => {
+    props.handleCloseModal();
     return;
   };
 
@@ -32,19 +39,17 @@ const DesignModal: React.FC<DesignModalType> = (props) => {
       }}
     >
       <Modal.Container className='Modal__container'>
+        <Modal.Button.Close
+          className='Modal__close-btn'
+          onClick={onClickCloseBtn.bind(this)}
+        >
+          <CLOSE_24 />
+        </Modal.Button.Close>
         <Modal.Inner className='Modal__inner'>
           <AutoHeightImageView
             alt={'design detail'}
-            src={require(`src/assets/image/design/design0${props.srcNum}_2.png`)}
+            src={props.modalImg || ''}
           />
-          {/* <Image
-            alt={'design detail'}
-            layout='fill'
-            width='100%'
-            // height='auto'
-            objectFit='cover'
-            src={require(`src/assets/image/design/design0${props.srcNum}_2.png`)}
-          /> */}
         </Modal.Inner>
       </Modal.Container>
     </Modal.Page>
@@ -68,16 +73,27 @@ const Modal = {
   Container: styled.div`
     width: 100rem;
     height: 70vh;
-    /* padding: 3.2rem; */
-    background: #fff;
-    overflow-y: auto;
-    border-radius: 1.6rem;
+    position: relative;
   `,
   Inner: styled.div`
     width: 100%;
-    min-height: 100%;
+    height: 100%;
+    border-radius: 1.6rem;
+    overflow-y: auto;
+    background: #fff;
     position: relative;
   `,
+  Button: {
+    Close: styled.div`
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: calc(100% + 0.8rem);
+      right: 0;
+    `,
+  },
 };
 
 export default DesignModal;

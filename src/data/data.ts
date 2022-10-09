@@ -2,6 +2,20 @@ import DESIGN01 from 'src/assets/image/design/design01.png';
 import DESIGN01_2 from 'src/assets/image/design/design01_2.png';
 import DESIGN02 from 'src/assets/image/design/design02.png';
 import DESIGN02_2 from 'src/assets/image/design/design02_2.png';
+import DESIGN03 from 'src/assets/image/design/design03.png';
+import DESIGN03_2 from 'src/assets/image/design/design03_2.png';
+import DESIGN04 from 'src/assets/image/design/design04.png';
+import DESIGN05 from 'src/assets/image/design/design05.png';
+import DESIGN05_2 from 'src/assets/image/design/design05_2.png';
+import DESIGN06 from 'src/assets/image/design/design06.png';
+import DESIGN06_2 from 'src/assets/image/design/design06_2.png';
+import DESIGN07 from 'src/assets/image/design/design07.png';
+import DESIGN07_2 from 'src/assets/image/design/design07_2.png';
+import DESIGN08 from 'src/assets/image/design/design08.png';
+import DESIGN08_2 from 'src/assets/image/design/design08_2.png';
+import DESIGN09 from 'src/assets/image/design/design09.png';
+import DESIGN010 from 'src/assets/image/design/design010.png';
+import DESIGN010_2 from 'src/assets/image/design/design010_2.png';
 
 const techList = {
   design: {
@@ -38,10 +52,74 @@ const techList = {
   },
 };
 
-const designList = [
+type designListType = {
+  title: string;
+  link: string | false;
+  thumb: string;
+  detail: string | false;
+};
+
+const designList: designListType[] = [
   {
-    thumb: '',
+    title: "밴드 'Poision Infector' 앨범 커버 디자인",
+    link: false,
+    thumb: DESIGN01.src,
+    detail: DESIGN01_2.src,
+  },
+  {
+    title: "'뻐끔뻐끔 뽀모도로' UXUI 기획 및 디자인",
+    link: false,
+    thumb: DESIGN02.src,
+    detail: DESIGN02_2.src,
+  },
+  {
+    title: "'꿈상점' UXUI 기획 및 색채 계획",
+    link: false,
+    thumb: DESIGN03.src,
+    detail: DESIGN03_2.src,
+  },
+  {
+    title: "'심연의 장송곡' 키네틱타이포 MV",
+    link: 'https://youtu.be/nIhcqw48Rc0',
+    thumb: DESIGN04.src,
+    detail: false,
+  },
+  {
+    title: "교내 동아리 '가리워진 길' 공연 홍보 포스터 제작",
+    link: false,
+    thumb: DESIGN05.src,
+    detail: DESIGN05_2.src,
+  },
+  {
+    title: "교내 동아리 '오키드' 홍보 포스터 제작",
+    link: false,
+    thumb: DESIGN06.src,
+    detail: DESIGN06_2.src,
+  },
+  {
+    title: '게임 UI 디자인 제작',
+    link: false,
+    thumb: DESIGN07.src,
+    detail: DESIGN07_2.src,
+  },
+  {
+    title: '게임 UI 디자인 제작',
+    link: false,
+    thumb: DESIGN08.src,
+    detail: DESIGN08_2.src,
+  },
+  {
+    title: "홍익대학교 게임그래픽디자인 졸업전시 '프로젝트! 미니어처'",
+    link: 'https://www.husg.net/huge21/work/%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%eb%af%b8%eb%8b%88%ec%96%b4%ec%b2%98/',
+    thumb: DESIGN09.src,
+    detail: false,
+  },
+  {
+    title: '근로장학생 디자인 작업',
+    link: false,
+    thumb: DESIGN010.src,
+    detail: DESIGN010_2.src,
   },
 ];
 
-export { techList };
+export { techList, designList };

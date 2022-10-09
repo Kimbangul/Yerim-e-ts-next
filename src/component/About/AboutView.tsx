@@ -8,7 +8,7 @@ import {
   ProfileImgContainer,
 } from 'styles/Common';
 
-import PROFILE from '../../../src/assets/image/about/profile.jpg';
+import PROFILE from 'src/assets/image/about/profile.jpg';
 
 const AboutView = () => {
   return (

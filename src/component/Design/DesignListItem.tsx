@@ -3,11 +3,16 @@ import { useState } from 'react';
 import Image from 'next/image';
 import styled, { css } from 'styled-components';
 import DesignModal from 'src/component/Design/DesignModal';
-import JSXStyle from 'styled-jsx/style';
 
 // PARAM type
 type DesignListItemProps = {
   idx: number;
+  thumb: string;
+  detail: string | false;
+  link: string | false;
+  title: string;
+  onMouseEnter: () => void;
+  onMouseOut: () => void;
 };
 
 const DesignListItem: React.FC<DesignListItemProps> = (props) => {
@@ -15,42 +20,14 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   // FUNCTION 클릭 시 팝업 핸들러
-  const onClickItem = (e: React.MouseEvent<HTMLElement>, num: number) => {
+  const onClickItem = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    handleLink(num);
+    if (props.link) {
+      window.open(props.link);
+    } else {
+      setIsOpenModal(true);
+    }
     return;
-  };
-
-  // FUNCTION detail handler
-  const handleDetail = (num: number): JSX.Element | void => {
-    switch (num) {
-      case 4:
-      case 9:
-        return;
-      default:
-        return (
-          <DesignModal
-            srcNum={num}
-            handleCloseModal={() => setIsOpenModal(false)}
-          />
-        );
-    }
-  };
-
-  const handleLink = (num: number): string | void => {
-    switch (num) {
-      case 4:
-        window.open('https://youtu.be/nIhcqw48Rc0');
-        return;
-      case 9:
-        window.open(
-          'https://www.husg.net/huge21/work/%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%eb%af%b8%eb%8b%88%ec%96%b4%ec%b2%98/'
-        );
-        return;
-      default:
-        setIsOpenModal(true);
-        return;
-    }
   };
 
   return (
@@ -58,19 +35,26 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
       <Item.Container duration={props.idx}>
         <Item.Link
           href='#'
+          onMouseEnter={props.onMouseEnter}
+          onMouseOut={props.onMouseOut}
           onClick={(e) => {
-            onClickItem(e, props.idx + 1);
+            onClickItem(e);
           }}
         >
           <Image
-            alt='design'
+            alt={props.title}
             layout='fill'
             objectFit='cover'
-            src={require(`src/assets/image/design/design0${props.idx + 1}.png`)}
+            src={props.thumb}
           />
         </Item.Link>
       </Item.Container>
-      {isOpenModal && handleDetail(props.idx + 1)}
+      {isOpenModal && props.detail && (
+        <DesignModal
+          modalImg={props.detail && props.detail}
+          handleCloseModal={() => setIsOpenModal(false)}
+        />
+      )}
     </>
   );
 };
