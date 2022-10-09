@@ -65,6 +65,14 @@ const GlobalStyle = createGlobalStyle`
   display: none;
 }
 
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+  background: ${theme.color.text_4};
+}
+/* #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span{
+  width: 0.8rem;
+  height: 0.8rem;
+} */
+
 ::-webkit-scrollbar{
   display: none;
 }

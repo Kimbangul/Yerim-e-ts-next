@@ -1,3 +1,4 @@
+import React, { SetStateAction, Dispatch, useRef } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper';
@@ -8,10 +9,29 @@ import WorkListItem from 'src/component/Work/WorkListItem';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
-const WorkList = () => {
+// PARAM type
+type WorkListType = {
+  setCurrentIdx: (idx: number) => void;
+};
+type SwiperBaseType = {
+  [key: string]: any;
+  activeIndex: number;
+};
+
+const WorkList: React.FC<WorkListType> = (props) => {
+  // FUNCTION set active index
+  const onChangeIndex = ({ activeIndex, ...swiper }: SwiperBaseType) => {
+    props.setCurrentIdx(swiper.realIndex);
+    console.log('idx' + swiper.realIndex);
+    console.log(swiper);
+    return;
+  };
+
   return (
     <List.Container className='Work__list-container'>
       <Swiper
+        onSwiper={onChangeIndex}
+        onRealIndexChange={onChangeIndex}
         effect={'coverflow'}
         pagination={{
           type: 'progressbar',
@@ -33,9 +53,16 @@ const WorkList = () => {
         className='mySwiper'
       >
         {workList.map((el) => {
+          console.log('workListLength', workList.length);
           return (
             <SwiperSlide key={el.title}>
-              <WorkListItem thumb={el.thumb} title={el.title} />
+              <WorkListItem
+                thumb={el.thumb}
+                title={el.title}
+                desc={el.desc}
+                tag={el.tag}
+                category={el.category}
+              />
             </SwiperSlide>
           );
         })}
@@ -50,10 +77,17 @@ const List = {
       transform: scale(0.85);
       transition: transform 0.3s, filter 0.3s;
       filter: saturate(0) brightness(0.4);
+      .WorkListItem__text-container {
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
     }
     .swiper-slide-active {
       transform: scale(1);
       filter: saturate(1);
+      .WorkListItem__text-container {
+        opacity: 1;
+      }
     }
   `,
 };

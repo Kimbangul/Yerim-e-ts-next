@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
-import WORK04 from 'src/assets/image/work/work04.jpg';
 
 type WorkListItemType = {
   thumb: string;
   title: string;
+  desc: string;
+  category: string;
+  tag: string[];
 };
 
 const WorkListItem: React.FC<WorkListItemType> = (props) => {
@@ -18,8 +20,11 @@ const WorkListItem: React.FC<WorkListItemType> = (props) => {
 
 const Item = {
   Container: styled.div`
-    border-radius: 0.8rem;
     overflow: hidden;
+    span {
+      border-radius: 0.8rem;
+      overflow: hidden;
+    }
   `,
 };
 

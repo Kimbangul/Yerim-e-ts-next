@@ -67,7 +67,7 @@ const techList = {
 };
 
 // PARAM designList type
-type designListType = {
+type DesignListType = {
   title: string;
   link: string | false;
   thumb: string;
@@ -75,7 +75,7 @@ type designListType = {
 };
 
 // PARAM designList data
-const designList: designListType[] = [
+const designList: DesignListType[] = [
   {
     title: "밴드 'Poision Infector' 앨범 커버 디자인",
     link: false,
@@ -138,7 +138,18 @@ const designList: designListType[] = [
   },
 ];
 
-const workList = [
+// PARAM workList type
+type WorkType = {
+  title: string;
+  thumb: string;
+  category: string;
+  link: string | false;
+  tag: string[];
+  github: string | false;
+  desc: string;
+};
+
+const workList: WorkType[] = [
   {
     title: '알까기를 시작하는 트레이너를 위한 안내서',
     thumb: WORK01.src,

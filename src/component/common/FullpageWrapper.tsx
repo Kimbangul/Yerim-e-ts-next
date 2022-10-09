@@ -28,6 +28,16 @@ const FullpageWrapper: React.FC = () => {
         <ReactFullpage
           // PARAM fullpage options
           licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
+          navigation={true}
+          navigationPosition='left'
+          navigationTooltips={[
+            'Main',
+            'About',
+            'Tech',
+            'Work',
+            'Design',
+            'Contact',
+          ]}
           scrollingSpeed={1000}
           scrollOverflow={true}
           responsiveWidth={1000}
