@@ -56,8 +56,8 @@ const DesignView: React.FC = () => {
 const Design = {
   Page: styled(Container)`
     .fp-overflow {
-      overflow-x: visible;
-      overflow-y: visible;
+      overflow-x: visible !important;
+      overflow-y: visible !important;
     }
   `,
   Container: styled.div`
