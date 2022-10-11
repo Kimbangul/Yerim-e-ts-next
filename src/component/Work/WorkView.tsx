@@ -57,6 +57,7 @@ const Work = {
   Content: {
     Container: styled.div`
       display: flex;
+      margin-top: 2.4rem;
     `,
   },
 };

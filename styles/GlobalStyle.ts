@@ -68,6 +68,11 @@ const GlobalStyle = createGlobalStyle`
 #fp-nav ul li a span, .fp-slidesNav ul li a span{
   background: ${theme.color.text_4} !important;
 }
+
+#fp-nav ul li a.active span{
+  background: ${theme.color.text} !important;
+  box-shadow: ${theme.color.text} 0rem 0rem 0.8rem;
+}
 /* #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span{
   width: 0.8rem;
   height: 0.8rem;

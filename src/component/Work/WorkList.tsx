@@ -96,6 +96,18 @@ const List = {
         opacity: 1;
       }
     }
+    .swiper-horizontal > .swiper-pagination-progressbar {
+      top: unset;
+      bottom: 0;
+      border-radius: 10rem;
+      overflow: hidden;
+    }
+    .swiper-pagination-progressbar {
+    }
+    .swiper-pagination-progressbar-fill {
+      background: ${(props) => props.theme.color.text};
+      border-radius: 10rem;
+    }
   `,
 };
 
