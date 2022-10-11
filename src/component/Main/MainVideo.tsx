@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import MAIN_VIDEO from 'src/assets/video/main_video.mp4';
-
 // COMPONENT main component
 const MainVideoView: React.FC = () => {
+  const videoLink = '/video/main_video.mp4';
+
   return (
     <MainVideo.Container
       className='Main__MainVideo'
@@ -15,7 +15,7 @@ const MainVideoView: React.FC = () => {
       muted={true}
       data-keepplaying
     >
-      <source src={MAIN_VIDEO} type='video/mp4' />
+      <source src={videoLink} type='video/mp4' />
     </MainVideo.Container>
   );
 };

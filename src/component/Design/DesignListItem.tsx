@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
 import Image from 'next/image';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+
+import { blurDataUrl } from 'src/data/data';
 import DesignModal from 'src/component/Design/DesignModal';
 
 // PARAM type
@@ -46,6 +48,8 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
             layout='fill'
             objectFit='cover'
             src={props.thumb}
+            placeholder='blur'
+            blurDataURL={blurDataUrl}
           />
         </Item.Link>
       </Item.Container>

@@ -1,11 +1,19 @@
 import Image, { ImageProps } from 'next/image';
-import equal from 'fast-deep-equal';
 import styled from 'styled-components';
+
+import { blurDataUrl } from 'src/data/data';
 
 const AutoHeightImageView = ({ ...props }: ImageProps): React.ReactElement => {
   return (
     <AutoHeightImage>
-      <Image layout='fill' className='autoImage' {...props} alt={props.alt} />
+      <Image
+        {...props}
+        layout='fill'
+        className='autoImage'
+        alt={props.alt}
+        placeholder='blur'
+        blurDataURL={blurDataUrl}
+      />
     </AutoHeightImage>
   );
 };

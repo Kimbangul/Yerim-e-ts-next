@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import { blurDataUrl } from 'src/data/data';
 import {
   Container,
   SectionCategoryTitle,
@@ -21,6 +22,8 @@ const ContactView: React.FC = () => {
             alt='profile image'
             layout='fill'
             objectFit='cover'
+            placeholder='blur'
+            blurDataURL={blurDataUrl}
           />
         </ProfileImgContainer>
         <Contact.Text.Container className='Contact__text-container'>

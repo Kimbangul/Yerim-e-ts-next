@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import { Container, SectionCategoryTitle } from 'styles/Common';
 
-import { techList } from 'src/data/data';
+import { techList, blurDataUrl } from 'src/data/data';
 
 import TechList from 'src/component/Tech/TechListView';
 
@@ -14,11 +14,17 @@ const TechView: React.FC = () => {
       <SectionCategoryTitle>Tech Stack</SectionCategoryTitle>
       <Tech.Container className='Tech__container'>
         <Tech.Img.Container className='Tech__img-container'>
-          <Image src={TECH_DESIGN.src} alt='' layout='fill' objectFit='cover' />
+          <Image
+            src={TECH_DESIGN.src}
+            alt=''
+            layout='fill'
+            objectFit='cover'
+            placeholder='blur'
+            blurDataURL={blurDataUrl}
+          />
         </Tech.Img.Container>
         <Tech.Text.Container className='Tech__text-container'>
           <Tech.Text.Title className='Tech__title'>Tech Stack</Tech.Text.Title>
-          {/* <p className='Tech__desc'>저는 이런 것 들을 할 수 있어요!</p> */}
         </Tech.Text.Container>
 
         <Tech.List.Container className='Tech__tech-list-container'>

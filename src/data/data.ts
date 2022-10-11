@@ -30,6 +30,10 @@ import DESIGN09 from 'src/assets/image/design/design09.png';
 import DESIGN010 from 'src/assets/image/design/design010.png';
 import DESIGN010_2 from 'src/assets/image/design/design010_2.png';
 
+// PARAM image placeholder blur data
+const blurDataUrl =
+  'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNUqgcAAMkAo/sGMSwAAAAASUVORK5CYII=';
+
 // PARAM techList data
 const techList = {
   design: {
@@ -251,4 +255,4 @@ const workList: WorkType[] = [
   },
 ];
 
-export { techList, designList, workList };
+export { techList, designList, workList, blurDataUrl };

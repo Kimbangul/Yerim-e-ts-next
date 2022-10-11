@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+
+import { blurDataUrl } from 'src/data/data';
 import {
   Container,
   SectionCategoryTitle,
@@ -21,6 +23,8 @@ const AboutView = () => {
             alt='profile image'
             layout='fill'
             objectFit='cover'
+            placeholder='blur'
+            blurDataURL={blurDataUrl}
           />
         </ProfileImgContainer>
         <About.Text.Container className='About__text-container'>
