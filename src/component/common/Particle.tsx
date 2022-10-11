@@ -48,7 +48,7 @@ const particleOption: RecursivePartial<IOptions> = {
       color: '#ffffff',
       distance: 60,
       enable: true,
-      opacity: 0.1,
+      opacity: 0.02,
       width: 1,
     },
     move: {
@@ -71,8 +71,8 @@ const particleOption: RecursivePartial<IOptions> = {
       value: 0.2,
       animation: {
         enable: true,
-        opacity_min: 0.3,
-        speed: 5,
+        opacity_min: 0.2,
+        speed: 1500,
         sync: false,
       },
     },
@@ -84,7 +84,7 @@ const particleOption: RecursivePartial<IOptions> = {
       random: true,
       animation: {
         enable: true,
-        speed: 1,
+        speed: 3000,
         size_min: 2,
         sync: false,
       },

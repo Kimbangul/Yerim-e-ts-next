@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Tag from 'src/component/common/Tag';
+
 // PARAM type
 type TechTypeParams = {
   title: string;
@@ -32,7 +34,7 @@ const TechListView: React.FC<TechListProps> = ({ techName }) => {
         </TechList.Contents.List>
         <TechList.Tag.List className='Tech__tech-tag-list'>
           {techName.tag.map((el: string) => {
-            return <TechList.Tag.Item key={el}>#{el}</TechList.Tag.Item>;
+            return <Tag key={el}>{el}</Tag>;
           })}
         </TechList.Tag.List>
       </TechList.Contents.Container>
@@ -74,13 +76,6 @@ const TechList = {
     }
   `,
   Tag: {
-    Item: styled.li`
-      padding: 0.4rem 1.2rem;
-      color: ${({ theme }) => theme.color.text_4};
-      font-size: ${({ theme }) => theme.fontSize.body.sm};
-      border: 0.1rem solid ${({ theme }) => theme.color.text_6};
-      border-radius: 10rem;
-    `,
     List: styled.ul`
       display: flex;
       margin-top: 3.2rem;

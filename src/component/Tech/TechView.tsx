@@ -62,7 +62,8 @@ const Tech = {
     `,
     Title: styled.h3`
       font-size: ${({ theme }) => theme.fontSize.head.xl};
-      color: ${({ theme }) => theme.color.text_3};
+      color: ${({ theme }) => theme.color.f_headColor};
+      /* color: ${({ theme }) => theme.color.text_3}; */
     `,
   },
   List: {

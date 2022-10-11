@@ -5,6 +5,7 @@ import { workList } from 'src/data/data';
 
 import { Container, SectionCategoryTitle } from 'styles/Common';
 import WorkList from 'src/component/Work/WorkList';
+import WorkDesc from 'src/component/Work/WorkDesc';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -20,25 +21,12 @@ const WorkView: React.FC = () => {
       <Work.Container className='Work__container'>
         <Work.Text.Container className='Work__text-container'>
           <Work.Text.Title className='Work__title'>Work</Work.Text.Title>
-          <Work.Text.Desc className='Work__desc'>작업물들</Work.Text.Desc>
+          {/* <Work.Text.Desc className='Work__desc'>작업물들</Work.Text.Desc> */}
         </Work.Text.Container>
-        <WorkList setCurrentIdx={setCurrentIdx} />
-        <Work.Desc.Container className='WorkListItem__desc-container'>
-          <h4 className='WorkListItem__title'>{currentWorkList.title}</h4>
-          <div className='WorkListItem__category'>
-            {currentWorkList.category}
-          </div>
-          <ul className='WorkListItem__tag-list'>
-            {currentWorkList.tag.map((el) => {
-              return (
-                <li className='WorkListItem__tag' key={`tag${el}`}>
-                  {el}
-                </li>
-              );
-            })}
-          </ul>
-          <p className='WorkListItem__desc'>{currentWorkList.desc}</p>
-        </Work.Desc.Container>
+        <Work.Content.Container className='Work__Content'>
+          <WorkList setCurrentIdx={setCurrentIdx} />
+          {/* <WorkDesc list={currentWorkList} /> */}
+        </Work.Content.Container>
       </Work.Container>
     </Work.Page>
   );
@@ -46,7 +34,6 @@ const WorkView: React.FC = () => {
 
 // COMPONENT style
 const Work = {
-  // Page: styled(Container)``,
   Page: styled.div``,
   Container: styled.div``,
   Text: {
@@ -57,7 +44,7 @@ const Work = {
     `,
     Title: styled.h3`
       font-size: ${({ theme }) => theme.fontSize.head.xl};
-      color: ${({ theme }) => theme.color.pointPink};
+      color: ${({ theme }) => theme.color.f_headColor};
     `,
     Desc: styled.p`
       font-size: ${({ theme }) => theme.fontSize.body.md};
@@ -67,10 +54,9 @@ const Work = {
       margin-top: 2.4rem;
     `,
   },
-  Desc: {
+  Content: {
     Container: styled.div`
-      width: ${({ theme }) => theme.maxWidth};
-      margin: 0 auto;
+      display: flex;
     `,
   },
 };

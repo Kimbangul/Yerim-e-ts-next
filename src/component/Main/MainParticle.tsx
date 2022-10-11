@@ -17,7 +17,7 @@ const particleOption: RecursivePartial<IOptions> = {
       onhover: {
         enable: true,
         mode: 'repulse',
-        parallax: { enable: true, force: 70, smooth: 10 },
+        parallax: { enable: true, force: 50, smooth: 30 },
       },
       onclick: {
         enable: true,
@@ -48,19 +48,19 @@ const particleOption: RecursivePartial<IOptions> = {
       color: '#ffffff',
       distance: 60,
       enable: true,
-      opacity: 0.1,
+      opacity: 0.04,
       width: 1,
     },
     move: {
       enable: true,
-      speed: 0.3,
+      speed: 0.7,
       direction: 'none',
       random: true,
       straight: false,
       out_mode: 'out',
       bounce: false,
       attract: {
-        enable: false,
+        enable: true,
         rotateX: 600,
         rotateY: 1200,
       },
@@ -68,11 +68,11 @@ const particleOption: RecursivePartial<IOptions> = {
     number: { density: { enable: true, area: 1000 }, value: 80 },
     opacity: {
       random: true,
-      value: 0.6,
+      value: 0.64,
       animation: {
         enable: true,
-        opacity_min: 0.3,
-        speed: 5,
+        opacity_min: 0.2,
+        speed: 1,
         sync: false,
       },
     },
@@ -80,12 +80,12 @@ const particleOption: RecursivePartial<IOptions> = {
       type: 'circle',
     },
     size: {
-      value: 1,
+      value: 1.6,
       random: true,
       animation: {
         enable: true,
         speed: 1,
-        size_min: 2,
+        size_min: 1,
         sync: false,
       },
     },

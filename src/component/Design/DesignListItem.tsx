@@ -10,8 +10,8 @@ import DesignModal from 'src/component/Design/DesignModal';
 type DesignListItemProps = {
   idx: number;
   thumb: string;
-  detail: string | false;
-  link: string | false;
+  detail?: string;
+  link?: string;
   title: string;
   onMouseEnter: () => void;
   onMouseOut: () => void;

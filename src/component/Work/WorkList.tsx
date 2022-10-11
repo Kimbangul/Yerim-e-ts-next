@@ -1,13 +1,15 @@
 import React, { SetStateAction, Dispatch, useRef } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper';
 
 import { workList } from 'src/data/data';
 import WorkListItem from 'src/component/Work/WorkListItem';
 
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 // PARAM type
 type WorkListType = {
@@ -29,16 +31,19 @@ const WorkList: React.FC<WorkListType> = (props) => {
   const swiperOption: SwiperProps = {
     onSwiper: onChangeIndex,
     onRealIndexChange: onChangeIndex,
-    effect: 'coverflow',
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
     pagination: { type: 'progressbar' },
     navigation: true,
     speed: 1500,
     grabCursor: true,
     spaceBetween: 24,
     centeredSlides: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
     slidesPerGroup: 1,
-    modules: [Autoplay, Pagination, Navigation],
+    modules: [Autoplay, Pagination, Navigation, EffectFade],
     loop: true,
     autoplay: {
       delay: 3000,
@@ -60,6 +65,8 @@ const WorkList: React.FC<WorkListType> = (props) => {
                 desc={el.desc}
                 tag={el.tag}
                 category={el.category}
+                github={el.github && el.github}
+                link={el.link && el.link}
               />
             </SwiperSlide>
           );
@@ -71,6 +78,8 @@ const WorkList: React.FC<WorkListType> = (props) => {
 
 const List = {
   Container: styled.div`
+    width: ${(props) => props.theme.maxWidth};
+    margin: 0 auto;
     .swiper-slide {
       transform: scale(0.85);
       transition: transform 0.3s, filter 0.3s;

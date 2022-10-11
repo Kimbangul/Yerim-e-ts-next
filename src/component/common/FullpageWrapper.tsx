@@ -42,7 +42,7 @@ const FullpageWrapper: React.FC = () => {
           scrollOverflow={true}
           responsiveWidth={1000}
           normalScrollElements={'.Modal'}
-          lazyLoading={true}
+          lazyLoading={false}
           render={() => {
             return (
               <ReactFullpage.Wrapper>
