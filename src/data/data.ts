@@ -30,6 +30,15 @@ import DESIGN09 from 'src/assets/image/design/design09.png';
 import DESIGN010 from 'src/assets/image/design/design010.png';
 import DESIGN010_2 from 'src/assets/image/design/design010_2.png';
 
+// PARAM link data
+const link = {
+  github: 'https://github.com/Kimbangul',
+  tel: 'tel: +8201077070968',
+  mail: 'mailto:highcolor_12@g.hongik.ac.kr',
+  resume:
+    'https://meadow-touch-c48.notion.site/fefaf8401a0f489b8c3e111db4e263ba',
+};
+
 // PARAM image placeholder blur data
 const blurDataUrl =
   'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNUqgcAAMkAo/sGMSwAAAAASUVORK5CYII=';
@@ -234,5 +243,5 @@ const workList: WorkType[] = [
   },
 ];
 
-export { techList, designList, workList, blurDataUrl };
+export { link, techList, designList, workList, blurDataUrl };
 export type { WorkType };

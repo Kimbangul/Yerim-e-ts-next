@@ -21,7 +21,6 @@ const WorkView: React.FC = () => {
       <Work.Container className='Work__container'>
         <Work.Text.Container className='Work__text-container'>
           <Work.Text.Title className='Work__title'>Work</Work.Text.Title>
-          {/* <Work.Text.Desc className='Work__desc'>작업물들</Work.Text.Desc> */}
         </Work.Text.Container>
         <Work.Content.Container className='Work__Content'>
           <WorkList setCurrentIdx={setCurrentIdx} />

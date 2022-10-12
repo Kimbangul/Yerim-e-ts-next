@@ -1,7 +1,12 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-import { blurDataUrl } from 'src/data/data';
+import { blurDataUrl, link } from 'src/data/data';
+import { onClickLinkBtn } from 'utils/utils';
 import {
   Container,
   SectionCategoryTitle,
@@ -12,6 +17,28 @@ import {
 import PROFILE from 'src/assets/image/contact/profile.jpg';
 
 const ContactView: React.FC = () => {
+  // PARAM link data
+  const linkData = [
+    {
+      text: 'Mail',
+      icon: faEnvelope,
+      link: link.mail,
+      linkOption: '_self',
+    },
+    {
+      text: 'Tel',
+      icon: faPhone,
+      link: link.tel,
+      linkOption: '_self',
+    },
+    {
+      text: 'Github',
+      icon: faGithub,
+      link: link.github,
+      linkOption: '_blank',
+    },
+  ];
+
   return (
     <Contact.Page className='section'>
       <SectionCategoryTitle>Contact</SectionCategoryTitle>
@@ -44,24 +71,19 @@ const ContactView: React.FC = () => {
             포트폴리오를 봐주셔서 감사합니다 :&#41;
           </Contact.Text.Desc>
           <Contact.Button.Container className='Contact__button-wrap'>
-            <Contact.Button.Item
-              className='Contact__button'
-              bgColor='secondaryBlue'
-            >
-              Mail
-            </Contact.Button.Item>
-            <Contact.Button.Item
-              className='Contact__button'
-              bgColor='secondaryBlue'
-            >
-              Tel
-            </Contact.Button.Item>
-            <Contact.Button.Item
-              className='Contact__button'
-              bgColor='secondaryBlue'
-            >
-              Github
-            </Contact.Button.Item>
+            {linkData.map((el) => {
+              return (
+                <Contact.Button.Item
+                  key={el.text}
+                  className='Contact__button'
+                  bgColor='secondaryBlue'
+                  onClick={onClickLinkBtn.bind(this, el.link, el.linkOption)}
+                >
+                  <FontAwesomeIcon icon={el.icon} />
+                  {el.text}
+                </Contact.Button.Item>
+              );
+            })}
           </Contact.Button.Container>
         </Contact.Text.Container>
       </Contact.Container>
@@ -104,6 +126,13 @@ const Contact = {
     `,
     Item: styled(Button)`
       margin-right: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      svg {
+        width: ${({ theme }) => theme.fontSize.head.xs};
+        /* margin-left: calc(${({ theme }) => theme.fontSize.head.sm} / -2); */
+      }
       &:last-child {
         margin-left: 0;
       }

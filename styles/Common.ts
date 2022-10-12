@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import theme from 'styles/Theme';
 
 // FUNCTION prop color type
@@ -27,7 +27,6 @@ const Container = styled.section`
   padding-top: 7.2rem;
   overflow: hidden;
   background: transparent;
-  /* background: ${({ theme }) => theme.color.mainColor}; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -45,7 +44,7 @@ const SectionCategoryTitle = styled.h2`
 `;
 
 // COMPONENT button
-const Button = styled.button<{ width?: string; bgColor?: string }>`
+const Button = styled.a<{ width?: string; bgColor?: string }>`
   font-family: 'Pretendard', 'sans-serif';
   font-size: ${({ theme }) => theme.fontSize.body.md};
   font-weight: 400;

@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,18 +19,18 @@ const HeaderView: React.FC = () => {
         </Header.Logo>
         <Header.Social.List className='Header__social'>
           <Header.Social.Item className='Header__social-item'>
-            <Link href='https://github.com/Kimbangul' target='_blank'>
-              <a>
+            <Link href='https://github.com/Kimbangul'>
+              <a target='_blank' rel='noreferrer'>
                 <Header.Social.SoundOnly className='Header__social-item--sound-only'>
-                  GIthub
+                  Github
                 </Header.Social.SoundOnly>
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </Link>
           </Header.Social.Item>
           <Header.Social.Item className='Header__social-item'>
-            <Link href='mailto:highcolor_12@g.hongik.ac.kr' target='_blank'>
-              <a>
+            <Link href='mailto:highcolor_12@g.hongik.ac.kr'>
+              <a target='_blank' rel='noreferrer'>
                 <Header.Social.SoundOnly className='Header__social-item--sound-only'>
                   Mail
                 </Header.Social.SoundOnly>

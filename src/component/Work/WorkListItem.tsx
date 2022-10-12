@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import styled from 'styled-components';
 
+import { onClickLinkBtn } from 'utils/utils';
 import { blurDataUrl } from 'src/data/data';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 import { Button } from 'styles/Common';
@@ -28,41 +28,35 @@ const WorkListItem: React.FC<WorkListItemType> = (props) => {
         />
       </Item.Thumb>
       <Item.Desc.Container className='WorkListItem__desc-container'>
-        <Item.Desc.Title className='WorkListItem__title'>
-          {props.title}
-        </Item.Desc.Title>
-        <Item.Desc.Category className='WorkListItem__category'>
-          {props.category}
-        </Item.Desc.Category>
-        <Item.Desc.TagList className='WorkListItem__tag-list'>
-          {props.tag.map((el: string) => {
-            return (
-              <Tag className='WorkListItem__tag' key={`tag${el}`}>
-                {el}
-              </Tag>
-            );
-          })}
-        </Item.Desc.TagList>
-        <Item.Desc.Desc className='WorkListItem__desc'>
-          {props.desc}
-        </Item.Desc.Desc>
+        <Item.Desc.Info>
+          <Item.Desc.Title className='WorkListItem__title'>
+            {props.title}
+          </Item.Desc.Title>
+          <Item.Desc.Category className='WorkListItem__category'>
+            {props.category}
+          </Item.Desc.Category>
+          <Item.Desc.TagList className='WorkListItem__tag-list'>
+            {props.tag.map((el: string) => {
+              return (
+                <Tag className='WorkListItem__tag' key={`tag${el}`}>
+                  {el}
+                </Tag>
+              );
+            })}
+          </Item.Desc.TagList>
+          <Item.Desc.Desc className='WorkListItem__desc'>
+            {props.desc}
+          </Item.Desc.Desc>
+        </Item.Desc.Info>
         <Item.Button.Container className='WorkListItem__button-container'>
           {props.github ? (
-            <Button>
-              <Link href={props.github}>
-                <a target='_blank' rel='noreferrer'>
-                  Github 바로가기
-                </a>
-              </Link>
+            <Button onClick={onClickLinkBtn.bind(this, props.github, '_blank')}>
+              Github 바로가기
             </Button>
           ) : null}
           {props.link ? (
-            <Button>
-              <Link href={props.link}>
-                <a target='_blank' rel='noreferrer'>
-                  사이트 바로가기
-                </a>
-              </Link>
+            <Button onClick={onClickLinkBtn.bind(this, props.link, '_blank')}>
+              사이트 바로가기
             </Button>
           ) : null}
         </Item.Button.Container>
@@ -88,12 +82,12 @@ const Item = {
   `,
   Desc: {
     Container: styled.div`
-      /* width: ${({ theme }) => theme.maxWidth};
-      margin: 0 auto;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%); */
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      justify-content: space-between;
     `,
+    Info: styled.div``,
     Title: styled.h4`
       font-size: ${({ theme }) => theme.fontSize.head.rg};
       font-weight: 700;

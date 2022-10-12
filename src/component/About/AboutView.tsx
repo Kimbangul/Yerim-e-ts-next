@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
 
-import { blurDataUrl } from 'src/data/data';
+import { blurDataUrl, link } from 'src/data/data';
+import { onClickLinkBtn } from 'utils/utils';
 import {
   Container,
   SectionCategoryTitle,
@@ -62,12 +62,9 @@ const AboutView = () => {
             <About.Button.Button
               className='About__button'
               bgColor='secondaryBlue'
+              onClick={onClickLinkBtn.bind(this, link.resume, '_blank')}
             >
-              <Link href='https://meadow-touch-c48.notion.site/fefaf8401a0f489b8c3e111db4e263ba'>
-                <a target='_blank' rel='noreferrer'>
-                  이력서 보기
-                </a>
-              </Link>
+              이력서 보기
             </About.Button.Button>
             <About.Button.Button
               className='About__button'
