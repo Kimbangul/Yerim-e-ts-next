@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+import { MaxWidthContainer } from 'styles/Common';
 import LOGO from '../../../src/assets/image/logo.svg';
 
 const HeaderView: React.FC = () => {
@@ -59,8 +60,7 @@ const Header = {
       background: ${({ theme }) => theme.color.header};
     }
   `,
-  Inner: styled.div`
-    width: ${({ theme }) => theme.maxWidth};
+  Inner: styled(MaxWidthContainer)`
     margin: 0 auto;
     height: 100%;
     align-items: center;
@@ -70,7 +70,7 @@ const Header = {
     transition: padding 0.3s;
 
     @media (${({ theme }) => theme.windowSize['lt-m']}) {
-      padding: 0 40px;
+      padding: 0 4rem;
     }
   `,
   Logo: styled.h1`

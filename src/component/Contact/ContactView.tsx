@@ -12,6 +12,7 @@ import {
   SectionCategoryTitle,
   Button,
   ProfileImgContainer,
+  MaxWidthContainer,
 } from 'styles/Common';
 
 import PROFILE from 'src/assets/image/contact/profile.jpg';
@@ -96,10 +97,18 @@ const Contact = {
   Page: styled(Container)`
     flex-direction: column;
   `,
-  Container: styled.div`
-    width: ${({ theme }) => theme.maxWidth};
+  Container: styled(MaxWidthContainer)`
     display: flex;
     gap: 5.6rem;
+    /* FUNCTION pc */
+    @media (${({ theme }) => theme.windowSize['lt-m']}) {
+      align-items: center;
+    }
+    /* FUNCTION mb */
+    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   `,
   Text: {
     Container: styled.div`
@@ -112,6 +121,9 @@ const Contact = {
       color: ${({ theme }) => theme.color.f_headColor};
       font-weight: 600;
       margin-top: 2.4rem;
+      @media (${({ theme }) => theme.windowSize['lt-m']}) {
+        margin-top: 0;
+      }
     `,
     Desc: styled.p`
       font-size: ${({ theme }) => theme.fontSize.body.md};

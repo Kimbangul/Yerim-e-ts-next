@@ -33,6 +33,14 @@ const Container = styled.section`
   align-items: center;
 `;
 
+const MaxWidthContainer = styled.div`
+  width: ${({ theme }) => theme.maxWidth};
+  @media (${({ theme }) => theme.windowSize['lt-m']}) {
+    width: 100%;
+    padding: 0 4rem;
+  }
+`;
+
 // COMPONENT section title - sound only
 const SectionCategoryTitle = styled.h2`
   visibility: hidden;
@@ -79,4 +87,10 @@ const ProfileImgContainer = styled.div`
   border-radius: 0.4rem;
 `;
 
-export { Container, SectionCategoryTitle, Button, ProfileImgContainer };
+export {
+  Container,
+  SectionCategoryTitle,
+  MaxWidthContainer,
+  Button,
+  ProfileImgContainer,
+};

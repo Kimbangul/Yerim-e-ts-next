@@ -9,6 +9,7 @@ import SwiperCore, {
 } from 'swiper';
 
 import { workList } from 'src/data/data';
+import { MaxWidthContainer } from 'styles/Common';
 import Chevron from 'src/component/common/Chevron';
 import WorkListItem from 'src/component/Work/WorkListItem';
 
@@ -117,8 +118,7 @@ const WorkList: React.FC<WorkListType> = (props) => {
 };
 
 const List = {
-  Container: styled.div`
-    width: ${(props) => props.theme.maxWidth};
+  Container: styled(MaxWidthContainer)`
     margin: 0 auto;
     position: relative;
     .swiper-slide {

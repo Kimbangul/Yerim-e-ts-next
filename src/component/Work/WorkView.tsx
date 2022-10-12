@@ -3,7 +3,11 @@ import styled from 'styled-components';
 
 import { workList } from 'src/data/data';
 
-import { Container, SectionCategoryTitle } from 'styles/Common';
+import {
+  Container,
+  SectionCategoryTitle,
+  MaxWidthContainer,
+} from 'styles/Common';
 import WorkList from 'src/component/Work/WorkList';
 import WorkDesc from 'src/component/Work/WorkDesc';
 
@@ -36,8 +40,7 @@ const Work = {
   Page: styled.div``,
   Container: styled.div``,
   Text: {
-    Container: styled.div`
-      width: ${({ theme }) => theme.maxWidth};
+    Container: styled(MaxWidthContainer)`
       margin: 0 auto;
       color: ${({ theme }) => theme.color.f_headColor};
     `,

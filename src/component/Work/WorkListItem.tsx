@@ -75,10 +75,18 @@ const Item = {
       border-radius: 0.8rem;
       overflow: hidden;
     }
+    /* FUNCTION tablet size */
+    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+      flex-direction: column;
+    }
   `,
   Thumb: styled.div`
     width: 50%;
     flex-shrink: 0;
+    /* FUNCTION tablet size */
+    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+      width: 100%;
+    }
   `,
   Desc: {
     Container: styled.div`

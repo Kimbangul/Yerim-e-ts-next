@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-import { Container, SectionCategoryTitle } from 'styles/Common';
+import {
+  Container,
+  SectionCategoryTitle,
+  MaxWidthContainer,
+} from 'styles/Common';
 
 import { techList, blurDataUrl } from 'src/data/data';
 
@@ -40,9 +44,12 @@ const Tech = {
   Page: styled(Container)`
     padding: 0;
   `,
-  Container: styled.div`
+  Container: styled(MaxWidthContainer)`
     padding: 10.4rem 0 7.2rem 0;
-    width: ${({ theme }) => theme.maxWidth};
+    @media (${({ theme }) => theme.windowSize['lt-m']}) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
   `,
   Img: {
     Container: styled.div`

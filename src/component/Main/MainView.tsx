@@ -4,7 +4,11 @@ import React from 'react';
 import { blurDataUrl } from 'src/data/data';
 import MainVideo from 'src/component/Main/MainVideo';
 import MainParticle from 'src/component/Main/MainParticle';
-import { Container, SectionCategoryTitle } from 'styles/Common';
+import {
+  Container,
+  SectionCategoryTitle,
+  MaxWidthContainer,
+} from 'styles/Common';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 
 import MOON from 'src/assets/image/main/moon.png';
@@ -53,8 +57,7 @@ const Main = {
     background-position: 100% center;
     position: relative;
   `,
-  Container: styled.div`
-    width: ${({ theme }) => theme.maxWidth};
+  Container: styled(MaxWidthContainer)`
     position: relative;
     z-index: 2;
     margin: 0 auto;
@@ -63,7 +66,7 @@ const Main = {
 
     @media (${({ theme }) => theme.windowSize['lt-m']}) {
       width: calc(100vw - 6.4rem);
-      padding: 0 40px;
+      padding: 0 4rem;
       overflow: hidden;
     }
   `,

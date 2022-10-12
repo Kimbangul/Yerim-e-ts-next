@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { MaxWidthContainer } from 'styles/Common';
+
 const FooterView: React.FC = () => {
   return (
     <Footer.Container className='section fp-auto-height'>
@@ -20,13 +22,12 @@ const Footer = {
   Container: styled.footer`
     background: ${({ theme }) => theme.color.header};
   `,
-  Inner: styled.div`
+  Inner: styled(MaxWidthContainer)`
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 24rem;
     padding: 3.2rem 0;
-    width: ${({ theme }) => theme.maxWidth};
     margin: 0 auto;
     text-align: center;
     color: ${({ theme }) => theme.color.text_4};

@@ -1,5 +1,3 @@
-import styled, { css } from 'styled-components';
-
 const windowSize = {
   'mb-s': '(max-width: 300px)',
   'mb-m': '(max-width: 480px)',

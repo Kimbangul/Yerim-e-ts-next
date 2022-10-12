@@ -1,9 +1,8 @@
 import { useState } from 'react';
-
-import Image from 'next/image';
 import styled from 'styled-components';
 
 import { blurDataUrl } from 'src/data/data';
+import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 import DesignModal from 'src/component/Design/DesignModal';
 
 // PARAM type
@@ -43,10 +42,8 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
             onClickItem(e);
           }}
         >
-          <Image
+          <AutoHeightImageView
             alt={props.title}
-            layout='fill'
-            objectFit='cover'
             src={props.thumb}
             placeholder='blur'
             blurDataURL={blurDataUrl}
@@ -87,12 +84,11 @@ const Item = {
       }
     }
     width: 18rem;
-    height: 18rem;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 0.8rem;
-    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0rem 0rem 24rem rgba(0, 0, 0, 0.2);
     animation: up-down-ani 1.7s ease-in-out 0s infinite alternate both;
     img {
       border-radius: 0.8rem;

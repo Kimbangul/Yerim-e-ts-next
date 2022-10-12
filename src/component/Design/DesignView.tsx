@@ -2,7 +2,11 @@ import { useState } from 'react';
 import styled, { css } from 'styled-components';
 
 import { designList } from 'src/data/data';
-import { Container, SectionCategoryTitle } from 'styles/Common';
+import {
+  Container,
+  SectionCategoryTitle,
+  MaxWidthContainer,
+} from 'styles/Common';
 import DesignListItem from 'src/component/Design/DesignListItem';
 
 const DesignView: React.FC = () => {
@@ -60,9 +64,7 @@ const Design = {
       overflow-y: visible !important;
     }
   `,
-  Container: styled.div`
-    width: ${({ theme }) => theme.maxWidth};
-  `,
+  Container: styled(MaxWidthContainer)``,
   List: styled.ul`
     display: flex;
     flex-wrap: wrap;

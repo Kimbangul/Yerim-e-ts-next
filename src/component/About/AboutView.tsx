@@ -8,6 +8,7 @@ import {
   SectionCategoryTitle,
   Button,
   ProfileImgContainer,
+  MaxWidthContainer,
 } from 'styles/Common';
 
 import PROFILE from 'src/assets/image/about/profile.jpg';
@@ -81,10 +82,17 @@ const AboutView = () => {
 
 const About = {
   Page: styled(Container)``,
-  Container: styled.div`
-    width: ${({ theme }) => theme.maxWidth};
+  Container: styled(MaxWidthContainer)`
     display: flex;
     gap: 5.6rem;
+    /* FUNCTION pc */
+    @media (${({ theme }) => theme.windowSize['lt-m']}) {
+      align-items: center;
+    }
+    /* FUNCTION tablet size */
+    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+      flex-direction: column;
+    }
   `,
   Text: {
     Container: styled.div`

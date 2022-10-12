@@ -11,7 +11,7 @@ const AutoHeightImageView = ({ ...props }: ImageProps): React.ReactElement => {
         layout='fill'
         className='autoImage'
         alt={props.alt}
-        placeholder='blur'
+        placeholder={props.placeholder && 'blur'}
         blurDataURL={blurDataUrl}
       />
     </AutoHeightImage>
