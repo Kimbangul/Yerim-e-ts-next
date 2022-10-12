@@ -21,6 +21,9 @@ const FooterView: React.FC = () => {
 const Footer = {
   Container: styled.footer`
     background: ${({ theme }) => theme.color.header};
+    @media (max-width: ${({ theme }) => theme.maxWidth}) {
+      min-height: unset !important;
+    }
   `,
   Inner: styled(MaxWidthContainer)`
     display: flex;

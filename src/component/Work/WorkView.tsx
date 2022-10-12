@@ -1,15 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 import { workList } from 'src/data/data';
 
-import {
-  Container,
-  SectionCategoryTitle,
-  MaxWidthContainer,
-} from 'styles/Common';
+import { SectionCategoryTitle, MaxWidthContainer } from 'styles/Common';
 import WorkList from 'src/component/Work/WorkList';
-import WorkDesc from 'src/component/Work/WorkDesc';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';

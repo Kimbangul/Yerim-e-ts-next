@@ -76,7 +76,7 @@ const Item = {
       overflow: hidden;
     }
     /* FUNCTION tablet size */
-    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+    @media (${({ theme }) => theme.windowSize['lt-s']}) {
       flex-direction: column;
     }
   `,
@@ -84,7 +84,7 @@ const Item = {
     width: 50%;
     flex-shrink: 0;
     /* FUNCTION tablet size */
-    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+    @media (${({ theme }) => theme.windowSize['lt-s']}) {
       width: 100%;
     }
   `,

@@ -73,6 +73,10 @@ const GlobalStyle = createGlobalStyle`
   background: ${theme.color.text} !important;
   box-shadow: ${theme.color.text} 0rem 0rem 0.8rem;
 }
+
+#fp-nav ul li:last-child{
+  display: none;
+}
 /* #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span{
   width: 0.8rem;
   height: 0.8rem;
