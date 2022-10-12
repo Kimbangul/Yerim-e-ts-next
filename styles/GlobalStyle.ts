@@ -3,7 +3,7 @@ import theme from 'styles/Theme';
 
 const GlobalStyle = createGlobalStyle`
  html{
-  font-size: 10px;   
+  font-size: 62.5%; 
  }
  *{
     margin: 0;

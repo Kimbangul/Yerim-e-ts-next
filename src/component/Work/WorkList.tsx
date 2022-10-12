@@ -8,7 +8,6 @@ import WorkListItem from 'src/component/Work/WorkListItem';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // PARAM type
@@ -103,6 +102,8 @@ const List = {
       overflow: hidden;
     }
     .swiper-pagination-progressbar {
+    }
+    .swiper-button-prev {
     }
     .swiper-pagination-progressbar-fill {
       background: ${(props) => props.theme.color.text};

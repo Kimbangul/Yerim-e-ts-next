@@ -27,7 +27,7 @@ const FullpageWrapper: React.FC = () => {
       {isReady && (
         <ReactFullpage
           // PARAM fullpage options
-          licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
+          licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE}
           navigation={true}
           navigationPosition='left'
           navigationTooltips={[
