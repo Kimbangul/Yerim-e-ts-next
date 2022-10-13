@@ -65,6 +65,12 @@ const TechList = {
     color: ${({ theme }) => theme.color.text_3};
     font-size: ${({ theme }) => theme.fontSize.head.sm};
     font-weight: 600;
+    transition: font-size 0.3s;
+
+    /* FUNCTION mb */
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      font-size: ${({ theme }) => theme.fontSize.head.xs};
+    }
   `,
   Item: styled.li`
     font-size: ${({ theme }) => theme.fontSize.body.md};

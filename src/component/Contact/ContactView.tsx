@@ -1,10 +1,9 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
+import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 import { blurDataUrl, link } from 'src/data/data';
 import { onClickLinkBtn } from 'utils/utils';
 import {
@@ -45,13 +44,10 @@ const ContactView: React.FC = () => {
       <SectionCategoryTitle>Contact</SectionCategoryTitle>
       <Contact.Container className='Contact__container'>
         <ProfileImgContainer>
-          <Image
+          <AutoHeightImageView
             src={PROFILE.src}
             alt='profile image'
-            layout='fill'
-            objectFit='cover'
             placeholder='blur'
-            blurDataURL={blurDataUrl}
           />
         </ProfileImgContainer>
         <Contact.Text.Container className='Contact__text-container'>
@@ -96,6 +92,10 @@ const ContactView: React.FC = () => {
 const Contact = {
   Page: styled(Container)`
     flex-direction: column;
+    /* FUNCTION pc */
+    @media (${(props) => props.theme.windowSize['lt-s']}) {
+      padding-bottom: 14.4rem;
+    }
     .fp-overflow {
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         width: 100%;
@@ -135,6 +135,7 @@ const Contact = {
       font-size: ${({ theme }) => theme.fontSize.body.md};
       color: ${({ theme }) => theme.color.text_4};
       margin-top: 2.4rem;
+      word-break: keep-all;
     `,
   },
   Button: {

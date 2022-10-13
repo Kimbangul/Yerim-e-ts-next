@@ -46,6 +46,12 @@ const Work = {
     Title: styled.h3`
       font-size: ${({ theme }) => theme.fontSize.head.xl};
       color: ${({ theme }) => theme.color.f_headColor};
+      transition: font-size 0.3s;
+
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.head.md};
+      }
     `,
   },
   Content: {

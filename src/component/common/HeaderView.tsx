@@ -82,6 +82,7 @@ const Header = {
     List: styled.ul`
       display: flex;
       align-items: center;
+      transform: translateX(1.2rem);
     `,
     Item: styled.li`
       a {

@@ -6,8 +6,9 @@ import {
   MaxWidthContainer,
 } from 'styles/Common';
 
-import { techList, blurDataUrl } from 'src/data/data';
+import { techList } from 'src/data/data';
 
+import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 import TechList from 'src/component/Tech/TechListView';
 
 import TECH_DESIGN from 'src/assets/image/tech/tech_design.jpg';
@@ -18,13 +19,10 @@ const TechView: React.FC = () => {
       <SectionCategoryTitle>Tech Stack</SectionCategoryTitle>
       <Tech.Container className='Tech__container'>
         <Tech.Img.Container className='Tech__img-container'>
-          <Image
+          <AutoHeightImageView
             src={TECH_DESIGN.src}
             alt=''
-            layout='fill'
-            objectFit='cover'
             placeholder='blur'
-            blurDataURL={blurDataUrl}
           />
         </Tech.Img.Container>
         <Tech.Text.Container className='Tech__text-container'>
@@ -52,7 +50,6 @@ const Tech = {
   Img: {
     Container: styled.div`
       width: 100%;
-      height: 24rem;
       margin-top: 3.2rem;
       position: relative;
       filter: contrast(0.5) grayscale(1) brightness(0.55);
@@ -68,7 +65,12 @@ const Tech = {
     Title: styled.h3`
       font-size: ${({ theme }) => theme.fontSize.head.xl};
       color: ${({ theme }) => theme.color.f_headColor};
-      /* color: ${({ theme }) => theme.color.text_3}; */
+      transition: font-size 0.3s;
+
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.head.md};
+      }
     `,
   },
   List: {

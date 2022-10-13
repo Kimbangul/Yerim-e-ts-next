@@ -94,11 +94,15 @@ const Button = styled.a<{ width?: string; bgColor?: string }>`
 // COMPONENT profile image container
 const ProfileImgContainer = styled.div`
   width: 34rem;
-  height: 46rem;
   position: relative;
   overflow: hidden;
   border-radius: 0.4rem;
   flex-shrink: 0;
+
+  @media (max-width: 460px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export {

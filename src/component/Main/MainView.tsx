@@ -137,6 +137,11 @@ const Main = {
       flex-direction: column;
       align-items: center;
       gap: 1.2rem;
+      transition: bottom 0.3s;
+
+      @media (${(props) => props.theme.windowSize['lt-s']}) {
+        bottom: 7.2rem;
+      }
     `,
     Icon: styled.div`
       width: 3.6rem;

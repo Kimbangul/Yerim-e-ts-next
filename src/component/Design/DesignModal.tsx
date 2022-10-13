@@ -58,6 +58,14 @@ const DesignModal: React.FC<DesignModalType> = (props) => {
 // COMPONENT style
 const Modal = {
   Page: styled.div`
+    @keyframes modalAni {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -68,9 +76,17 @@ const Modal = {
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.6);
+    transition: padding 0.3s;
+    animation: modalAni 0.3s ease-in-out;
+
     /* FUNCTION pc */
     @media (${(props) => props.theme.windowSize['lt-s']}) {
-      position: fixed;
+      /* position: fixed; */
+      padding: 0 6rem;
+    }
+    /* FUNCTION mb */
+    @media (${(props) => props.theme.windowSize['mb-m']}) {
+      padding: 0 4rem;
     }
   `,
   Container: styled.div`

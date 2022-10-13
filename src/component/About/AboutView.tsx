@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import styled from 'styled-components';
 
-import { blurDataUrl, link } from 'src/data/data';
+import { link } from 'src/data/data';
 import { onClickLinkBtn } from 'utils/utils';
 import {
   Container,
@@ -10,6 +9,7 @@ import {
   ProfileImgContainer,
   MaxWidthContainer,
 } from 'styles/Common';
+import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 
 import PROFILE from 'src/assets/image/about/profile.jpg';
 
@@ -19,13 +19,10 @@ const AboutView = () => {
       <SectionCategoryTitle>About me</SectionCategoryTitle>
       <About.Container className='About__container'>
         <ProfileImgContainer>
-          <Image
+          <AutoHeightImageView
             src={PROFILE.src}
             alt='profile image'
-            layout='fill'
-            objectFit='cover'
             placeholder='blur'
-            blurDataURL={blurDataUrl}
           />
         </ProfileImgContainer>
         <About.Text.Container className='About__text-container'>
@@ -115,6 +112,12 @@ const About = {
         text-transform: uppercase;
         color: ${({ theme }) => theme.color.f_headColor};
         margin-top: 2.4rem;
+        transition: font-size 0.3s;
+
+        /* FUNCTION mb */
+        @media (${({ theme }) => theme.windowSize['mb-m']}) {
+          font-size: ${({ theme }) => theme.fontSize.head.md};
+        }
       `,
       Light: styled.span`
         font-weight: 300;
@@ -127,6 +130,7 @@ const About = {
         font-weight: 300;
         color: ${({ theme }) => theme.color.text_4};
         margin-top: 2.4rem;
+        word-break: keep-all;
       `,
       Point: styled.span`
         color: ${({ theme }) => theme.color.f_headColor};

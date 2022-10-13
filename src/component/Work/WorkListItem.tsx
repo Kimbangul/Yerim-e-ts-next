@@ -100,11 +100,24 @@ const Item = {
       font-size: ${({ theme }) => theme.fontSize.head.rg};
       font-weight: 700;
       color: ${({ theme }) => theme.color.f_headColor};
+      transition: font-size 0.3s;
+
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.head.xs};
+      }
     `,
     Category: styled.div`
       font-size: ${({ theme }) => theme.fontSize.body.lg};
       color: ${({ theme }) => theme.color.text_2};
       margin-top: 0.8rem;
+
+      transition: font-size 0.3s;
+
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.md};
+      }
     `,
     TagList: styled.ul`
       display: flex;
@@ -117,6 +130,7 @@ const Item = {
       font-size: ${({ theme }) => theme.fontSize.body.rg};
       color: ${({ theme }) => theme.color.text_4};
       line-height: 1.8;
+      word-break: keep-all;
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         font-size: ${({ theme }) => theme.fontSize.body.md};

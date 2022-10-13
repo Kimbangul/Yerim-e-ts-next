@@ -77,10 +77,6 @@ const GlobalStyle = createGlobalStyle`
 #fp-nav ul li:last-child{
   display: none;
 }
-/* #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span{
-  width: 0.8rem;
-  height: 0.8rem;
-} */
 
 ::-webkit-scrollbar{
   display: none;
