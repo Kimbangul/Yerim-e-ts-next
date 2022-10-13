@@ -62,14 +62,34 @@ const Design = {
     .fp-overflow {
       overflow-x: visible !important;
       overflow-y: visible !important;
+      /* FUNCTION pc*/
+      @media (max-width: 1150px) {
+        width: 100%;
+      }
     }
   `,
   Container: styled(MaxWidthContainer)``,
   List: styled.ul`
+    width: 100%;
     display: flex;
+
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 4.8rem 1.6rem;
-    justify-content: center;
+    gap: 5.6rem 2.4rem;
+    transition: gap 0.3s;
+
+    /* FUNCTION pc*/
+    @media (max-width: 1150px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: center;
+      gap: 0;
+      grid-gap: 3.6rem 2.4rem;
+    }
+    /* FUNCTION mb */
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      grid-template-columns: 1fr 1fr;
+    }
   `,
   Desc: {
     Text: styled.p`
@@ -80,10 +100,11 @@ const Design = {
       position: relative;
     `,
     Title: styled.span`
+      font-size: ${({ theme }) => theme.fontSize.body.md};
+      font-weight: 300;
       color: ${({ theme }) => theme.color.text_4};
-      font-size: ${({ theme }) => theme.fontSize.body.rg};
       position: absolute;
-      margin-top: 0.4rem;
+      margin-top: 0.8rem;
       top: 100%;
       left: 50%;
       transform: translateX(-50%);

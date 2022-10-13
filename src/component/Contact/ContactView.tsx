@@ -96,6 +96,11 @@ const ContactView: React.FC = () => {
 const Contact = {
   Page: styled(Container)`
     flex-direction: column;
+    .fp-overflow {
+      @media (${({ theme }) => theme.windowSize['lt-s']}) {
+        width: 100%;
+      }
+    }
   `,
   Container: styled(MaxWidthContainer)`
     display: flex;
@@ -105,13 +110,14 @@ const Contact = {
       align-items: center;
     }
     /* FUNCTION mb */
-    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+    @media (${({ theme }) => theme.windowSize['lt-s']}) {
       flex-direction: column;
       align-items: flex-start;
     }
   `,
   Text: {
     Container: styled.div`
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;

@@ -117,6 +117,11 @@ const Item = {
       font-size: ${({ theme }) => theme.fontSize.body.rg};
       color: ${({ theme }) => theme.color.text_4};
       line-height: 1.8;
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['lt-s']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.md};
+        line-height: 2;
+      }
     `,
   },
   Button: {

@@ -42,7 +42,6 @@ const WorkList: React.FC<WorkListType> = (props) => {
       swiper.params.navigation.prevEl = prevRef.current;
       swiper.params.navigation.nextEl = nextRef.current;
     }
-    console.log(prevRef.current, nextRef.current);
     swiper.navigation.update();
     return;
   };
@@ -122,13 +121,6 @@ const List = {
     margin: 0 auto;
     position: relative;
     .swiper-slide {
-      /* transform: scale(0.85);
-      transition: transform 0.3s, filter 0.3s;
-      filter: saturate(0) brightness(0.4);
-      .WorkListItem__text-container {
-        opacity: 0;
-        transition: opacity 0.3s;
-      } */
       margin-bottom: 4.8rem;
     }
     .swiper-slide-active {

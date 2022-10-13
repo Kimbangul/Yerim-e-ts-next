@@ -56,6 +56,7 @@ const Main = {
     background-attachment: fixed;
     background-position: 100% center;
     position: relative;
+    overflow: hidden;
   `,
   Container: styled(MaxWidthContainer)`
     position: relative;
@@ -63,35 +64,38 @@ const Main = {
     margin: 0 auto;
     transition: width 0.3s, padding 0.3s;
     text-align: center;
-
-    @media (${({ theme }) => theme.windowSize['lt-m']}) {
-      width: calc(100vw - 6.4rem);
-      padding: 0 4rem;
-      overflow: hidden;
-    }
   `,
   Text: {
     Container: styled.div`
-      /* text-align: justify;
-      text-align-last: justify; */
       display: inline-block;
       padding-bottom: 8rem;
       text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 3.2rem;
     `,
-    Title: styled.h2`
+    Title: styled.h3`
       color: ${({ theme }) => theme.color.f_headColor};
       font-size: 7rem;
       font-style: italic;
       font-weight: 900;
       letter-spacing: 0.4rem;
+      transition: font-size 0.3s;
+
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-l']}) {
+        font-size: ${({ theme }) => theme.fontSize.head.ul};
+      }
     `,
     Desc: styled.p`
       color: ${({ theme }) => theme.color.f_headColor};
       font-size: ${({ theme }) => theme.fontSize.body.md};
       font-weight: 300;
-      /* margin-top: 0.8rem; */
       margin-left: 1.4rem;
       letter-spacing: 0.8rem;
+      transition: font-size 0.3s, letter-spaction 0.3s;
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-l']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.rg};
+        letter-spacing: 0.4rem;
+      }
     `,
   },
   Image: {

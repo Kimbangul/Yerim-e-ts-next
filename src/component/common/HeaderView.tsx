@@ -67,11 +67,6 @@ const Header = {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: padding 0.3s;
-
-    @media (${({ theme }) => theme.windowSize['lt-m']}) {
-      padding: 0 4rem;
-    }
   `,
   Logo: styled.h1`
     path {

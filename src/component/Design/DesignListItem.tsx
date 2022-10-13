@@ -63,6 +63,7 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
 // COMPONENT style
 const Item = {
   Container: styled.li<{ duration: number }>`
+    width: 100%;
     border-radius: 0.4rem;
     cursor: pointer;
     flex-basis: calc(20% - 3.2rem);
@@ -83,13 +84,13 @@ const Item = {
         transform: translateY(1rem);
       }
     }
-    width: 18rem;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 0.8rem;
     box-shadow: 0rem 0rem 24rem rgba(0, 0, 0, 0.2);
     animation: up-down-ani 1.7s ease-in-out 0s infinite alternate both;
+
     img {
       border-radius: 0.8rem;
       transition: transform 0.3s, filter 0.3s;

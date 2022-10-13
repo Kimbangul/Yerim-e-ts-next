@@ -22,8 +22,7 @@ const handleColorType = (color: string) => {
 // COMPONENT section container
 const Container = styled.section`
   width: 100%;
-  height: 100vh;
-  padding: ${({ theme }) => theme.padding};
+  min-height: 100vh;
   padding-top: 7.2rem;
   overflow: hidden;
   background: transparent;
@@ -31,12 +30,26 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: padding 0.3s;
+  @media (${({ theme }) => theme.windowSize['lt-s']}) {
+    padding-bottom: 7.2rem;
+  }
 `;
 
 const MaxWidthContainer = styled.div`
   width: ${({ theme }) => theme.maxWidth};
+  margin: 0 auto;
+  transition: padding 0.3s;
+  /* FUNCTION pc */
   @media (${({ theme }) => theme.windowSize['lt-m']}) {
     width: 100%;
+    padding: 0 6rem;
+  }
+  @media (${({ theme }) => theme.windowSize['lt-s']}) {
+    width: 100%;
+  }
+  /* FUNCTION mb */
+  @media (${({ theme }) => theme.windowSize['mb-m']}) {
     padding: 0 4rem;
   }
 `;
@@ -85,6 +98,7 @@ const ProfileImgContainer = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 0.4rem;
+  flex-shrink: 0;
 `;
 
 export {

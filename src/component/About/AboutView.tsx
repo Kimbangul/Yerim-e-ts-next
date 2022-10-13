@@ -81,7 +81,13 @@ const AboutView = () => {
 };
 
 const About = {
-  Page: styled(Container)``,
+  Page: styled(Container)`
+    .fp-overflow {
+      @media (${({ theme }) => theme.windowSize['lt-s']}) {
+        width: 100%;
+      }
+    }
+  `,
   Container: styled(MaxWidthContainer)`
     display: flex;
     gap: 5.6rem;
@@ -90,8 +96,9 @@ const About = {
       align-items: center;
     }
     /* FUNCTION tablet size */
-    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+    @media (${({ theme }) => theme.windowSize['lt-s']}) {
       flex-direction: column;
+      align-items: flex-start;
     }
   `,
   Text: {
@@ -100,6 +107,7 @@ const About = {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      width: 100%;
     `,
     Title: {
       Text: styled.h3`
@@ -115,7 +123,7 @@ const About = {
     Desc: {
       Text: styled.p`
         font-size: ${({ theme }) => theme.fontSize.body.md};
-        line-height: 1.5;
+        line-height: 1.8;
         font-weight: 300;
         color: ${({ theme }) => theme.color.text_4};
         margin-top: 2.4rem;

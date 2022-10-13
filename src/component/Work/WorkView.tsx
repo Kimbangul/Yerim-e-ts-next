@@ -23,7 +23,6 @@ const WorkView: React.FC = () => {
         </Work.Text.Container>
         <Work.Content.Container className='Work__Content'>
           <WorkList setCurrentIdx={setCurrentIdx} />
-          {/* <WorkDesc list={currentWorkList} /> */}
         </Work.Content.Container>
       </Work.Container>
     </Work.Page>
@@ -32,7 +31,12 @@ const WorkView: React.FC = () => {
 
 // COMPONENT style
 const Work = {
-  Page: styled.div``,
+  Page: styled.div`
+    @media (${({ theme }) => theme.windowSize['lt-s']}) {
+      padding-top: 7.2rem;
+      padding-bottom: 7.2rem;
+    }
+  `,
   Container: styled.div``,
   Text: {
     Container: styled(MaxWidthContainer)`
@@ -42,13 +46,6 @@ const Work = {
     Title: styled.h3`
       font-size: ${({ theme }) => theme.fontSize.head.xl};
       color: ${({ theme }) => theme.color.f_headColor};
-    `,
-    Desc: styled.p`
-      font-size: ${({ theme }) => theme.fontSize.body.md};
-      line-height: 1.5;
-      font-weight: 300;
-      color: ${({ theme }) => theme.color.text};
-      margin-top: 2.4rem;
     `,
   },
   Content: {

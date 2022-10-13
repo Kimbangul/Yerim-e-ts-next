@@ -68,6 +68,10 @@ const Modal = {
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.6);
+    /* FUNCTION pc */
+    @media (${(props) => props.theme.windowSize['lt-s']}) {
+      position: fixed;
+    }
   `,
   Container: styled.div`
     width: 100rem;

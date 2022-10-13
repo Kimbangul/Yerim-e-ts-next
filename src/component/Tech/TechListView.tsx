@@ -67,10 +67,11 @@ const TechList = {
     font-weight: 600;
   `,
   Item: styled.li`
-    color: ${({ theme }) => theme.color.text_2};
-    font-size: ${({ theme }) => theme.fontSize.body.rg};
+    font-size: ${({ theme }) => theme.fontSize.body.md};
+    line-height: 2;
+    font-weight: 300;
+    color: ${({ theme }) => theme.color.text_4};
     white-space: pre-line;
-    margin-top: 0.8rem;
     &:first-child {
       margin-top: 0;
     }

@@ -42,14 +42,12 @@ const TechView: React.FC = () => {
 
 const Tech = {
   Page: styled(Container)`
-    padding: 0;
+    /* padding: 0; */
+    padding-top: 0;
   `,
   Container: styled(MaxWidthContainer)`
-    padding: 10.4rem 0 7.2rem 0;
-    @media (${({ theme }) => theme.windowSize['lt-m']}) {
-      padding-left: 4rem;
-      padding-right: 4rem;
-    }
+    padding-top: 10.4rem;
+    padding-bottom: 7.2rem;
   `,
   Img: {
     Container: styled.div`
