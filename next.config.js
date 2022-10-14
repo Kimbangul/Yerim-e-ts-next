@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
-const withVideos = require('next-videos');
+
+const debug = process.env.NODE_ENV !== 'production'
+const name = 'yerim-e'
 
 const nextConfig = {
-  assetPrefix: '.',
+
+  assetPrefix: !debug ? `/${name}/` : '',
   reactStrictMode: true,
   swcMinify: true,
 
