@@ -49,7 +49,6 @@ const MainView: React.FC = () => {
 // COMPONENT style
 const Main = {
   Page: styled(Container)`
-    /* background: url(${MOON.src}); */
     background-size: 70%;
     background-repeat: no-repeat;
     background-blend-mode: lighten;
@@ -57,6 +56,11 @@ const Main = {
     background-position: 100% center;
     position: relative;
     overflow: hidden;
+    #tsparticles {
+      canvas {
+        max-height: 100vh;
+      }
+    }
   `,
   Container: styled(MaxWidthContainer)`
     position: relative;

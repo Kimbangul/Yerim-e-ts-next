@@ -1,5 +1,6 @@
 const windowSize = {
-  'mb-s': '(max-width: 300px)',
+  'mb-xs': '(max-width: 300px)',
+  'mb-s': '(max-width: 375px)',
   'mb-m': '(max-width: 480px)',
   'mb-l': '(max-width: 768px)',
   'lt-s': '(max-width: 1024px)',

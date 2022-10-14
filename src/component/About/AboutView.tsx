@@ -131,6 +131,10 @@ const About = {
         color: ${({ theme }) => theme.color.text_4};
         margin-top: 2.4rem;
         word-break: keep-all;
+        transition: font-size 0.3s;
+        @media (${(props) => props.theme.windowSize['mb-m']}) {
+          font-size: ${({ theme }) => theme.fontSize.body.rg};
+        }
       `,
       Point: styled.span`
         color: ${({ theme }) => theme.color.f_headColor};

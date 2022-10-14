@@ -90,6 +90,9 @@ const Design = {
     @media (${({ theme }) => theme.windowSize['mb-m']}) {
       grid-template-columns: 1fr 1fr;
     }
+    @media (${({ theme }) => theme.windowSize['mb-s']}) {
+      grid-template-columns: 1fr;
+    }
   `,
   Desc: {
     Text: styled.p`

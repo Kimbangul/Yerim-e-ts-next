@@ -1,11 +1,8 @@
 /** @type {import('next').NextConfig} */
 
-const debug = process.env.NODE_ENV !== 'production'
-const name = 'yerim-e'
-
 const nextConfig = {
 
-  assetPrefix: !debug ? `/${name}/` : '',
+  assetPrefix: '.',
   reactStrictMode: true,
   swcMinify: true,
 

@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', 'Pretendard', 'sans-serif';
     font-size: ${theme.fontSize.body.sm};
     background-color: ${theme.color.main};
+    min-width: 280px;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', 'Pretendard', 'sans-serif';
