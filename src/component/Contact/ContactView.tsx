@@ -136,24 +136,28 @@ const Contact = {
       color: ${({ theme }) => theme.color.text_4};
       margin-top: 2.4rem;
       word-break: keep-all;
+      /* FUNCTION mb */
+      @media (${(props) => props.theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.rg};
+      }
     `,
   },
   Button: {
     Container: styled.div`
       display: flex;
       margin-top: 4.8rem;
+      gap: 1.6rem;
+      @media (${(props) => props.theme.windowSize['lt-s']}) {
+        flex-direction: column;
+      }
     `,
     Item: styled(Button)`
-      margin-right: 1.6rem;
       display: flex;
       align-items: center;
       gap: 1.2rem;
       svg {
         width: ${({ theme }) => theme.fontSize.head.xs};
         /* margin-left: calc(${({ theme }) => theme.fontSize.head.sm} / -2); */
-      }
-      &:last-child {
-        margin-left: 0;
       }
     `,
   },

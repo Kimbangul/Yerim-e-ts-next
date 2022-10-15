@@ -101,6 +101,10 @@ const Design = {
       font-size: ${({ theme }) => theme.fontSize.head.xs};
       margin-top: 5.6rem;
       position: relative;
+      transition: font-size 0.3s;
+      @media (${(props) => props.theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.rg};
+      }
     `,
     Title: styled.span`
       font-size: ${({ theme }) => theme.fontSize.body.md};

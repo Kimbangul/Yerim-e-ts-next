@@ -128,6 +128,11 @@ const Main = {
     Inner: styled.div`
       width: 100rem;
       position: relative;
+      transition: width 0.3s;
+
+      @media (${({ theme }) => theme.windowSize['lt-s']}) {
+        width: 100vw;
+      }
     `,
   },
   ScrollDown: {

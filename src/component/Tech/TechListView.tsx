@@ -78,6 +78,11 @@ const TechList = {
     font-weight: 300;
     color: ${({ theme }) => theme.color.text_4};
     white-space: pre-line;
+    transition: font-size 0.3s;
+    /* FUNCTION mb */
+    @media (${(props) => props.theme.windowSize['mb-m']}) {
+      font-size: ${({ theme }) => theme.fontSize.body.rg};
+    }
     &:first-child {
       margin-top: 0;
     }

@@ -145,10 +145,14 @@ const About = {
     Container: styled.div`
       display: flex;
       margin-top: 4.8rem;
+      gap: 1.6rem;
+
+      /* @media (${(props) => props.theme.windowSize['lt-s']}) {
+        flex-direction: column;
+      } */
     `,
     Button: styled(Button)`
-      margin-right: 1.6rem;
-      &:last-child {
+      @media (${(props) => props.theme.windowSize['lt-s']}) {
         margin-right: 0;
       }
     `,

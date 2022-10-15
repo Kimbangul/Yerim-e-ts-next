@@ -136,6 +136,10 @@ const Item = {
         font-size: ${({ theme }) => theme.fontSize.body.md};
         line-height: 2;
       }
+      /* FUNCTION mb */
+      @media (${(props) => props.theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.rg};
+      }
     `,
   },
   Button: {

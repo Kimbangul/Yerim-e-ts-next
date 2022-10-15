@@ -71,7 +71,7 @@ const Button = styled.a<{ width?: string; bgColor?: string }>`
   font-weight: 400;
   cursor: pointer;
   min-width: ${(props) => (props.width ? props.width : '18rem')};
-  padding: 0 1.6rem;
+  padding: 0 4.8rem;
   height: 5.6rem;
   border-radius: 0.4rem;
   display: flex;
@@ -83,11 +83,16 @@ const Button = styled.a<{ width?: string; bgColor?: string }>`
       ? handleColorType(props.bgColor)
       : props.theme.color.pointPink};
   color: ${({ theme }) => theme.color.text_2};
-  transition: background 0.3s, color 0.3s;
+  transition: width 0.3s, background 0.3s, color 0.3s;
 
   &:hover {
     background-color: ${({ theme }) => theme.color.pointPink};
     color: ${({ theme }) => theme.color.main};
+  }
+
+  @media (${({ theme }) => theme.windowSize['mb-l']}) {
+    width: 100%;
+    min-width: unset;
   }
 `;
 
