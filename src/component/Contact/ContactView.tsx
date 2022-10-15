@@ -136,6 +136,7 @@ const Contact = {
       color: ${({ theme }) => theme.color.text_4};
       margin-top: 2.4rem;
       word-break: keep-all;
+      line-height: 1.8;
       /* FUNCTION mb */
       @media (${(props) => props.theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.body.rg};

@@ -87,6 +87,10 @@ const Main = {
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.head.ul};
       }
+      /* FUNCTION mb */
+      @media (${(props) => props.theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.head.rg};
+      }
     `,
     Desc: styled.p`
       color: ${({ theme }) => theme.color.f_headColor};
@@ -99,6 +103,9 @@ const Main = {
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.body.rg};
         letter-spacing: 0.4rem;
+      }
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.sm};
       }
     `,
   },
@@ -130,8 +137,12 @@ const Main = {
       position: relative;
       transition: width 0.3s;
 
-      @media (${({ theme }) => theme.windowSize['lt-s']}) {
-        width: 100vw;
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        width: 70rem;
+      }
+      @media (${({ theme }) => theme.windowSize['mb-s']}) {
+        width: 56rem;
       }
     `,
   },
@@ -146,11 +157,6 @@ const Main = {
       flex-direction: column;
       align-items: center;
       gap: 1.2rem;
-      transition: bottom 0.3s;
-
-      @media (${(props) => props.theme.windowSize['lt-s']}) {
-        bottom: 7.2rem;
-      }
     `,
     Icon: styled.div`
       width: 3.6rem;
@@ -158,6 +164,13 @@ const Main = {
       border-radius: 10rem;
       border: 0.2rem solid ${({ theme }) => theme.color.text};
       position: relative;
+      transition: width 0.3s, height 0.3s, border 0.3s;
+
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        width: 3.2rem;
+        height: 4.4rem;
+        border: 0.1rem solid ${({ theme }) => theme.color.text};
+      }
       &::after {
         position: absolute;
         content: '';
@@ -169,6 +182,7 @@ const Main = {
         top: 0.8rem;
         left: 50%;
         transform: translateX(-50%);
+        transition: width 0.3s, height 0.3s;
         @keyframes cursorAni {
           0% {
             top: 0.8rem;
@@ -183,6 +197,10 @@ const Main = {
           }
         }
         animation: cursorAni 1.2s ease-in-out infinite;
+        @media (${({ theme }) => theme.windowSize['mb-m']}) {
+          width: 0.2rem;
+          height: 0.2rem;
+        }
       }
     `,
     Text: styled.span`

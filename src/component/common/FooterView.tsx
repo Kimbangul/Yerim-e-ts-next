@@ -29,8 +29,12 @@ const Footer = {
     @media (${({ theme }) => theme.windowSize['lt-m']}) {
       padding: 0 6rem;
     }
-    */ @media (${({ theme }) => theme.windowSize['mb-m']}) {
-      padding: 0 4rem;
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      padding: 0 3rem;
+    }
+    /* FUNCTION mb */
+    @media (${(props) => props.theme.windowSize['mb-s']}) {
+      padding: 0 2rem;
     }
   `,
   Inner: styled(MaxWidthContainer)`

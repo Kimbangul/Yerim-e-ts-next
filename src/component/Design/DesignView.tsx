@@ -63,12 +63,17 @@ const Design = {
       overflow-x: visible !important;
       overflow-y: visible !important;
       /* FUNCTION pc*/
-      @media (max-width: 1150px) {
+      @media (${({ theme }) => theme.windowSize['lt-l']}) {
         width: 100%;
       }
     }
   `,
-  Container: styled(MaxWidthContainer)``,
+  Container: styled(MaxWidthContainer)`
+    @media (max-width: 1000px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  `,
   List: styled.ul`
     width: 100%;
     display: flex;
@@ -79,12 +84,20 @@ const Design = {
     transition: gap 0.3s;
 
     /* FUNCTION pc*/
-    @media (max-width: 1150px) {
+    @media (${({ theme }) => theme.windowSize['lt-l']}) {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       justify-content: center;
       gap: 0;
       grid-gap: 3.6rem 2.4rem;
+      padding-top: 5.6rem;
+    }
+
+    @media (${({ theme }) => theme.windowSize['lt-m']}) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @media (${({ theme }) => theme.windowSize['lt-s']}) {
+      grid-template-columns: 1fr 1fr 1fr;
     }
     /* FUNCTION mb */
     @media (${({ theme }) => theme.windowSize['mb-m']}) {
@@ -101,6 +114,15 @@ const Design = {
       font-size: ${({ theme }) => theme.fontSize.head.xs};
       margin-top: 5.6rem;
       position: relative;
+      transition: font-size 0.3s;
+      @media (max-width: 1000px) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.md};
+      }
     `,
     Title: styled.span`
       font-size: ${({ theme }) => theme.fontSize.body.md};
@@ -108,9 +130,15 @@ const Design = {
       color: ${({ theme }) => theme.color.text_4};
       position: absolute;
       margin-top: 0.8rem;
+      white-space: nowrap;
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
+      transition: font-size 0.3s;
+
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.sm};
+      }
     `,
   },
 };
