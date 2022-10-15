@@ -1,11 +1,11 @@
 const windowSize = {
-  'mb-xs': '(max-width: 300px)',
-  'mb-s': '(max-width: 375px)',
-  'mb-m': '(max-width: 480px)',
-  'mb-l': '(max-width: 768px)',
-  'lt-s': '(max-width: 1024px)',
-  'lt-m': '(max-width: 1200px)',
-  'lt-l': '(max-width: 1440px)',
+  'mb-xs': 'max-width: 300px',
+  'mb-s': 'max-width: 375px',
+  'mb-m': 'max-width: 480px',
+  'mb-l': 'max-width: 768px',
+  'lt-s': 'max-width: 1024px',
+  'lt-m': 'max-width: 1200px',
+  'lt-l': 'max-width: 1440px',
 };
 
 const fontSize = {
