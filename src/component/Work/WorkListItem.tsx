@@ -44,9 +44,9 @@ const WorkListItem: React.FC<WorkListItemType> = (props) => {
               );
             })}
           </Item.Desc.TagList>
-          <Item.Desc.Desc className='WorkListItem__desc'>
+          {/* <Item.Desc.Desc className='WorkListItem__desc'>
             {props.desc}
-          </Item.Desc.Desc>
+          </Item.Desc.Desc> */}
         </Item.Desc.Info>
         <Item.Button.Container className='WorkListItem__button-container'>
           {props.github ? (
@@ -101,7 +101,10 @@ const Item = {
       font-weight: 700;
       color: ${({ theme }) => theme.color.f_headColor};
       transition: font-size 0.3s;
-
+      /* FUNCTION pc */
+      @media (${({ theme }) => theme.windowSize['lt-s']}) {
+        font-size: ${({ theme }) => theme.fontSize.head.sm};
+      }
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.head.xs};

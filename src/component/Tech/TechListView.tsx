@@ -79,6 +79,12 @@ const TechList = {
     color: ${({ theme }) => theme.color.text_4};
     white-space: pre-line;
     transition: font-size 0.3s;
+    margin-left: 2rem;
+    list-style: square;
+    &::marker {
+      color: ${({ theme }) => theme.color.text_5};
+      font-size: 0.7em;
+    }
     /* FUNCTION mb */
     @media (${(props) => props.theme.windowSize['mb-m']}) {
       font-size: ${({ theme }) => theme.fontSize.body.rg};

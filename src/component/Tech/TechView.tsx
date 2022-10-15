@@ -40,8 +40,8 @@ const TechView: React.FC = () => {
 
 const Tech = {
   Page: styled(Container)`
-    /* padding: 0; */
     padding-top: 0;
+    background-color: ${(props) => props.theme.color.secondBg};
   `,
   Container: styled(MaxWidthContainer)`
     padding-top: 10.4rem;
@@ -55,6 +55,11 @@ const Tech = {
       filter: contrast(0.5) grayscale(1) brightness(0.55);
       border-radius: 0.4rem;
       overflow: hidden;
+      transition: margin 0.3s;
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-l']}) {
+        margin-top: 0;
+      }
     `,
   },
   Text: {
@@ -66,9 +71,8 @@ const Tech = {
       font-size: ${({ theme }) => theme.fontSize.head.xl};
       color: ${({ theme }) => theme.color.f_headColor};
       transition: font-size 0.3s;
-
       /* FUNCTION mb */
-      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.head.md};
       }
     `,

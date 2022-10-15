@@ -34,6 +34,10 @@ const Container = styled.section`
   @media (${({ theme }) => theme.windowSize['lt-s']}) {
     padding-bottom: 7.2rem;
   }
+  /* FUNCTION mb */
+  @media (${({ theme }) => theme.windowSize['mb-m']}) {
+    height: 6rem;
+  }
 `;
 
 const MaxWidthContainer = styled.div`
@@ -72,7 +76,7 @@ const SectionCategoryTitle = styled.h2`
 const Button = styled.a<{ width?: string; bgColor?: string }>`
   font-family: 'Pretendard', 'sans-serif';
   font-size: ${({ theme }) => theme.fontSize.body.md};
-  font-weight: 400;
+  font-weight: 700;
   cursor: pointer;
   min-width: ${(props) => (props.width ? props.width : '18rem')};
   padding: 0 4.8rem;
@@ -82,15 +86,17 @@ const Button = styled.a<{ width?: string; bgColor?: string }>`
   justify-content: center;
   align-items: center;
   border-radius: 10rem;
-  background-color: ${(props) =>
+  border: 0.2rem solid ${(props) => props.theme.color.point};
+
+  /* background-color: ${(props) =>
     props.bgColor
       ? handleColorType(props.bgColor)
-      : props.theme.color.pointPink};
-  color: ${({ theme }) => theme.color.text_2};
+      : props.theme.color.pointPink}; */
+  color: ${({ theme }) => theme.color.point};
   transition: width 0.3s, background 0.3s, color 0.3s;
 
   &:hover {
-    background-color: ${({ theme }) => theme.color.pointPink};
+    background-color: ${({ theme }) => theme.color.point};
     color: ${({ theme }) => theme.color.main};
   }
 

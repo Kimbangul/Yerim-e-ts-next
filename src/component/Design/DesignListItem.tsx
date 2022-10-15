@@ -42,6 +42,9 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
             onClickItem(e);
           }}
         >
+          <Item.Hover className='DesignListItem__title'>
+            {props.title}
+          </Item.Hover>
           <AutoHeightImageView
             alt={props.title}
             src={props.thumb}
@@ -67,12 +70,33 @@ const Item = {
     border-radius: 0.4rem;
     cursor: pointer;
     flex-basis: calc(20% - 3.2rem);
+    .DesignListItem__title {
+      opacity: 0;
+    }
     &:hover {
       img {
         transform: scale(1.12);
         filter: saturate(1);
       }
     }
+  `,
+  Hover: styled.div`
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    color: ${(props) => props.theme.color.text};
+    padding: 2.4rem;
+    text-align: center;
+    pointer-events: none;
   `,
   Link: styled.a`
     @keyframes up-down-ani {

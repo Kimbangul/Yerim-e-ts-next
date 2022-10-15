@@ -31,10 +31,14 @@ const WorkView: React.FC = () => {
 
 // COMPONENT style
 const Work = {
-  Page: styled.div`
+  Page: styled.section`
     @media (${({ theme }) => theme.windowSize['lt-s']}) {
       padding-top: 7.2rem;
       padding-bottom: 7.2rem;
+    }
+    /* FUNCTION mb */
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      height: 6rem;
     }
   `,
   Container: styled.div``,
@@ -47,9 +51,8 @@ const Work = {
       font-size: ${({ theme }) => theme.fontSize.head.xl};
       color: ${({ theme }) => theme.color.f_headColor};
       transition: font-size 0.3s;
-
       /* FUNCTION mb */
-      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.head.md};
       }
     `,

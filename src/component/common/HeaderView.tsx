@@ -55,9 +55,13 @@ const Header = {
     color: #fff;
     background: transparent;
     z-index: 99999;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, height 0.3s;
     &:hover {
       background: ${({ theme }) => theme.color.header};
+    }
+    /* FUNCTION mb */
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      height: 6rem;
     }
   `,
   Inner: styled(MaxWidthContainer)`

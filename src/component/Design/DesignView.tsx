@@ -59,6 +59,7 @@ const DesignView: React.FC = () => {
 
 const Design = {
   Page: styled(Container)`
+    background-color: ${(props) => props.theme.color.secondBg};
     .fp-overflow {
       overflow-x: visible !important;
       overflow-y: visible !important;
@@ -103,9 +104,9 @@ const Design = {
     @media (${({ theme }) => theme.windowSize['mb-m']}) {
       grid-template-columns: 1fr 1fr;
     }
-    @media (${({ theme }) => theme.windowSize['mb-s']}) {
+    /* @media (${({ theme }) => theme.windowSize['mb-s']}) {
       grid-template-columns: 1fr;
-    }
+    } */
   `,
   Desc: {
     Text: styled.p`

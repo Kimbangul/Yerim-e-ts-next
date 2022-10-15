@@ -43,7 +43,7 @@ const ContactView: React.FC = () => {
     <Contact.Page className='section'>
       <SectionCategoryTitle>Contact</SectionCategoryTitle>
       <Contact.Container className='Contact__container'>
-        <ProfileImgContainer>
+        <ProfileImgContainer className='Contact__image'>
           <AutoHeightImageView
             src={PROFILE.src}
             alt='profile image'
@@ -101,6 +101,11 @@ const Contact = {
         width: 100%;
       }
     }
+    @media (${({ theme }) => theme.windowSize['lt-s']}) {
+      .Contact__image {
+        display: none;
+      }
+    }
   `,
   Container: styled(MaxWidthContainer)`
     display: flex;
@@ -109,7 +114,6 @@ const Contact = {
     @media (${({ theme }) => theme.windowSize['lt-m']}) {
       align-items: center;
     }
-    /* FUNCTION mb */
     @media (${({ theme }) => theme.windowSize['lt-s']}) {
       flex-direction: column;
       align-items: flex-start;
@@ -127,8 +131,13 @@ const Contact = {
       color: ${({ theme }) => theme.color.f_headColor};
       font-weight: 600;
       margin-top: 2.4rem;
+      transition: font-size 0.3s;
       @media (${({ theme }) => theme.windowSize['lt-m']}) {
         margin-top: 0;
+      }
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-l']}) {
+        font-size: ${({ theme }) => theme.fontSize.head.xs};
       }
     `,
     Desc: styled.p`

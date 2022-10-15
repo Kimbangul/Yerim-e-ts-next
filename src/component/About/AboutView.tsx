@@ -97,6 +97,9 @@ const About = {
       flex-direction: column;
       align-items: flex-start;
     }
+    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+      gap: 0;
+    }
   `,
   Text: {
     Container: styled.div`
@@ -111,11 +114,12 @@ const About = {
         font-size: ${({ theme }) => theme.fontSize.head.xl};
         text-transform: uppercase;
         color: ${({ theme }) => theme.color.f_headColor};
-        margin-top: 2.4rem;
-        transition: font-size 0.3s;
+        /* margin-top: 2.4rem; */
+        transition: font-size 0.3s, margin 0.3s;
 
         /* FUNCTION mb */
-        @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        @media (${({ theme }) => theme.windowSize['mb-l']}) {
+          margin-top: 3.2rem;
           font-size: ${({ theme }) => theme.fontSize.head.md};
         }
       `,
@@ -147,9 +151,9 @@ const About = {
       margin-top: 4.8rem;
       gap: 1.6rem;
 
-      /* @media (${(props) => props.theme.windowSize['lt-s']}) {
+      @media (${(props) => props.theme.windowSize['lt-s']}) {
         flex-direction: column;
-      } */
+      }
     `,
     Button: styled(Button)`
       @media (${(props) => props.theme.windowSize['lt-s']}) {
