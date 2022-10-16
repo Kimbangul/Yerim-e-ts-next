@@ -127,7 +127,7 @@ const Design = {
     `,
     Title: styled.span`
       font-size: ${({ theme }) => theme.fontSize.body.md};
-      font-weight: 300;
+      font-weight: 400;
       color: ${({ theme }) => theme.color.text_4};
       position: absolute;
       margin-top: 0.8rem;

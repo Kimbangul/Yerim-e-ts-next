@@ -78,7 +78,6 @@ const Main = {
     Title: styled.h3`
       color: ${({ theme }) => theme.color.f_headColor};
       font-size: 7rem;
-      font-style: italic;
       font-weight: 900;
       letter-spacing: 0.4rem;
       transition: font-size 0.3s;
@@ -119,17 +118,17 @@ const Main = {
         @keyframes imgAnimation {
           0% {
             transform: rotate(0deg);
-            opacity: 0.3;
+            opacity: 0.2;
           }
           50% {
-            opacity: 0.6;
+            opacity: 0.4;
           }
           100% {
             transform: rotate(360deg);
-            opacity: 0.3;
+            opacity: 0.2;
           }
         }
-        animation: imgAnimation 120s infinite linear;
+        animation: imgAnimation 180s infinite linear;
       }
     `,
     Inner: styled.div`

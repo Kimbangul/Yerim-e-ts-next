@@ -42,7 +42,7 @@ const particleOption: RecursivePartial<IOptions> = {
   particles: {
     // color: { value: ['#2EB67D', '#ECB22E', '#E01E5B', '#36C5F0'] },
     color: {
-      value: '#fff',
+      value: ['#ffffff20', '#0ACDCE80', '#0ACDCE40'],
     },
     links: {
       color: '#ffffff',

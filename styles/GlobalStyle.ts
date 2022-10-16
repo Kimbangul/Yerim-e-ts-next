@@ -77,8 +77,8 @@ const GlobalStyle = createGlobalStyle`
 }
 
 #fp-nav ul li a.active span{
-  background: ${theme.color.text} !important;
-  box-shadow: ${theme.color.text} 0rem 0rem 0.8rem;
+  background: ${theme.color.point} !important;
+  box-shadow: ${theme.color.point80} 0rem 0rem 0.8rem;
 }
 
 #fp-nav ul li:last-child{

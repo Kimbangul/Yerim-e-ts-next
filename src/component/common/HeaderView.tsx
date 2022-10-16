@@ -78,7 +78,7 @@ const Header = {
     }
     &:hover {
       path {
-        fill: ${({ theme }) => theme.color.pointPink};
+        fill: ${({ theme }) => theme.color.point};
       }
     }
   `,
@@ -99,7 +99,7 @@ const Header = {
         color: ${({ theme }) => theme.color.text};
         transition: color 0.3s;
         &:hover {
-          color: ${({ theme }) => theme.color.pointPink};
+          color: ${({ theme }) => theme.color.point};
         }
       }
     `,
@@ -113,7 +113,7 @@ const Header = {
       color: ${({ theme }) => theme.color.f_bodyColor};
       transition: color 0.3s;
       &:hover {
-        color: ${({ theme }) => theme.color.pointPink};
+        color: ${({ theme }) => theme.color.point};
       }
     `,
     SoundOnly: styled.span`

@@ -20,6 +20,7 @@ const WorkView: React.FC = () => {
       <Work.Container className='Work__container'>
         <Work.Text.Container className='Work__text-container'>
           <Work.Text.Title className='Work__title'>Work</Work.Text.Title>
+          {/* <Work.Text.Desc className='Work__desc'>좌우로 슬라이드해서 제 작업물들을 살펴보세요.</Work.Text.Desc> */}
         </Work.Text.Container>
         <Work.Content.Container className='Work__Content'>
           <WorkList setCurrentIdx={setCurrentIdx} />

@@ -131,7 +131,7 @@ const About = {
       Text: styled.p`
         font-size: ${({ theme }) => theme.fontSize.body.md};
         line-height: 1.8;
-        font-weight: 300;
+        font-weight: 400;
         color: ${({ theme }) => theme.color.text_4};
         margin-top: 2.4rem;
         word-break: keep-all;
@@ -141,7 +141,8 @@ const About = {
         }
       `,
       Point: styled.span`
-        color: ${({ theme }) => theme.color.f_headColor};
+        color: ${({ theme }) => theme.color.point};
+        font-weight: 500;
       `,
     },
   },

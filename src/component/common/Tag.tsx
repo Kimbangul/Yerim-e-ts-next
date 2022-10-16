@@ -13,9 +13,10 @@ const Tag: React.FC<TagType> = (props) => {
 // COMPONENT style
 const TagItem = styled.li`
   padding: 0.4rem 1.2rem;
-  color: ${({ theme }) => theme.color.text_4};
+  color: ${({ theme }) => theme.color.point};
+  /* background-color: ${({ theme }) => theme.color.pointBg}; */
   font-size: ${({ theme }) => theme.fontSize.body.sm};
-  border: 0.1rem solid ${({ theme }) => theme.color.text_6};
+  border: 0.2rem solid ${({ theme }) => theme.color.point40};
   border-radius: 10rem;
 `;
 

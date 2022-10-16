@@ -15,7 +15,7 @@ const handleColorType = (color: string) => {
     case 'pointPink':
       return theme.color.pointPink;
     default:
-      return theme.color.secondaryPink;
+      return theme.color.point;
   }
 };
 
@@ -86,7 +86,8 @@ const Button = styled.a<{ width?: string; bgColor?: string }>`
   justify-content: center;
   align-items: center;
   border-radius: 10rem;
-  border: 0.2rem solid ${(props) => props.theme.color.point};
+  background-color: ${({ theme }) => theme.color.point40};
+  /* border: 0.2rem solid ${(props) => props.theme.color.point}; */
 
   /* background-color: ${(props) =>
     props.bgColor

@@ -75,14 +75,14 @@ const TechList = {
   Item: styled.li`
     font-size: ${({ theme }) => theme.fontSize.body.md};
     line-height: 2;
-    font-weight: 300;
+    font-weight: 400;
     color: ${({ theme }) => theme.color.text_4};
     white-space: pre-line;
     transition: font-size 0.3s;
     margin-left: 2rem;
     list-style: square;
     &::marker {
-      color: ${({ theme }) => theme.color.text_5};
+      color: ${({ theme }) => theme.color.point80};
       font-size: 0.7em;
     }
     /* FUNCTION mb */

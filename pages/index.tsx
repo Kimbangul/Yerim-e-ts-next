@@ -10,10 +10,6 @@ import DesignModal from 'src/component/Design/DesignModal';
 // COMPONENT main component
 const Home: NextPage = () => {
   const { isOpenModal, setIsOpenModal } = useContext(ModalContext);
-  useEffect(() => {
-    console.log(isOpenModal);
-    return;
-  }, [isOpenModal]);
   return (
     <>
       <Header />
