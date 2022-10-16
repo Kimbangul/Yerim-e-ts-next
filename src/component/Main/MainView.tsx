@@ -76,22 +76,29 @@ const Main = {
     Container: styled.div`
       display: inline-block;
       padding-bottom: 8rem;
+      transition: padding 0.3s;
       text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 3.2rem;
+      /* FUNCTION pc */
+      @media (${({ theme }) => theme.windowSize['lt-s']}) {
+        padding-bottom: 4rem;
+      }
     `,
     Title: styled.h3`
       color: ${({ theme }) => theme.color.f_headColor};
       font-size: 7rem;
       font-weight: 900;
       letter-spacing: 0.4rem;
-      transition: font-size 0.3s;
+      transition: font-size 0.3s, letter-spacing 0.3s;
 
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.head.ul};
+        letter-spacing: 0.2rem;
       }
       /* FUNCTION mb */
       @media (${(props) => props.theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.head.xl};
+        letter-spacing: 0rem;
       }
       @media (${(props) => props.theme.windowSize['mb-s']}) {
         font-size: ${({ theme }) => theme.fontSize.head.lg};

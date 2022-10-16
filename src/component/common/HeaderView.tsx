@@ -14,7 +14,7 @@ const HeaderView: React.FC = () => {
         <Header.Logo className='Header__logo'>
           <Link href='/'>
             <a>
-              <LOGO />
+              <LOGO preserveAspectRatio='none' />
             </a>
           </Link>
         </Header.Logo>
