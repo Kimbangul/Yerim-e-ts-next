@@ -62,13 +62,7 @@ const AboutView = () => {
               bgColor='secondaryBlue'
               onClick={onClickLinkBtn.bind(this, link.resume, '_blank')}
             >
-              이력서 보기
-            </About.Button.Button>
-            <About.Button.Button
-              className='About__button'
-              bgColor='secondaryPurple'
-            >
-              이력서 보기
+              이력 & 경력 보기
             </About.Button.Button>
           </About.Button.Container>
         </About.Text.Container>

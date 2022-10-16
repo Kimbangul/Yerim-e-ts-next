@@ -4,7 +4,10 @@ import theme from 'styles/Theme';
 const GlobalStyle = createGlobalStyle`
  html{
   font-size: 62.5%; 
-  @media (max-width: 375px){
+  @media (${theme.windowSize['mb-l']}){
+      font-size: 58%;
+    }
+  @media (max-width: 500px){
       font-size: 55.125%;
     }
  }

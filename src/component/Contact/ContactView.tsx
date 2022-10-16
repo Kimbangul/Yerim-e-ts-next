@@ -94,7 +94,7 @@ const Contact = {
     flex-direction: column;
     /* FUNCTION pc */
     @media (${(props) => props.theme.windowSize['lt-s']}) {
-      padding-bottom: 14.4rem;
+      padding-bottom: 7.2rem;
     }
     .fp-overflow {
       @media (${({ theme }) => theme.windowSize['lt-s']}) {

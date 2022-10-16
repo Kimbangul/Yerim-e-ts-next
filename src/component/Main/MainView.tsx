@@ -61,6 +61,9 @@ const Main = {
         max-height: 100vh;
       }
     }
+    .fp-overflow {
+      overflow-y: visible !important;
+    }
   `,
   Container: styled(MaxWidthContainer)`
     position: relative;
@@ -88,7 +91,10 @@ const Main = {
       }
       /* FUNCTION mb */
       @media (${(props) => props.theme.windowSize['mb-m']}) {
-        font-size: ${({ theme }) => theme.fontSize.head.rg};
+        font-size: ${({ theme }) => theme.fontSize.head.xl};
+      }
+      @media (${(props) => props.theme.windowSize['mb-s']}) {
+        font-size: ${({ theme }) => theme.fontSize.head.lg};
       }
     `,
     Desc: styled.p`
