@@ -12,8 +12,19 @@ type DesignModalType = {
 };
 
 const DesignModal: React.FC<DesignModalType> = (props) => {
+  // PARAM dom
+  const bodyDom = document.querySelector('body');
   // PARAM ref
   const dimmerRef = useRef<HTMLDivElement>(null);
+
+  // FUNCTION 모달 열렸을 때 스크롤 방지
+  const setBodyPreventScroll = () => {
+    if (bodyDom) {
+      bodyDom.style.overflow = 'hidden';
+    }
+    return;
+  };
+  setBodyPreventScroll();
 
   // FUNCTION 모달 바깥 클릭 시 닫기
   const handleClickOutSide = (e: React.MouseEvent) => {
@@ -25,6 +36,9 @@ const DesignModal: React.FC<DesignModalType> = (props) => {
 
   // FUNCTION 모달 닫기 버튼 눌렀을 때
   const onClickCloseBtn = () => {
+    if (bodyDom) {
+      bodyDom.style.overflow = 'visible';
+    }
     props.handleCloseModal();
     return;
   };
@@ -66,10 +80,10 @@ const Modal = {
         opacity: 1;
       }
     }
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 999999;
+    z-index: 99999;
     top: 0;
     left: 0;
     display: flex;

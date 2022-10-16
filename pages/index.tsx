@@ -1,10 +1,37 @@
+import { useContext, useEffect } from 'react';
 import type { NextPage } from 'next';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
+import { ModalContext } from 'src/utils/ModalContext';
 import Header from 'src/component/common/HeaderView';
 import FullpageWrapper from 'src/component/common/FullpageWrapper';
-import Particle from 'src/component/common/Particle';
+import DesignModal from 'src/component/Design/DesignModal';
 
+// COMPONENT main component
+const Home: NextPage = () => {
+  const { isOpenModal, setIsOpenModal } = useContext(ModalContext);
+  useEffect(() => {
+    console.log(isOpenModal);
+    return;
+  }, [isOpenModal]);
+  return (
+    <>
+      <Header />
+      <FullpageWrapper />
+      {isOpenModal && (
+        <DesignModal
+          modalImg={isOpenModal}
+          handleCloseModal={() => {
+            setIsOpenModal(false);
+            return;
+          }}
+        />
+      )}
+    </>
+  );
+};
+
+// COMPONENT style
 const ParticleContainer = styled.div`
   width: 100%;
   height: 100vw;
@@ -19,17 +46,5 @@ const ParticleContainer = styled.div`
     height: 100%;
   }
 `;
-
-const Home: NextPage = () => {
-  return (
-    <>
-      <Header />
-      <FullpageWrapper />
-      <ParticleContainer>
-        <div className='ParticleContainer__inner'>{/* <Particle /> */}</div>
-      </ParticleContainer>
-    </>
-  );
-};
 
 export default Home;

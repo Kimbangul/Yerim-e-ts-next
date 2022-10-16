@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import styled from 'styled-components';
+
+import { ModalContext } from 'src/utils/ModalContext';
 
 import { blurDataUrl } from 'src/data/data';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
@@ -17,8 +19,8 @@ type DesignListItemProps = {
 };
 
 const DesignListItem: React.FC<DesignListItemProps> = (props) => {
-  // PARAM state
-  const [isOpenModal, setIsOpenModal] = useState(false);
+  // // PARAM state
+  const { setIsOpenModal } = useContext(ModalContext);
 
   // FUNCTION 클릭 시 팝업 핸들러
   const onClickItem = (e: React.MouseEvent<HTMLElement>) => {
@@ -26,7 +28,7 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
     if (props.link) {
       window.open(props.link);
     } else {
-      setIsOpenModal(true);
+      setIsOpenModal(props.detail ? props.detail : false);
     }
     return;
   };
@@ -53,12 +55,6 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
           />
         </Item.Link>
       </Item.Container>
-      {isOpenModal && props.detail && (
-        <DesignModal
-          modalImg={props.detail && props.detail}
-          handleCloseModal={() => setIsOpenModal(false)}
-        />
-      )}
     </>
   );
 };

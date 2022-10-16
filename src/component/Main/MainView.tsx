@@ -138,8 +138,11 @@ const Main = {
       transition: width 0.3s;
 
       /* FUNCTION mb */
-      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      @media (${({ theme }) => theme.windowSize['mb-l']}) {
         width: 70rem;
+      }
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        width: 64rem;
       }
       @media (${({ theme }) => theme.windowSize['mb-s']}) {
         width: 56rem;
