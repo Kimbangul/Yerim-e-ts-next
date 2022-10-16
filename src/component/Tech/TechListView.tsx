@@ -81,9 +81,13 @@ const TechList = {
     transition: font-size 0.3s;
     margin-left: 2rem;
     list-style: square;
+    margin-bottom: 1.2rem;
     &::marker {
       color: ${({ theme }) => theme.color.point80};
       font-size: 0.7em;
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
     /* FUNCTION mb */
     @media (${(props) => props.theme.windowSize['mb-m']}) {
