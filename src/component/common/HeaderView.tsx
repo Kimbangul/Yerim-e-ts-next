@@ -5,7 +5,8 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { MaxWidthContainer } from 'styles/Common';
-import LOGO from '../../../src/assets/image/logo.svg';
+import LOGO from 'src/assets/image/logo.svg';
+import LOGO_MB from 'src/assets/image/logo_mb.svg';
 
 const HeaderView: React.FC = () => {
   return (
@@ -14,10 +15,23 @@ const HeaderView: React.FC = () => {
         <Header.Logo className='Header__logo'>
           <Link href='/'>
             <a>
-              <LOGO preserveAspectRatio='none' />
+              <LOGO />
             </a>
           </Link>
         </Header.Logo>
+        <Header.Mb.Logo className='Header__logo--mb'>
+          <Link href='/'>
+            <a>
+              <LOGO_MB />
+            </a>
+          </Link>
+        </Header.Mb.Logo>
+        <Header.Mb.Menu href='#'>
+          Menu
+          <Header.Mb.MenuBar />
+          <Header.Mb.MenuBar />
+          <Header.Mb.MenuBar />
+        </Header.Mb.Menu>
         <Header.Social.List className='Header__social'>
           <Header.Social.Item className='Header__social-item'>
             <Link href='https://github.com/Kimbangul'>
@@ -73,6 +87,9 @@ const Header = {
     align-items: center;
   `,
   Logo: styled.h1`
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      display: none;
+    }
     path {
       transition: fill 0.3s;
     }
@@ -87,6 +104,10 @@ const Header = {
       display: flex;
       align-items: center;
       transform: translateX(1.2rem);
+
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        display: none;
+      }
     `,
     Item: styled.li`
       a {
@@ -103,19 +124,6 @@ const Header = {
         }
       }
     `,
-    Link: styled.a`
-      width: 2.4rem;
-      margin: 0 1.2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: ${({ theme }) => theme.fontSize.body.lg};
-      color: ${({ theme }) => theme.color.f_bodyColor};
-      transition: color 0.3s;
-      &:hover {
-        color: ${({ theme }) => theme.color.point};
-      }
-    `,
     SoundOnly: styled.span`
       visibility: hidden;
       font-size: 0;
@@ -123,6 +131,52 @@ const Header = {
       height: 0;
       position: absolute;
       pointer-events: none;
+    `,
+  },
+  Mb: {
+    Logo: styled.h1`
+      display: none;
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        display: block;
+      }
+      path {
+        transition: fill 0.3s;
+      }
+      &:hover {
+        path {
+          fill: ${({ theme }) => theme.color.point};
+        }
+      }
+    `,
+    Menu: styled.a`
+      display: none;
+      background: transparent;
+      border: none;
+      width: 2.4rem;
+      height: 2.4rem;
+      position: relative;
+      font-size: 0;
+      text-indent: -99999;
+      &::after {
+      }
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    `,
+    MenuBar: styled.span`
+      display: inline-block;
+      width: 100%;
+      height: 0.1rem;
+      background: #fff;
+      &:nth-child(2) {
+        width: 70%;
+      }
+      &:nth-child(3) {
+        width: 100%;
+      }
     `,
   },
 };

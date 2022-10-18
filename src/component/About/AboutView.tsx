@@ -97,7 +97,7 @@ const About = {
   `,
   Text: {
     Container: styled.div`
-      color: ${({ theme }) => theme.color.f_headColor};
+      color: ${({ theme }) => theme.color.text_head};
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -107,7 +107,7 @@ const About = {
       Text: styled.h3`
         font-size: ${({ theme }) => theme.fontSize.head.xl};
         text-transform: uppercase;
-        color: ${({ theme }) => theme.color.f_headColor};
+        color: ${({ theme }) => theme.color.text_head};
         /* margin-top: 2.4rem; */
         transition: font-size 0.3s, margin 0.3s;
 

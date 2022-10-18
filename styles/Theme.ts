@@ -32,20 +32,13 @@ const maxWidth = '1200px';
 const padding = '3.2rem';
 
 const color = {
-  bg: 'linear-gradient(180deg, #355C7D 0%, #725A7A 100%)',
   header: 'rgba(0,0,0,0.24)',
   main: '#222',
-  // secondBg: '#1A1927',
   secondBg: '#1D1D1D',
   point: '#0ACDCE',
   point80: '#0ACDCE80',
   point40: '#0ACDCE40',
-  secondaryDark: '#0C1A31',
-  secondaryBlue: '#355c7d',
-  secondaryPurple: '#725a7a',
-  secondaryPink: '#c56c86',
-  pointPink: '#FF7582',
-  f_headColor: '#fff',
+  text_head: '#fff',
   text: '#fffffff0',
   text_2: '#ffffffca',
   text_3: '#ddd',

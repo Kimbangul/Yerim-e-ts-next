@@ -46,11 +46,11 @@ const Work = {
   Text: {
     Container: styled(MaxWidthContainer)`
       margin: 0 auto;
-      color: ${({ theme }) => theme.color.f_headColor};
+      color: ${({ theme }) => theme.color.text_head};
     `,
     Title: styled.h3`
       font-size: ${({ theme }) => theme.fontSize.head.xl};
-      color: ${({ theme }) => theme.color.f_headColor};
+      color: ${({ theme }) => theme.color.text_head};
       transition: font-size 0.3s;
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {

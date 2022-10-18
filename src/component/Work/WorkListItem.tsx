@@ -99,8 +99,9 @@ const Item = {
     Title: styled.h4`
       font-size: ${({ theme }) => theme.fontSize.head.rg};
       font-weight: 700;
-      color: ${({ theme }) => theme.color.f_headColor};
+      color: ${({ theme }) => theme.color.text_head};
       transition: font-size 0.3s;
+      word-break: keep-all;
       /* FUNCTION pc */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         font-size: ${({ theme }) => theme.fontSize.head.sm};
@@ -114,7 +115,6 @@ const Item = {
       font-size: ${({ theme }) => theme.fontSize.body.lg};
       color: ${({ theme }) => theme.color.text_2};
       margin-top: 0.8rem;
-
       transition: font-size 0.3s;
 
       /* FUNCTION mb */

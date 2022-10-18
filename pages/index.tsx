@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import type { NextPage } from 'next';
 import styled from 'styled-components';
 

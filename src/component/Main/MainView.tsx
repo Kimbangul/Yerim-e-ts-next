@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import React from 'react';
 
 import { blurDataUrl } from 'src/data/data';
@@ -77,14 +77,14 @@ const Main = {
       display: inline-block;
       padding-bottom: 8rem;
       transition: padding 0.3s;
-      text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 3.2rem;
+      text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 2rem;
       /* FUNCTION pc */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         padding-bottom: 4rem;
       }
     `,
     Title: styled.h3`
-      color: ${({ theme }) => theme.color.f_headColor};
+      color: ${({ theme }) => theme.color.text_head};
       font-size: 7rem;
       font-weight: 900;
       letter-spacing: 0.4rem;
@@ -105,7 +105,7 @@ const Main = {
       }
     `,
     Desc: styled.p`
-      color: ${({ theme }) => theme.color.f_headColor};
+      color: ${({ theme }) => theme.color.text_head};
       font-size: ${({ theme }) => theme.fontSize.body.md};
       font-weight: 300;
       margin-left: 1.4rem;
@@ -201,14 +201,12 @@ const Main = {
         @keyframes cursorAni {
           0% {
             top: 0.8rem;
-            opacity: 0.4;
           }
           85% {
             top: 1.6rem;
           }
           100% {
             top: 1.6rem;
-            opacity: 1;
           }
         }
         animation: cursorAni 1.2s ease-in-out infinite;

@@ -42,10 +42,33 @@ const Tech = {
   Page: styled(Container)`
     padding-top: 0;
     background-color: ${(props) => props.theme.color.secondBg};
+    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(${TECH_DESIGN.src});
+        background-repeat: no-repeat;
+        filter: contrast(0.5) grayscale(1) brightness(0.55);
+        background-position: center top;
+      }
+    }
   `,
   Container: styled(MaxWidthContainer)`
     padding-top: 10.4rem;
     padding-bottom: 7.2rem;
+    position: relative;
+    z-index: 1;
+    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+      padding-top: 32rem;
+    }
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      padding-top: 34rem;
+    }
   `,
   Img: {
     Container: styled.div`
@@ -58,18 +81,18 @@ const Tech = {
       transition: margin 0.3s;
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
-        margin-top: 0;
+        display: none;
       }
     `,
   },
   Text: {
     Container: styled.div`
-      color: ${({ theme }) => theme.color.f_headColor};
+      color: ${({ theme }) => theme.color.text_head};
       transform: translateY(-50%);
     `,
     Title: styled.h3`
       font-size: ${({ theme }) => theme.fontSize.head.xl};
-      color: ${({ theme }) => theme.color.f_headColor};
+      color: ${({ theme }) => theme.color.text_head};
       transition: font-size 0.3s;
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {

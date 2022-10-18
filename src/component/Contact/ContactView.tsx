@@ -128,13 +128,9 @@ const Contact = {
     `,
     Blockquote: styled.blockquote`
       font-size: ${({ theme }) => theme.fontSize.head.sm};
-      color: ${({ theme }) => theme.color.f_headColor};
+      color: ${({ theme }) => theme.color.text_head};
       font-weight: 600;
-      margin-top: 2.4rem;
       transition: font-size 0.3s;
-      @media (${({ theme }) => theme.windowSize['lt-m']}) {
-        margin-top: 0;
-      }
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.head.xs};
