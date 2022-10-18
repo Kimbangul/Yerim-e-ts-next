@@ -56,6 +56,9 @@ const Work = {
   Container: styled.div`
     opacity: 0;
     transition: opacity 0.3s;
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      opacity: 1;
+    }
   `,
   Text: {
     Container: styled(MaxWidthContainer)`

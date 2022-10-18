@@ -69,6 +69,9 @@ const Tech = {
         background-position: center top;
         opacity: 0;
         transition: opacity 0.3s;
+        @media (${({ theme }) => theme.windowSize['mb-m']}) {
+          opacity: 1;
+        }
       }
     }
     /* FUNCTION section animation */
@@ -95,6 +98,7 @@ const Tech = {
     }
     @media (${({ theme }) => theme.windowSize['mb-m']}) {
       padding-top: 34rem;
+      opacity: 1;
     }
   `,
   Img: {

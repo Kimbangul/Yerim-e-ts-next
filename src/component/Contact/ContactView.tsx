@@ -127,13 +127,35 @@ const Contact = {
       .Contact__button {
         opacity: 1;
         &:nth-child(1) {
-          transition: opacity 0.3s 2s;
+          transition: all 0.3s, opacity 0.3s 2s;
         }
         &:nth-child(2) {
-          transition: opacity 0.3s 2.2s;
+          transition: all 0.3s, opacity 0.3s 2.2s;
         }
         &:nth-child(3) {
-          transition: opacity 0.3s 2.4s;
+          transition: all 0.3s, opacity 0.3s 2.4s;
+        }
+      }
+      @media (${({ theme }) => theme.windowSize['lt-s']}) {
+        .Contact__blockquote {
+          opacity: 1;
+          transition: font-size 0.3s, opacity 0.3s 0.3s;
+        }
+        .Contact__desc {
+          opacity: 1;
+          transition: font-size 0.3s, opacity 0.3s 0.9s;
+        }
+        .Contact__button {
+          opacity: 1;
+          &:nth-child(1) {
+            transition: all 0.3s, opacity 0.3s 1.2s;
+          }
+          &:nth-child(2) {
+            transition: all 0.3s, opacity 0.3s 1.4s;
+          }
+          &:nth-child(3) {
+            transition: all 0.3s, opacity 0.3s 1.6s;
+          }
         }
       }
     }

@@ -6,14 +6,6 @@ const handleColorType = (color: string) => {
   switch (color) {
     case 'mainColor':
       return theme.color.main;
-    case 'secondaryBlue':
-      return theme.color.secondaryBlue;
-    case 'secondaryPurple':
-      return theme.color.secondaryPurple;
-    case 'secondaryPink':
-      return theme.color.secondaryPink;
-    case 'pointPink':
-      return theme.color.pointPink;
     default:
       return theme.color.point;
   }
