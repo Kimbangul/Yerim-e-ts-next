@@ -18,7 +18,7 @@ const AboutView = () => {
     <About.Page className='section'>
       <SectionCategoryTitle>About me</SectionCategoryTitle>
       <About.Container className='About__container'>
-        <ProfileImgContainer>
+        <ProfileImgContainer className='About__profile-img'>
           <AutoHeightImageView
             src={PROFILE.src}
             alt='profile image'
@@ -78,6 +78,28 @@ const About = {
         width: 100%;
       }
     }
+    .About__profile-img {
+      opacity: 0;
+      transition: opacity 0.3s 0.3s;
+    }
+    /* FUNCTION section animation */
+    &.active {
+      .About__profile-img {
+        opacity: 1;
+      }
+      .About__title {
+        opacity: 1;
+        transition: font-size 0.3s, margin 0.3s, opacity 0.3s 0.8s;
+      }
+      .About__desc {
+        opacity: 1;
+        transition: font-size 0.3s, opacity 0.3s 1.4s;
+      }
+      .About__button-wrap {
+        opacity: 1;
+        transition: opacity 0.3s 2s;
+      }
+    }
   `,
   Container: styled(MaxWidthContainer)`
     display: flex;
@@ -108,8 +130,8 @@ const About = {
         font-size: ${({ theme }) => theme.fontSize.head.xl};
         text-transform: uppercase;
         color: ${({ theme }) => theme.color.text_head};
-        /* margin-top: 2.4rem; */
-        transition: font-size 0.3s, margin 0.3s;
+        opacity: 0;
+        transition: font-size 0.3s, margin 0.3s, opacity 0.3s;
 
         /* FUNCTION mb */
         @media (${({ theme }) => theme.windowSize['mb-l']}) {
@@ -129,7 +151,8 @@ const About = {
         color: ${({ theme }) => theme.color.text_4};
         margin-top: 2.4rem;
         word-break: keep-all;
-        transition: font-size 0.3s;
+        opacity: 0;
+        transition: font-size 0.3s, opacity 0.3s;
         @media (${(props) => props.theme.windowSize['mb-m']}) {
           font-size: ${({ theme }) => theme.fontSize.body.rg};
         }
@@ -145,6 +168,8 @@ const About = {
       display: flex;
       margin-top: 4.8rem;
       gap: 1.6rem;
+      opacity: 0;
+      transition: opacity 0.3s;
 
       @media (${(props) => props.theme.windowSize['lt-s']}) {
         flex-direction: column;

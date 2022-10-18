@@ -4,7 +4,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
-import { blurDataUrl, link } from 'src/data/data';
+import { link } from 'src/data/data';
 import { onClickLinkBtn } from 'utils/utils';
 import {
   Container,
@@ -43,7 +43,7 @@ const ContactView: React.FC = () => {
     <Contact.Page className='section'>
       <SectionCategoryTitle>Contact</SectionCategoryTitle>
       <Contact.Container className='Contact__container'>
-        <ProfileImgContainer className='Contact__image'>
+        <ProfileImgContainer className='Contact__profile-img'>
           <AutoHeightImageView
             src={PROFILE.src}
             alt='profile image'
@@ -92,6 +92,10 @@ const ContactView: React.FC = () => {
 const Contact = {
   Page: styled(Container)`
     flex-direction: column;
+    .Contact__profile-img {
+      opacity: 0;
+      transition: opacity 0.3s 0.3s;
+    }
     /* FUNCTION pc */
     @media (${(props) => props.theme.windowSize['lt-s']}) {
       padding-bottom: 7.2rem;
@@ -102,8 +106,35 @@ const Contact = {
       }
     }
     @media (${({ theme }) => theme.windowSize['lt-s']}) {
-      .Contact__image {
+      .Contact__profile-img {
         display: none;
+      }
+    }
+
+    /* FUNCTION section animation */
+    &.active {
+      .Contact__profile-img {
+        opacity: 1;
+      }
+      .Contact__blockquote {
+        opacity: 1;
+        transition: font-size 0.3s, opacity 0.3s 0.8s;
+      }
+      .Contact__desc {
+        opacity: 1;
+        transition: font-size 0.3s, opacity 0.3s 1.4s;
+      }
+      .Contact__button {
+        opacity: 1;
+        &:nth-child(1) {
+          transition: opacity 0.3s 2s;
+        }
+        &:nth-child(2) {
+          transition: opacity 0.3s 2.2s;
+        }
+        &:nth-child(3) {
+          transition: opacity 0.3s 2.4s;
+        }
       }
     }
   `,
@@ -130,7 +161,8 @@ const Contact = {
       font-size: ${({ theme }) => theme.fontSize.head.sm};
       color: ${({ theme }) => theme.color.text_head};
       font-weight: 600;
-      transition: font-size 0.3s;
+      opacity: 0;
+      transition: font-size 0.3s, opacity 0.3s;
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.head.xs};
@@ -142,6 +174,8 @@ const Contact = {
       margin-top: 2.4rem;
       word-break: keep-all;
       line-height: 1.8;
+      opacity: 0;
+      transition: font-size 0.3s, opacity 0.3s;
       /* FUNCTION mb */
       @media (${(props) => props.theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.body.rg};
@@ -161,6 +195,8 @@ const Contact = {
       display: flex;
       align-items: center;
       gap: 1.2rem;
+      opacity: 0;
+      transition: opacity 0.3s;
       svg {
         width: ${({ theme }) => theme.fontSize.head.xs};
         /* margin-left: calc(${({ theme }) => theme.fontSize.head.sm} / -2); */

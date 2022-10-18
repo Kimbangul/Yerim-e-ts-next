@@ -12,14 +12,18 @@ import 'swiper/css/effect-coverflow';
 const WorkView: React.FC = () => {
   // PARAM state
   const [currentIdx, setCurrentIdx] = useState(0);
-  const currentWorkList = workList[currentIdx % (workList.length - 1)];
 
   return (
     <Work.Page className='section'>
       <SectionCategoryTitle>Work</SectionCategoryTitle>
       <Work.Container className='Work__container'>
         <Work.Text.Container className='Work__text-container'>
-          <Work.Text.Title className='Work__title'>Work</Work.Text.Title>
+          <Work.Text.Title className='Work__title'>
+            <Work.Text.Word className='Work__title-word'>W</Work.Text.Word>
+            <Work.Text.Word className='Work__title-word'>o</Work.Text.Word>
+            <Work.Text.Word className='Work__title-word'>r</Work.Text.Word>
+            <Work.Text.Word className='Work__title-word'>k</Work.Text.Word>
+          </Work.Text.Title>
           {/* <Work.Text.Desc className='Work__desc'>좌우로 슬라이드해서 제 작업물들을 살펴보세요.</Work.Text.Desc> */}
         </Work.Text.Container>
         <Work.Content.Container className='Work__Content'>
@@ -41,8 +45,18 @@ const Work = {
     @media (${({ theme }) => theme.windowSize['mb-m']}) {
       height: 6rem;
     }
+    /* FUNCTION section animation */
+    &.active {
+      .Work__container {
+        opacity: 1;
+        transition: opacity 0.3s 0.5s;
+      }
+    }
   `,
-  Container: styled.div``,
+  Container: styled.div`
+    opacity: 0;
+    transition: opacity 0.3s;
+  `,
   Text: {
     Container: styled(MaxWidthContainer)`
       margin: 0 auto;
@@ -55,6 +69,42 @@ const Work = {
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.head.md};
+      }
+    `,
+    Word: styled.span`
+      @keyframes titleWordAni {
+        0% {
+          top: 0;
+        }
+        20% {
+          top: -0.4rem;
+        }
+        40% {
+          top: 0;
+        }
+        60% {
+          top: 0;
+        }
+        80% {
+          top: 0;
+        }
+        100% {
+          top: 0;
+        }
+      }
+      position: relative;
+      animation: titleWordAni 1.8s infinite;
+      &:nth-of-type(1) {
+        animation-delay: 0.3s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 0.6s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 0.9s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: 1.2s;
       }
     `,
   },

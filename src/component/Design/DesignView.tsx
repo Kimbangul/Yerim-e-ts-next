@@ -68,8 +68,17 @@ const Design = {
         width: 100%;
       }
     }
+    /* FUNCTION section animation */
+    &.active {
+      .Design__container {
+        opacity: 1;
+        transition: opacity 0.3s 0.5s;
+      }
+    }
   `,
   Container: styled(MaxWidthContainer)`
+    opacity: 0;
+    transition: opacity 0.3s;
     @media (max-width: 1000px) {
       display: flex;
       flex-direction: column-reverse;
