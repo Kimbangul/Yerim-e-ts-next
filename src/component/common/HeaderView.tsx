@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -7,8 +7,25 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { MaxWidthContainer } from 'styles/Common';
 import LOGO from 'src/assets/image/logo.svg';
 import LOGO_MB from 'src/assets/image/logo_mb.svg';
+import React, { useState } from 'react';
+
+// PARAM type
+type HeadComponentPropType = {
+  [key: string]: any;
+  isOpen: boolean;
+};
 
 const HeaderView: React.FC = () => {
+  // PARAM state
+  const [isOpenMbMenu, setIsOpenMbMenu] = useState(false);
+
+  // FUNCTION mobile menu click
+  const onClickMbMenu = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsOpenMbMenu(!isOpenMbMenu);
+    return;
+  };
+
   return (
     <Header.Container>
       <Header.Inner className='Header__inner'>
@@ -26,13 +43,15 @@ const HeaderView: React.FC = () => {
             </a>
           </Link>
         </Header.Mb.Logo>
-        <Header.Mb.Menu href='#'>
+        <Header.Mb.Menu href='#' isOpen={isOpenMbMenu} onClick={onClickMbMenu}>
           Menu
-          <Header.Mb.MenuBar />
-          <Header.Mb.MenuBar />
-          <Header.Mb.MenuBar />
+          <Header.Mb.MenuInner>
+            <Header.Mb.MenuBar className='Header__mb-menu-bar' />
+            <Header.Mb.MenuBar className='Header__mb-menu-bar' />
+            <Header.Mb.MenuBar className='Header__mb-menu-bar' />
+          </Header.Mb.MenuInner>
         </Header.Mb.Menu>
-        <Header.Social.List className='Header__social'>
+        <Header.Social.List isOpen={isOpenMbMenu} className='Header__social'>
           <Header.Social.Item className='Header__social-item'>
             <Link href='https://github.com/Kimbangul'>
               <a target='_blank' rel='noreferrer'>
@@ -100,13 +119,48 @@ const Header = {
     }
   `,
   Social: {
-    List: styled.ul`
+    List: styled.ul<HeadComponentPropType>`
       display: flex;
       align-items: center;
       transform: translateX(1.2rem);
+      transition: right 0.3s;
+
+      @keyframes list-ani {
+        0% {
+          transform: scale(0);
+        }
+        80% {
+          transform: scale(1.2);
+        }
+        95% {
+          transform: scale(1);
+        }
+      }
 
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
-        display: none;
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        flex-direction: column;
+        transform: none;
+        top: calc(100% + 0.8rem);
+        right: 3rem;
+        gap: 2.4rem;
+        transition: opacity 0.3s, visibility 0s 0.3s;
+        ${(props) =>
+          props.isOpen &&
+          css`
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s, visibility 0s;
+            .Header__social-item {
+              animation: list-ani 0.3s;
+            }
+          `};
+      }
+      @media (${({ theme }) => theme.windowSize['mb-s']}) {
+        right: 2rem;
       }
     `,
     Item: styled.li`
@@ -121,6 +175,9 @@ const Header = {
         transition: color 0.3s;
         &:hover {
           color: ${({ theme }) => theme.color.point};
+        }
+        @media (${({ theme }) => theme.windowSize['mb-m']}) {
+          margin: 0;
         }
       }
     `,
@@ -148,34 +205,63 @@ const Header = {
         }
       }
     `,
-    Menu: styled.a`
+    Menu: styled.a<HeadComponentPropType>`
       display: none;
       background: transparent;
       border: none;
       width: 2.4rem;
       height: 2.4rem;
-      position: relative;
       font-size: 0;
       text-indent: -99999;
+      padding: 0.2rem 0;
       &::after {
       }
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
+        display: block;
       }
+      ${(props) =>
+        props.isOpen &&
+        css`
+          .Header__mb-menu-bar {
+            position: absolute;
+            transition: all 0.3s, transform 0.3s 0.3s;
+            &:nth-child(1) {
+              top: 50%;
+              right: 0;
+              transform: rotate(-45deg);
+            }
+            &:nth-child(3) {
+              top: 50%;
+              right: 0;
+              transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+          }
+        `};
+    `,
+    MenuInner: styled.div`
+      width: 100%;
+      height: 100%;
+      position: relative;
     `,
     MenuBar: styled.span`
       display: inline-block;
       width: 100%;
       height: 0.1rem;
       background: #fff;
+      transition: all 0.3s 0.3s, transform 0.3s;
+      position: absolute;
+      right: 0;
+      top: 0;
       &:nth-child(2) {
         width: 70%;
+        top: calc(50% - 0.05rem);
       }
       &:nth-child(3) {
         width: 100%;
+        top: calc(100% - 0.1rem);
       }
     `,
   },
