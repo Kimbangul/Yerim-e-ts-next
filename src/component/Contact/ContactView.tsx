@@ -57,13 +57,14 @@ const ContactView: React.FC = () => {
           </Contact.Text.Blockquote>
           <Contact.Text.Desc className='Contact__desc'>
             즐기는 자를 이길 수 있는 사람은 없습니다. <br />
-            저에게는 퍼블리싱 업무가 즐거운 일입니다. 그리고 좋아하는 일을 잘
-            해내고 싶은 욕심이 있습니다. <br />
-            좋아하는 일을 즐기며 잘 해내는, 그런 멋진 사람이 되고 싶습니다.{' '}
+            저에게는 웹을 만들어 나가는 업무가 즐거운 일입니다. 그리고 좋아하는
+            일을 잘 해내고 싶은 욕심이 있습니다. <br />
+            좋아하는 일을 즐기며 잘 해내는, 그런{' '}
+            <Contact.Text.Point>멋진 사람</Contact.Text.Point>이 되고 싶습니다.{' '}
             <br /> <br />
             오늘보다 내일 더 멋진 사람이 되도록 노력하는,
-            <br />
-            웹 퍼블리셔 박예림입니다.
+            <br />웹 개발자 <Contact.Text.Point>박예림</Contact.Text.Point>
+            입니다.
             <br />
             포트폴리오를 봐주셔서 감사합니다 :&#41;
           </Contact.Text.Desc>
@@ -202,6 +203,10 @@ const Contact = {
       @media (${(props) => props.theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.body.rg};
       }
+    `,
+    Point: styled.span`
+      color: ${({ theme }) => theme.color.point};
+      font-weight: 500;
     `,
   },
   Button: {

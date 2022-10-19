@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import { workList } from 'src/data/data';
-
 import { SectionCategoryTitle, MaxWidthContainer } from 'styles/Common';
 import WorkList from 'src/component/Work/WorkList';
 
@@ -24,7 +22,6 @@ const WorkView: React.FC = () => {
             <Work.Text.Word className='Work__title-word'>r</Work.Text.Word>
             <Work.Text.Word className='Work__title-word'>k</Work.Text.Word>
           </Work.Text.Title>
-          {/* <Work.Text.Desc className='Work__desc'>좌우로 슬라이드해서 제 작업물들을 살펴보세요.</Work.Text.Desc> */}
         </Work.Text.Container>
         <Work.Content.Container className='Work__Content'>
           <WorkList setCurrentIdx={setCurrentIdx} />

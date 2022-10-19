@@ -33,24 +33,22 @@ const AboutView = () => {
             flexible.
           </About.Text.Title.Text>
           <About.Text.Desc.Text className='About__desc'>
-            안녕하세요, 웹 퍼블리셔 박예림입니다. <br />
+            안녕하세요, 웹 프론트엔드 개발자 박예림입니다. <br />
             흥미로운 것은 오래 기억됩니다. 저는 사람들의 기억에 남는 웹을 만드는
             것이 목표입니다. <br />
-            특히 CSS와 Javascript를 이용해 모션을 주고, 동적인 화면을 구사하는
-            것에 관심이 많습니다. <br />
-            보는 사람들에게 하여금 브랜드를 기억시키고 가치를 높이는 것이 제
-            일이라고 생각합니다. <br /> <br />
-            개발에도 관심이 많아, 프로그래밍 스터디에 꾸준히 참여하며 추후
-            원활한
+            CSS와 Javascript를 이용해 모션을 주고 동적인 화면을 구사하는 것에
+            관심이 많으며, <br />
+            협업과 유지보수에 좋은 코드를 짜기 위해 꾸준히 공부하고 있습니다.
             <br />
-            협업을 위한 발판을 마련중입니다. 웹 개발은 혼자 하는 일이 아닌 만큼
-            <br />
-            사람들 간의{' '}
+            이용자에게 멋진 사용자 경험을 제공하고, 웹을 통해 상품이나 브랜드의
+            가치를 높이는 것이 제 일이라고 생각합니다. <br /> <br />웹 개발은
+            혼자 하는 일이 아닌 만큼 사람들 간의{' '}
             <About.Text.Desc.Point className='About__desc--point'>
               약속, 그리고 소통
             </About.Text.Desc.Point>
             이 중요하다고 생각합니다. <br />
-            유연한 소통을 할 수 있도록, 항상 경청하고 열린 자세로 임하는{' '}
+            유연한 소통을 할 수 있도록, 항상 경청하고 열린 자세로 임하며 성장해
+            나가는{' '}
             <About.Text.Desc.Point className='About__desc--point'>
               flexible
             </About.Text.Desc.Point>
