@@ -142,7 +142,7 @@ const designList: DesignListType[] = [
 ];
 
 // PARAM workList type
-type WorkType = {
+export type WorkType = {
   title: string;
   thumb: string;
   category: string;
@@ -244,4 +244,3 @@ const workList: WorkType[] = [
 ];
 
 export { link, techList, designList, workList, blurDataUrl };
-export type { WorkType };

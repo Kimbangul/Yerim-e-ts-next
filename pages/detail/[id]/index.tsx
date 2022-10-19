@@ -23,13 +23,16 @@ export const getStaticPaths: GetStaticPaths = (props) => {
 
 export const getStaticProps: GetStaticProps = (props) => {
   const id = `${props.params?.id}`;
+  const data = workList.filter(({ title }) => title == id)[0];
   return {
     props: {
       id,
+      data,
     },
   };
 };
-const Detail: NextPage<{ id: string }> = ({ id }) => {
+const Detail: NextPage<{ id: string; data: WorkType }> = ({ id, data }) => {
+  console.log(data);
   return (
     <article className='Detail'>
       <Header />
