@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-
+  trailingSlash: true,
   assetPrefix: '.',
   reactStrictMode: true,
   swcMinify: true,
@@ -13,9 +13,8 @@ const nextConfig = {
 
   images: {
     loader: 'akamai',
-    path: '',
+    path: '.',
   },
-
 
   webpack(config, { isServer }) {
     config.module.rules.push({

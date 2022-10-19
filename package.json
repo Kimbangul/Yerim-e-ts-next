@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "test": "next build && cp .next/server/index.html test/index.html",
     "start": "next start",
     "lint": "next lint",
     "export": "next export",

@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 import { onClickLinkBtn } from 'utils/utils';
@@ -17,6 +18,14 @@ type WorkListItemType = {
 };
 
 const WorkListItem: React.FC<WorkListItemType> = (props) => {
+  const router = useRouter();
+  // FUNCTION
+  const onClickDetailViewBtn = (param: string) => {
+    // window.location.href = window.location.host + `/detail/${param}/index.html`;
+    router.push(`/detail/${param}.html`);
+    return;
+  };
+
   return (
     <Item.Container className='WorkListItem__container'>
       <Item.Thumb>
@@ -44,9 +53,6 @@ const WorkListItem: React.FC<WorkListItemType> = (props) => {
               );
             })}
           </Item.Desc.TagList>
-          {/* <Item.Desc.Desc className='WorkListItem__desc'>
-            {props.desc}
-          </Item.Desc.Desc> */}
         </Item.Desc.Info>
         <Item.Button.Container className='WorkListItem__button-container'>
           {props.github ? (
@@ -55,7 +61,8 @@ const WorkListItem: React.FC<WorkListItemType> = (props) => {
             </Button>
           ) : null}
           {props.link ? (
-            <Button onClick={onClickLinkBtn.bind(this, props.link, '_blank')}>
+            // <Button onClick={onClickLinkBtn.bind(this, props.link, '_blank')}>
+            <Button onClick={onClickDetailViewBtn.bind(this, props.title)}>
               사이트 바로가기
             </Button>
           ) : null}

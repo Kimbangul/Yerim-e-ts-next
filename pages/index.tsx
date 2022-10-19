@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import type { NextPage } from 'next';
-import styled from 'styled-components';
 
 import { ModalContext } from 'src/utils/ModalContext';
 import Header from 'src/component/common/HeaderView';
@@ -26,21 +25,5 @@ const Home: NextPage = () => {
     </>
   );
 };
-
-// COMPONENT style
-const ParticleContainer = styled.div`
-  width: 100%;
-  height: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  pointer-events: none;
-  .ParticleContainer__inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-`;
 
 export default Home;
