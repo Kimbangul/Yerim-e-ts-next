@@ -16,13 +16,17 @@ type WorkListItemType = {
   link?: string;
   github?: string;
 };
-
 const WorkListItem: React.FC<WorkListItemType> = (props) => {
   const router = useRouter();
   // FUNCTION
   const onClickDetailViewBtn = (param: string) => {
+    const isDev = process.env.NODE_ENV === 'development';
     // window.location.href = window.location.host + `/detail/${param}/index.html`;
-    router.push(`/detail/${param}.html`);
+    if (isDev) {
+      router.push(`/detail/${param}`);
+    } else {
+      router.push(`/detail/${param}/index.html`);
+    }
     return;
   };
 
