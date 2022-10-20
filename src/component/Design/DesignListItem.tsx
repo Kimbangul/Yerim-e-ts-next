@@ -1,11 +1,10 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import styled from 'styled-components';
 
 import { ModalContext } from 'src/utils/ModalContext';
 
 import { blurDataUrl } from 'src/data/data';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
-import DesignModal from 'src/component/Design/DesignModal';
 
 // PARAM type
 type DesignListItemProps = {

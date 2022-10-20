@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 
-import CHEVRON_64 from 'src/assets/icon/chevron_64.svg';
+import CHEVRON_64 from 'public/icon/chevron_64.svg';
 
 // PARAM type
 type ChevronType = {

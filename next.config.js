@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   trailingSlash: true,
   assetPrefix: '.',
   reactStrictMode: true,
   swcMinify: true,
+  // basePath: '/.',
 
   // i18n: {
   //   locales: ["ko"],

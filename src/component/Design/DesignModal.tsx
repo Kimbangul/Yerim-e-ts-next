@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import styled from 'styled-components';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 
-import CLOSE_24 from 'src/assets/icon/close_24.svg';
+import CLOSE_24 from 'public/icon/close_24.svg';
 
 // PARAM type
 type DesignModalType = {

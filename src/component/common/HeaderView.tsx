@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Link from 'next/link';
 import styled, { css } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -5,9 +6,8 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { MaxWidthContainer } from 'styles/Common';
-import LOGO from 'src/assets/image/logo.svg';
-import LOGO_MB from 'src/assets/image/logo_mb.svg';
-import React, { useState } from 'react';
+import LOGO from 'public/image/logo.svg';
+import LOGO_MB from 'public/image/logo_mb.svg';
 
 // PARAM type
 type HeadComponentPropType = {

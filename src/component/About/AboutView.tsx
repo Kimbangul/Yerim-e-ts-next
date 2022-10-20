@@ -11,7 +11,7 @@ import {
 } from 'styles/Common';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 
-import PROFILE from 'src/assets/image/about/profile.jpg';
+import PROFILE from 'public/image/about/profile.jpg';
 
 const AboutView = () => {
   return (

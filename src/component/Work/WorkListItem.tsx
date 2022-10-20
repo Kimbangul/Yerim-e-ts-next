@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
-import { onClickLinkBtn } from 'utils/utils';
 import { blurDataUrl } from 'src/data/data';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 import { Button } from 'styles/Common';
@@ -25,7 +24,8 @@ const WorkListItem: React.FC<WorkListItemType> = (props) => {
     if (isDev) {
       router.push(`/detail/${param}`);
     } else {
-      router.push(`/detail/${param}/index.html`);
+      console.log(router);
+      router.push(`${router.basePath}/detail/${param}/index.html`);
     }
     return;
   };

@@ -13,18 +13,27 @@ type DetailType = {
 
 // COMPONENT main component
 const DetailView: React.FC<DetailType> = ({ data }) => {
-  console.log(data);
+  // FUNCTION get image url
+  const getImageUrl = () => {
+    const fileNameLength = data.id.toString().length;
+    if (fileNameLength < 2) {
+      return `image/work/work0${data.id}`;
+    } else {
+      return `image/work/work${data.id}`;
+    }
+  };
+  console.log(getImageUrl());
   return (
     <Detail.Container as='article' className='Detail'>
       <Detail.Inner>
-        <div className='Detail__image-container'>
+        <Detail.Image.Container className='Detail__image-container'>
           <AutoHeightImageView
-            src={data.thumb}
+            src={`image/work/work01.jpg`}
             alt={data.title}
             placeholder='blur'
             blurDataURL={blurDataUrl}
           />
-        </div>
+        </Detail.Image.Container>
         <h2 className='Detail__title'>{data.title}</h2>
         <h3 className='Detail__category'>{data.category}</h3>
         <ul className='Detail__tag-list'>
@@ -58,6 +67,16 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
 const Detail = {
   Container: styled(Container)``,
   Inner: styled(MaxWidthContainer)``,
+  Tag: {
+    List: styled.ul`
+      display: flex;
+    `,
+  },
+  Image: {
+    Container: styled.div`
+      position: relative;
+    `,
+  },
 };
 
 export default DetailView;

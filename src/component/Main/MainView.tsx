@@ -11,7 +11,7 @@ import {
 } from 'styles/Common';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 
-import MOON from 'src/assets/image/main/moon.png';
+import MOON from 'public/image/main/moon.png';
 
 // COMPONENT main component
 const MainView: React.FC = () => {

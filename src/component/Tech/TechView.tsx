@@ -11,7 +11,7 @@ import { techList } from 'src/data/data';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 import TechList from 'src/component/Tech/TechListView';
 
-import TECH_DESIGN from 'src/assets/image/tech/tech_design.jpg';
+import TECH_DESIGN from 'public/image/tech/tech_design.jpg';
 
 const TechView: React.FC = () => {
   return (

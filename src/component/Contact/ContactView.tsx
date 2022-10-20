@@ -14,7 +14,7 @@ import {
   MaxWidthContainer,
 } from 'styles/Common';
 
-import PROFILE from 'src/assets/image/contact/profile.jpg';
+import PROFILE from 'public/image/contact/profile.jpg';
 
 const ContactView: React.FC = () => {
   // PARAM link data
