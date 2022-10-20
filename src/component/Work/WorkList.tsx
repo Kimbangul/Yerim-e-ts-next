@@ -94,15 +94,7 @@ const WorkList: React.FC<WorkListType> = (props) => {
         {workList.map((el) => {
           return (
             <SwiperSlide key={el.title}>
-              <WorkListItem
-                thumb={el.thumb}
-                title={el.title}
-                desc={el.desc}
-                tag={el.tag}
-                category={el.category}
-                github={el.github && el.github}
-                link={el.link && el.link}
-              />
+              <WorkListItem {...el} />
             </SwiperSlide>
           );
         })}

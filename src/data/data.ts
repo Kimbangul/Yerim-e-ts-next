@@ -143,6 +143,7 @@ const designList: DesignListType[] = [
 
 // PARAM workList type
 export type WorkType = {
+  id: number;
   title: string;
   thumb: string;
   category: string;
@@ -154,6 +155,7 @@ export type WorkType = {
 
 const workList: WorkType[] = [
   {
+    id: 1,
     title: '알까기를 시작하는 트레이너를 위한 안내서',
     thumb: WORK01.src,
     category: '창작 웹사이트',
@@ -162,6 +164,7 @@ const workList: WorkType[] = [
     desc: '게임 &#39;포켓몬스터&#39; 시리즈의 시스템 중 하나인 	&#39;알까기&#39; 에 대한 내용을 소개하는 사이트입니다. 디자인 컨셉은 캐릭터 일러스트를 이용한 인포그래픽 스타일로, 인터랙티브하고 동적인 웹 구현에 중점을 두었습니다.',
   },
   {
+    id: 2,
     title: 'ORION',
     thumb: WORK02.src,
     category: '오리온 사이트 리디자인',
@@ -170,6 +173,7 @@ const workList: WorkType[] = [
     desc: '기존 오리온 사이트를 분석해 구조적, 디자인적 문제점을 찾아 개선하고 회사와 제품의 가치를 방문자에게 더욱 어필할 수 있도록 현대적으로 디자인하고자 하였습니다.',
   },
   {
+    id: 3,
     title: 'Haagendazs',
     thumb: WORK03.src,
     category: '오리온 사이트 리디자인',
@@ -178,6 +182,7 @@ const workList: WorkType[] = [
     desc: '기존 하겐다즈 사이트를 분석해 구조적, 디자인적 문제점을 찾아 개선하고 브랜드의 이미지에 맞춰 고급지면서도 트렌디한 느낌으로 디자인하고자 하였습니다.',
   },
   {
+    id: 4,
     title: '건명테크',
     thumb: WORK04.src,
     category: '기업 사이트 제작',
@@ -186,6 +191,7 @@ const workList: WorkType[] = [
     desc: '그누보드 솔루션을 이용해 (주)건명테크의 회사 사이트를 제작하였습니다. 지나치게 무겁지 않으면서도 신뢰감을 줄 수 있는 회사의 이미지를 표현하기 위해 블루와 그린의 그라데이션 컬러를 사용하여 감각적으로 디자인하고자 하였습니다.',
   },
   {
+    id: 5,
     title: 'Ripa Korea',
     thumb: WORK05.src,
     category: '기업 사이트 제작',
@@ -194,6 +200,7 @@ const workList: WorkType[] = [
     desc: '코인과 서버, 클라우드 등 IT 기술을 다루는 회사의 이미지에 맞도록 블랙과 화이트의 대비, 그라데이션과 애니메이션 효과를 이용하여 세련된 느낌을 전달할 수 있도록 제작하고자 하였습니다.',
   },
   {
+    id: 6,
     title: '메모리안',
     thumb: WORK06.src,
     category: '기업 사이트 제작',
@@ -202,6 +209,7 @@ const workList: WorkType[] = [
     desc: '유골보석 및 성형업 관련 제품을 제작하는 기업의 사이트를 제작하였습니다. 판매 제품의 특성상, 방문 고객들이 두려움을 갖고 접근할 수 있기 때문에 무겁지 않으면서도 고급스러운 분위기가 느껴질 수 있도록 기획하였습니다.',
   },
   {
+    id: 7,
     title: '가마통옛날닭강정',
     thumb: WORK07.src,
     category: '프랜차이즈 사이트 제작',
@@ -210,6 +218,7 @@ const workList: WorkType[] = [
     desc: '',
   },
   {
+    id: 8,
     title: '부속114',
     thumb: WORK08.src,
     category: '쇼핑몰 사이트 제작',
@@ -218,6 +227,7 @@ const workList: WorkType[] = [
     desc: '',
   },
   {
+    id: 9,
     title: 'Import-H',
     thumb: WORK09.src,
     category: '사이드 팀 프로젝트',
@@ -226,6 +236,7 @@ const workList: WorkType[] = [
     desc: '학교 프로그래밍 소모임 활동으로 프론트엔드, 백엔드로 나누어 스터디 커뮤니티 사이트 제작을 진행하였습니다. React.js와 관련 라이브러리를 이용하여 제작하였습니다.',
   },
   {
+    id: 10,
     title: 'To-do App',
     thumb: WORK10.src,
     category: '오리온 사이트 리디자인',
@@ -234,6 +245,7 @@ const workList: WorkType[] = [
     desc: '학교 프로그래밍 소모임 활동으로 프론트엔드, 백엔드로 나뉘어 Todo 앱을 제작했습니다. 처음 다뤄 보는 React라 미숙한 점이 많았으나, 팀 프로젝트를 진행하며 배운 점도 많았고 프론트엔드 라이브러리를 공부해야겠다는 계기를 만들어 준 뜻 깊었던 작업이었습니다.',
   },
   {
+    id: 11,
     title: 'FUNCHY',
     thumb: WORK11.src,
     category: '오리온 사이트 리디자인',

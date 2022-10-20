@@ -8,6 +8,7 @@ import { Button } from 'styles/Common';
 import Tag from 'src/component/common/Tag';
 
 type WorkListItemType = {
+  id: number;
   thumb: string;
   title: string;
   desc: string;
@@ -19,9 +20,8 @@ type WorkListItemType = {
 const WorkListItem: React.FC<WorkListItemType> = (props) => {
   const router = useRouter();
   // FUNCTION
-  const onClickDetailViewBtn = (param: string) => {
+  const onClickDetailViewBtn = (param: number) => {
     const isDev = process.env.NODE_ENV === 'development';
-    // window.location.href = window.location.host + `/detail/${param}/index.html`;
     if (isDev) {
       router.push(`/detail/${param}`);
     } else {
@@ -59,17 +59,9 @@ const WorkListItem: React.FC<WorkListItemType> = (props) => {
           </Item.Desc.TagList>
         </Item.Desc.Info>
         <Item.Button.Container className='WorkListItem__button-container'>
-          {props.github ? (
-            <Button onClick={onClickLinkBtn.bind(this, props.github, '_blank')}>
-              Github 바로가기
-            </Button>
-          ) : null}
-          {props.link ? (
-            // <Button onClick={onClickLinkBtn.bind(this, props.link, '_blank')}>
-            <Button onClick={onClickDetailViewBtn.bind(this, props.title)}>
-              사이트 바로가기
-            </Button>
-          ) : null}
+          <Button onClick={onClickDetailViewBtn.bind(this, props.id)}>
+            상세보기
+          </Button>
         </Item.Button.Container>
       </Item.Desc.Container>
     </Item.Container>

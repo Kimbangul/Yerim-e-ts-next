@@ -1,19 +1,13 @@
-import {
-  NextPage,
-  GetServerSideProps,
-  InferGetServerSidePropsType,
-  GetStaticPaths,
-  GetStaticProps,
-} from 'next';
-import { title } from 'process';
-import Header from 'src/component/common/HeaderView';
-import Tag from 'src/component/common/Tag';
+import { NextPage, GetStaticPaths, GetStaticProps } from 'next';
 
 import { workList, WorkType } from 'src/data/data';
+import DetailView from 'src/component/Detail/DetailView';
+import Header from 'src/component/common/HeaderView';
+import Footer from 'src/component/common/FooterView';
 
 export const getStaticPaths: GetStaticPaths = (props) => {
-  const paths = workList.map(({ title }) => ({
-    params: { id: `${title}` },
+  const paths = workList.map(({ id }) => ({
+    params: { id: `${id}` },
   }));
   return {
     paths,
@@ -22,34 +16,32 @@ export const getStaticPaths: GetStaticPaths = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = (props) => {
-  const id = `${props.params?.id}`;
-  const data = workList.filter(({ title }) => title == id)[0];
+  const paramsIdData = `${props.params?.id}`;
+  // TODO 데이터 정리 후 수정
+  const data = workList.filter(({ id }) => paramsIdData === id.toString())[0];
   return {
     props: {
-      id,
       data,
     },
   };
 };
-const Detail: NextPage<{ id: string; data: WorkType }> = ({ id, data }) => {
-  console.log(data);
-  return (
-    <article className='Detail'>
-      <Header />
-      <h2>{id}</h2>
-      <ul className='Detail__tag-list'>
-        <Tag className='Detail__tag-item'>태그1</Tag>
-        <Tag className='Detail__tag-item'>태그2</Tag>
-      </ul>
-    </article>
-  );
+
+// PARAM type
+type DetailViewType = {
+  paramsIdData: string;
+  data: WorkType;
 };
 
-// Detail.getInitialProps = ({ query }) => {
-//   const pageId = `${query.id}`;
-//   return {
-//     pid: pageId,
-//   };
-// };
+// COMPONENT main component
+const Detail: NextPage<DetailViewType> = ({ data }) => {
+  console.log(data);
+  return (
+    <>
+      <Header />
+      <DetailView data={data} />
+      <Footer />
+    </>
+  );
+};
 
 export default Detail;
