@@ -17,22 +17,18 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
   const getImageUrl = () => {
     const fileNameLength = data.id.toString().length;
     if (fileNameLength < 2) {
-      return `image/work/work0${data.id}`;
+      return `/work/work0${data.id}.jpg`;
     } else {
-      return `image/work/work${data.id}`;
+      return `/work/work${data.id}.jpg`;
     }
   };
-  console.log(getImageUrl());
+  console.log('Thumb!!!@#@#@@#');
+  console.log(data.thumb);
   return (
     <Detail.Container as='article' className='Detail'>
       <Detail.Inner>
         <Detail.Image.Container className='Detail__image-container'>
-          <AutoHeightImageView
-            src={`image/work/work01.jpg`}
-            alt={data.title}
-            placeholder='blur'
-            blurDataURL={blurDataUrl}
-          />
+          <AutoHeightImageView src={data.thumb} alt={data.title} />
         </Detail.Image.Container>
         <h2 className='Detail__title'>{data.title}</h2>
         <h3 className='Detail__category'>{data.category}</h3>

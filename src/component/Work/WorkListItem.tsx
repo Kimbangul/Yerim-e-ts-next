@@ -18,14 +18,15 @@ type WorkListItemType = {
 };
 const WorkListItem: React.FC<WorkListItemType> = (props) => {
   const router = useRouter();
+  // console.log(router);
+  // console.log(`${router.route}/detail/1/index.html`);
   // FUNCTION
   const onClickDetailViewBtn = (param: number) => {
     const isDev = process.env.NODE_ENV === 'development';
     if (isDev) {
       router.push(`/detail/${param}`);
     } else {
-      console.log(router);
-      router.push(`${router.basePath}/detail/${param}/index.html`);
+      router.push(`./detail/${param}/index.html`);
     }
     return;
   };
