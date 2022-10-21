@@ -34,7 +34,6 @@ type DetailViewType = {
 
 // COMPONENT main component
 const Detail: NextPage<DetailViewType> = ({ data }) => {
-  console.log(data);
   return (
     <>
       <Header />
