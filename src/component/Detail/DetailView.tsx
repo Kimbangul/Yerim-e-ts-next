@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
 import Tag from 'src/component/common/Tag';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 import { onClickLinkBtn } from 'utils/utils';
-import { Container, MaxWidthContainer, Button } from 'styles/Common';
-import { workList, WorkType, blurDataUrl } from 'src/data/data';
+import { Container, Button } from 'styles/Common';
+import { WorkType } from 'src/data/data';
 
 // PARAM type
 type DetailType = {
@@ -13,15 +14,14 @@ type DetailType = {
 
 // COMPONENT main component
 const DetailView: React.FC<DetailType> = ({ data }) => {
-  // FUNCTION get image url
-  const getImageUrl = () => {
-    const fileNameLength = data.id.toString().length;
-    if (fileNameLength < 2) {
-      return `/work/work0${data.id}.jpg`;
-    } else {
-      return `/work/work${data.id}.jpg`;
-    }
+  const router = useRouter();
+
+  // FUNCTION 목록으로 돌아가기 버튼 눌렀을 때
+  const onClickBackBtn = () => {
+    router.back();
+    return;
   };
+
   return (
     <Detail.Container as='article' className='Detail'>
       <Detail.Inner>
@@ -64,22 +64,27 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
           </Detail.Image.Container>
         </Detail.Title.Container>
 
-        <div className='Detail__duration-container'>
+        <Detail.Desc.Container className='Detail__duration-container'>
           <Detail.Desc.Title className='Detail__duration-title'>
             Duration of work
           </Detail.Desc.Title>
           <Detail.Desc.Content as='div' className='Detail__duration-data'>
             2022-10-22 ~ 2022-10-22
           </Detail.Desc.Content>
-        </div>
-        <div className='Detail__desc-container'>
+        </Detail.Desc.Container>
+        <Detail.Desc.Container className='Detail__desc-container'>
           <Detail.Desc.Title className='Detail__desc-title'>
             OverView.
           </Detail.Desc.Title>
           <Detail.Desc.Content className='Detail__desc'>
             {data.desc}
           </Detail.Desc.Content>
-        </div>
+        </Detail.Desc.Container>
+        <Detail.Button.Container className='Detail__button-container'>
+          <Detail.Button.Button onClick={onClickBackBtn}>
+            목록으로
+          </Detail.Button.Button>
+        </Detail.Button.Container>
       </Detail.Inner>
     </Detail.Container>
   );
@@ -105,7 +110,6 @@ const Detail = {
       color: ${({ theme }) => theme.color.text_head};
       transition: font-size 0.3s;
       word-break: keep-all;
-      text-align: center;
       /* FUNCTION pc */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         font-size: ${({ theme }) => theme.fontSize.head.xl};
@@ -141,8 +145,13 @@ const Detail = {
     }
   `,
   Desc: {
+    Container: styled.div`
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      margin-top: 7.2rem;
+    `,
     Content: styled.p`
-      margin-top: 2.4rem;
       font-size: ${({ theme }) => theme.fontSize.body.rg};
       color: ${({ theme }) => theme.color.text_4};
       line-height: 1.8;
@@ -162,7 +171,6 @@ const Detail = {
       font-size: ${({ theme }) => theme.fontSize.head.sm};
       font-weight: 600;
       transition: font-size 0.3s;
-      margin-top: 7.2rem;
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.head.xs};
@@ -185,6 +193,7 @@ const Detail = {
       border-radius: 0.8rem;
       overflow: hidden;
       margin: 0 auto;
+      margin-top: 7.2rem;
     `,
   },
   Button: {
