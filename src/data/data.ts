@@ -151,6 +151,9 @@ export type WorkType = {
   tag: string[];
   github?: string;
   desc: string;
+  duration: string;
+  section: string;
+  tool: string;
 };
 
 const workList: WorkType[] = [
@@ -161,7 +164,13 @@ const workList: WorkType[] = [
     category: '창작 웹사이트',
     link: 'https://kimbangul.github.io/interaction-lab/',
     tag: ['기획 100%', '디자인 100%', '반응형', 'CSS'],
-    desc: '게임 &#39;포켓몬스터&#39; 시리즈의 시스템 중 하나인 	&#39;알까기&#39; 에 대한 내용을 소개하는 사이트입니다. 디자인 컨셉은 캐릭터 일러스트를 이용한 인포그래픽 스타일로, 인터랙티브하고 동적인 웹 구현에 중점을 두었습니다.',
+    desc: `게임 \'포켓몬스터\' 시리즈의 시스템 중 하나인 	\'알까기\' 에 대한 내용을 소개하는 사이트입니다. 
+    캐주얼한 일러스트를 활용한 인포그래픽 스타일을 디자인 컨셉으로 삼고, 애니메이션을 적극 활용하여 전반적으로 동적인 느낌이 들도록 기획하였습니다.
+    \n포켓몬스터 시리즈의 대표 캐릭터인 '피카츄' 의 컬러에서 따와 옐로 컬러를 주 색상으로 선정했습니다.   
+    `,
+    duration: '2021.05 ~ 2021.06',
+    section: '메인 페이지, 마이크로 웹사이트',
+    tool: 'HTML, CSS, JQuery, Adobe XD, Photoshop, Illustrator',
   },
   {
     id: 2,
@@ -170,7 +179,15 @@ const workList: WorkType[] = [
     category: '오리온 사이트 리디자인',
     link: 'https://kimbangul.github.io/orion/',
     tag: ['기획 100%', '디자인 100%', '반응형', 'SCSS'],
-    desc: '기존 오리온 사이트를 분석해 구조적, 디자인적 문제점을 찾아 개선하고 회사와 제품의 가치를 방문자에게 더욱 어필할 수 있도록 현대적으로 디자인하고자 하였습니다.',
+    desc: `기존 사이트의 메인 페이지는 단순히 제품만 나열되어 있을 뿐, 회사에 대한 정보나 제품 상세 설명이 부족하여 브랜드의 가치를 부각시키지 못하고 있습니다. 
+    또한, 모바일 환경의 사용자를 고려하지 않고 고정폭 레이아웃을 사용하기도 하였습니다. 
+    애니메이션이 거의 없어 지나치게 정적인 느낌이 들며, 디자인적으로도 '오래된 웹사이트'라는 느낌이 들어 리뉴얼을 하기로 하였습니다. 
+    
+    웹페이지를 통한 브랜드의 가치 부각을 중점으로 삼고 디자인을 진행했습니다. 회사의 슬로건과 비전을 풀페이지 메인 슬라이드로 배치하여, 고객과 투자자에게 신뢰감을 심어주고자 하였습니다. 기존 사이트의 정보 부족 문제를 해결하기 위해, 대표 제품인 '초코파이'를 테마로 한 섹션과 신제품을 소개하는 섹션을 제작했습니다. \n
+    모던하면서도 지나치게 경직된 느낌을 주지 않게끔, 애니메이션과 drop-shadow 그리고 border-radius 등을 적극 활용하였으며 다양한 환경에서 접속하는 이용자들을 위해 반응형으로 제작하였습니다.`,
+    duration: '2021.02 ~ 2021.03',
+    section: '메인 페이지',
+    tool: 'HTML, CSS, JQuery, Figma, Photoshop, Illustrator',
   },
   {
     id: 3,
@@ -179,7 +196,17 @@ const workList: WorkType[] = [
     category: '오리온 사이트 리디자인',
     link: 'https://kimbangul.github.io/haagendazs/',
     tag: ['기획 100%', '디자인 100%', '반응형', 'SCSS'],
-    desc: '기존 하겐다즈 사이트를 분석해 구조적, 디자인적 문제점을 찾아 개선하고 브랜드의 이미지에 맞춰 고급지면서도 트렌디한 느낌으로 디자인하고자 하였습니다.',
+    desc: `기존 사이트는 구조적으로 메뉴 구성이 정리되지 않았고, 메인 페이지에 소개되는 제품들의 이미지를 클릭해도 구매 페이지 링크로 연결되지 않아 접근성이 떨어지는 문제가 있었습니다.
+    또한 메인 페이지에 있는 제품들이 신상품인지 베스트셀러 제품인지를 알 수 없으며 창업 관련 내용이 없는 등 정보의 부재도 보였습니다.
+    UX적으로도 상단 메뉴 구성이 양 끝단으로 나뉘어 있고, 지나치게 여백이 부족해 영역의 시작과 끝을 구분하기 어렵습니다.
+    서체와 폰트 크기가 조정되지 않아 정리되지 않은 느낌을 주기도 합니다.
+
+    문제점을 개선하기 위해 큰 카테고리를 나누어 메뉴 구조를 정리하고, 메인 페이지 구조를 신상품/인기 제품/SNS/창업 문의 등으로 나누어 배치하였습니다. 또한 접근성을 위해 링크를 연결해주었습니다.
+강렬한 원색을 많이 사용하기보다는 전체적으로 은은한 배색을 활용하여 브랜드의 이미지에 맞춰 고급지면서도 트렌디한 느낌으로 리디자인하고자 하였습니다.
+    `,
+    duration: '2021.01 ~ 2021.02',
+    section: '메인 페이지',
+    tool: 'HTML, CSS, JQuery, Figma, Photoshop, Illustrator',
   },
   {
     id: 4,
@@ -189,6 +216,9 @@ const workList: WorkType[] = [
     link: 'http://xn--z69au0yv6quza.kr/',
     tag: ['기획 100%', '디자인 100%', '그누보드'],
     desc: '그누보드 솔루션을 이용해 (주)건명테크의 회사 사이트를 제작하였습니다. 지나치게 무겁지 않으면서도 신뢰감을 줄 수 있는 회사의 이미지를 표현하기 위해 블루와 그린의 그라데이션 컬러를 사용하여 감각적으로 디자인하고자 하였습니다.',
+    duration: '2021.05 ~ 2021.06',
+    section: '메인 페이지',
+    tool: 'HTML, CSS, JQuery, Figma, Photoshop, Illustrator',
   },
   {
     id: 5,
@@ -198,6 +228,9 @@ const workList: WorkType[] = [
     link: 'http://ripa.ltd/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC + Mobile'],
     desc: '코인과 서버, 클라우드 등 IT 기술을 다루는 회사의 이미지에 맞도록 블랙과 화이트의 대비, 그라데이션과 애니메이션 효과를 이용하여 세련된 느낌을 전달할 수 있도록 제작하고자 하였습니다.',
+    duration: '2021.05 ~ 2021.06',
+    section: '메인 페이지, 마이크로 웹사이트',
+    tool: 'Adobe XD, Photoshop, Illustrator, Visual Studio Code',
   },
   {
     id: 6,
@@ -207,6 +240,9 @@ const workList: WorkType[] = [
     link: 'http://memoryan.com/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC + Mobile'],
     desc: '유골보석 및 성형업 관련 제품을 제작하는 기업의 사이트를 제작하였습니다. 판매 제품의 특성상, 방문 고객들이 두려움을 갖고 접근할 수 있기 때문에 무겁지 않으면서도 고급스러운 분위기가 느껴질 수 있도록 기획하였습니다.',
+    duration: '2021.05 ~ 2021.06',
+    section: '메인 페이지, 마이크로 웹사이트',
+    tool: 'Adobe XD, Photoshop, Illustrator, Visual Studio Code',
   },
   {
     id: 7,
@@ -216,6 +252,9 @@ const workList: WorkType[] = [
     link: 'http://xn--939a49fr4bd77anic.com/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC + Mobile'],
     desc: '',
+    duration: '2021.05 ~ 2021.06',
+    section: '메인 페이지, 마이크로 웹사이트',
+    tool: 'Adobe XD, Photoshop, Illustrator, Visual Studio Code',
   },
   {
     id: 8,
@@ -225,6 +264,9 @@ const workList: WorkType[] = [
     link: 'https://busok114.kr/',
     tag: ['기획 100%', '디자인 100%', 'CAFE24', 'CSS'],
     desc: '',
+    duration: '2021.05 ~ 2021.06',
+    section: '메인 페이지, 마이크로 웹사이트',
+    tool: 'Adobe XD, Photoshop, Illustrator, Visual Studio Code',
   },
   {
     id: 9,
@@ -234,6 +276,9 @@ const workList: WorkType[] = [
     tag: ['기획 20%', '디자인 100%', 'React', 'Styled-component', '반응형'],
     github: 'https://github.com/import-H/frontend',
     desc: '학교 프로그래밍 소모임 활동으로 프론트엔드, 백엔드로 나누어 스터디 커뮤니티 사이트 제작을 진행하였습니다. React.js와 관련 라이브러리를 이용하여 제작하였습니다.',
+    duration: '2021.05 ~ 2021.06',
+    section: '메인 페이지, 마이크로 웹사이트',
+    tool: 'Adobe XD, Photoshop, Illustrator, Visual Studio Code',
   },
   {
     id: 10,
@@ -243,6 +288,9 @@ const workList: WorkType[] = [
     tag: ['기획 70%', '디자인 90%', '구현 20%', '반응형', 'CSS', 'React'],
     github: 'https://github.com/Coding-matzip/To-do',
     desc: '학교 프로그래밍 소모임 활동으로 프론트엔드, 백엔드로 나뉘어 Todo 앱을 제작했습니다. 처음 다뤄 보는 React라 미숙한 점이 많았으나, 팀 프로젝트를 진행하며 배운 점도 많았고 프론트엔드 라이브러리를 공부해야겠다는 계기를 만들어 준 뜻 깊었던 작업이었습니다.',
+    duration: '2021.05 ~ 2021.06',
+    section: '메인 페이지, 마이크로 웹사이트',
+    tool: 'Adobe XD, Photoshop, Illustrator, Visual Studio Code',
   },
   {
     id: 11,
@@ -252,6 +300,9 @@ const workList: WorkType[] = [
     link: 'https://kimbangul.github.io/interaction-lab/',
     tag: ['기획 100%', '디자인 100%', '반응형', 'CSS'],
     desc: '',
+    duration: '2021.05 ~ 2021.06',
+    section: '메인 페이지, 마이크로 웹사이트',
+    tool: 'Adobe XD, Photoshop, Illustrator, Visual Studio Code',
   },
 ];
 

@@ -63,15 +63,6 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
             <AutoHeightImageView src={data.thumb} alt={data.title} />
           </Detail.Image.Container>
         </Detail.Title.Container>
-
-        <Detail.Desc.Container className='Detail__duration-container'>
-          <Detail.Desc.Title className='Detail__duration-title'>
-            Duration of work
-          </Detail.Desc.Title>
-          <Detail.Desc.Content as='div' className='Detail__duration-data'>
-            2022-10-22 ~ 2022-10-22
-          </Detail.Desc.Content>
-        </Detail.Desc.Container>
         <Detail.Desc.Container className='Detail__desc-container'>
           <Detail.Desc.Title className='Detail__desc-title'>
             OverView.
@@ -79,6 +70,25 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
           <Detail.Desc.Content className='Detail__desc'>
             {data.desc}
           </Detail.Desc.Content>
+        </Detail.Desc.Container>
+        <Detail.Desc.Container className='Detail__duration-container'>
+          <Detail.Desc.Title className='Detail__duration-title'>
+            Work Info.
+          </Detail.Desc.Title>
+          <Detail.Desc.InfoList className='Detail__InfoList'>
+            <Detail.Desc.Content as='li' className='Detail__InfoList-item'>
+              <Detail.Desc.Label>제작 기간</Detail.Desc.Label>
+              {data.duration}
+            </Detail.Desc.Content>
+            <Detail.Desc.Content as='li' className='Detail__InfoList-item'>
+              <Detail.Desc.Label>제작 영역</Detail.Desc.Label>
+              {data.section}
+            </Detail.Desc.Content>
+            <Detail.Desc.Content as='li' className='Detail__InfoList-item'>
+              <Detail.Desc.Label>사용 툴</Detail.Desc.Label>
+              {data.tool}
+            </Detail.Desc.Content>
+          </Detail.Desc.InfoList>
         </Detail.Desc.Container>
         <Detail.Button.Container className='Detail__button-container'>
           <Detail.Button.Button onClick={onClickBackBtn}>
@@ -95,9 +105,25 @@ const Detail = {
   Container: styled(Container)`
     margin: 0 auto;
     padding-bottom: 7.2rem;
+    height: auto;
+    .Detail__InfoList-item {
+      margin-top: 0.8rem;
+      display: flex;
+    }
   `,
+
   Inner: styled.div`
     width: 80rem;
+    opacity: 0;
+    @keyframes fadeInAni {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    animation: fadeInAni 0.3s 0.3s ease-in-out both;
     @media (max-width: 800px) {
       width: 100%;
       padding: 0 6rem;
@@ -105,23 +131,21 @@ const Detail = {
   `,
   Title: {
     Text: styled.h2`
-      font-size: ${({ theme }) => theme.fontSize.head.ul};
+      font-size: ${({ theme }) => theme.fontSize.head.xl};
       font-weight: 700;
       color: ${({ theme }) => theme.color.text_head};
       transition: font-size 0.3s;
       word-break: keep-all;
       /* FUNCTION pc */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
-        font-size: ${({ theme }) => theme.fontSize.head.xl};
+        font-size: ${({ theme }) => theme.fontSize.head.md};
       }
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
-        font-size: ${({ theme }) => theme.fontSize.head.md};
+        font-size: ${({ theme }) => theme.fontSize.head.rg};
       }
     `,
     Container: styled.div`
-      /* display: flex;
-      align-items: center; */
       gap: 5.6rem;
     `,
     TextContainer: styled.div`
@@ -129,7 +153,7 @@ const Detail = {
       display: flex;
       flex-direction: column;
       align-self: stretch;
-      text-align: center;
+      text-align: left;
     `,
   },
   Category: styled.div`
@@ -146,16 +170,15 @@ const Detail = {
   `,
   Desc: {
     Container: styled.div`
-      display: flex;
-      align-items: center;
-      gap: 4rem;
       margin-top: 7.2rem;
     `,
     Content: styled.p`
       font-size: ${({ theme }) => theme.fontSize.body.rg};
       color: ${({ theme }) => theme.color.text_4};
-      line-height: 1.8;
+      line-height: 2;
       word-break: keep-all;
+      display: flex;
+      white-space: pre-line;
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         font-size: ${({ theme }) => theme.fontSize.body.md};
@@ -171,10 +194,20 @@ const Detail = {
       font-size: ${({ theme }) => theme.fontSize.head.sm};
       font-weight: 600;
       transition: font-size 0.3s;
+      margin-bottom: 1.6rem;
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.head.xs};
       }
+    `,
+    Label: styled.span`
+      font-weight: 600;
+      width: 8rem;
+      display: inline-block;
+      color: ${({ theme }) => theme.color.point};
+    `,
+    InfoList: styled.ul`
+      margin-top: 0;
     `,
   },
   Tag: {
@@ -183,7 +216,7 @@ const Detail = {
       margin-top: 3.2rem;
       flex-wrap: wrap;
       gap: 0.8rem;
-      justify-content: center;
+      justify-content: flex-start;
     `,
   },
   Image: {
