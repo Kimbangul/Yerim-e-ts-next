@@ -169,7 +169,7 @@ const workList: WorkType[] = [
     desc: "핀테크 기반 온라인 P2P 플랫폼 'FUNCHY'의 사용자 및 관리자 사이트 디자인 및 Front-end 개발을 담당하였습니다. 페이지 간 통일성을 맞추는 것을 우선으로, 서비스 아이덴티티 구축을 위한 컬러 선정과 더 좋은 UX/UI적 표현 방식에 대해 팀원들과 논의하며 긴밀히 소통하였습니다.",
     duration: '2022.07 ~ 2022.10',
     section: '사이트 전반 디자인 및 Front-end 개발 담당',
-    tool: 'Figma, Next.js, SCSS, JavaScript',
+    tool: 'Figma, Next.js, SCSS, JavaScript, Git',
   },
   {
     id: 4,

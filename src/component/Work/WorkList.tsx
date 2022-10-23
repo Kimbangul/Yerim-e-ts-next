@@ -62,7 +62,7 @@ const WorkList: React.FC<WorkListType> = (props) => {
     fadeEffect: {
       crossFade: true,
     },
-    pagination: { type: 'progressbar' },
+    pagination: { clickable: true },
     navigation: {
       prevEl: prevRef.current,
       nextEl: nextRef.current,
@@ -135,6 +135,30 @@ const List = {
     .swiper-pagination-progressbar-fill {
       background: ${(props) => props.theme.color.text};
       border-radius: 10rem;
+    }
+    .swiper-pagination-bullets {
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: static;
+      margin-top: 1.6rem;
+    }
+    .swiper-pagination-bullet {
+      border-radius: 50%;
+      height: 1.2rem;
+      width: 1.2rem;
+      transform: scale(0.5);
+      border: 0;
+      background-color: ${(props) => props.theme.color.text_4};
+      opacity: 1;
+      transition: transform 0.3s, background-color 0.3s;
+      margin: 0 0.4rem !important;
+      &-active {
+        transform: scale(1);
+        background-color: ${(props) => props.theme.color.point};
+        box-shadow: ${(props) => props.theme.color.point80} 0rem 0rem 0.8rem;
+      }
     }
     .Work__list__button {
       @keyframes prevBtnAni {

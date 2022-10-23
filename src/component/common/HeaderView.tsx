@@ -179,6 +179,10 @@ const Header = {
         @media (${({ theme }) => theme.windowSize['mb-m']}) {
           margin: 0;
         }
+        svg {
+          width: 100%;
+          height: 100%;
+        }
       }
     `,
     SoundOnly: styled.span`
