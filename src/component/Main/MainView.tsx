@@ -95,7 +95,7 @@ const Main = {
   Text: {
     Container: styled.div`
       display: inline-block;
-      padding-bottom: 8rem;
+      padding-bottom: 9.6rem;
       transition: padding 0.3s;
       /* FUNCTION pc */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {

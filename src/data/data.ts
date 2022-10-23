@@ -12,6 +12,8 @@ import WORK10 from 'public/image/work/work10.jpg';
 import WORK11 from 'public/image/work/work11.jpg';
 import WORK12 from 'public/image/work/work12.jpg';
 import WORK13 from 'public/image/work/work13.jpg';
+import WORK14 from 'public/image/work/work14.jpg';
+
 // PARAM design image
 import DESIGN01 from 'public/image/design/design01.png';
 import DESIGN01_2 from 'public/image/design/design01_2.png';
@@ -159,6 +161,18 @@ export type WorkType = {
 };
 
 const workList: WorkType[] = [
+  {
+    id: 14,
+    title: 'YERIM.e',
+    thumb: WORK14.src,
+    category: '포트폴리오 사이트',
+    link: 'https://yerim-e.com/',
+    tag: ['디자인 100%', '구현 100%', 'Next.js', 'Styled-Component'],
+    desc: '감각적이고 모던한 느낌을 전달하기 위해 전반적으로 흑백의 컬러를 차용하며, 메인은 우주 컨셉으로 디자인하였습니다. TypeScript와 Styled-Component를 사용하였으며 CSS transition 및 animation 효과를 활용하여 감각적으로 모션을 부여하고자 하였습니다.',
+    duration: '2022.10 ~ 2022.10',
+    section: '사이트 전반 디자인 및 구현',
+    tool: 'Figma, Next.js, SCSS, TypeScript, Git',
+  },
   {
     id: 11,
     title: 'FUNCHY',
