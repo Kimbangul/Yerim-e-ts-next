@@ -11,11 +11,11 @@ const HeaderInfo = () => {
       <meta property='og:type' content='website' />
       <meta
         property='og:image'
-        content='https://yerim-e.com/image/og-image.png'
+        content='https://yerim-e.com/image/og-image.jpg'
       />
       <meta
         property='og:description'
-        content='박예림 개인 포트폴리오 사이트입니다.'
+        content='웹 퍼블리셔, 프론트엔드 개발자 박예림 포트폴리오입니다.'
       />
       <link rel='shortcut icon' href='favicon.png' type='image/x-icon' />
       <link rel='icon' href='favicon.png' type='image/x-icon' />
