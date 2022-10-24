@@ -4,9 +4,6 @@ import styled from 'styled-components';
 import { SectionCategoryTitle, MaxWidthContainer } from 'styles/Common';
 import WorkList from 'src/component/Work/WorkList';
 
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-
 const WorkView: React.FC = () => {
   // PARAM state
   const [currentIdx, setCurrentIdx] = useState(0);

@@ -1,6 +1,5 @@
 import ReactFullpage from '@fullpage/react-fullpage';
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
 
 import Main from 'src/component/Main/MainView';
 import About from 'src/component/About/AboutView';

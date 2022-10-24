@@ -11,7 +11,7 @@ const HeaderInfo = () => {
       <meta property='og:type' content='website' />
       <meta
         property='og:image'
-        content='https://yerim-e.com/img/title-image.png'
+        content='https://yerim-e.com/image/og-image.png'
       />
       <meta
         property='og:description'

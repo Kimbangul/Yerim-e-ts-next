@@ -123,10 +123,14 @@ const Detail = {
         opacity: 1;
       }
     }
+    transition: width 0.3s, padding 0.3s;
     animation: fadeInAni 0.3s 0.3s ease-in-out both;
     @media (max-width: 800px) {
       width: 100%;
       padding: 0 6rem;
+    }
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      padding: 0 3rem;
     }
   `,
   Title: {
