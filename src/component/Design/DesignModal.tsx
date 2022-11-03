@@ -117,6 +117,7 @@ const Modal = {
     height: 100%;
     border-radius: 1.6rem;
     overflow-y: auto;
+    scrollbar-width: none;
     background: #fff;
     position: relative;
   `,

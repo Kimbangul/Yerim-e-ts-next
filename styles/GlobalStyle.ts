@@ -70,6 +70,7 @@ const GlobalStyle = createGlobalStyle`
 
 .fp-overflow{
   overflow-x: hidden;
+  scrollbar-width: none;
 }
   .fp-warning, .fp-watermark{
   display: none;
@@ -91,6 +92,7 @@ const GlobalStyle = createGlobalStyle`
 ::-webkit-scrollbar{
   display: none;
 }
+
 ::selection{
   background-color: ${theme.color.text_6};
 }
