@@ -49,13 +49,14 @@ const WorkList: React.FC<WorkListType> = (props) => {
   // PARAM ref
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
+  const swiperRef = useRef<null | SwiperCore>(null);
 
   // PARAM swiper option
   const swiperOption: SwiperProps = {
     onSwiper: onChangeIndex,
     onRealIndexChange: onChangeIndex,
     onBeforeInit: (swiper: SwiperCore) => {
-      onBeforeSwiperInit(swiper);
+      swiperRef.current = swiper;
       return;
     },
     effect: 'fade',
@@ -63,11 +64,7 @@ const WorkList: React.FC<WorkListType> = (props) => {
       crossFade: true,
     },
     pagination: { clickable: true },
-    navigation: {
-      prevEl: prevRef.current,
-      nextEl: nextRef.current,
-    },
-    speed: 1500,
+    speed: 800,
     grabCursor: true,
     spaceBetween: 24,
     centeredSlides: true,
@@ -83,12 +80,26 @@ const WorkList: React.FC<WorkListType> = (props) => {
     className: 'mySwiper',
   };
 
+  // FUNCTION swiper navigation 클릭 시
+  const onClickNavigation = (direction: string) => {
+    console.log(direction);
+    switch (direction) {
+      case 'prev':
+        swiperRef.current?.slidePrev();
+        return;
+      case 'next':
+        swiperRef.current?.slideNext();
+        return;
+    }
+    return;
+  };
+
   return (
     <List.Container className='Work__list-container'>
       <Chevron
         className='Work__list__button-prev'
         direction='prev'
-        ref={prevRef}
+        onClick={onClickNavigation.bind(this, 'prev')}
       />
       <Swiper {...swiperOption}>
         {workList.map((el) => {
@@ -103,6 +114,7 @@ const WorkList: React.FC<WorkListType> = (props) => {
         className='Work__list__button-next'
         direction='next'
         ref={nextRef}
+        onClick={onClickNavigation.bind(this, 'next')}
       />
     </List.Container>
   );
