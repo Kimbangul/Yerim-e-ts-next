@@ -15,7 +15,7 @@ const HeaderInfo = () => {
       />
       <meta
         property='og:description'
-        content='웹 퍼블리셔, 프론트엔드 개발자 박예림 포트폴리오입니다.'
+        content='웹 퍼블리셔, UI 개발자 박예림 포트폴리오입니다.'
       />
       <link rel='shortcut icon' href='favicon.png' type='image/x-icon' />
       <link rel='icon' href='favicon.png' type='image/x-icon' />

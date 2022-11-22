@@ -33,7 +33,7 @@ const AboutView = () => {
             flexible.
           </About.Text.Title.Text>
           <About.Text.Desc.Text className='About__desc'>
-            안녕하세요, 웹 프론트엔드 개발자 박예림입니다. <br />
+            안녕하세요, 웹 UI 개발자 / 퍼블리셔 박예림입니다. <br />
             흥미로운 것은 오래 기억됩니다. 저는 사람들의 기억에 남는 웹을 만드는
             것이 목표입니다. <br />
             CSS와 Javascript를 이용해 모션을 주고 동적인 화면을 구사하는 것에
