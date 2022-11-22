@@ -82,7 +82,6 @@ const WorkList: React.FC<WorkListType> = (props) => {
 
   // FUNCTION swiper navigation 클릭 시
   const onClickNavigation = (direction: string) => {
-    console.log(direction);
     switch (direction) {
       case 'prev':
         swiperRef.current?.slidePrev();

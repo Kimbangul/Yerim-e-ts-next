@@ -83,10 +83,12 @@ const HeaderView: React.FC = () => {
 
 const Header = {
   Title: styled.h1`
-    text-indent: -9999;
+    position: absolute;
+    text-indent: -99999;
     font-size: 0;
     width: 0;
     height: 0;
+    overflow: hidden;
   `,
   Container: styled.header`
     width: 100%;
