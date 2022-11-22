@@ -28,6 +28,9 @@ const HeaderView: React.FC = () => {
 
   return (
     <Header.Container>
+      <Header.Title>
+        YERIM.e :: UI 개발자, 웹 퍼블리셔 박예림 포트폴리오
+      </Header.Title>
       <Header.Inner className='Header__inner'>
         <Header.Logo className='Header__logo'>
           <Link href='/'>
@@ -79,6 +82,12 @@ const HeaderView: React.FC = () => {
 };
 
 const Header = {
+  Title: styled.h1`
+    text-indent: -9999;
+    font-size: 0;
+    width: 0;
+    height: 0;
+  `,
   Container: styled.header`
     width: 100%;
     height: 7.2rem;
@@ -105,7 +114,7 @@ const Header = {
     justify-content: space-between;
     align-items: center;
   `,
-  Logo: styled.h1`
+  Logo: styled.div`
     @media (${({ theme }) => theme.windowSize['mb-m']}) {
       display: none;
     }
