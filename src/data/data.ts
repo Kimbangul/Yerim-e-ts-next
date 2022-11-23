@@ -35,10 +35,11 @@ import DESIGN010_2 from 'public/image/design/design010_2.png';
 // PARAM link data
 const link = {
   github: 'https://github.com/Kimbangul',
+  velog: 'https://velog.io/@kimbangul',
   tel: 'tel: +8201077070968',
   mail: 'mailto:highcolor_12@g.hongik.ac.kr',
   resume:
-    'https://meadow-touch-c48.notion.site/fefaf8401a0f489b8c3e111db4e263ba',
+    'https://meadow-touch-c48.notion.site/Yerim-Park-FLEXIBLE-UI-Developer-5694713033624c6cae1ae51b129c556a',
 };
 
 // PARAM image placeholder blur data

@@ -5,9 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+import { link } from 'src/data/data';
 import { MaxWidthContainer } from 'styles/Common';
 import LOGO from 'public/image/logo.svg';
 import LOGO_MB from 'public/image/logo_mb.svg';
+import VELOG_24 from 'public/icon/velog_24.svg';
 
 // PARAM type
 type HeadComponentPropType = {
@@ -56,7 +58,7 @@ const HeaderView: React.FC = () => {
         </Header.Mb.Menu>
         <Header.Social.List isOpen={isOpenMbMenu} className='Header__social'>
           <Header.Social.Item className='Header__social-item'>
-            <Link href='https://github.com/Kimbangul'>
+            <Link href={link.github}>
               <a target='_blank' rel='noreferrer'>
                 <Header.Social.SoundOnly className='Header__social-item--sound-only'>
                   Github
@@ -66,12 +68,22 @@ const HeaderView: React.FC = () => {
             </Link>
           </Header.Social.Item>
           <Header.Social.Item className='Header__social-item'>
-            <Link href='mailto:highcolor_12@g.hongik.ac.kr'>
+            <Link href={link.mail}>
               <a target='_blank' rel='noreferrer'>
                 <Header.Social.SoundOnly className='Header__social-item--sound-only'>
                   Mail
                 </Header.Social.SoundOnly>
                 <FontAwesomeIcon icon={faEnvelope} />
+              </a>
+            </Link>
+          </Header.Social.Item>
+          <Header.Social.Item className='Header__social-item'>
+            <Link href={link.velog}>
+              <a target='_blank' rel='noreferrer'>
+                <Header.Social.SoundOnly className='Header__social-item--sound-only'>
+                  Velog
+                </Header.Social.SoundOnly>
+                <VELOG_24 />
               </a>
             </Link>
           </Header.Social.Item>
@@ -183,9 +195,10 @@ const Header = {
         align-items: center;
         font-size: ${({ theme }) => theme.fontSize.body.lg};
         color: ${({ theme }) => theme.color.text};
-        transition: color 0.3s;
         &:hover {
-          color: ${({ theme }) => theme.color.point};
+          path {
+            fill: ${({ theme }) => theme.color.point};
+          }
         }
         @media (${({ theme }) => theme.windowSize['mb-m']}) {
           margin: 0;
@@ -193,6 +206,10 @@ const Header = {
         svg {
           width: 100%;
           height: 100%;
+          path {
+            transition: fill 0.3s;
+            fill: ${({ theme }) => theme.color.text};
+          }
         }
       }
     `,
