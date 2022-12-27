@@ -19,6 +19,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@fullpage/react-fullpage": "^0.1.28",
     "@webcomponents/webcomponentsjs": "^2.7.0",
+    "axios": "^1.2.1",
     "next": "12.3.1",
     "next-videos": "1.5.0",
     "react": "18.2.0",
