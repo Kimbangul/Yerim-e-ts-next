@@ -7,6 +7,7 @@ import Tech from 'src/component/Tech/TechView';
 import Work from 'src/component/Work/WorkView';
 import Design from 'src/component/Design/DesignView';
 import Contact from 'src/component/Contact/ContactView';
+import PostsView from 'src/component/Posts/PostsView';
 import Footer from 'src/component/common/FooterView';
 
 const FullpageWrapper: React.FC = () => {
@@ -34,6 +35,7 @@ const FullpageWrapper: React.FC = () => {
             'Tech',
             'Work',
             'Design',
+            'PostView',
             'Contact',
           ]}
           scrollingSpeed={1000}
@@ -49,6 +51,7 @@ const FullpageWrapper: React.FC = () => {
                 <Tech />
                 <Work />
                 <Design />
+                <PostsView />
                 <Contact />
                 <Footer />
               </ReactFullpage.Wrapper>

@@ -13,18 +13,18 @@ const onClickLinkBtn = (link: string, option?: string) => {
 const useAPIcall = (
   callable: any,
   url: string,
-  params: { [key: string]: any }
+  params?: { [key: string]: any }
 ) => {
   const [state, setState] = useState('idle');
   const [data, setData] = useState(null);
-  console.log(callable, url, params);
+  // console.log(callable, url, params);
 
   useEffect(() => {
     callable(url, params)
       .then((response: AxiosResponse) => {
         console.log(response);
-        if (response.data.status === 'SUCCESS') {
-          setData(data);
+        if (response.status === 200) {
+          setData(response.data);
           setState('fullfilled');
         } else {
           setState('rejected');
