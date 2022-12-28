@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import { useAPIcall } from 'utils/utils';
 import { SectionCategoryTitle } from 'styles/Common';
-import { ReactNode, useEffect } from 'react';
+import PostList, { PostListPropsType } from 'src/component/Posts/PostsList';
 
 // COMPONENT main component
 const PostsView = () => {
@@ -14,16 +14,18 @@ const PostsView = () => {
     'https://api.honeycombpizza.link/velog/kimbangul'
   );
 
-  const posts = postsCall || {};
+  const posts = postsCall.data ? postsCall.data : [];
   console.log(posts);
 
   if (postsCall.state !== 'fullfilled') {
-    return postsCall.LoadingPage();
+    return <postsCall.LoadingPage />;
   }
   return (
     <section className='section'>
       <SectionCategoryTitle>Posts</SectionCategoryTitle>
-      <div className='PostsView__container'></div>
+      <div className='PostsView__container'>
+        {posts.length > 0 && <PostList {...posts} />}
+      </div>
     </section>
   );
 };
