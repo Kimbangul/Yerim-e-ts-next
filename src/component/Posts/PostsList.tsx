@@ -2,21 +2,26 @@ import Link from 'next/link';
 import Tag from 'src/component/common/Tag';
 
 const PostList: React.FC<PostListPropsType> = (props) => {
-  const tagList = JSON.parse(props.tags);
+  const tagList = props.tags ? JSON.parse(props.tags.replace(/'/g, '"')) : [];
 
   return (
     <li className='Post'>
-      <Link href={props.href || '#'}>
-        <a>
+      <Link href={`https://velog.io${props.href}` || '#'}>
+        <a target='_blank'>
           <div className='Post__title-container'>
             <h3 className='Post__title'>{props.headline}</h3>
             <div className='Post__date'>{props.date}</div>
           </div>
           <p className='Post__context'>{props.context}</p>
           {tagList.length > 0 &&
-            tagList.map((el: string, idx: number) => {
-              return <Tag key={`tag${idx}`}>{el}</Tag>;
-            })}
+          <ul>    
+            {
+              tagList.map ((el:string, idx: number) => {
+                return <Tag key={`tag${idx}`}>{el}</Tag>;
+              })
+            }      
+          </ul>
+            }
         </a>
       </Link>
     </li>
@@ -26,8 +31,8 @@ const PostList: React.FC<PostListPropsType> = (props) => {
 export type PostListPropsType = {
   headline?: string;
   date?: string;
-  href: string;
-  tags: string;
+  href?: string;
+  tags?: string;
   context?: string;
   [key: string]: any;
 };

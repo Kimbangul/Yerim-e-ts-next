@@ -13,11 +13,10 @@ const onClickLinkBtn = (link: string, option?: string) => {
 const useAPIcall = (
   callable: any,
   url: string,
-  params?: { [key: string]: any }
+  params?: { [key: string]: any },
 ) => {
   const [state, setState] = useState('idle');
   const [data, setData] = useState(null);
-  // console.log(callable, url, params);
 
   useEffect(() => {
     callable(url, params)
