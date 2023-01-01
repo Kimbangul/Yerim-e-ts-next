@@ -24,25 +24,18 @@ const PostsView = () => {
   );
 
   if (postsCall.state !== 'accepted') {
-    return <div>로딩 컴포넌트</div>;
+    return <Post.Loading className='PostsView__loading'></Post.Loading>;
   }
   return (
     <Post.Page className='section'>
       <SectionCategoryTitle>Posts</SectionCategoryTitle>
       <Post.Container className='PostsView__container'>
         <Post.Title className='PostsView__title'>
-          <Post.Word className='PostsView__title-word'>R</Post.Word>
-          <Post.Word className='PostsView__title-word'>e</Post.Word>
-          <Post.Word className='PostsView__title-word'>c</Post.Word>
-          <Post.Word className='PostsView__title-word'>e</Post.Word>
-          <Post.Word className='PostsView__title-word'>n</Post.Word>
-          <Post.Word className='PostsView__title-word'>t</Post.Word>
-          <Post.Word className='PostsView__title-word'> </Post.Word>
-          <Post.Word className='PostsView__title-word'>P</Post.Word>
-          <Post.Word className='PostsView__title-word'>o</Post.Word>
-          <Post.Word className='PostsView__title-word'>s</Post.Word>
-          <Post.Word className='PostsView__title-word'>t</Post.Word>
-          <Post.Word className='PostsView__title-word'>s</Post.Word>
+          {'Recent Posts'.split('').map((str, idx) => (
+            <Post.Word className='PostsView__title-word' key={str + idx}>
+              {str}
+            </Post.Word>
+          ))}
         </Post.Title>
         {postsCall.data.length > 0 && (
           <Post.List className='PostsView__list'>
@@ -62,6 +55,7 @@ const PostsView = () => {
 const Post = {
   Page: styled(Container)`
     background-color: ${(props) => props.theme.color.secondBg};
+    height: auto;
     .fp-overflow {
       /* FUNCTION pc*/
       @media (${({ theme }) => theme.windowSize['lt-l']}) {
@@ -131,6 +125,9 @@ const Post = {
   `,
   List: styled.ul`
     margin-top: 4.8rem;
+  `,
+  Loading: styled.div`
+    min-height: 100vh;
   `,
 };
 
