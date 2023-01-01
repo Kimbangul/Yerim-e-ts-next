@@ -11,6 +11,7 @@ import WORK11 from 'public/image/work/work11.jpg';
 import WORK12 from 'public/image/work/work12.jpg';
 import WORK13 from 'public/image/work/work13.jpg';
 import WORK14 from 'public/image/work/work14.jpg';
+import WORK15 from 'public/image/work/work15.jpg';
 
 // PARAM design image
 import DESIGN01 from 'public/image/design/design01.png';
@@ -171,6 +172,18 @@ const workList: WorkType[] = [
     duration: '2022.10 ~ 2022.10',
     section: '사이트 전반 디자인 및 구현',
     tool: 'Figma, Next.js, SCSS, TypeScript, Git',
+  },
+  {
+    id: 15,
+    title: 'RebitX',
+    thumb: WORK15.src,
+    category: '상업용 부동산 조각투자 플랫폼 구축',
+    link: 'https://rebitx.com/',
+    tag: ['디자인 100%', '구현 60%', 'Next.js', 'SCSS'],
+    desc: '상업용 부동산 조각투자 서비스의 웹 플랫폼 구축 프로젝트에 참여하여 사용자 및 관리자 사이트 전반 디자인 및 Front-end 개발 업무를 담당하였습니다. 초기 환경을 구축하였으며 메인 웹 페이지와 모바일 데모 사이트, 청약, 거래, 로그인 페이지 UI 개발 및 데이터 바인딩 업무와 호가창 등의 차트 등을 개발하였습니다.',
+    duration: '2022.10 ~ 2022.12',
+    section: '사용자, 관리자 페이지 전반 디자인 및 Front-end 개발 담당',
+    tool: 'Figma, Next.js, SCSS, JavaScript, Git',
   },
   {
     id: 11,
