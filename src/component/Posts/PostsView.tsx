@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import axios from 'axios';
 
-import { SectionCategoryTitle } from 'styles/Common';
-import PostList, { PostListPropsType } from 'src/component/Posts/PostsList';
+import { Container, SectionCategoryTitle, MaxWidthContainer } from 'styles/Common';
+import PostList from 'src/component/Posts/PostsList';
 import useApiCall from 'utils/useApiCall';
 
 type VelogArticle={
@@ -13,43 +13,46 @@ type VelogArticle={
   context:string
 }
 
-type PartialArticleType = Partial<VelogArticle>
 // COMPONENT main component
 const PostsView = () => {
-  // const productCall = useAPICall(axios.get, '/admin/product/detail', { params: { last_selection_id: router.query.id } }, 'product_data')
 
   const postsCall = useApiCall<VelogArticle[]>(
-   ()=> axios.get( 'https://api.honeycombpizza.link/velog/kimbangul')
-   
+   ()=> axios.get( 'https://api.honeycombpizza.link/velog/kimbangul')   
   );
 
   if (postsCall.state !== 'accepted') {
     return <div >로딩 컴포넌트</div>;
   }
   return (
-    <section className='section'>
+    <Post.Page className='section'>
       <SectionCategoryTitle>Posts</SectionCategoryTitle>
+      <Post.Container className='PostsView__container'>
       <Post.Title className='PostsView__title'>
-      <Post.Word className='PostsView__title-word'>R</Post.Word>
-      <Post.Word className='PostsView__title-word'>e</Post.Word>
-      <Post.Word className='PostsView__title-word'>c</Post.Word>
-      <Post.Word className='PostsView__title-word'>e</Post.Word>
-      <Post.Word className='PostsView__title-word'>n</Post.Word>
-      <Post.Word className='PostsView__title-word'>t</Post.Word>
-            <Post.Word className='PostsView__title-word'>P</Post.Word>
-            <Post.Word className='PostsView__title-word'>o</Post.Word>
-            <Post.Word className='PostsView__title-word'>s</Post.Word>
-            <Post.Word className='PostsView__title-word'>t</Post.Word>
-            <Post.Word className='PostsView__title-word'>s</Post.Word>
-          </Post.Title>
-      <div className='PostsView__container'>
-        {postsCall.data.filter((_,index)=>index<5).map((el ,idx) => {
-          return (
-            <PostList key={`post${idx}`} {...el} />
-          )
-        })}
-      </div>
-    </section>
+        <Post.Word className='PostsView__title-word'>R</Post.Word>
+        <Post.Word className='PostsView__title-word'>e</Post.Word>
+        <Post.Word className='PostsView__title-word'>c</Post.Word>
+        <Post.Word className='PostsView__title-word'>e</Post.Word>
+        <Post.Word className='PostsView__title-word'>n</Post.Word>
+        <Post.Word className='PostsView__title-word'>t</Post.Word>
+        <Post.Word className='PostsView__title-word'> </Post.Word>
+        <Post.Word className='PostsView__title-word'>P</Post.Word>
+        <Post.Word className='PostsView__title-word'>o</Post.Word>
+        <Post.Word className='PostsView__title-word'>s</Post.Word>
+        <Post.Word className='PostsView__title-word'>t</Post.Word>
+        <Post.Word className='PostsView__title-word'>s</Post.Word>
+      </Post.Title>
+        {
+          postsCall.data.length > 0 &&
+          <Post.List className='PostsView__list'>
+          {postsCall.data.filter((_,index)=>index<3).map((el ,idx) => {
+            return (
+              <PostList key={`post${idx}`} {...el} />
+            )
+          })}
+          </Post.List>
+        }    
+      </Post.Container>
+    </Post.Page>
   );
 };
 
@@ -57,6 +60,38 @@ const PostsView = () => {
 
 // COMPONENT style
 const Post = {
+  Page: styled(Container)`
+  background-color: ${(props) => props.theme.color.secondBg};
+  .fp-overflow {
+    /* FUNCTION pc*/
+    @media (${({ theme }) => theme.windowSize['lt-l']}) {
+      width: 100%;
+    }
+  }
+  /* FUNCTION section animation */
+  &.active {
+    .PostsView__container {
+      opacity: 1;
+      transition: opacity 0.3s 0.5s;
+    }
+  }
+`,
+Container: styled(MaxWidthContainer)`
+opacity: 0;
+transition: opacity 0.3s;
+padding-bottom: 2.4rem;
+@media (max-width: 1000px) {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media (${({ theme }) => theme.windowSize['mb-l']}) {
+      padding-top: 32rem;
+    }
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      padding-top: 34rem;
+      opacity: 1;
+    }
+`,
   Title: styled.h3`
   font-size: ${({ theme }) => theme.fontSize.head.xl};
   color: ${({ theme }) => theme.color.text_head};
@@ -90,10 +125,13 @@ Word: styled.span`
   position: relative;
   animation: titleWordAni 1.8s infinite;
   ${
-   [0,1,2,3,4,5,6,7,8,9,10,11].map((_,index)=>`&:nth-of-type(${index}){
+   [0,1,2,3,4,5,6,7,8,9,10,11,12].map((_,index)=>`&:nth-of-type(${index}){
       animation-delay: calc(0.3s * ${index});
     }`).join('')
   }
+`,
+List: styled.ul`
+  margin-top: 4.8rem;
 `,
 }
 

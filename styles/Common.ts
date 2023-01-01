@@ -16,7 +16,7 @@ const Container = styled.section`
   width: 100%;
   min-height: 100vh;
   padding-top: 7.2rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: transparent;
   position: relative;
   display: flex;
