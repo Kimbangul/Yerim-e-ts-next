@@ -205,6 +205,7 @@ const Detail = {
       }
     `,
     Label: styled.span`
+      flex-shrink: 0;
       font-weight: 600;
       width: 8rem;
       display: inline-block;
