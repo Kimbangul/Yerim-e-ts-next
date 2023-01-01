@@ -35,7 +35,7 @@ const FullpageWrapper: React.FC = () => {
             'Tech',
             'Work',
             'Design',
-            'PostView',
+            'Posts',
             'Contact',
           ]}
           scrollingSpeed={1000}
