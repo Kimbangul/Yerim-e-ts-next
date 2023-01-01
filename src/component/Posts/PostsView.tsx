@@ -1,23 +1,30 @@
 import styled from 'styled-components';
 import axios from 'axios';
 
-import { useAPIcall } from 'utils/utils';
 import { SectionCategoryTitle } from 'styles/Common';
 import PostList, { PostListPropsType } from 'src/component/Posts/PostsList';
+import useApiCall from 'utils/useApiCall';
 
+type VelogArticle={
+  headline:string
+  href:string
+  date:string
+  tags:string
+  context:string
+}
+
+type PartialArticleType = Partial<VelogArticle>
 // COMPONENT main component
 const PostsView = () => {
   // const productCall = useAPICall(axios.get, '/admin/product/detail', { params: { last_selection_id: router.query.id } }, 'product_data')
 
-  const postsCall = useAPIcall(
-    axios.get,
-    'https://api.honeycombpizza.link/velog/kimbangul'
+  const postsCall = useApiCall<VelogArticle[]>(
+   ()=> axios.get( 'https://api.honeycombpizza.link/velog/kimbangul')
+   
   );
 
-  const posts : PostListPropsType | []  = postsCall.data ? postsCall.data.slice(0,5) : [];
-
-  if (postsCall.state !== 'fullfilled') {
-    return <postsCall.LoadingPage />;
+  if (postsCall.state !== 'accepted') {
+    return <div >로딩 컴포넌트</div>;
   }
   return (
     <section className='section'>
@@ -36,7 +43,7 @@ const PostsView = () => {
             <Post.Word className='PostsView__title-word'>s</Post.Word>
           </Post.Title>
       <div className='PostsView__container'>
-        {posts.length > 0 && posts.map((el : PostListPropsType,idx: number) => {
+        {postsCall.data.filter((_,index)=>index<5).map((el ,idx) => {
           return (
             <PostList key={`post${idx}`} {...el} />
           )
@@ -45,6 +52,8 @@ const PostsView = () => {
     </section>
   );
 };
+
+
 
 // COMPONENT style
 const Post = {
@@ -80,17 +89,10 @@ Word: styled.span`
   }
   position: relative;
   animation: titleWordAni 1.8s infinite;
-  &:nth-of-type(1) {
-    animation-delay: 0.3s;
-  }
-  &:nth-of-type(2) {
-    animation-delay: 0.6s;
-  }
-  &:nth-of-type(3) {
-    animation-delay: 0.9s;
-  }
-  &:nth-of-type(4) {
-    animation-delay: 1.2s;
+  ${
+   [0,1,2,3,4,5,6,7,8,9,10,11].map((_,index)=>`&:nth-of-type(${index}){
+      animation-delay: calc(0.3s * ${index});
+    }`).join('')
   }
 `,
 }
