@@ -1,4 +1,5 @@
 // PARAM work image
+import WORK01 from 'public/image/work/work01.jpg';
 import WORK02 from 'public/image/work/work02.jpg';
 import WORK03 from 'public/image/work/work03.jpg';
 import WORK04 from 'public/image/work/work04.jpg';
@@ -313,21 +314,21 @@ const workList: WorkType[] = [
       'Single Page Application, 전반적인 디자인 및 퍼블리싱 담당, 검색 등 일부 기능 개발',
     tool: 'React.js, CSS, Figma, Illustrator, Visual Studio Code',
   },
-  // {
-  //   id: 1,
-  //   title: '알까기를 시작하는 트레이너를 위한 안내서',
-  //   thumb: WORK01.src,
-  //   category: '창작 웹사이트',
-  //   link: 'https://kimbangul.github.io/interaction-lab/',
-  //   tag: ['기획 100%', '디자인 100%', '반응형', 'CSS'],
-  //   desc: `게임 \'포켓몬스터\' 시리즈의 시스템 중 하나인 	\'알까기\' 에 대한 내용을 소개하는 사이트입니다.
-  //   캐주얼한 일러스트를 활용한 인포그래픽 스타일을 디자인 컨셉으로 삼고, 애니메이션을 적극 활용하여 전반적으로 동적인 느낌이 들도록 기획하였습니다.
-  //   \n포켓몬스터 시리즈의 대표 캐릭터인 '피카츄' 의 컬러에서 따와 옐로 컬러를 주 색상으로 선정했습니다.
-  //   `,
-  //   duration: '2021.05 ~ 2021.06',
-  //   section: '메인 페이지, 마이크로 웹사이트',
-  //   tool: 'HTML, CSS, JQuery, Adobe XD, Photoshop, Illustrator',
-  // },
+  {
+    id: 1,
+    title: '알까기를 시작하는 트레이너를 위한 안내서',
+    thumb: WORK01.src,
+    category: '창작 웹사이트',
+    link: 'https://kimbangul.github.io/interaction-lab/',
+    tag: ['기획 100%', '디자인 100%', '반응형', 'CSS'],
+    desc: `게임 \'포켓몬스터\' 시리즈의 시스템 중 하나인 	\'알까기\' 에 대한 내용을 소개하는 사이트입니다.
+    캐주얼한 일러스트를 활용한 인포그래픽 스타일을 디자인 컨셉으로 삼고, 애니메이션을 적극 활용하여 전반적으로 동적인 느낌이 들도록 기획하였습니다.
+    \n포켓몬스터 시리즈의 대표 캐릭터인 '피카츄' 의 컬러에서 따와 옐로 컬러를 주 색상으로 선정했습니다.
+    `,
+    duration: '2021.05 ~ 2021.06',
+    section: '메인 페이지, 마이크로 웹사이트',
+    tool: 'HTML, CSS, JQuery, Adobe XD, Photoshop, Illustrator',
+  },
   {
     id: 2,
     title: 'ORION',
