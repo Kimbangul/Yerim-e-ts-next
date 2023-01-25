@@ -13,6 +13,7 @@ import WORK12 from 'public/image/work/work12.jpg';
 import WORK13 from 'public/image/work/work13.jpg';
 import WORK14 from 'public/image/work/work14.jpg';
 import WORK15 from 'public/image/work/work15.jpg';
+import WORK16 from 'public/image/work/work16.jpg';
 
 // PARAM design image
 import DESIGN01 from 'public/image/design/design01.png';
@@ -175,6 +176,18 @@ const workList: WorkType[] = [
     tool: 'Figma, Next.js, SCSS, TypeScript, Git',
   },
   {
+    id: 16,
+    title: 'RebitX Mobile Web',
+    thumb: WORK16.src,
+    category: '상업용 부동산 조각투자 플랫폼 웹앱 버전 구축',
+    link: 'https://rebitx.com/mobile',
+    tag: ['구현 60%', 'Next.js', 'SCSS'],
+    desc: 'RebitX의 App 디자인을 토대로 모바일 Web 플랫폼을 제작하였습니다. 메인 페이지, 청약, 거래, 알림, 공지사항과 이벤트, 이용가이드 등의 게시판 페이지들의 프론트엔드 개발 작업을 주로 진행하였으며 그 외 마이페이지, 나의 정보 페이지들의 일부 데이터 바인딩 및 수정 작업을 진행하였습니다. 짧은 시간 내에 다양한 해상도의 모바일 디바이스를 대응할 수 있도록 rem 단위를 사용했습니다.',
+    duration: '2023.01 ~',
+    section: '주요 기능 및 게시판 페이지 Front-end 개발 담당',
+    tool: 'Next.js, SCSS, JavaScript, Git',
+  },
+  {
     id: 15,
     title: 'RebitX',
     thumb: WORK15.src,
@@ -182,7 +195,7 @@ const workList: WorkType[] = [
     link: 'https://rebitx.com/',
     tag: ['디자인 100%', '구현 60%', 'Next.js', 'SCSS'],
     desc: '상업용 부동산 조각투자 서비스의 웹 플랫폼 구축 프로젝트에 참여하여 사용자 및 관리자 사이트 전반 디자인 및 Front-end 개발 업무를 담당하였습니다. 초기 환경을 구축하였으며 메인 웹 페이지와 모바일 데모 사이트, 청약, 거래, 로그인 페이지 UI 개발 및 데이터 바인딩 업무와 호가창 등의 차트 등을 개발하였습니다.',
-    duration: '2022.10 ~ 2022.12',
+    duration: '2022.10 ~ 2023.01',
     section: '사용자, 관리자 페이지 전반 디자인 및 Front-end 개발 담당',
     tool: 'Figma, Next.js, SCSS, JavaScript, Git',
   },
