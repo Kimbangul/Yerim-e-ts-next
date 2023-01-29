@@ -73,6 +73,10 @@ const Tech = {
         }
       }
     }
+
+    .fp-overflow {
+      width: 100%;
+    }
     /* FUNCTION section animation */
     &.active {
       &::after {
