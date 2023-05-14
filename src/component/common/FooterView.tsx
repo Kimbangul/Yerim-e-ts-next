@@ -1,8 +1,11 @@
 import styled from 'styled-components';
+import moment from 'moment';
 
 import { MaxWidthContainer } from 'styles/Common';
 
 const FooterView: React.FC = () => {
+  const currentYear = moment().format('YYYY');
+
   return (
     <Footer.Container className='section fp-auto-height'>
       <Footer.Inner className='Footer__container'>
@@ -10,9 +13,7 @@ const FooterView: React.FC = () => {
           본 페이지는 상업적 목적이 아닌 <br />
           개인 포트폴리오용으로 제작되었습니다.
         </p>
-        <Footer.Copy className='Footer__copy'>
-          © 2022 Park-Ye-Rim. All Rights Reserved.
-        </Footer.Copy>
+        <Footer.Copy className='Footer__copy'>© {currentYear} Park-Ye-Rim. All Rights Reserved.</Footer.Copy>
       </Footer.Inner>
     </Footer.Container>
   );
