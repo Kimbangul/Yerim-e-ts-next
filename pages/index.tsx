@@ -9,6 +9,18 @@ import DesignModal from 'src/component/Design/DesignModal';
 // COMPONENT main component
 const Home: NextPage = () => {
   const { isOpenModal, setIsOpenModal } = useContext(ModalContext);
+
+  const data = async () => {
+    const res = await fetch('http://127.0.0.1:3000/api/crawler')
+    const data = await res.json()
+    console.log(data);
+
+    return data
+  }
+
+  
+  data();
+
   return (
     <>
       <Header />
