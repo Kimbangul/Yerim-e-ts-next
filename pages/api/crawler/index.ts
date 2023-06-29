@@ -35,22 +35,27 @@ const getHtml = async (url : string) => {
         headline: $(el).find("h2").text(),
         tags: getTag(el),
       }
-      
     });
-    console.log(content);
-    const json = JSON.stringify(content);
-    return json;
+    
+    const data = content;
+    // console.log(content);
+    console.log(data.length);
+    return data;
   }
   catch(e){
-    console.log(e)
+    console.log(e);
   }
 }
 
-const articles = (url : string) => getHtml(url);
+const articles = async (url : string) => await getHtml(url);
+const article = getHtml("https://velog.io/@kimbangul");
+console.log(article);
 
 export default function handler (
   req: NextApiRequest,
   res: NextApiResponse)  {
-  
-      res.status(200).json(articles("https://velog.io/@kimbangul"))
+  res.status(200).json({
+    data: article,
+    sample: 'hello'
+  })
 }
