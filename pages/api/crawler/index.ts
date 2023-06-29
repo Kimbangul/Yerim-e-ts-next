@@ -37,25 +37,20 @@ const getHtml = async (url : string) => {
       }
     });
     
-    const data = content;
-    // console.log(content);
-    console.log(data.length);
-    return data;
+    return content;
   }
   catch(e){
     console.log(e);
   }
 }
 
-const articles = async (url : string) => await getHtml(url);
 const article = getHtml("https://velog.io/@kimbangul");
-console.log(article);
 
-export default function handler (
+export default async function handler (
   req: NextApiRequest,
   res: NextApiResponse)  {
   res.status(200).json({
-    data: article,
+    data: await article,
     sample: 'hello'
   })
 }
