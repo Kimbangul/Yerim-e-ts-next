@@ -5,7 +5,7 @@ import Tag from 'src/component/common/Tag';
 
 // COMPONENT main component
 const PostList: React.FC<PostListPropsType> = (props) => {
-  const tagList = props.tags ? JSON.parse(props.tags.replace(/'/g, '"')) : [];
+  const tagList = props.tags || [];
 
   return (
     <Post.Item className='Post'>
@@ -113,7 +113,7 @@ export type PostListPropsType = {
   headline?: string;
   date?: string;
   href?: string;
-  tags?: string;
+  tags?: string[];
   context?: string;
 };
 

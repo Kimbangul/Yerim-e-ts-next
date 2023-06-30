@@ -49,8 +49,5 @@ const article = getHtml("https://velog.io/@kimbangul");
 export default async function handler (
   req: NextApiRequest,
   res: NextApiResponse)  {
-  res.status(200).json({
-    data: await article,
-    sample: 'hello'
-  })
+  res.status(200).json(await article)
 }

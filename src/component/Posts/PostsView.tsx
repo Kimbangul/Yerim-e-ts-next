@@ -8,22 +8,28 @@ import {
 } from 'styles/Common';
 import PostList from 'src/component/Posts/PostsList';
 import useApiCall from 'utils/useApiCall';
+import { useEffect, useMemo } from 'react';
 
 type VelogArticle = {
   headline: string;
   href: string;
   date: string;
-  tags: string;
+  tags?: string[];
   context: string;
 };
 
 // COMPONENT main component
 const PostsView = () => {
   const postsCall = useApiCall<VelogArticle[]>(() =>
-    axios.get('https://api.honeycombpizza.link/velog/kimbangul')
+    axios.get(`${process.env.NEXT_PUBLIC_BACK_API_URL}/api/crawler`)
   );
 
-  if (postsCall.state !== 'accepted') {
+  const isLoad = useMemo(()=>{
+    return postsCall.state;
+  }, [postsCall.state]);
+
+
+  if (isLoad !== 'accepted' || postsCall.data === undefined) {
     return <Post.Loading className='PostsView__loading'></Post.Loading>;
   }
   return (
@@ -40,6 +46,7 @@ const PostsView = () => {
         {postsCall.data.length > 0 && (
           <Post.List className='PostsView__list'>
             {postsCall.data
+              .filter((el) => el.headline !== undefined)
               .filter((_, index) => index < 3)
               .map((el, idx) => {
                 return <PostList key={`post${idx}`} {...el} />;
