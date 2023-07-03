@@ -44,7 +44,7 @@ const getHtml = async (url : string) => {
   }
 }
 
-const article = getHtml("https://velog.io/@kimbangul");
+const article = getHtml(process.env.NEXT_PUBLIC_BLOG_URL || '');
 
 export default async function handler (
   req: NextApiRequest,
