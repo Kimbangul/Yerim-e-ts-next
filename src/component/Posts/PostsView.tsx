@@ -21,7 +21,7 @@ type VelogArticle = {
 // COMPONENT main component
 const PostsView = () => {
   const postsCall = useApiCall<VelogArticle[]>(() =>
-    axios.get(`${process.env.NEXT_PUBLIC_BACK_API_URL}/api/crawler`)
+    axios.get(`/api/crawler`)
   );
 
   const isLoad = useMemo(()=>{

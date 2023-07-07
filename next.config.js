@@ -5,8 +5,8 @@ const isProduction = process.env.NODE_ENV === 'production';
 const nextConfig = {
   // assetPrefix: isProduction ? 'https://kimbangul.github.io/' : null,
   // trailingSlash: true,
-  // reactStrictMode: true,
-  // swcMinify: true,
+  reactStrictMode: true,
+  swcMinify: true,
   // basePath:'/.',
   //basePath: isProduction ? '/.' : 'http://127.0.0.1:3000/',
 
@@ -18,6 +18,15 @@ const nextConfig = {
   //   loader: 'akamai',
   //   path: '',
   // } : {},
+
+  async rewrites() {
+    return [
+      {
+        source: "/:path*",
+        destination: `${process.env.NEXT_PUBLIC_BACK_API_URL}/:path*`,
+      },
+    ];
+  },
 
   webpack(config, { isServer }) {
     config.module.rules.push({
