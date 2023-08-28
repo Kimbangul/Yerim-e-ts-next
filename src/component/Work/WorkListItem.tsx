@@ -18,14 +18,9 @@ type WorkListItemType = {
 };
 const WorkListItem: React.FC<WorkListItemType> = (props) => {
   const router = useRouter();
-  // FUNCTION
+  // FUNCTION 링크 이동
   const onClickDetailViewBtn = (param: number) => {
-    const isDev = process.env.NODE_ENV === 'development';
-    if (isDev) {
-      router.push(`/detail/${param}`);
-    } else {
-      router.push(`./detail/${param}/index.html`);
-    }
+    router.push(`detail/${param}`);
     return;
   };
 
