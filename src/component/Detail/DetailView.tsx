@@ -28,13 +28,13 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
         <Detail.Title.Container className='Detail__title-container'>
           <Detail.Title.TextContainer className='Detail__title__text-container'>
             <Detail.Title.Text className='Detail__title'>
-              {data.title}
+              {data?.title}
             </Detail.Title.Text>
             <Detail.Category className='Detail__category'>
-              {data.category}
+              {data?.category}
             </Detail.Category>
             <Detail.Tag.List className='Detail__tag-list'>
-              {data.tag.map((el) => {
+              {data?.tag.map((el) => {
                 return (
                   <Tag key={el} className='Detail__tag-item'>
                     {el}
@@ -43,16 +43,16 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
               })}
             </Detail.Tag.List>
             <Detail.Button.Container className='Detail__button-container'>
-              {data.link ? (
+              {data?.link ? (
                 <Detail.Button.Button
-                  onClick={onClickLinkBtn.bind(this, data.link, '_blank')}
+                  onClick={onClickLinkBtn.bind(this, data?.link, '_blank')}
                 >
                   사이트 바로가기
                 </Detail.Button.Button>
               ) : null}
-              {data.github ? (
+              {data?.github ? (
                 <Detail.Button.Button
-                  onClick={onClickLinkBtn.bind(this, data.github, '_blank')}
+                  onClick={onClickLinkBtn.bind(this, data?.github, '_blank')}
                 >
                   Github 바로가기
                 </Detail.Button.Button>
@@ -60,7 +60,7 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
             </Detail.Button.Container>
           </Detail.Title.TextContainer>
           <Detail.Image.Container className='Detail__image-container'>
-            <AutoHeightImageView src={data.thumb} alt={data.title} />
+            <AutoHeightImageView src={data?.thumb} alt={data?.title} />
           </Detail.Image.Container>
         </Detail.Title.Container>
         <Detail.Desc.Container className='Detail__desc-container'>
@@ -68,7 +68,7 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
             OverView.
           </Detail.Desc.Title>
           <Detail.Desc.Content className='Detail__desc'>
-            {data.desc}
+            {data?.desc}
           </Detail.Desc.Content>
         </Detail.Desc.Container>
         <Detail.Desc.Container className='Detail__duration-container'>
@@ -78,15 +78,15 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
           <Detail.Desc.InfoList className='Detail__InfoList'>
             <Detail.Desc.Content as='li' className='Detail__InfoList-item'>
               <Detail.Desc.Label>제작 기간</Detail.Desc.Label>
-              {data.duration}
+              {data?.duration}
             </Detail.Desc.Content>
             <Detail.Desc.Content as='li' className='Detail__InfoList-item'>
               <Detail.Desc.Label>제작 영역</Detail.Desc.Label>
-              {data.section}
+              {data?.section}
             </Detail.Desc.Content>
             <Detail.Desc.Content as='li' className='Detail__InfoList-item'>
               <Detail.Desc.Label>사용 툴</Detail.Desc.Label>
-              {data.tool}
+              {data?.tool}
             </Detail.Desc.Content>
           </Detail.Desc.InfoList>
         </Detail.Desc.Container>

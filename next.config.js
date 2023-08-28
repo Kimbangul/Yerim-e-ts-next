@@ -7,7 +7,7 @@ const nextConfig = {
   // trailingSlash: true,
   reactStrictMode: true,
   swcMinify: true,
-  // basePath:'/.',
+  // basePath: '/',
   //basePath: isProduction ? '/.' : 'http://127.0.0.1:3000/',
 
   // HTTP 431 Error로 설정 삭제
