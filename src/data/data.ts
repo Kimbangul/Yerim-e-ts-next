@@ -14,6 +14,7 @@ import WORK13 from 'public/image/work/work13.jpg';
 import WORK14 from 'public/image/work/work14.jpg';
 import WORK15 from 'public/image/work/work15.jpg';
 import WORK16 from 'public/image/work/work16.jpg';
+import WORK17 from 'public/image/work/work17.jpg';
 
 // PARAM design image
 import DESIGN01 from 'public/image/design/design01.png';
@@ -69,6 +70,7 @@ const techList = {
       '협업을 위해 재활용과 유지보수가 쉬운 코드를 짤 수 있도록 더 좋은 방법에 대해 끊임없이 생각하며, 여러 가능성 및 예외 상황에 대해 고려하며 개발을 진행합니다.',
       'CSS, SCSS 등을 통해 디자인 결과물과 흡사하게 웹에 구현해 낼 수 있으며 반응형 웹 퍼블리싱이 가능합니다.',
       '표준과 웹 접근성 준수, SEO 최적화를 위해 페이지 구조와 태그의 의미를 고려하며 마크업하는 것을 지향합니다.',
+      '운영 업무를 통해 얻은 경험으로 Frontend 뿐만 아니라 Backend와 서버, 네트워크 담당자와도 원활한 협업 및 기초적인 업무가 가능합니다.',
     ],
     tag: [
       'HTML5',
@@ -80,7 +82,7 @@ const techList = {
       'React.js',
       'Next.js',
       'Vue.js',
-      'PHP',
+      'Spring',
     ],
   },
 };
@@ -164,6 +166,18 @@ export type WorkType = {
 
 const workList: WorkType[] = [
   {
+    id: 15,
+    title: '아주대의료원 산하 웹사이트 운영 및 유지보수',
+    thumb: WORK17.src,
+    category: '병원, 의료원 산하 웹사이트 및 내부 시스템 운영',
+    link: 'https://hosp.ajoumc.or.kr/',
+    tag: ['운영', '유지보수', '서브시스템 개발', '퍼블리싱'],
+    desc: '아주대병원 홈페이지 담당자로 의료원 산하 병원, 의료원, 각종 센터와 CMS, 인사고과, VOC 관리자 등 내부 직원들이 사용하는 서브사이트들을 운영 및 유지보수 하였습니다.',
+    duration: '2023.03 ~ ',
+    section: '사이트 운영 및 유지보수',
+    tool: 'Spring, JSP, ASP.NET',
+  },
+  {
     id: 14,
     title: 'YERIM.e',
     thumb: WORK14.src,
@@ -180,10 +194,10 @@ const workList: WorkType[] = [
     title: 'RebitX Mobile Web',
     thumb: WORK16.src,
     category: '상업용 부동산 조각투자 플랫폼 웹앱 버전 구축',
-    link: 'https://rebitx.com/mobile',
+    //link: 'https://rebitx.com/mobile',
     tag: ['구현 60%', 'Next.js', 'SCSS'],
     desc: 'RebitX의 App 디자인을 토대로 모바일 Web 플랫폼을 제작하였습니다. 메인 페이지, 청약, 거래, 알림, 공지사항과 이벤트, 이용가이드 등의 게시판 페이지들의 프론트엔드 개발 작업을 주로 진행하였으며 그 외 마이페이지, 나의 정보 페이지들의 일부 데이터 바인딩 및 수정 작업을 진행하였습니다. 짧은 시간 내에 다양한 해상도의 모바일 디바이스를 대응할 수 있도록 rem 단위를 사용했습니다.',
-    duration: '2023.01 ~',
+    duration: '2023.01 ~ 2023.02',
     section: '주요 기능 및 게시판 페이지 Front-end 개발 담당',
     tool: 'Next.js, SCSS, JavaScript, Git',
   },
