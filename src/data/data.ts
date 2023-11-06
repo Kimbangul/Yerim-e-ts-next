@@ -14,6 +14,7 @@ import WORK13 from 'public/image/work/work13.jpg';
 import WORK14 from 'public/image/work/work14.jpg';
 import WORK15 from 'public/image/work/work15.jpg';
 import WORK16 from 'public/image/work/work16.jpg';
+import WORK17 from 'public/image/work/work17.jpg';
 
 // PARAM design image
 import DESIGN01 from 'public/image/design/design01.png';
@@ -167,7 +168,7 @@ const workList: WorkType[] = [
   {
     id: 15,
     title: '아주대의료원 산하 웹사이트 운영 및 유지보수',
-    thumb: WORK14.src,
+    thumb: WORK17.src,
     category: '병원, 의료원 산하 웹사이트 및 내부 시스템 운영',
     link: 'https://hosp.ajoumc.or.kr/',
     tag: ['운영', '유지보수', '서브시스템 개발', '퍼블리싱'],
