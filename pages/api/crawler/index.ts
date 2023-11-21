@@ -49,5 +49,6 @@ const article = getHtml(process.env.NEXT_PUBLIC_BLOG_URL || '');
 export default async function handler (
   req: NextApiRequest,
   res: NextApiResponse)  {
+  console.log(article);
   res.status(200).json(await article)
 }
