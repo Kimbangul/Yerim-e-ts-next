@@ -14,6 +14,7 @@ import WORK13 from 'public/image/work/work13.jpg';
 import WORK14 from 'public/image/work/work14.jpg';
 import WORK15 from 'public/image/work/work15.jpg';
 import WORK16 from 'public/image/work/work16.jpg';
+import WORK17 from 'public/image/work/work17.jpg';
 
 // PARAM design image
 import DESIGN01 from 'public/image/design/design01.png';
@@ -69,6 +70,7 @@ const techList = {
       '협업을 위해 재활용과 유지보수가 쉬운 코드를 짤 수 있도록 더 좋은 방법에 대해 끊임없이 생각하며, 여러 가능성 및 예외 상황에 대해 고려하며 개발을 진행합니다.',
       'CSS, SCSS 등을 통해 디자인 결과물과 흡사하게 웹에 구현해 낼 수 있으며 반응형 웹 퍼블리싱이 가능합니다.',
       '표준과 웹 접근성 준수, SEO 최적화를 위해 페이지 구조와 태그의 의미를 고려하며 마크업하는 것을 지향합니다.',
+      '운영 업무를 통해 얻은 경험으로 Frontend 뿐만 아니라 Backend와 서버, 네트워크 담당자와도 원활한 협업 및 기초적인 업무가 가능합니다.',
     ],
     tag: [
       'HTML5',
@@ -80,7 +82,7 @@ const techList = {
       'React.js',
       'Next.js',
       'Vue.js',
-      'PHP',
+      'Spring',
     ],
   },
 };
@@ -164,6 +166,18 @@ export type WorkType = {
 
 const workList: WorkType[] = [
   {
+    id: 15,
+    title: '아주대의료원 산하 웹사이트 운영 및 유지보수',
+    thumb: WORK17.src,
+    category: '병원, 의료원 산하 웹사이트 및 내부 시스템 운영',
+    link: 'https://hosp.ajoumc.or.kr/',
+    tag: ['운영', '유지보수', '서브시스템 개발', '퍼블리싱'],
+    desc: '아주대병원 홈페이지 담당자로 의료원 산하 병원, 의료원, 각종 센터와 CMS, 인사고과, VOC 관리자 등 내부 직원들이 사용하는 서브사이트들을 운영 및 유지보수 하였습니다.',
+    duration: '2023.03 ~ ',
+    section: '사이트 운영 및 유지보수',
+    tool: 'Spring, JSP, ASP.NET',
+  },
+  {
     id: 14,
     title: 'YERIM.e',
     thumb: WORK14.src,
@@ -180,10 +194,10 @@ const workList: WorkType[] = [
     title: 'RebitX Mobile Web',
     thumb: WORK16.src,
     category: '상업용 부동산 조각투자 플랫폼 웹앱 버전 구축',
-    link: 'https://rebitx.com/mobile',
+    //link: 'https://rebitx.com/mobile',
     tag: ['구현 60%', 'Next.js', 'SCSS'],
     desc: 'RebitX의 App 디자인을 토대로 모바일 Web 플랫폼을 제작하였습니다. 메인 페이지, 청약, 거래, 알림, 공지사항과 이벤트, 이용가이드 등의 게시판 페이지들의 프론트엔드 개발 작업을 주로 진행하였으며 그 외 마이페이지, 나의 정보 페이지들의 일부 데이터 바인딩 및 수정 작업을 진행하였습니다. 짧은 시간 내에 다양한 해상도의 모바일 디바이스를 대응할 수 있도록 rem 단위를 사용했습니다.',
-    duration: '2023.01 ~',
+    duration: '2023.01 ~ 2023.02',
     section: '주요 기능 및 게시판 페이지 Front-end 개발 담당',
     tool: 'Next.js, SCSS, JavaScript, Git',
   },
@@ -327,57 +341,57 @@ const workList: WorkType[] = [
       'Single Page Application, 전반적인 디자인 및 퍼블리싱 담당, 검색 등 일부 기능 개발',
     tool: 'React.js, CSS, Figma, Illustrator, Visual Studio Code',
   },
-  {
-    id: 1,
-    title: '알까기를 시작하는 트레이너를 위한 안내서',
-    thumb: WORK01.src,
-    category: '창작 웹사이트',
-    link: 'https://kimbangul.github.io/interaction-lab/',
-    tag: ['기획 100%', '디자인 100%', '반응형', 'CSS'],
-    desc: `게임 \'포켓몬스터\' 시리즈의 시스템 중 하나인 	\'알까기\' 에 대한 내용을 소개하는 사이트입니다.
-    캐주얼한 일러스트를 활용한 인포그래픽 스타일을 디자인 컨셉으로 삼고, 애니메이션을 적극 활용하여 전반적으로 동적인 느낌이 들도록 기획하였습니다.
-    \n포켓몬스터 시리즈의 대표 캐릭터인 '피카츄' 의 컬러에서 따와 옐로 컬러를 주 색상으로 선정했습니다.
-    `,
-    duration: '2021.05 ~ 2021.06',
-    section: '메인 페이지, 마이크로 웹사이트',
-    tool: 'HTML, CSS, JQuery, Adobe XD, Photoshop, Illustrator',
-  },
-  {
-    id: 2,
-    title: 'ORION',
-    thumb: WORK02.src,
-    category: '오리온 사이트 리디자인',
-    link: 'https://kimbangul.github.io/orion/',
-    tag: ['기획 100%', '디자인 100%', '반응형', 'SCSS'],
-    desc: `기존 사이트의 메인 페이지는 단순히 제품만 나열되어 있을 뿐, 회사에 대한 정보나 제품 상세 설명이 부족하여 브랜드의 가치를 부각시키지 못하고 있습니다. 
-    또한, 모바일 환경의 사용자를 고려하지 않고 고정폭 레이아웃을 사용하기도 하였습니다. 
-    애니메이션이 거의 없어 지나치게 정적인 느낌이 들며, 디자인적으로도 '오래된 웹사이트'라는 느낌이 들어 리뉴얼을 하기로 하였습니다. 
+//   {
+//     id: 1,
+//     title: '알까기를 시작하는 트레이너를 위한 안내서',
+//     thumb: WORK01.src,
+//     category: '창작 웹사이트',
+//     link: 'https://kimbangul.github.io/interaction-lab/',
+//     tag: ['기획 100%', '디자인 100%', '반응형', 'CSS'],
+//     desc: `게임 \'포켓몬스터\' 시리즈의 시스템 중 하나인 	\'알까기\' 에 대한 내용을 소개하는 사이트입니다.
+//     캐주얼한 일러스트를 활용한 인포그래픽 스타일을 디자인 컨셉으로 삼고, 애니메이션을 적극 활용하여 전반적으로 동적인 느낌이 들도록 기획하였습니다.
+//     \n포켓몬스터 시리즈의 대표 캐릭터인 '피카츄' 의 컬러에서 따와 옐로 컬러를 주 색상으로 선정했습니다.
+//     `,
+//     duration: '2021.05 ~ 2021.06',
+//     section: '메인 페이지, 마이크로 웹사이트',
+//     tool: 'HTML, CSS, JQuery, Adobe XD, Photoshop, Illustrator',
+//   },
+//   {
+//     id: 2,
+//     title: 'ORION',
+//     thumb: WORK02.src,
+//     category: '오리온 사이트 리디자인',
+//     link: 'https://kimbangul.github.io/orion/',
+//     tag: ['기획 100%', '디자인 100%', '반응형', 'SCSS'],
+//     desc: `기존 사이트의 메인 페이지는 단순히 제품만 나열되어 있을 뿐, 회사에 대한 정보나 제품 상세 설명이 부족하여 브랜드의 가치를 부각시키지 못하고 있습니다. 
+//     또한, 모바일 환경의 사용자를 고려하지 않고 고정폭 레이아웃을 사용하기도 하였습니다. 
+//     애니메이션이 거의 없어 지나치게 정적인 느낌이 들며, 디자인적으로도 '오래된 웹사이트'라는 느낌이 들어 리뉴얼을 하기로 하였습니다. 
     
-    웹페이지를 통한 브랜드의 가치 부각을 중점으로 삼고 디자인을 진행했습니다. 회사의 슬로건과 비전을 풀페이지 메인 슬라이드로 배치하여, 고객과 투자자에게 신뢰감을 심어주고자 하였습니다. 기존 사이트의 정보 부족 문제를 해결하기 위해, 대표 제품인 '초코파이'를 테마로 한 섹션과 신제품을 소개하는 섹션을 제작했습니다. \n
-    모던하면서도 지나치게 경직된 느낌을 주지 않게끔, 애니메이션과 drop-shadow 그리고 border-radius 등을 적극 활용하였으며 다양한 환경에서 접속하는 이용자들을 위해 반응형으로 제작하였습니다.`,
-    duration: '2021.02 ~ 2021.03',
-    section: '메인 페이지',
-    tool: 'HTML, CSS, JQuery, Figma, Photoshop, Illustrator',
-  },
-  {
-    id: 3,
-    title: 'Haagendazs',
-    thumb: WORK03.src,
-    category: '하겐다즈 사이트 리디자인',
-    link: 'https://kimbangul.github.io/haagendazs/',
-    tag: ['기획 100%', '디자인 100%', '반응형', 'SCSS'],
-    desc: `기존 사이트는 구조적으로 메뉴 구성이 정리되지 않았고, 메인 페이지에 소개되는 제품들의 이미지를 클릭해도 구매 페이지 링크로 연결되지 않아 접근성이 떨어지는 문제가 있었습니다.
-    또한 메인 페이지에 있는 제품들이 신상품인지 베스트셀러 제품인지를 알 수 없으며 창업 관련 내용이 없는 등 정보의 부재도 보였습니다.
-    UX적으로도 상단 메뉴 구성이 양 끝단으로 나뉘어 있고, 지나치게 여백이 부족해 영역의 시작과 끝을 구분하기 어렵습니다.
-    서체와 폰트 크기가 조정되지 않아 정리되지 않은 느낌을 주기도 합니다.
+//     웹페이지를 통한 브랜드의 가치 부각을 중점으로 삼고 디자인을 진행했습니다. 회사의 슬로건과 비전을 풀페이지 메인 슬라이드로 배치하여, 고객과 투자자에게 신뢰감을 심어주고자 하였습니다. 기존 사이트의 정보 부족 문제를 해결하기 위해, 대표 제품인 '초코파이'를 테마로 한 섹션과 신제품을 소개하는 섹션을 제작했습니다. \n
+//     모던하면서도 지나치게 경직된 느낌을 주지 않게끔, 애니메이션과 drop-shadow 그리고 border-radius 등을 적극 활용하였으며 다양한 환경에서 접속하는 이용자들을 위해 반응형으로 제작하였습니다.`,
+//     duration: '2021.02 ~ 2021.03',
+//     section: '메인 페이지',
+//     tool: 'HTML, CSS, JQuery, Figma, Photoshop, Illustrator',
+//   },
+//   {
+//     id: 3,
+//     title: 'Haagendazs',
+//     thumb: WORK03.src,
+//     category: '하겐다즈 사이트 리디자인',
+//     link: 'https://kimbangul.github.io/haagendazs/',
+//     tag: ['기획 100%', '디자인 100%', '반응형', 'SCSS'],
+//     desc: `기존 사이트는 구조적으로 메뉴 구성이 정리되지 않았고, 메인 페이지에 소개되는 제품들의 이미지를 클릭해도 구매 페이지 링크로 연결되지 않아 접근성이 떨어지는 문제가 있었습니다.
+//     또한 메인 페이지에 있는 제품들이 신상품인지 베스트셀러 제품인지를 알 수 없으며 창업 관련 내용이 없는 등 정보의 부재도 보였습니다.
+//     UX적으로도 상단 메뉴 구성이 양 끝단으로 나뉘어 있고, 지나치게 여백이 부족해 영역의 시작과 끝을 구분하기 어렵습니다.
+//     서체와 폰트 크기가 조정되지 않아 정리되지 않은 느낌을 주기도 합니다.
 
-    문제점을 개선하기 위해 큰 카테고리를 나누어 메뉴 구조를 정리하고, 메인 페이지 구조를 신상품/인기 제품/SNS/창업 문의 등으로 나누어 배치하였습니다. 또한 접근성을 위해 링크를 연결해주었습니다.
-강렬한 원색을 많이 사용하기보다는 전체적으로 은은한 배색을 활용하여 브랜드의 이미지에 맞춰 고급지면서도 트렌디한 느낌으로 리디자인하고자 하였습니다.
-    `,
-    duration: '2021.01 ~ 2021.02',
-    section: '메인 페이지',
-    tool: 'HTML, CSS, JQuery, Figma, Photoshop, Illustrator',
-  },
+//     문제점을 개선하기 위해 큰 카테고리를 나누어 메뉴 구조를 정리하고, 메인 페이지 구조를 신상품/인기 제품/SNS/창업 문의 등으로 나누어 배치하였습니다. 또한 접근성을 위해 링크를 연결해주었습니다.
+// 강렬한 원색을 많이 사용하기보다는 전체적으로 은은한 배색을 활용하여 브랜드의 이미지에 맞춰 고급지면서도 트렌디한 느낌으로 리디자인하고자 하였습니다.
+//     `,
+//     duration: '2021.01 ~ 2021.02',
+//     section: '메인 페이지',
+//     tool: 'HTML, CSS, JQuery, Figma, Photoshop, Illustrator',
+//   },
 ];
 
 export { link, techList, designList, workList, blurDataUrl };
