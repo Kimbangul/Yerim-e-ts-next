@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 // COMPONENT main component
 const MainVideoView: React.FC = () => {
-  const videoLink = 'video/main_video.mp4';
+  const videoLink = 'https://kimbangul.github.io/video/main_video.mp4';
 
   return (
     <MainVideo.Container
