@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import SwiperCore, {
@@ -51,12 +51,30 @@ const WorkList: React.FC<WorkListType> = (props) => {
   const nextRef = useRef<HTMLButtonElement>(null);
   const swiperRef = useRef<null | SwiperCore>(null);
 
+  const observerCallback = (observeArr: IntersectionObserverEntry[]) => {
+    observeArr.forEach((el) => {      
+      if (el.isIntersecting) {
+        console.log('view')
+      } else {
+        console.log('no view')
+      }
+    });
+  }
+
+  const intersectionObserver = new IntersectionObserver(observerCallback);
+
+
+  useEffect(()=>{
+    console.log(swiperRef);
+  },[swiperRef])
+
   // PARAM swiper option
   const swiperOption: SwiperProps = {
     onSwiper: onChangeIndex,
     onRealIndexChange: onChangeIndex,
     onBeforeInit: (swiper: SwiperCore) => {
       swiperRef.current = swiper;
+      intersectionObserver.observe(swiperRef.current.el);
       return;
     },
     effect: 'fade',
