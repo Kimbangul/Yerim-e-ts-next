@@ -10,8 +10,6 @@ import Contact from 'src/component/Contact/ContactView';
 import PostsView from 'src/component/Posts/PostsView';
 import Footer from 'src/component/common/FooterView';
 
-console.log(process.env.NEXT_PUBLIC_FULLPAGE_LICENSE);
-
 const FullpageWrapper: React.FC = () => {
   const [isReady, setIsReady] = useState(false);
 
@@ -30,6 +28,7 @@ const FullpageWrapper: React.FC = () => {
       {isReady && (
         <ReactFullpage
           // PARAM fullpage options
+          credits={{enabled: true}}
           licenseKey={process.env.NEXT_PUBLIC_FULLPAGE_LICENSE}
           navigation={true}
           navigationPosition='left'
