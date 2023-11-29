@@ -51,22 +51,20 @@ const WorkList: React.FC<WorkListType> = (props) => {
   const nextRef = useRef<HTMLButtonElement>(null);
   const swiperRef = useRef<null | SwiperCore>(null);
 
+  // FUNCTION 슬라이드가 화면에 있을 때만 자동재생
   const observerCallback = (observeArr: IntersectionObserverEntry[]) => {
-    observeArr.forEach((el) => {      
+    observeArr.forEach((el) => {     
+      if (!swiperRef.current) return;      
       if (el.isIntersecting) {
-        console.log('view')
+         swiperRef.current.autoplay.start();
       } else {
-        console.log('no view')
+         swiperRef.current.autoplay.stop();        
       }
+      swiperRef.current.update();
     });
   }
 
   const intersectionObserver = new IntersectionObserver(observerCallback);
-
-
-  useEffect(()=>{
-    console.log(swiperRef);
-  },[swiperRef])
 
   // PARAM swiper option
   const swiperOption: SwiperProps = {
@@ -91,9 +89,9 @@ const WorkList: React.FC<WorkListType> = (props) => {
     modules: [Autoplay, Pagination, Navigation, EffectFade],
     loop: true,
     autoplay: {
-      delay: 3000,
-      pauseOnMouseEnter: true,
-      disableOnInteraction: true,
+      delay: 3500,
+       pauseOnMouseEnter: true,
+       disableOnInteraction: false,
     },
     className: 'mySwiper',
   };
