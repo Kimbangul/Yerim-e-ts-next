@@ -26,15 +26,10 @@ const TechView: React.FC = () => {
         </Tech.Img.Container>
         <Tech.Text.Container className='Tech__text-container'>
           <Tech.Text.Title className='Tech__title'>
-            <Tech.Text.Word className='Tech__title-word'>T</Tech.Text.Word>
-            <Tech.Text.Word className='Tech__title-word'>e</Tech.Text.Word>
-            <Tech.Text.Word className='Tech__title-word'>c</Tech.Text.Word>
-            <Tech.Text.Word className='Tech__title-word'>h</Tech.Text.Word>{' '}
-            <Tech.Text.Word className='Tech__title-word'>S</Tech.Text.Word>
-            <Tech.Text.Word className='Tech__title-word'>t</Tech.Text.Word>
-            <Tech.Text.Word className='Tech__title-word'>a</Tech.Text.Word>
-            <Tech.Text.Word className='Tech__title-word'>c</Tech.Text.Word>
-            <Tech.Text.Word className='Tech__title-word'>k</Tech.Text.Word>
+            {
+            'Tech Stack'.split('').map((el,idx)=> 
+             <Tech.Text.Word key={el + idx} className='Tech__title-word'>{el}</Tech.Text.Word>
+            )}
             {/* Tech Stack */}
           </Tech.Text.Title>
         </Tech.Text.Container>

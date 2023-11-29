@@ -23,13 +23,11 @@ const MainView: React.FC = () => {
         <SectionCategoryTitle>Main</SectionCategoryTitle>
         <Main.Text.Container className='Main__text-container'>
           <Main.Text.Title className='Main__title'>
-            <Main.Text.Word delay='0.1s'>Y</Main.Text.Word>
-            <Main.Text.Word delay='0.2s'>E</Main.Text.Word>
-            <Main.Text.Word delay='0.3s'>R</Main.Text.Word>
-            <Main.Text.Word delay='0.4s'>I</Main.Text.Word>
-            <Main.Text.Word delay='0.5s'>M</Main.Text.Word>
-            <Main.Text.Word delay='0.6s'>.</Main.Text.Word>
-            <Main.Text.Word delay='0.7s'>e</Main.Text.Word>
+          {
+            'YERIM.e'.split('').map((el,idx)=> 
+            <Main.Text.Word key={el+idx} delay={`${0.1*idx}s`}>{el}</Main.Text.Word>
+            )
+          }
           </Main.Text.Title>
           <Main.Text.Desc className='Main__desc'>
             Web Developer Portfolio
