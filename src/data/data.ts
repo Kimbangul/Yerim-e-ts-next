@@ -1,41 +1,3 @@
-// PARAM work image
-import WORK01 from 'public/image/work/work01.jpg';
-import WORK02 from 'public/image/work/work02.jpg';
-import WORK03 from 'public/image/work/work03.jpg';
-import WORK04 from 'public/image/work/work04.jpg';
-import WORK05 from 'public/image/work/work05.jpg';
-import WORK06 from 'public/image/work/work06.jpg';
-import WORK07 from 'public/image/work/work07.jpg';
-import WORK09 from 'public/image/work/work09.jpg';
-import WORK10 from 'public/image/work/work10.jpg';
-import WORK11 from 'public/image/work/work11.jpg';
-import WORK12 from 'public/image/work/work12.jpg';
-import WORK13 from 'public/image/work/work13.jpg';
-import WORK14 from 'public/image/work/work14.jpg';
-import WORK15 from 'public/image/work/work15.jpg';
-import WORK16 from 'public/image/work/work16.jpg';
-import WORK17 from 'public/image/work/work17.jpg';
-
-// PARAM design image
-import DESIGN01 from 'public/image/design/design01.png';
-import DESIGN01_2 from 'public/image/design/design01_2.png';
-import DESIGN02 from 'public/image/design/design02.png';
-import DESIGN02_2 from 'public/image/design/design02_2.png';
-import DESIGN03 from 'public/image/design/design03.png';
-import DESIGN03_2 from 'public/image/design/design03_2.png';
-import DESIGN04 from 'public/image/design/design04.png';
-import DESIGN05 from 'public/image/design/design05.png';
-import DESIGN05_2 from 'public/image/design/design05_2.png';
-import DESIGN06 from 'public/image/design/design06.png';
-import DESIGN06_2 from 'public/image/design/design06_2.png';
-import DESIGN07 from 'public/image/design/design07.png';
-import DESIGN07_2 from 'public/image/design/design07_2.png';
-import DESIGN08 from 'public/image/design/design08.png';
-import DESIGN08_2 from 'public/image/design/design08_2.png';
-import DESIGN09 from 'public/image/design/design09.png';
-import DESIGN010 from 'public/image/design/design010.png';
-import DESIGN010_2 from 'public/image/design/design010_2.png';
-
 // PARAM link data
 const link = {
   github: 'https://github.com/Kimbangul',
@@ -99,53 +61,53 @@ type DesignListType = {
 const designList: DesignListType[] = [
   {
     title: "밴드 'Poision Infector' 앨범 커버 디자인",
-    thumb: DESIGN01.src,
-    detail: DESIGN01_2.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design01.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design01_2.png`,
   },
   {
     title: "'뻐끔뻐끔 뽀모도로' UXUI 기획 및 디자인",
-    thumb: DESIGN02.src,
-    detail: DESIGN02_2.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design02.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design02_2.png`,
   },
   {
     title: "'꿈상점' UXUI 기획 및 색채 계획",
-    thumb: DESIGN03.src,
-    detail: DESIGN03_2.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design03.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design03_2.png`,
   },
   {
     title: "'심연의 장송곡' 키네틱타이포 MV",
     link: 'https://youtu.be/nIhcqw48Rc0',
-    thumb: DESIGN04.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design04.png`,
   },
   {
     title: "교내 동아리 '가리워진 길' 공연 홍보 포스터 제작",
-    thumb: DESIGN05.src,
-    detail: DESIGN05_2.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design05.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design05_2.png`,
   },
   {
     title: "교내 동아리 '오키드' 홍보 포스터 제작",
-    thumb: DESIGN06.src,
-    detail: DESIGN06_2.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design06.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design06_2.png`,
   },
   {
     title: '게임 UI 디자인 제작',
-    thumb: DESIGN07.src,
-    detail: DESIGN07_2.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design07.png`,
+    detail:`${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design07_2.png`,
   },
   {
     title: '게임 UI 디자인 제작',
-    thumb: DESIGN08.src,
-    detail: DESIGN08_2.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design08.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design08_2.png`,
   },
   {
     title: "홍익대학교 게임그래픽디자인 졸업전시 '프로젝트! 미니어처'",
     link: 'https://www.husg.net/huge21/work/%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%eb%af%b8%eb%8b%88%ec%96%b4%ec%b2%98/',
-    thumb: DESIGN09.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design09.png`,
   },
   {
     title: '근로장학생 디자인 작업',
-    thumb: DESIGN010.src,
-    detail: DESIGN010_2.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design010.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design010_2.png`,
   },
 ];
 
