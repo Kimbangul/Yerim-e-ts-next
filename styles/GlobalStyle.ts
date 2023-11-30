@@ -71,6 +71,9 @@ const GlobalStyle = createGlobalStyle`
 .fp-overflow{
   overflow-x: hidden;
   scrollbar-width: none;
+  @media (max-width: 1023px){
+    max-height: 100% !important;
+  }
 }
   .fp-warning, .fp-watermark{
   display: none;
