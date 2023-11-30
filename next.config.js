@@ -9,6 +9,16 @@ const nextConfig = {
   swcMinify: true,
   // basePath: '/',
   //basePath: isProduction ? '/.' : 'http://127.0.0.1:3000/',
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'kimbangul.github.io',
+        port: '',
+        pathname: '/cdn/**',
+      },
+    ],
+  },
 
   // HTTP 431 Error로 설정 삭제
   // i18n: {

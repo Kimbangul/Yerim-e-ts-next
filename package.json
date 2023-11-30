@@ -17,7 +17,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@fullpage/react-fullpage": "^0.1.28",
+    "@fullpage/react-fullpage": "^0.1.40",
     "@react-three/drei": "^9.78.1",
     "@react-three/fiber": "^8.13.4",
     "@types/three": "^0.153.0",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^6.4.0",
-    "@types/node": "18.7.23",
+    "@types/node": "^18.7.23",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "@types/styled-components": "^5.1.26",
