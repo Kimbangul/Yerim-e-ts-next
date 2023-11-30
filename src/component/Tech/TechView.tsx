@@ -10,8 +10,6 @@ import { techList } from 'src/data/data';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 import TechList from 'src/component/Tech/TechListView';
 
-import TECH_DESIGN from 'public/image/tech/tech_design.jpg';
-
 const TechView: React.FC = () => {
   return (
     <Tech.Page className='section'>
@@ -19,7 +17,7 @@ const TechView: React.FC = () => {
       <Tech.Container className='Tech__container'>
         <Tech.Img.Container className='Tech__img-container'>
           <AutoHeightImageView
-            src={TECH_DESIGN.src}
+            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/image/tech/tech_design.jpg`}
             alt=''
             placeholder='blur'
           />
@@ -57,7 +55,7 @@ const Tech = {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(${TECH_DESIGN.src});
+        background-image: url(${process.env.NEXT_PUBLIC_CDN_LINK}/image/tech/tech_design.jpg);
         background-repeat: no-repeat;
         filter: contrast(0.5) grayscale(1) brightness(0.55);
         background-position: center top;
