@@ -168,7 +168,7 @@ const workList: WorkType[] = [
   {
     id: 15,
     title: '아주대의료원 산하 웹사이트 운영 및 유지보수',
-    thumb: WORK17.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work17.jpg`,
     category: '병원, 의료원 산하 웹사이트 및 내부 시스템 운영',
     link: 'https://hosp.ajoumc.or.kr/',
     tag: ['운영', '유지보수', '서브시스템 개발', '퍼블리싱'],
@@ -180,7 +180,7 @@ const workList: WorkType[] = [
   {
     id: 14,
     title: 'YERIM.e',
-    thumb: WORK14.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work14.jpg`,
     category: '포트폴리오 사이트',
     link: 'https://yerim-e.com/',
     tag: ['디자인 100%', '구현 100%', 'Next.js', 'Styled-Component'],
@@ -192,7 +192,7 @@ const workList: WorkType[] = [
   {
     id: 16,
     title: 'RebitX Mobile Web',
-    thumb: WORK16.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work16.jpg`,
     category: '상업용 부동산 조각투자 플랫폼 웹앱 버전 구축',
     //link: 'https://rebitx.com/mobile',
     tag: ['구현 60%', 'Next.js', 'SCSS'],
@@ -204,7 +204,7 @@ const workList: WorkType[] = [
   {
     id: 15,
     title: 'RebitX',
-    thumb: WORK15.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work15.jpg`,
     category: '상업용 부동산 조각투자 플랫폼 구축',
     link: 'https://rebitx.com/',
     tag: ['디자인 100%', '구현 60%', 'Next.js', 'SCSS'],
@@ -228,7 +228,7 @@ const workList: WorkType[] = [
   {
     id: 4,
     title: '건명테크',
-    thumb: WORK04.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work04.jpg`,
     category: '기업 사이트 제작',
     link: 'http://xn--z69au0yv6quza.kr/',
     tag: ['기획 100%', '디자인 100%', '그누보드'],
@@ -241,7 +241,7 @@ const workList: WorkType[] = [
   {
     id: 5,
     title: 'Ripa Korea',
-    thumb: WORK05.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work05.jpg`,
     category: '기업 사이트 제작',
     link: 'http://ripa.ltd/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC + Mobile'],
@@ -254,7 +254,7 @@ const workList: WorkType[] = [
   {
     id: 6,
     title: '메모리안',
-    thumb: WORK06.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work06.jpg`,
     category: '기업 사이트 제작',
     link: 'http://memoryan.com/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC + Mobile'],
@@ -267,7 +267,7 @@ const workList: WorkType[] = [
   {
     id: 12,
     title: 'ITECH',
-    thumb: WORK12.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work12.jpg`,
     category: '기업 사이트 제작',
     link: 'http://itechate.co.kr/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC'],
@@ -280,7 +280,7 @@ const workList: WorkType[] = [
   {
     id: 8,
     title: '강민이벤트',
-    thumb: WORK13.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work13.jpg`,
     category: '업체 사이트 제작',
     link: 'http://kmevent.kr/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC'],
@@ -319,7 +319,7 @@ const workList: WorkType[] = [
   {
     id: 9,
     title: 'Import-H',
-    thumb: WORK09.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work09.jpg`,
     category: '사이드 팀 프로젝트',
     tag: ['기획 20%', '디자인 100%', 'React', 'Styled-component', '반응형'],
     github: 'https://github.com/import-H/frontend',
@@ -331,7 +331,7 @@ const workList: WorkType[] = [
   {
     id: 10,
     title: 'To-do App',
-    thumb: WORK10.src,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work10.jpg`,
     category: '사이드 팀 프로젝트',
     tag: ['기획 70%', '디자인 90%', '구현 20%', '반응형', 'CSS', 'React'],
     github: 'https://github.com/Coding-matzip/To-do',
