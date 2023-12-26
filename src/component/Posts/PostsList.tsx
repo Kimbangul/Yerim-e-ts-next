@@ -9,7 +9,7 @@ const PostList: React.FC<PostListPropsType> = (props) => {
 
   return (
     <Post.Item className='Post'>
-      <Link href={`https://velog.io${props.href}` || '#'}>
+      <Link href={`${props.href}` || '#'}>
         <a target='_blank'>
           <Post.Title.Container className='Post__title-container'>
             <Post.Title.Text className='Post__title'>
