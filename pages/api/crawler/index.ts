@@ -1,9 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import axios from 'axios';
 import cheerio, {Element} from 'cheerio';
 import { ContentType } from './type';
 
-const openBrowser  = async () => {
+const openBrowser  = async (url: string) => {
   const puppeteer = require('puppeteer');
 
   //1. 크로미움으로 브라우저를 연다. 
@@ -15,7 +14,7 @@ const openBrowser  = async () => {
   const page = await browser.newPage();
         
   //3. 링크 이동
-  await page.goto(`${process.env.NEXT_PUBLIC_BLOG_URL || ''}`, {
+  await page.goto(url, {
     waitUntil: "networkidle2" // 500ms 동안 두 개 이상의 네트워크 연결이 없을 때 탐색이 완료되는 것으로 간주
   });
 
@@ -30,7 +29,7 @@ const content  : string= await page.content();
 
 const getHtml = async (url : string) => {
   try {  
-    const $ = cheerio.load(await openBrowser());
+    const $ = cheerio.load(await openBrowser(url));
 
     let content : ContentType[] = [];
     const ARTICLE_SELECTOR= $("main section > div:nth-child(2) > div:nth-child(3) > div");
