@@ -7,13 +7,15 @@ import chromium from '@sparticuz/chromium-min';
 const openBrowser  = async (url: string) => {
   chromium.setHeadlessMode = true;
   chromium.setGraphicsMode = false;
+  console.log(await chromium.executablePath())
 
   //1. 크로미움으로 브라우저를 연다. 
   const browser = await puppeteer.launch(
     process.env.NODE_ENV === 'development' ?
     {
       headless: true,
-      executablePath: `${process.env.NEXT_LOCAL_CHROME_PATH||''}`,
+      executablePath: process.env.NEXT_LOCAL_CHROME_PATH,
+      //`${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
     }
     :
     {
