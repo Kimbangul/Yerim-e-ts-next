@@ -18,10 +18,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@fullpage/react-fullpage": "^0.1.40",
-    "@react-three/drei": "^9.78.1",
-    "@react-three/fiber": "^8.13.4",
     "@sparticuz/chromium-min": "^119.0.2",
-    "@types/three": "^0.153.0",
     "@vercel/analytics": "^1.1.1",
     "@webcomponents/webcomponentsjs": "^2.7.0",
     "axios": "^1.2.1",
@@ -36,7 +33,6 @@
     "react-tsparticles": "^2.3.3",
     "styled-components": "^5.3.6",
     "swiper": "^8.4.2",
-    "three": "^0.154.0",
     "tsparticles": "^2.3.4"
   },
   "devDependencies": {
