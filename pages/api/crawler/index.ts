@@ -5,6 +5,8 @@ import puppeteer, { executablePath } from 'puppeteer-core';
 import chromium from '@sparticuz/chromium-min';
 
 const openBrowser  = async (url: string) => {
+  chromium.setHeadlessMode = true;
+  chromium.setGraphicsMode = false;
 
   //1. 크로미움으로 브라우저를 연다. 
   const browser = await puppeteer.launch(
@@ -19,7 +21,7 @@ const openBrowser  = async (url: string) => {
       defaultViewport: chromium.defaultViewport,
       executablePath: await chromium.executablePath(),
       headless: chromium.headless,
-    ignoreHTTPSErrors: true
+      ignoreHTTPSErrors: true
     }
   ); // -> 여기서 여러가지 옵션을 설정할 수 있다.
         

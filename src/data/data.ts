@@ -61,53 +61,53 @@ type DesignListType = {
 const designList: DesignListType[] = [
   {
     title: "밴드 'Poision Infector' 앨범 커버 디자인",
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design01.png`,
-    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design01_2.png`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design01.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design01_2.png`,
   },
   {
     title: "'뻐끔뻐끔 뽀모도로' UXUI 기획 및 디자인",
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design02.png`,
-    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design02_2.png`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design02.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design02_2.png`,
   },
   {
     title: "'꿈상점' UXUI 기획 및 색채 계획",
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design03.png`,
-    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design03_2.png`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design03.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design03_2.png`,
   },
   {
     title: "'심연의 장송곡' 키네틱타이포 MV",
     link: 'https://youtu.be/nIhcqw48Rc0',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design04.png`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design04.png`,
   },
   {
     title: "교내 동아리 '가리워진 길' 공연 홍보 포스터 제작",
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design05.png`,
-    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design05_2.png`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design05.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design05_2.png`,
   },
   {
     title: "교내 동아리 '오키드' 홍보 포스터 제작",
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design06.png`,
-    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design06_2.png`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design06.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design06_2.png`,
   },
   {
     title: '게임 UI 디자인 제작',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design07.png`,
-    detail:`${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design07_2.png`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design07.png`,
+    detail:`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design07_2.png`,
   },
   {
     title: '게임 UI 디자인 제작',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design08.png`,
-    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design08_2.png`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design08.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design08_2.png`,
   },
   {
     title: "홍익대학교 게임그래픽디자인 졸업전시 '프로젝트! 미니어처'",
     link: 'https://www.husg.net/huge21/work/%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%eb%af%b8%eb%8b%88%ec%96%b4%ec%b2%98/',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design09.png`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design09.png`,
   },
   {
     title: '근로장학생 디자인 작업',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design010.png`,
-    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/design/design010_2.png`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design010.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design010_2.png`,
   },
 ];
 
@@ -130,7 +130,7 @@ const workList: WorkType[] = [
   {
     id: 15,
     title: '아주대의료원 산하 웹사이트 운영 및 유지보수',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work17.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work17.jpg`,
     category: '병원, 의료원 산하 웹사이트 및 내부 시스템 운영',
     link: 'https://hosp.ajoumc.or.kr/',
     tag: ['운영', '유지보수', '서브시스템 개발', '퍼블리싱'],
@@ -142,7 +142,7 @@ const workList: WorkType[] = [
   {
     id: 14,
     title: 'YERIM.e',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work14.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work14.jpg`,
     category: '포트폴리오 사이트',
     link: 'https://yerim-e.com/',
     tag: ['디자인 100%', '구현 100%', 'Next.js', 'Styled-Component'],
@@ -154,7 +154,7 @@ const workList: WorkType[] = [
   {
     id: 16,
     title: 'RebitX Mobile Web',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work16.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work16.jpg`,
     category: '상업용 부동산 조각투자 플랫폼 웹앱 버전 구축',
     //link: 'https://rebitx.com/mobile',
     tag: ['구현 60%', 'Next.js', 'SCSS'],
@@ -166,7 +166,7 @@ const workList: WorkType[] = [
   {
     id: 15,
     title: 'RebitX',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work15.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work15.jpg`,
     category: '상업용 부동산 조각투자 플랫폼 구축',
     link: 'https://rebitx.com/',
     tag: ['디자인 100%', '구현 60%', 'Next.js', 'SCSS'],
@@ -190,7 +190,7 @@ const workList: WorkType[] = [
   {
     id: 4,
     title: '건명테크',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work04.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work04.jpg`,
     category: '기업 사이트 제작',
     link: 'http://xn--z69au0yv6quza.kr/',
     tag: ['기획 100%', '디자인 100%', '그누보드'],
@@ -203,7 +203,7 @@ const workList: WorkType[] = [
   {
     id: 5,
     title: 'Ripa Korea',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work05.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work05.jpg`,
     category: '기업 사이트 제작',
     link: 'http://ripa.ltd/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC + Mobile'],
@@ -216,7 +216,7 @@ const workList: WorkType[] = [
   {
     id: 6,
     title: '메모리안',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work06.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work06.jpg`,
     category: '기업 사이트 제작',
     link: 'http://memoryan.com/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC + Mobile'],
@@ -229,7 +229,7 @@ const workList: WorkType[] = [
   {
     id: 12,
     title: 'ITECH',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work12.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work12.jpg`,
     category: '기업 사이트 제작',
     link: 'http://itechate.co.kr/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC'],
@@ -242,7 +242,7 @@ const workList: WorkType[] = [
   {
     id: 8,
     title: '강민이벤트',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work13.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work13.jpg`,
     category: '업체 사이트 제작',
     link: 'http://kmevent.kr/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC'],
@@ -281,7 +281,7 @@ const workList: WorkType[] = [
   {
     id: 9,
     title: 'Import-H',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work09.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work09.jpg`,
     category: '사이드 팀 프로젝트',
     tag: ['기획 20%', '디자인 100%', 'React', 'Styled-component', '반응형'],
     github: 'https://github.com/import-H/frontend',
@@ -293,7 +293,7 @@ const workList: WorkType[] = [
   {
     id: 10,
     title: 'To-do App',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/image/work/work10.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work10.jpg`,
     category: '사이드 팀 프로젝트',
     tag: ['기획 70%', '디자인 90%', '구현 20%', '반응형', 'CSS', 'React'],
     github: 'https://github.com/Coding-matzip/To-do',

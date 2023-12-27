@@ -37,7 +37,7 @@ const MainView: React.FC = () => {
       <Main.Image.Container className='Main__img'>
         <Main.Image.Inner>
           <AutoHeightImageView
-            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/image/main/moon.png`}
+            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/main/moon.png`}
             alt='main image'
             placeholder='blur'
             blurDataURL={blurDataUrl}

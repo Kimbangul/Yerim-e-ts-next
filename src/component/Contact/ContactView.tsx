@@ -45,7 +45,7 @@ const ContactView: React.FC = () => {
       <Contact.Container className='Contact__container'>
         <ProfileImgContainer className='Contact__profile-img'>
           <AutoHeightImageView
-            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/image/contact/profile.jpg`}
+            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/contact/profile.jpg`}
             alt='profile image'
             placeholder='blur'
           />

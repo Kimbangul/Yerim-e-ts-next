@@ -17,7 +17,7 @@ const TechView: React.FC = () => {
       <Tech.Container className='Tech__container'>
         <Tech.Img.Container className='Tech__img-container'>
           <AutoHeightImageView
-            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/image/tech/tech_design.jpg`}
+            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/tech/tech_design.jpg`}
             alt=''
             placeholder='blur'
           />
@@ -55,7 +55,7 @@ const Tech = {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(${process.env.NEXT_PUBLIC_CDN_LINK}/image/tech/tech_design.jpg);
+        background-image: url(${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/tech/tech_design.jpg);
         background-repeat: no-repeat;
         filter: contrast(0.5) grayscale(1) brightness(0.55);
         background-position: center top;
