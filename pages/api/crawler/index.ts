@@ -1,14 +1,29 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import cheerio, {Element} from 'cheerio';
 import { ContentType } from './type';
+import puppeteer, { executablePath } from 'puppeteer-core';
+import chromium from '@sparticuz/chromium-min';
 
 const openBrowser  = async (url: string) => {
-  const puppeteer = require('puppeteer');
 
   //1. 크로미움으로 브라우저를 연다. 
-  const browser = await puppeteer.launch({
-    headless: true
-  }); // -> 여기서 여러가지 옵션을 설정할 수 있다.
+  const browser = await puppeteer.launch(
+    process.env.NODE_ENV === 'development' ?
+    {
+      headless: true,
+      executablePath: `${process.env.NEXT_LOCAL_CHROME_PATH||''}`,
+    }
+    :
+    {
+      args: [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(
+        `https://github.com/Sparticuz/chromium/releases/download/v116.0.0/chromium-v116.0.0-pack.tar`
+      ),
+      headless: chromium.headless,
+    ignoreHTTPSErrors: true
+    }
+  ); // -> 여기서 여러가지 옵션을 설정할 수 있다.
         
   //2. 페이지 열기
   const page = await browser.newPage();
