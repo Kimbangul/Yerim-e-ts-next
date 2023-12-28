@@ -7,8 +7,6 @@ import chromium from '@sparticuz/chromium-min';
 const openBrowser  = async (url: string) => {
   chromium.setHeadlessMode = true;
   chromium.setGraphicsMode = false;
-  //console.log(await chromium.executablePath());
-  console.log(chromium.executablePath);
   console.log(`${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`)
 
   //1. 크로미움으로 브라우저를 연다. 
