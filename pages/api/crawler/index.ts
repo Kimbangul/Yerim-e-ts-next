@@ -40,8 +40,8 @@ const openBrowser  = async (url: string) => {
   });
 
   //4. HTML 정보 가지고 온다.
-const content  : string= await page.content();
-console.log(content);
+  const content  : string= await page.content();
+  console.log(content);
           
   //5. 페이지와 브라우저 종료
   await page.close();
