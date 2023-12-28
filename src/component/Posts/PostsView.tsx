@@ -28,6 +28,14 @@ const PostsView = () => {
     return postsCall.state;
   }, [postsCall.state]);
 
+  useEffect(()=>{
+    console.log(postsCall.state);
+  }, [postsCall.state]);
+
+  useEffect(()=>{
+    console.log(postsCall.data);
+  }, [postsCall.data]);
+
 
   if (isLoad !== 'accepted' || postsCall.data === undefined) {
     return <Post.Loading className='PostsView__loading'></Post.Loading>;

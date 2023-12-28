@@ -16,6 +16,7 @@ const Home: NextPage = () => {
 
   useEffect(()=>{
     console.log(postsCall);
+    console.log(`------------ test.tsx`);
   }, [postsCall]);
 
   return (
