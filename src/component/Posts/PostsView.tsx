@@ -40,8 +40,8 @@ const PostsView = () => {
     console.log(`isLoad`);
     console.log(isLoad);
     console.log(`postCall.data`);
-    console.log(postCall.data)
-  }, [isLoad, postCall.data])
+    console.log(postsCall.data)
+  }, [isLoad, postsCall.data])
 
 
   if (isLoad !== 'accepted' || postsCall.data === undefined) {
