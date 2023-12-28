@@ -43,6 +43,8 @@ const PostsView = () => {
             </Post.Word>
           ))}
         </Post.Title>
+       {/* TEST */}
+        {postsCall.data.length}
         {postsCall.data.length > 0 && (
           <Post.List className='PostsView__list'>
             {postsCall.data
