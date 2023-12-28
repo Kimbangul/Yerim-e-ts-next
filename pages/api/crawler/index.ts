@@ -11,16 +11,16 @@ const openBrowser  = async (url: string) => {
 
   //1. 크로미움으로 브라우저를 연다. 
   const browser = await puppeteer.launch(
-    process.env.NODE_ENV === 'development' ?
-    {
-      headless: true,
-     // executablePath: process.env.NEXT_LOCAL_CHROME_PATH,
-     // executablePath: `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
-     executablePath: await chromium.executablePath(
-      `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
-    ),
-    }
-    :
+    // process.env.NODE_ENV === 'development' ?
+    // {
+    //   headless: true,
+    //  // executablePath: process.env.NEXT_LOCAL_CHROME_PATH,
+    //  // executablePath: `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
+    //  executablePath: await chromium.executablePath(
+    //   `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
+    // ),
+    // }
+    // :
     {
       args: [...chromium.args, '--hide-scrollbars', '--disable-web-security', "--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: chromium.defaultViewport,

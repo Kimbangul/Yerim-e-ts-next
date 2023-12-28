@@ -6,19 +6,6 @@ import PostView from 'src/component/Posts/PostsView';
 
 // COMPONENT main component
 const Home: NextPage = () => {
-  const postsCall = useApiCall<any>(() =>
-  axios.get(`/api/crawler`)
-  );
-
-  const isLoad = useMemo(()=>{
-    return postsCall.state;
-  }, [postsCall.state]);
-
-  useEffect(()=>{
-    console.log(postsCall);
-    console.log(`------------ test.tsx`);
-  }, [postsCall]);
-
   return (
     <>
     <h1>test page</h1>
