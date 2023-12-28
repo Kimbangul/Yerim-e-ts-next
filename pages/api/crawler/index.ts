@@ -9,6 +9,7 @@ const openBrowser  = async (url: string) => {
   chromium.setGraphicsMode = false;
   //console.log(await chromium.executablePath());
   console.log(chromium.executablePath);
+  console.log(`${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`)
 
   //1. 크로미움으로 브라우저를 연다. 
   const browser = await puppeteer.launch(
@@ -18,7 +19,7 @@ const openBrowser  = async (url: string) => {
      // executablePath: process.env.NEXT_LOCAL_CHROME_PATH,
      // executablePath: `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
      executablePath: await chromium.executablePath(
-      "https://github.com/Sparticuz/chromium/releases/download/v116.0.0/chromium-v116.0.0-pack.tar"
+      `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
     ),
     }
     :
@@ -27,8 +28,9 @@ const openBrowser  = async (url: string) => {
       defaultViewport: chromium.defaultViewport,
       //executablePath: await chromium.executablePath(),
       executablePath: await chromium.executablePath(
-        "https://github.com/Sparticuz/chromium/releases/download/v116.0.0/chromium-v116.0.0-pack.tar"
-      ),
+       // "https://github.com/Sparticuz/chromium/releases/download/v116.0.0/chromium-v116.0.0-pack.tar"
+       `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
+       ),
       headless: chromium.headless,
       ignoreHTTPSErrors: true
     }
