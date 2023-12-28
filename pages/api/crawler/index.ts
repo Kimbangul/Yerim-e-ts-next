@@ -7,17 +7,23 @@ import chromium from '@sparticuz/chromium-min';
 const openBrowser  = async (url: string) => {
   chromium.setHeadlessMode = true;
   chromium.setGraphicsMode = false;
+  //console.log(await chromium.executablePath());
+  console.log(chromium.executablePath);
 
   //1. 크로미움으로 브라우저를 연다. 
   const browser = await puppeteer.launch(
     process.env.NODE_ENV === 'development' ?
     {
       headless: true,
-      executablePath: `${process.env.NEXT_LOCAL_CHROME_PATH||''}`,
+     // executablePath: process.env.NEXT_LOCAL_CHROME_PATH,
+     // executablePath: `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
+     executablePath: await chromium.executablePath(
+      "https://github.com/Sparticuz/chromium/releases/download/v116.0.0/chromium-v116.0.0-pack.tar"
+    ),
     }
     :
     {
-      args: [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
+      args: [...chromium.args, '--hide-scrollbars', '--disable-web-security', "--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: chromium.defaultViewport,
       executablePath: await chromium.executablePath(),
       headless: chromium.headless,
@@ -35,6 +41,7 @@ const openBrowser  = async (url: string) => {
 
   //4. HTML 정보 가지고 온다.
 const content  : string= await page.content();
+console.log(content);
           
   //5. 페이지와 브라우저 종료
   await page.close();
@@ -45,6 +52,7 @@ const content  : string= await page.content();
 const getHtml = async (url : string) => {
   try {  
     const $ = cheerio.load(await openBrowser(url));
+    console.log($);
 
     let content : ContentType[] = [];
     const ARTICLE_SELECTOR= $("main section > div:nth-child(2) > div:nth-child(3) > div");

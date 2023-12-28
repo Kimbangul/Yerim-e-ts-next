@@ -54,7 +54,8 @@ const FullpageWrapper: React.FC = () => {
                 <Tech />
                 <Work />
                 <Design />
-                <PostsView />
+                {/* TODO 정상화 될때까지 주석처리 */}
+                {/* <PostsView /> */}
                 <Contact />
                 <Footer />
               </ReactFullpage.Wrapper>
