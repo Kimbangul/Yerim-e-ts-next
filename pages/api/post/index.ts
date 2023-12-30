@@ -1,12 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import cheerio, {Element} from 'cheerio';
-import { ContentType } from '../crawler/type';
 import axios from 'axios';
 
-
-// const article = getHtml(process.env.NEXT_PUBLIC_BLOG_URL || '');
-const getHtml = async (url : string) => {
-  //console.log(url); 
+const getHtml = async (name : string, limit: number) => {
   try {  
     const html = await axios({
       url: "https://v2.velog.io/graphql",
@@ -35,24 +30,23 @@ const getHtml = async (url : string) => {
               }
             `,
         variables:{
-              username: 'kimbangul',
-              limit: 4,
+              username: name,
+              limit: limit,
             }
       }
     });
-    //console.log(html.data.data.posts);
     return html.data.data.posts;
   }
   catch(e){
     console.log(e);
   }
 }
-const article =  getHtml(process.env.NEXT_PUBLIC_BLOG_URL || '');
+const article =  getHtml('kimbangul', 3);
 console.log(article);
 
 export default async function handler (
   req: NextApiRequest,
   res: NextApiResponse)  {  
-    
+  console.log(req);
   res.status(200).json(await article);
 }
