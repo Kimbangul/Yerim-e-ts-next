@@ -7,28 +7,28 @@ import chromium from '@sparticuz/chromium-min';
 const openBrowser  = async (url: string) => {
   chromium.setHeadlessMode = true;
   chromium.setGraphicsMode = false;
-  //console.log(await chromium.executablePath());
-  console.log(chromium.executablePath);
+  console.log(`${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`)
 
   //1. 크로미움으로 브라우저를 연다. 
   const browser = await puppeteer.launch(
-    process.env.NODE_ENV === 'development' ?
-    {
-      headless: true,
-     // executablePath: process.env.NEXT_LOCAL_CHROME_PATH,
-     // executablePath: `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
-     executablePath: await chromium.executablePath(
-      "https://github.com/Sparticuz/chromium/releases/download/v116.0.0/chromium-v116.0.0-pack.tar"
-    ),
-    }
-    :
+    // process.env.NODE_ENV === 'development' ?
+    // {
+    //   headless: true,
+    //  // executablePath: process.env.NEXT_LOCAL_CHROME_PATH,
+    //  // executablePath: `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
+    //  executablePath: await chromium.executablePath(
+    //   `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
+    // ),
+    // }
+    // :
     {
       args: [...chromium.args, '--hide-scrollbars', '--disable-web-security', "--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: chromium.defaultViewport,
       //executablePath: await chromium.executablePath(),
       executablePath: await chromium.executablePath(
-        "https://github.com/Sparticuz/chromium/releases/download/v116.0.0/chromium-v116.0.0-pack.tar"
-      ),
+       // "https://github.com/Sparticuz/chromium/releases/download/v116.0.0/chromium-v116.0.0-pack.tar"
+       `${process.env.NEXT_PUBLIC_CDN_LINK}/chromium/chromium-v119.0.2-pack.tar`
+       ),
       headless: chromium.headless,
       ignoreHTTPSErrors: true
     }

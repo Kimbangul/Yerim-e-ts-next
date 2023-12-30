@@ -7,26 +7,28 @@ import {
   MaxWidthContainer,
 } from 'styles/Common';
 import PostList from 'src/component/Posts/PostsList';
+import { PostListPropsType } from 'src/component/Posts/type';
 import useApiCall from 'utils/useApiCall';
 import { useEffect, useMemo } from 'react';
 
-type VelogArticle = {
-  headline: string;
-  href: string;
-  date: string;
-  tags?: string[];
-  context: string;
-};
 
 // COMPONENT main component
 const PostsView = () => {
-  const postsCall = useApiCall<VelogArticle[]>(() =>
-    axios.get(`/api/crawler`)
+  const postsCall = useApiCall<PostListPropsType[]>(() =>
+    axios.get(`/api/post`)
   );
 
   const isLoad = useMemo(()=>{
     return postsCall.state;
   }, [postsCall.state]);
+
+  useEffect(()=>{
+    console.log(postsCall.state);
+  }, [postsCall.state]);
+
+  useEffect(()=>{
+    console.log(postsCall.data);
+  }, [postsCall.data]);
 
 
   if (isLoad !== 'accepted' || postsCall.data === undefined) {
@@ -46,8 +48,6 @@ const PostsView = () => {
         {postsCall.data.length > 0 && (
           <Post.List className='PostsView__list'>
             {postsCall.data
-              .filter((el) => el.headline !== undefined)
-              .filter((_, index) => index < 3)
               .map((el, idx) => {
                 return <PostList key={`post${idx}`} {...el} />;
               })}

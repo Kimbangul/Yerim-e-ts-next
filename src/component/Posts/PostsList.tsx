@@ -2,24 +2,34 @@ import styled from 'styled-components';
 
 import Link from 'next/link';
 import Tag from 'src/component/common/Tag';
+import { PostListPropsType } from 'src/component/Posts/type';
+import moment from 'moment';
+import 'moment/locale/ko';
 
 // COMPONENT main component
 const PostList: React.FC<PostListPropsType> = (props) => {
   const tagList = props.tags || [];
 
+  // FUNCTION 날짜 표기법 분기
+  const getPostDate = () => {
+    const diff = moment().diff(moment(props.released_at), 'days');
+    if (diff > 6) return moment(props.released_at).format('YYYY.MM.DD');
+    return moment(props.released_at).fromNow();
+  }
+
   return (
     <Post.Item className='Post'>
-      <Link href={`${props.href}` || '#'}>
+      <Link href={`${'https://velog.io/@kimbangul/'+props.url_slug}` || '#'}>
         <a target='_blank'>
           <Post.Title.Container className='Post__title-container'>
             <Post.Title.Text className='Post__title'>
-              {props.headline}
+              {props.title}
             </Post.Title.Text>
             <Post.Title.Date className='Post__date'>
-              {props.date}
+              {getPostDate()}
             </Post.Title.Date>
           </Post.Title.Container>
-          <Post.Context className='Post__context'>{props.context}</Post.Context>
+          <Post.Context className='Post__context'>{props.short_description}</Post.Context>
           {tagList.length > 0 && (
             <Post.Tag className='Post__tag'>
               {tagList.map((el: string, idx: number) => {
@@ -27,7 +37,7 @@ const PostList: React.FC<PostListPropsType> = (props) => {
               })}
             </Post.Tag>
           )}
-          <Post.Title.Date className='Post__date'>{props.date}</Post.Title.Date>
+          <Post.Title.Date className='Post__date'>{getPostDate()}</Post.Title.Date>
         </a>
       </Link>
     </Post.Item>
@@ -106,15 +116,6 @@ const Post = {
     margin-top: 2.4rem;
     flex-wrap: wrap;
   `,
-};
-
-// PARAM type
-export type PostListPropsType = {
-  headline?: string;
-  date?: string;
-  href?: string;
-  tags?: string[];
-  context?: string;
 };
 
 export default PostList;
