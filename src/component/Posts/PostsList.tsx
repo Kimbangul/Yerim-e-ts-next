@@ -3,10 +3,18 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Tag from 'src/component/common/Tag';
 import { PostListPropsType } from 'src/component/Posts/type';
+import moment from 'moment';
+import 'moment/locale/ko';
 
 // COMPONENT main component
 const PostList: React.FC<PostListPropsType> = (props) => {
   const tagList = props.tags || [];
+
+  const getPostDate = () => {
+    const diff = moment().diff(moment(props.released_at), 'days');
+    if (diff > 6) return moment(props.released_at).format('YYYY.MM.DD');
+    return moment(props.released_at).fromNow();
+  }
 
   return (
     <Post.Item className='Post'>
@@ -17,7 +25,7 @@ const PostList: React.FC<PostListPropsType> = (props) => {
               {props.title}
             </Post.Title.Text>
             <Post.Title.Date className='Post__date'>
-              {props.released_at}
+              {getPostDate()}
             </Post.Title.Date>
           </Post.Title.Container>
           <Post.Context className='Post__context'>{props.short_description}</Post.Context>
@@ -28,7 +36,7 @@ const PostList: React.FC<PostListPropsType> = (props) => {
               })}
             </Post.Tag>
           )}
-          <Post.Title.Date className='Post__date'>{props.released_at}</Post.Title.Date>
+          <Post.Title.Date className='Post__date'>{getPostDate()}</Post.Title.Date>
         </a>
       </Link>
     </Post.Item>

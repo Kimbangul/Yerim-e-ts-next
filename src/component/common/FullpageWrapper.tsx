@@ -38,8 +38,7 @@ const FullpageWrapper: React.FC = () => {
             'Tech',
             'Work',
             'Design',
-           // TODO 기능 정상화될때까지 주석처리
-           //  'Posts', 
+            'Posts', 
             'Contact',
           ]}
           scrollingSpeed={1000}
