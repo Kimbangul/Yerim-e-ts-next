@@ -10,6 +10,7 @@ import 'moment/locale/ko';
 const PostList: React.FC<PostListPropsType> = (props) => {
   const tagList = props.tags || [];
 
+  // FUNCTION 날짜 표기법 분기
   const getPostDate = () => {
     const diff = moment().diff(moment(props.released_at), 'days');
     if (diff > 6) return moment(props.released_at).format('YYYY.MM.DD');
