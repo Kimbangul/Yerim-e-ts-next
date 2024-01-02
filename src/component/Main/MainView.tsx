@@ -8,6 +8,7 @@ import {
   Container,
   SectionCategoryTitle,
   MaxWidthContainer,
+  WordEffectGlow,
 } from 'styles/Common';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 
@@ -53,7 +54,7 @@ const MainView: React.FC = () => {
 };
 
 // COMPONENT style
-const Main = {
+export const Main = {
   Page: styled(Container)`
     background-size: 70%;
     background-repeat: no-repeat;
@@ -121,33 +122,7 @@ const Main = {
         font-size: ${({ theme }) => theme.fontSize.head.lg};
       }
     `,
-    Word: styled.span<{ delay?: string }>`
-      @keyframes anime_textup {
-        0% {
-          top: 0;
-          text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
-        }
-        20% {
-          /* top: -0.8rem; */
-          text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 2rem;
-        }
-        40% {
-          top: 0;
-          text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
-        }
-        60% {
-          top: 0;
-        }
-        80% {
-          top: 0;
-        }
-        100% {
-          top: 0;
-        }
-      }
-      position: relative;
-      animation: anime_textup 6s infinite;
-      animation-delay: ${(props) => (props.delay ? props.delay : '0s')};
+    Word: styled(WordEffectGlow)`
     `,
     Desc: styled.p`
       color: ${({ theme }) => theme.color.text_head};
