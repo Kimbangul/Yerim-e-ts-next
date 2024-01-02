@@ -13,3 +13,8 @@ export type PostListPropsType = {
   // tags?: string[];
   // context?: string;
 };
+
+export type PostReqParamType = {
+  id: string;
+  count: number;
+}

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
+import { RequestType } from './type';
 
 const getHtml = async (name : string, limit: number) => {
   console.log(name);
@@ -39,18 +40,20 @@ const getHtml = async (name : string, limit: number) => {
     return html.data.data.posts;
   }
   catch(e){
-    console.log(e);
+    const {response} = e as unknown as AxiosError;
+
+    if (response){
+      throw {status: response.status, data: response.data};
+    }
+    throw e;
   }
 }
 
 
 export default async function handler (
-  req: NextApiRequest,
+  req: RequestType,
   res: NextApiResponse)  {  
-    console.log(typeof req.query.id);
-    console.log(typeof req.query.count);
-    console.log(typeof req.query.id !== 'string' || typeof req.query.count !== 'string');
-  if (typeof req.query.id !== 'string' || typeof req.query.count !== 'string') {
+  if (!req.query.id || !req.query.count) {
     res.status(400).json(`parameter error`);
     return;
   }

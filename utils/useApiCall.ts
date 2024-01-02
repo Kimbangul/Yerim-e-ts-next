@@ -13,9 +13,9 @@ type FullFilledState<T> = {
 };
 type CombinedState<T> = EmptyDataState<T> | FullFilledState<T>;
 
-const useApiCall = <T extends object>(
+const useApiCall = <T extends object, U extends object | undefined>(
     callable: Callable<T>,
-    param?: object
+    param?: U
 ) => {
     const [status, setStatus] = useState<CombinedState<T>>({state:'idle',data:undefined})
     useEffect(() => {

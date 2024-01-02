@@ -7,14 +7,14 @@ import {
   MaxWidthContainer,
 } from 'styles/Common';
 import PostList from 'src/component/Posts/PostsList';
-import { PostListPropsType } from 'src/component/Posts/type';
+import { PostListPropsType, PostReqParamType } from 'src/component/Posts/type';
 import useApiCall from 'utils/useApiCall';
 import { useEffect, useMemo } from 'react';
 
 
 // COMPONENT main component
 const PostsView = () => {
-  const postsCall = useApiCall<PostListPropsType[]>(() =>
+  const postsCall = useApiCall<PostListPropsType[], PostReqParamType>(() =>
     axios.get(`/api/post`, { params: {
       id: 'kimbangul',
       count: 3
@@ -24,15 +24,6 @@ const PostsView = () => {
   const isLoad = useMemo(()=>{
     return postsCall.state;
   }, [postsCall.state]);
-
-  useEffect(()=>{
-    console.log(postsCall.state);
-  }, [postsCall.state]);
-
-  useEffect(()=>{
-    console.log(postsCall.data);
-  }, [postsCall.data]);
-
 
   if (isLoad !== 'accepted' || postsCall.data === undefined) {
     return <Post.Loading className='PostsView__loading'></Post.Loading>;
