@@ -28,7 +28,7 @@ const NotFound = {
   Page: styled(Container)`
   `,
   Container: styled(MaxWidthContainer)`
-  
+
   `,
    Title: styled.h1`
     font-size: ${({ theme }) => theme.fontSize.head.xl};
@@ -38,18 +38,14 @@ const NotFound = {
     line-height: 1.6;
     transition: font-size 0.3s, letter-spacing 0.3s;
 
-    /* FUNCTION mb */
-    /* @media (${({ theme }) => theme.windowSize['mb-l']}) {
-      font-size: ${({ theme }) => theme.fontSize.head.ul};
-      letter-spacing: 0.2rem;
-    }
-    @media (${(props) => props.theme.windowSize['mb-m']}) {
-      font-size: ${({ theme }) => theme.fontSize.head.xl};
-      letter-spacing: 0rem;
-    }
-    @media (${(props) => props.theme.windowSize['mb-s']}) {
-      font-size: ${({ theme }) => theme.fontSize.head.lg};
-    } */
+      /* FUNCTION pc */
+      @media (${({ theme }) => theme.windowSize['lt-s']}) {
+        font-size: ${({ theme }) => theme.fontSize.head.md};
+      }
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.head.rg};
+      }
   `,
   Word: styled(WordEffectGlow)``,
   Button: {
