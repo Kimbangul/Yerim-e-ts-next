@@ -113,10 +113,41 @@ const ProfileImgContainer = styled.div`
   }
 `;
 
+//COMPONENT title word
+const WordEffectGlow = styled.span<{ delay?: string }>`
+@keyframes anime_textup {
+  0% {
+    top: 0;
+    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
+  }
+  20% {
+    /* top: -0.8rem; */
+    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 2rem;
+  }
+  40% {
+    top: 0;
+    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
+  }
+  60% {
+    top: 0;
+  }
+  80% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+position: relative;
+animation: anime_textup 6s infinite;
+animation-delay: ${(props) => (props.delay ? props.delay : '0s')};
+`;
+
 export {
   Container,
   SectionCategoryTitle,
   MaxWidthContainer,
   Button,
   ProfileImgContainer,
+  WordEffectGlow
 };
