@@ -15,7 +15,10 @@ import { useEffect, useMemo } from 'react';
 // COMPONENT main component
 const PostsView = () => {
   const postsCall = useApiCall<PostListPropsType[]>(() =>
-    axios.get(`/api/post`)
+    axios.get(`/api/post`, { params: {
+      id: 'kimbangul',
+      count: 3
+    }})
   );
 
   const isLoad = useMemo(()=>{

@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 
 const getHtml = async (name : string, limit: number) => {
+  console.log(name);
   try {  
     const html = await axios({
       url: "https://v2.velog.io/graphql",
@@ -41,12 +42,20 @@ const getHtml = async (name : string, limit: number) => {
     console.log(e);
   }
 }
-const article =  getHtml('kimbangul', 3);
-console.log(article);
+
 
 export default async function handler (
   req: NextApiRequest,
   res: NextApiResponse)  {  
-  console.log(req);
+    console.log(typeof req.query.id);
+    console.log(typeof req.query.count);
+    console.log(typeof req.query.id !== 'string' || typeof req.query.count !== 'string');
+  if (typeof req.query.id !== 'string' || typeof req.query.count !== 'string') {
+    res.status(400).json(`parameter error`);
+    return;
+  }
+
+  const article = getHtml(req.query.id, parseInt(req.query.count));
+  console.log(await article);
   res.status(200).json(await article);
 }
