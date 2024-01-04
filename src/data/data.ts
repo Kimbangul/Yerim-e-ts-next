@@ -128,6 +128,18 @@ export type WorkType = {
 
 const workList: WorkType[] = [
   {
+    id: 16,
+    title: '대아정보시스템  홈페이지 리디자인',
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work17.jpg`,
+    category: '기업 사이트 제작',
+    link: 'https://daea.vercel.app/',
+    tag: ['디자인 100%', '구현 100%', 'Next.js', 'SCSS'],
+    desc: '의료IT기업의 이미지에 맞게끔 기존 사이트를 더 현대적이고 깔끔하게 리디자인하고자 하였습니다. 메일 발송 기능은 nodemailer 라이브러리를 사용하여 구현했습니다.',
+    duration: '2023.11 ~ 2023.12',
+    section: '사이트 전반 디자인 및 구현',
+    tool: 'Figma, Next.js, SCSS, TypeScript, Node.js, Git',
+  },
+  {
     id: 15,
     title: '아주대의료원 산하 웹사이트 운영 및 유지보수',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work17.jpg`,
@@ -149,7 +161,7 @@ const workList: WorkType[] = [
     desc: '감각적이고 모던한 느낌을 전달하기 위해 전반적으로 흑백의 컬러를 차용하며, 메인은 우주 컨셉으로 디자인하였습니다. TypeScript와 Styled-Component를 사용하였으며 CSS transition 및 animation 효과를 활용하여 감각적으로 모션을 부여하고자 하였습니다.',
     duration: '2022.10 ~ 2022.10',
     section: '사이트 전반 디자인 및 구현',
-    tool: 'Figma, Next.js, SCSS, TypeScript, Git',
+    tool: 'Figma, Next.js, SCSS, TypeScript, Node.js, Git',
   },
   {
     id: 16,
