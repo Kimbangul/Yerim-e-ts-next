@@ -130,7 +130,7 @@ const workList: WorkType[] = [
   {
     id: 16,
     title: '대아정보시스템  홈페이지 리디자인',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work17.jpg`,
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work18.jpg`,
     category: '기업 사이트 제작',
     link: 'https://daea.vercel.app/',
     tag: ['디자인 100%', '구현 100%', 'Next.js', '반응형', 'SCSS'],
