@@ -11,8 +11,6 @@ import {
 } from 'styles/Common';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 
-import PROFILE from 'public/image/about/profile.jpg';
-
 const AboutView = () => {
   return (
     <About.Page className='section'>
@@ -33,26 +31,12 @@ const AboutView = () => {
             flexible.
           </About.Text.Title.Text>
           <About.Text.Desc.Text className='About__desc'>
-            안녕하세요, 웹 UI 개발자 박예림입니다. <br />
-            흥미로운 것은 오래 기억됩니다. 저는 사람들의 기억에 남는 웹을 만드는
-            것이 목표입니다. <br />
-            CSS와 Javascript를 이용해 모션을 주고 동적인 화면을 구사하는 것에
-            관심이 많으며, <br />
-            협업과 유지보수에 좋은 코드를 짜기 위해 꾸준히 공부하고 있습니다.
-            <br />
-            이용자에게 멋진 사용자 경험을 제공하고, 웹을 통해 상품이나 브랜드의
-            가치를 높이는 것이 제 일이라고 생각합니다. <br /> <br />웹 개발은
-            혼자 하는 일이 아닌 만큼 사람들 간의{' '}
-            <About.Text.Desc.Point className='About__desc--point'>
-              약속, 그리고 소통
-            </About.Text.Desc.Point>
-            이 중요하다고 생각합니다. <br />
-            유연한 소통을 할 수 있도록, 항상 경청하고 열린 자세로 임하며 성장해
-            나가는{' '}
-            <About.Text.Desc.Point className='About__desc--point'>
-              flexible
-            </About.Text.Desc.Point>
-            한 사람이 되겠습니다.
+            안녕하세요, 프론트엔드 개발자 박예림입니다.<br />
+            저는 멋진 디자인과 상호작용을 웹과 모바일 등의 플랫폼에 구현하고 <About.LineBreak.Pc />문제를 해결하여 사용자의 니즈를 충족시키는 것에서 보람을 느낍니다.<br />
+            기억에 남아 오래 사용하고 싶은 플랫폼을 만드는 것, <About.LineBreak.Pc />그리고 개발을 통해 더 많은 사람들의 문제를 해결하는 것이 목표입니다. <br /><br />
+            개발은 혼자 하는 일이 아니라고 생각하며 동료와의 의사소통과 협력에 가치를 두고 있습니다. <br />
+            그리고 이를 통해 개개인의 합보다 더 큰 시너지를 만들 수 있다고 믿고 있습니다.<br />
+            시너지를 만들 수 있도록, 항상 경청하고 열린 자세로 임하며 성장해나가는 <About.Text.Desc.Point className='About__desc--point'>flexible</About.Text.Desc.Point>한 사람이 되겠습니다.
           </About.Text.Desc.Text>
           <About.Button.Container className='About__button-wrap'>
             <About.Button.Button
@@ -179,6 +163,21 @@ const About = {
       }
     `,
   },
+  LineBreak: {
+    Pc: styled.br`      
+      /* FUNCTION tablet size */
+      @media (${({ theme }) => theme.windowSize['lt-s']}) {
+          display: none;
+      }
+    `,
+    Mb: styled.br`
+      display: none;
+       /* FUNCTION tablet size */
+       @media (${({ theme }) => theme.windowSize['lt-s']}) {
+          display: block;
+      }
+    `
+  }
 };
 
 export default AboutView;

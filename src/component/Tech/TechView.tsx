@@ -33,8 +33,8 @@ const TechView: React.FC = () => {
         </Tech.Text.Container>
 
         <Tech.List.Container className='Tech__tech-list-container'>
-          <TechList techName={techList.design} />
           <TechList techName={techList.develop} />
+          <TechList techName={techList.design} />
         </Tech.List.Container>
       </Tech.Container>
     </Tech.Page>
