@@ -128,7 +128,7 @@ export type WorkType = {
 
 const workList: WorkType[] = [
   {
-    id: 16,
+    id: 18,
     title: '대아정보시스템  홈페이지 리뉴얼',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work18.jpg`,
     category: '기업 사이트 제작',
@@ -140,7 +140,7 @@ const workList: WorkType[] = [
     tool: 'Figma, Next.js, SCSS, TypeScript, Node.js, Git',
   },
   {
-    id: 15,
+    id: 17,
     title: '아주대의료원 산하 웹사이트 운영 및 유지보수',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work17.jpg`,
     category: '병원, 의료원 산하 웹사이트 및 내부 시스템 운영',
@@ -187,18 +187,18 @@ const workList: WorkType[] = [
     section: '사용자, 관리자 페이지 전반 디자인 및 Front-end 개발 담당',
     tool: 'Figma, Next.js, SCSS, JavaScript, Git',
   },
-  // {
-  //   id: 11,
-  //   title: 'FUNCHY',
-  //   thumb: WORK11.src,
-  //   category: '온라인 P2P 플랫폼 서비스 구축',
-  //   link: 'https://funchy.kr/',
-  //   tag: ['디자인 40%', '구현 40%', 'Next.js', 'SCSS'],
-  //   desc: "핀테크 기반 온라인 P2P 플랫폼 'FUNCHY'의 사용자 및 관리자 사이트 디자인 및 Front-end 개발을 담당하였습니다. 페이지 간 통일성을 맞추는 것을 우선으로, 서비스 아이덴티티 구축을 위한 컬러 선정과 더 좋은 UX/UI적 표현 방식에 대해 팀원들과 논의하며 긴밀히 소통하였습니다.",
-  //   duration: '2022.07 ~ 2022.10',
-  //   section: '사이트 전반 디자인 및 Front-end 개발 담당',
-  //   tool: 'Figma, Next.js, SCSS, JavaScript, Git',
-  // },
+  {
+    id: 11,
+    title: 'FUNCHY',
+    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work11.jpg`,
+    category: '온라인 P2P 플랫폼 서비스 구축',
+    //link: 'https://funchy.kr/',
+    tag: ['디자인 40%', '구현 40%', 'Next.js', 'SCSS'],
+    desc: "핀테크 기반 온라인 P2P 플랫폼 'FUNCHY'의 사용자 및 관리자 사이트 디자인 및 Front-end 개발을 담당하였습니다. 페이지 간 통일성을 맞추는 것을 우선으로, 서비스 아이덴티티 구축을 위한 컬러 선정과 더 좋은 UX/UI적 표현 방식에 대해 팀원들과 논의하며 긴밀히 소통하였습니다.",
+    duration: '2022.07 ~ 2022.10',
+    section: '사이트 전반 디자인 및 Front-end 개발 담당',
+    tool: 'Figma, Next.js, SCSS, JavaScript, Git',
+  },
   {
     id: 4,
     title: '건명테크',
