@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { Button, Container, MaxWidthContainer, WordEffectGlow } from "styles/Common";
+import { Button, Container, MaxWidthContainer, WordEffectGlow } from "src/styles/Common";
 
 
 const Page404 = () => {

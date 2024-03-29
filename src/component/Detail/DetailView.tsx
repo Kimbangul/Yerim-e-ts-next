@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import Tag from 'src/component/common/Tag';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
-import { onClickLinkBtn } from 'src/utils/utils';
+import { onClickLinkBtn, setFocusToElement } from 'src/utils/utils';
 import { Container, Button } from 'src/styles/Common';
 import { WorkType } from 'src/data/data';
 
@@ -19,7 +19,8 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
   // FUNCTION 목록으로 돌아가기 버튼 눌렀을 때
   const onClickBackBtn = () => {
     router.back();    
-    return;
+    
+    return setFocusToElement('#work_page');
   };
 
   return (

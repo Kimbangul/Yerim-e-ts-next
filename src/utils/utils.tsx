@@ -10,9 +10,16 @@ const onClickLinkBtn = (link: string, option?: string) => {
   return;
 };
 
-  const LoadingPage: React.FC = () => {
-    return <div>Loading</div>;
-  };
+const setFocusToElement = (selector:string) => {
+  // console.log(window.history);
+  // console.log(selector);
+  // const element = document.querySelector(selector);
+  // console.log(element);
+  // if(element instanceof HTMLElement){
+  //   console.log('is element');
+  //   console.log(element);
+  // }
+}
 
 
-export { onClickLinkBtn };
+export { onClickLinkBtn, setFocusToElement };

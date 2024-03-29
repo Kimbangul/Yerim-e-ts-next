@@ -52,19 +52,19 @@ const WorkList: React.FC<WorkListType> = (props) => {
   const swiperRef = useRef<null | SwiperCore>(null);
 
   // FUNCTION 슬라이드가 화면에 있을 때만 자동재생
-  const observerCallback = (observeArr: IntersectionObserverEntry[]) => {
-    observeArr.forEach((el) => {     
-      if (!swiperRef.current) return;      
-      if (el.isIntersecting) {
-         swiperRef.current.autoplay.start();
-      } else {
-         swiperRef.current.autoplay.stop();        
-      }
-      swiperRef.current.update();
-    });
-  }
+  // const observerCallback = (observeArr: IntersectionObserverEntry[]) => {
+  //   observeArr.forEach((el) => {     
+  //     if (!swiperRef.current) return;      
+  //     if (el.isIntersecting) {
+  //        swiperRef.current.autoplay.start();
+  //     } else {
+  //        swiperRef.current.autoplay.stop();        
+  //     }
+  //     swiperRef.current.update();
+  //   });
+  // }
 
-  const intersectionObserver = new IntersectionObserver(observerCallback);
+  // const intersectionObserver = new IntersectionObserver(observerCallback);
 
   // PARAM swiper option
   const swiperOption: SwiperProps = {
@@ -72,9 +72,15 @@ const WorkList: React.FC<WorkListType> = (props) => {
     onRealIndexChange: onChangeIndex,
     onBeforeInit: (swiper: SwiperCore) => {
       swiperRef.current = swiper;
-      intersectionObserver.observe(swiperRef.current.el);
+     // intersectionObserver.observe(swiperRef.current.el);
       return;
     },
+    // onBeforeDestroy: () => {
+    //  // if (swiperRef.current){
+    //   //  console.log('unobserve')
+    //   //  intersectionObserver.unobserve(swiperRef.current.el);
+    //   }
+    // },
     effect: 'fade',
     fadeEffect: {
       crossFade: true,
