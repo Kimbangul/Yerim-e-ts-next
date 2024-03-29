@@ -5,14 +5,14 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 import { link } from 'src/data/data';
-import { onClickLinkBtn } from 'utils/utils';
+import { onClickLinkBtn } from 'src/utils/utils';
 import {
   Container,
   SectionCategoryTitle,
   Button,
   ProfileImgContainer,
   MaxWidthContainer,
-} from 'styles/Common';
+} from 'src/styles/Common';
 
 
 const ContactView: React.FC = () => {

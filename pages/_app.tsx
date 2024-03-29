@@ -2,10 +2,10 @@ import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 // import { Analytics } from '@vercel/analytics/react';
 
-import HeaderInfo from 'utils/HeaderInfo';
-import Theme from 'styles/Theme';
-import GlobalStyle from 'styles/GlobalStyle';
-import FontStyle from 'styles/FontStyle';
+import HeaderInfo from 'src/utils/HeaderInfo';
+import Theme from 'src/styles/Theme';
+import GlobalStyle from 'src/styles/GlobalStyle';
+import FontStyle from 'src/styles/FontStyle';
 
 import ModalContextProvider from 'src/utils/ModalContext';
 

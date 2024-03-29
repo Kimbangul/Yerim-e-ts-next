@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import { link } from 'src/data/data';
-import { MaxWidthContainer } from 'styles/Common';
+import { MaxWidthContainer } from 'src/styles/Common';
 import LOGO from 'public/image/logo.svg';
 import LOGO_MB from 'public/image/logo_mb.svg';
 import VELOG_24 from 'public/icon/velog_24.svg';

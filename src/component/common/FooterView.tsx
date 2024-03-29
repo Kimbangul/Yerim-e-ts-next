@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import moment from 'moment';
 
-import { MaxWidthContainer } from 'styles/Common';
+import { MaxWidthContainer } from 'src/styles/Common';
 
 const FooterView: React.FC = () => {
   const currentYear = moment().format('YYYY');

@@ -6,7 +6,7 @@ import {
   Container,
   SectionCategoryTitle,
   MaxWidthContainer,
-} from 'styles/Common';
+} from 'src/styles/Common';
 import DesignListItem from 'src/component/Design/DesignListItem';
 
 const DesignView: React.FC = () => {

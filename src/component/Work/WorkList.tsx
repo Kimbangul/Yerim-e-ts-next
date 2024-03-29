@@ -9,7 +9,7 @@ import SwiperCore, {
 } from 'swiper';
 
 import { workList } from 'src/data/data';
-import { MaxWidthContainer } from 'styles/Common';
+import { MaxWidthContainer } from 'src/styles/Common';
 import Chevron from 'src/component/common/Chevron';
 import WorkListItem from 'src/component/Work/WorkListItem';
 

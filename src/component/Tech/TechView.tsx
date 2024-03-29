@@ -3,7 +3,7 @@ import {
   Container,
   SectionCategoryTitle,
   MaxWidthContainer,
-} from 'styles/Common';
+} from 'src/styles/Common';
 
 import { techList } from 'src/data/data';
 

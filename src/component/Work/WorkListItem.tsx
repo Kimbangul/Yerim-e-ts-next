@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { blurDataUrl } from 'src/data/data';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
-import { Button } from 'styles/Common';
+import { Button } from 'src/styles/Common';
 import Tag from 'src/component/common/Tag';
 
 type WorkListItemType = {

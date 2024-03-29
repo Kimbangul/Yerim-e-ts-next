@@ -5,10 +5,10 @@ import {
   Container,
   SectionCategoryTitle,
   MaxWidthContainer,
-} from 'styles/Common';
+} from 'src/styles/Common';
 import PostList from 'src/component/Posts/PostsList';
 import { PostListPropsType, PostReqParamType } from 'src/component/Posts/type';
-import useApiCall from 'utils/useApiCall';
+import useApiCall from 'src/utils/useApiCall';
 import { useEffect, useMemo } from 'react';
 
 

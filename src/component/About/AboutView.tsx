@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 import { link } from 'src/data/data';
-import { onClickLinkBtn } from 'utils/utils';
+import { onClickLinkBtn } from 'src/utils/utils';
 import {
   Container,
   SectionCategoryTitle,
   Button,
   ProfileImgContainer,
   MaxWidthContainer,
-} from 'styles/Common';
+} from 'src/styles/Common';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 
 const AboutView = () => {

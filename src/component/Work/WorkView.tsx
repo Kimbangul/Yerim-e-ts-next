@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import { SectionCategoryTitle, MaxWidthContainer } from 'styles/Common';
+import { SectionCategoryTitle, MaxWidthContainer } from 'src/styles/Common';
 import WorkList from 'src/component/Work/WorkList';
 
 const WorkView: React.FC = () => {

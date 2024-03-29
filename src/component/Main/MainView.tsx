@@ -9,7 +9,7 @@ import {
   SectionCategoryTitle,
   MaxWidthContainer,
   WordEffectGlow,
-} from 'styles/Common';
+} from 'src/styles/Common';
 import AutoHeightImageView from 'src/component/common/AutoHeightImageView';
 
 import MOON from 'public/image/main/moon.png';

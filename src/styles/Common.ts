@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from 'styles/Theme';
+import theme from 'src/styles/Theme';
 
 // FUNCTION prop color type
 const handleColorType = (color: string) => {
