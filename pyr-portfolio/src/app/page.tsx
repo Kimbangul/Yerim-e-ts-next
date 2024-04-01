@@ -1,8 +1,7 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import MainContainer from "@/component/layout/main/MainContainer";
 
 export default function Home() {
   return (
-    <div>Hello world!</div>
+    <MainContainer />
   );
 }
