@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
-import ClientProvider from '@/component/clientProvider/ClientProvider';
 import Header from '@/component/layout/header/HeaderContainer';
+import StylesProvider from '@/styles/provider/StyleProvider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,12 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <ClientProvider>
+      <StylesProvider>
         <body>
           <Header />
           {children}
         </body>
-      </ClientProvider>
+      </StylesProvider>
     </html>
   );
 }

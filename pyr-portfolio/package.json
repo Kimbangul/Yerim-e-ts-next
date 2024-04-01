@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
+    "@swc/plugin-styled-components": "^1.5.122",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

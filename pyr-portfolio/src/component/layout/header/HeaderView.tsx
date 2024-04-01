@@ -24,7 +24,7 @@ const HeaderView: React.FC<HeadComponentPropType> = ({ isOpen, onClickMbMenuBtn,
           </a>
         </Header.Mb.Logo>
         {/* Menu */}
-        <Header.Mb.Menu href="#" isOpen={isOpen} onClick={onClickMbMenuBtn}>
+        <Header.Mb.Menu href="#" $isOpen={isOpen} onClick={onClickMbMenuBtn}>
           Menu
           <Header.Mb.MenuInner>
             <Header.Mb.MenuBar className="Header__mb-menu-bar" />
@@ -32,7 +32,7 @@ const HeaderView: React.FC<HeadComponentPropType> = ({ isOpen, onClickMbMenuBtn,
             <Header.Mb.MenuBar className="Header__mb-menu-bar" />
           </Header.Mb.MenuInner>
         </Header.Mb.Menu>
-        <Header.Social.List isOpen={isOpen} className="Header__social">
+        <Header.Social.List $isOpen={isOpen} className="Header__social">
           {socialList.map((el, idx) => (
             <Header.Social.Item className="Header__social-item" key={`social-${el.title}`}>
               <a href={el.href} target="_blank" rel="noreferrer">

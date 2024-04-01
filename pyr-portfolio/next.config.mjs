@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // styled-component 지원
+  compiler: {
+    styledComponents: true,
+  },
+
+  // svg to component
   webpack(config, { isServer }) {
     config.module.rules.push({
       test: /\.svg$/,

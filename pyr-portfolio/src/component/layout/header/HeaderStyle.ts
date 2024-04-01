@@ -52,7 +52,7 @@ const Header = {
     }
   `,
   Social: {
-    List: styled.ul<{ isOpen: boolean }>`
+    List: styled.ul<{ $isOpen: boolean }>`
       display: flex;
       align-items: center;
       transform: translateX(1.2rem);
@@ -82,7 +82,7 @@ const Header = {
         gap: 2.4rem;
         transition: opacity 0.3s, visibility 0s 0.3s;
         ${props =>
-          props.isOpen &&
+          props.$isOpen &&
           css`
             visibility: visible;
             opacity: 1;
@@ -142,7 +142,7 @@ const Header = {
         }
       }
     `,
-    Menu: styled.a<{ isOpen: boolean }>`
+    Menu: styled.a<{ $isOpen: boolean }>`
       display: none;
       background: transparent;
       border: none;
@@ -157,7 +157,7 @@ const Header = {
         display: block;
       }
       ${props =>
-        props.isOpen &&
+        props.$isOpen &&
         css`
           .Header__mb-menu-bar {
             position: absolute;
