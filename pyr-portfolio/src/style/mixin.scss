@@ -1,0 +1,31 @@
+@mixin Poppins {
+  font-family: 'Poppins', 'Pretendard', 'sans-serif';
+}
+
+@mixin flex($jc: flex-start, $ai: stretch, $gap: 0, $dir: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+  flex-direction: $dir;
+}
+// @mixin max-width-container {
+//   max-width: $max-width;
+//   margin: 0 auto;
+//   @media (max-width: $max-width) {
+//     padding-left: 4rem;
+//     padding-right: 4rem;
+//   }
+//   @media (max-width: $mb-l) {
+//     padding-left: 2.4rem;
+//     padding-right: 2.4rem;
+//   }
+// }
+
+// @mixin section-inner {
+//   @include max-width-container;
+//   padding-top: 12rem;
+//   padding-bottom: 12rem;
+//   position: relative;
+//   z-index: 3;
+// }
