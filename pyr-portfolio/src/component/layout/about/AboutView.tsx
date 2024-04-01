@@ -36,7 +36,7 @@ const AboutView = () => {
           <About.Button.Container className="About__button-wrap">
             <About.Button.Button
               className="About__button"
-              bgColor="secondaryBlue"
+              $bgColor="secondaryBlue"
               // onClick={onClickLinkBtn.bind(this, link.resume, '_blank')}
             >
               이력 & 경력 보기

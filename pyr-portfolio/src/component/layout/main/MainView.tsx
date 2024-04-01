@@ -13,7 +13,7 @@ const MainView = () => {
         <Main.Text.Container className="Main__text-container">
           <Main.Text.Title className="Main__title">
             {'YERIM.e'.split('').map((el, idx) => (
-              <Main.Text.Word key={el + idx} delay={`${0.1 * idx}s`}>
+              <Main.Text.Word key={el + idx} $delay={`${0.1 * idx}s`}>
                 {el}
               </Main.Text.Word>
             ))}

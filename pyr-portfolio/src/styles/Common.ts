@@ -1,6 +1,5 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import theme from '@/styles/theme';
-
 
 // COMPONENT fullpage Page
 const Page = styled.section`
@@ -40,7 +39,7 @@ const MaxWidthContainer = styled.div`
     padding: 0 3rem;
   }
   /* FUNCTION mb */
-  @media (${(props) => props.theme.windowSize['mb-s']}) {
+  @media (${props => props.theme.windowSize['mb-s']}) {
     padding: 0 2rem;
   }
 `;
@@ -56,12 +55,12 @@ const SectionCategoryTitle = styled.h2`
 `;
 
 // COMPONENT button
-const Button = styled.a<{ width?: string; bgColor?: string }>`
+const Button = styled.a<{ width?: string; $bgColor?: string }>`
   font-family: 'Pretendard', 'sans-serif';
   font-size: ${({ theme }) => theme.fontSize.body.md};
   font-weight: 700;
   cursor: pointer;
-  min-width: ${(props) => (props.width ? props.width : '18rem')};
+  min-width: ${props => (props.width ? props.width : '18rem')};
   padding: 0 4.8rem;
   height: 5.6rem;
   border-radius: 0.4rem;
@@ -99,40 +98,33 @@ const ProfileImgContainer = styled.div`
 `;
 
 //COMPONENT title word
-const WordEffectGlow = styled.span<{ delay?: string }>`
-@keyframes anime_textup {
-  0% {
-    top: 0;
-    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
+const WordEffectGlow = styled.span<{ $delay?: string }>`
+  @keyframes anime_textup {
+    0% {
+      top: 0;
+      text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
+    }
+    20% {
+      /* top: -0.8rem; */
+      text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 2rem;
+    }
+    40% {
+      top: 0;
+      text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
+    }
+    60% {
+      top: 0;
+    }
+    80% {
+      top: 0;
+    }
+    100% {
+      top: 0;
+    }
   }
-  20% {
-    /* top: -0.8rem; */
-    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 2rem;
-  }
-  40% {
-    top: 0;
-    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
-  }
-  60% {
-    top: 0;
-  }
-  80% {
-    top: 0;
-  }
-  100% {
-    top: 0;
-  }
-}
-position: relative;
-animation: anime_textup 6s infinite;
-animation-delay: ${(props) => (props.delay ? props.delay : '0s')};
+  position: relative;
+  animation: anime_textup 6s infinite;
+  animation-delay: ${props => (props.$delay ? props.$delay : '0s')};
 `;
 
-export {
-  Page,
-  SectionCategoryTitle,
-  MaxWidthContainer,
-  Button,
-  ProfileImgContainer,
-  WordEffectGlow
-};
+export { Page, SectionCategoryTitle, MaxWidthContainer, Button, ProfileImgContainer, WordEffectGlow };
