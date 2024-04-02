@@ -37,22 +37,22 @@ const getHtml = async (name: string, limit: number) => {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
-        // 'Content-Type': 'application/x-www-form-urlencoded',
       },
       cache: 'no-cache',
       referrerPolicy: 'no-referrer',
       body: setBodyData(name, limit),
     });
 
+    // 에러 처리
+    if (!res.ok) {
+      throw new Error(`error: ${res.status}`);
+    }
+
     const html = await res.json();
-    return html;
+    return html.data;
   } catch (e) {
     console.log(e);
-
-    // if (response){
-    //   throw {status: response.status, data: response.data};
-    // }
-    throw e;
+    throw new Error(`error: ${e}`);
   }
 };
 

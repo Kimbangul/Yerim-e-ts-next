@@ -1,7 +1,9 @@
 import { SectionCategoryTitle } from '@/styles/Common';
 import Post from '@/component/layout/post/PostStyle';
+import { PostViewPropType } from '@/component/layout/post/type';
+import PostItem from '@/component/layout/post/PostItem';
 
-const PostView = () => {
+const PostView: React.FC<PostViewPropType> = ({ list }) => {
   return (
     <Post.Page className="section">
       <SectionCategoryTitle>Posts</SectionCategoryTitle>
@@ -13,13 +15,13 @@ const PostView = () => {
             </Post.Word>
           ))}
         </Post.Title>
-        {/* {postsCall.data.length > 0 && (
+        {list && (
           <Post.List className="PostsView__list">
-            {postsCall.data.map((el, idx) => {
-              return <PostList key={`post${idx}`} {...el} />;
+            {list.map((el, idx) => {
+              return <PostItem key={`post${idx}`} {...el} />;
             })}
           </Post.List>
-        )} */}
+        )}
       </Post.Container>
     </Post.Page>
   );

@@ -4,8 +4,13 @@ import usePostQuery from '@/query/usePostQuery';
 
 const PostContainer = () => {
   const postquery = usePostQuery('kimbangul', 3);
-  console.log(postquery.data);
-  return <PostView />;
+
+  if (postquery.isLoading || postquery.isIdle) {
+    // TODO 로딩화면 추가
+    return <PostView list={[]} />;
+  }
+
+  return <PostView list={postquery.data.posts} />;
 };
 
 export default PostContainer;

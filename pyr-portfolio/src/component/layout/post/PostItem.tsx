@@ -1,8 +1,8 @@
 import Tag from '@/component/common/tag/Tag';
 import { PostItem as Post } from '@/component/layout/post/PostStyle';
-import { PostViewPropType } from '@/component/layout/post/type';
+import { PostItemPropType } from '@/component/layout/post/type';
 
-const PostItem: React.FC<PostViewPropType> = ({ tags, title, url_slug, short_description }) => {
+const PostItem: React.FC<PostItemPropType> = ({ tags, title, url_slug, short_description }) => {
   return (
     <Post.Item className="Post">
       <a target="_blank" href={`${'https://velog.io/@kimbangul/' + url_slug}` || '#'}>

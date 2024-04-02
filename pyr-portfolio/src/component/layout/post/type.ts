@@ -1,4 +1,8 @@
 export interface PostViewPropType {
+  list: PostItemPropType[];
+}
+
+export interface PostItemPropType {
   title: string;
   short_description: string;
   released_at: string;
