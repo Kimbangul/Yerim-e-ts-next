@@ -4,8 +4,6 @@ import TechList from '@/component/layout/tech/TechListView';
 import { Tech } from '@/component/layout/tech/TechStyle';
 import { TechViewPropType } from '@/component/layout/tech/type';
 
-import { techList } from '@/util/data';
-
 const TechView: React.FC<TechViewPropType> = ({ list }) => {
   return (
     <Tech.Page className="section">
