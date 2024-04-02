@@ -1,11 +1,12 @@
+import { DesignListItemType, WorkType } from '@/util/type';
+
 // PARAM link data
 const link = {
   github: 'https://github.com/Kimbangul',
   velog: 'https://velog.io/@kimbangul',
   tel: 'tel: +8201077070968',
   mail: 'mailto:highcolor_12@g.hongik.ac.kr',
-  resume:
-    'https://meadow-touch-c48.notion.site/Yerim-Park-FLEXIBLE-UI-Developer-5694713033624c6cae1ae51b129c556a',
+  resume: 'https://meadow-touch-c48.notion.site/Yerim-Park-FLEXIBLE-UI-Developer-5694713033624c6cae1ae51b129c556a',
 };
 
 // PARAM image placeholder blur data
@@ -44,21 +45,13 @@ const techList = {
       'React.js',
       'Next.js',
       'Vue.js',
-      'Spring'
+      'Spring',
     ],
   },
 };
 
-// PARAM designList type
-type DesignListType = {
-  title: string;
-  link?: string;
-  thumb: string;
-  detail?: string;
-};
-
 // PARAM designList data
-const designList: DesignListType[] = [
+const designList: DesignListItemType[] = [
   {
     title: "밴드 'Poision Infector' 앨범 커버 디자인",
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design01.png`,
@@ -92,7 +85,7 @@ const designList: DesignListType[] = [
   {
     title: '게임 UI 디자인 제작',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design07.png`,
-    detail:`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design07_2.png`,
+    detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design07_2.png`,
   },
   {
     title: '게임 UI 디자인 제작',
@@ -110,21 +103,6 @@ const designList: DesignListType[] = [
     detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design010_2.png`,
   },
 ];
-
-// PARAM workList type
-export type WorkType = {
-  id: number;
-  title: string;
-  thumb: string;
-  category: string;
-  link?: string;
-  tag: string[];
-  github?: string;
-  desc: string;
-  duration: string;
-  section: string;
-  tool: string;
-};
 
 const workList: WorkType[] = [
   {
@@ -208,8 +186,7 @@ const workList: WorkType[] = [
     tag: ['기획 100%', '디자인 100%', '그누보드'],
     desc: '그누보드 솔루션을 이용해 (주)건명테크의 회사 사이트를 제작하였습니다. 지나치게 무겁지 않으면서도 신뢰감을 줄 수 있는 회사의 이미지를 표현하기 위해 블루와 그린의 그라데이션 컬러를 사용하여 감각적으로 디자인하고자 하였습니다.',
     duration: '2022.01 ~ 2022.01',
-    section:
-      '기획, 디자인, 퍼블리싱, 고객 소통 및 응대 등 전반적인 사이트 제작 업무 담당',
+    section: '기획, 디자인, 퍼블리싱, 고객 소통 및 응대 등 전반적인 사이트 제작 업무 담당',
     tool: 'HTML, CSS, JQuery, Photoshop, Illustrator, PHP, 그누보드5',
   },
   {
@@ -221,8 +198,7 @@ const workList: WorkType[] = [
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC + Mobile'],
     desc: '코인과 서버, 클라우드 등 IT 기술을 다루는 회사의 이미지에 맞도록 블랙과 화이트의 대비, 그라데이션과 애니메이션 효과를 이용하여 세련된 느낌을 전달할 수 있도록 제작하고자 하였습니다.',
     duration: '2021.05 ~ 2021.06',
-    section:
-      '기획, 디자인, 퍼블리싱, 고객 소통 및 응대 등 전반적인 사이트 제작 업무 담당',
+    section: '기획, 디자인, 퍼블리싱, 고객 소통 및 응대 등 전반적인 사이트 제작 업무 담당',
     tool: 'HTML, CSS, JQuery, Photoshop, Illustrator, PHP, 그누보드5',
   },
   {
@@ -234,8 +210,7 @@ const workList: WorkType[] = [
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC + Mobile'],
     desc: '유골보석 및 성형업 관련 제품을 제작하는 기업의 사이트를 제작하였습니다. 판매 제품의 특성상, 방문 고객들이 두려움을 갖고 접근할 수 있기 때문에 무겁지 않으면서도 고급스러운 분위기가 느껴질 수 있도록 기획하였습니다.',
     duration: '2021.05 ~ 2021.06',
-    section:
-      '기획, 디자인, 퍼블리싱, 고객 소통 및 응대 등 전반적인 사이트 제작 업무 담당',
+    section: '기획, 디자인, 퍼블리싱, 고객 소통 및 응대 등 전반적인 사이트 제작 업무 담당',
     tool: 'HTML, CSS, JQuery, Photoshop, Illustrator, PHP, 그누보드5',
   },
   {
@@ -247,8 +222,7 @@ const workList: WorkType[] = [
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC'],
     desc: "계측장비 판매 기업 '아이텍'의 웹 사이트를 제작하였습니다. 전반적으로 블랙과 화이트 톤, 그리고 로고에 사용된 레드 컬러를 강조색으로 차용하여 기업 이미지를 각인시키고자 하였습니다.",
     duration: '2022.03 ~ 2022.03',
-    section:
-      '기획, 디자인, 퍼블리싱, 고객 소통 및 응대 등 전반적인 사이트 제작 업무 담당',
+    section: '기획, 디자인, 퍼블리싱, 고객 소통 및 응대 등 전반적인 사이트 제작 업무 담당',
     tool: 'HTML, CSS, JQuery, Photoshop, Illustrator, PHP, 그누보드5',
   },
   {
@@ -260,8 +234,7 @@ const workList: WorkType[] = [
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC'],
     desc: '개업 및 오픈 이벤트 전문 업체의 웹 사이트를 제작하였습니다. 이벤트를 통한 즐거움을 시각적으로 전달하기 위해 아이콘과 모션을 적극적으로 사용하고, 그라데이션 컬러를 사용하여 업체의 이미지를 구축하고자 하였습니다.',
     duration: '2021.12 ~ 2021.12',
-    section:
-      '기획, 디자인, 퍼블리싱, 고객 소통 및 응대 등 전반적인 사이트 제작 업무 담당',
+    section: '기획, 디자인, 퍼블리싱, 고객 소통 및 응대 등 전반적인 사이트 제작 업무 담당',
     tool: 'HTML, CSS, JQuery, Photoshop, Illustrator, PHP, 그누보드5',
   },
 ];
