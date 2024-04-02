@@ -2,7 +2,7 @@
 import About from '@/component/layout/about/AboutStyle';
 import { ProfileImgContainer, SectionCategoryTitle } from '@/styles/Common';
 
-const AboutView = () => {
+const AboutView: React.FC<{ link: string }> = ({ link }) => {
   return (
     <About.Page className="section">
       <SectionCategoryTitle>About me</SectionCategoryTitle>
@@ -37,6 +37,8 @@ const AboutView = () => {
             <About.Button.Button
               className="About__button"
               $bgColor="secondaryBlue"
+              href={link}
+              target="_blank"
               // onClick={onClickLinkBtn.bind(this, link.resume, '_blank')}
             >
               이력 & 경력 보기
