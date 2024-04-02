@@ -34,7 +34,7 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
 
   return (
     <>
-      <Item.Container duration={props.idx}>
+      <Item.Container $duration={props.idx}>
         <Item.Link
           href='#'
           onMouseEnter={props.onMouseEnter}
@@ -43,15 +43,8 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
             onClickItem(e);
           }}
         >
-          <Item.Hover className='DesignListItem__title'>
-            {props.title}
-          </Item.Hover>
-          <AutoHeightImageView
-            alt={props.title}
-            src={props.thumb}
-            placeholder='blur'
-            blurDataURL={blurDataUrl}
-          />
+          <Item.Hover className='DesignListItem__title'>{props.title}</Item.Hover>
+          <AutoHeightImageView alt={props.title} src={props.thumb} placeholder='blur' blurDataURL={blurDataUrl} />
         </Item.Link>
       </Item.Container>
     </>
@@ -60,7 +53,7 @@ const DesignListItem: React.FC<DesignListItemProps> = (props) => {
 
 // COMPONENT style
 const Item = {
-  Container: styled.li<{ duration: number }>`
+  Container: styled.li<{ $duration: number }>`
     width: 100%;
     border-radius: 0.4rem;
     cursor: pointer;

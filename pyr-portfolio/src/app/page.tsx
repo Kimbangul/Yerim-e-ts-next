@@ -3,6 +3,7 @@ import AboutContainer from '@/component/layout/about/AboutContainer';
 import TechContainer from '@/component/layout/tech/TechContainer';
 import FooterContainer from '@/component/layout/footer/FooterContainer';
 import ContactContainer from '@/component/layout/contact/ContactContainer';
+import PostContainer from '@/component/layout/post/PostContainer';
 import DesignContainer from '@/component/layout/design/DesignContainer';
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutContainer />
       <TechContainer />
       <DesignContainer />
+      <PostContainer />
       <ContactContainer />
       <FooterContainer />
     </>

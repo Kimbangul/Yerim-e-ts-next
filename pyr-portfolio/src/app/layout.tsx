@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import Header from '@/component/layout/header/HeaderContainer';
 import StylesProvider from '@/styles/provider/StyleProvider';
+import ReactClientProvider from '@/query/clientQueryProvider/ClientQueryProvider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,10 +17,12 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <StylesProvider>
-        <body>
-          <Header />
-          {children}
-        </body>
+        <ReactClientProvider>
+          <body>
+            <Header />
+            {children}
+          </body>
+        </ReactClientProvider>
       </StylesProvider>
     </html>
   );

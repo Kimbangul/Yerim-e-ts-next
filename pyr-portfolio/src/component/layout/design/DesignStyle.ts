@@ -98,7 +98,7 @@ const Design = {
 };
 
 export const Item = {
-  Container: styled.li<{ duration: number }>`
+  Container: styled.li<{ $duration: number }>`
     width: 100%;
     border-radius: 0.4rem;
     cursor: pointer;

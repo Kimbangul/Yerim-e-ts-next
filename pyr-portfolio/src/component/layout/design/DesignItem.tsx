@@ -17,7 +17,7 @@ const onClickItem = (link: string | undefined, detail: string | undefined) => (e
 const DesignItem: React.FC<DesignItemPropType> = ({ idx, title, link, detail, onMouseEnter, onMouseOut }) => {
   return (
     <>
-      <Item.Container duration={idx}>
+      <Item.Container $duration={idx}>
         <Item.Link href="#" onMouseEnter={onMouseEnter} onMouseOut={onMouseOut} onClick={onClickItem(link, detail)}>
           <Item.Hover className="DesignListItem__title">{title}</Item.Hover>
           {/* <AutoHeightImageView alt={props.title} src={props.thumb} placeholder="blur" blurDataURL={blurDataUrl} /> */}
