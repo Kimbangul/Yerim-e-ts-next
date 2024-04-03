@@ -4,6 +4,28 @@ import type { Metadata } from 'next';
 import Header from '@/component/layout/header/HeaderContainer';
 import StylesProvider from '@/styles/provider/StyleProvider';
 import ReactClientProvider from '@/query/clientQueryProvider/ClientQueryProvider';
+import ModalContextProvider from '@/component/common/modal/ModalProvider';
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="ko">
+      <StylesProvider>
+        <ReactClientProvider>
+          <ModalContextProvider>
+            <body>
+              <Header />
+              {children}
+            </body>
+          </ModalContextProvider>
+        </ReactClientProvider>
+      </StylesProvider>
+    </html>
+  );
+}
 
 export const metadata: Metadata = {
   title: 'YERIM.e',
@@ -34,22 +56,3 @@ export const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="ko">
-      <StylesProvider>
-        <ReactClientProvider>
-          <body>
-            <Header />
-            {children}
-          </body>
-        </ReactClientProvider>
-      </StylesProvider>
-    </html>
-  );
-}

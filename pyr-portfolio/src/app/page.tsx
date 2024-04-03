@@ -6,6 +6,7 @@ import ContactContainer from '@/component/layout/contact/ContactContainer';
 import PostContainer from '@/component/layout/post/PostContainer';
 import DesignContainer from '@/component/layout/design/DesignContainer';
 import WorkContainer from '@/component/layout/work/WorkContainer';
+import ModalContainer from '@/component/common/modal/ModalContainer';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <PostContainer />
       <ContactContainer />
       <FooterContainer />
+      <ModalContainer />
     </>
   );
 }
