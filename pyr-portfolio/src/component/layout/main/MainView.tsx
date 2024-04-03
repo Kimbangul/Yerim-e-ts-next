@@ -3,13 +3,14 @@ import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import Main from '@/component/layout/main/MainStyle';
 import { SectionCategoryTitle } from '@/styles/Common';
 import { blurDataUrl } from '@/util/data';
+import MainVideo from '@/component/layout/main/MainVideo';
 
 const MainView = () => {
   return (
     <Main.Page className="section">
       {/* TODO */}
-      {/* <MainVideo />
-      <MainParticle /> */}
+      <MainVideo />
+      {/*    <MainParticle /> */}
       <Main.Container className="Main__container">
         <SectionCategoryTitle>Main</SectionCategoryTitle>
         <Main.Text.Container className="Main__text-container">

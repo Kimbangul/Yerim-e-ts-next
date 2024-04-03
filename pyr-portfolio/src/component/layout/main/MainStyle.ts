@@ -198,4 +198,20 @@ const Main = {
   },
 };
 
+export const MainVideo = {
+  Container: styled.video`
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.34;
+  `,
+};
+
 export default Main;
