@@ -5,7 +5,7 @@ const Contact = {
   Page: styled(Page)`
     flex-direction: column;
     .Contact__profile-img {
-      opacity: 0;
+      // opacity: 0; // TODO
       transition: opacity 0.3s 0.3s;
     }
     /* FUNCTION pc */

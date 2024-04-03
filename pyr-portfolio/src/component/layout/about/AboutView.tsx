@@ -1,4 +1,5 @@
 'use client';
+import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import About from '@/component/layout/about/AboutStyle';
 import { ProfileImgContainer, SectionCategoryTitle } from '@/styles/Common';
 
@@ -7,13 +8,13 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
     <About.Page className="section">
       <SectionCategoryTitle>About me</SectionCategoryTitle>
       <About.Container className="About__container">
-        {/* <ProfileImgContainer className='About__profile-img'>
+        <ProfileImgContainer className="About__profile-img">
           <AutoHeightImageView
             src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/about/profile.jpg`}
-            alt='profile image'
-            placeholder='blur'
+            alt="profile image"
+            placeholder="blur"
           />
-        </ProfileImgContainer> */}
+        </ProfileImgContainer>
         <About.Text.Container className="About__text-container">
           <About.Text.Title.Text className="About__title">
             <About.Text.Title.Light className="About__title--light">be</About.Text.Title.Light> flexible.

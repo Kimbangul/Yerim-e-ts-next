@@ -1,21 +1,22 @@
 'use client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Contact from '@/component/layout/contact/ContactStyle';
-import { SectionCategoryTitle } from '@/styles/Common';
+import { ProfileImgContainer, SectionCategoryTitle } from '@/styles/Common';
 import { ContactViewPropType } from '@/component/layout/contact/type';
+import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 
 const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
   return (
     <Contact.Page className="section">
       <SectionCategoryTitle>Contact</SectionCategoryTitle>
       <Contact.Container className="Contact__container">
-        {/* <ProfileImgContainer className='Contact__profile-img'>
+        <ProfileImgContainer className="Contact__profile-img">
           <AutoHeightImageView
             src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/contact/profile.jpg`}
-            alt='profile image'
-            placeholder='blur'
+            alt="profile image"
+            placeholder="blur"
           />
-        </ProfileImgContainer> */}
+        </ProfileImgContainer>
         <Contact.Text.Container className="Contact__text-container">
           <Contact.Text.Blockquote className="Contact__blockquote">
             A genius cannot win over one who tries, <br />

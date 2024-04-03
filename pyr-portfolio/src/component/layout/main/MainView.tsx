@@ -1,6 +1,8 @@
 'use client';
+import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import Main from '@/component/layout/main/MainStyle';
 import { SectionCategoryTitle } from '@/styles/Common';
+import { blurDataUrl } from '@/util/data';
 
 const MainView = () => {
   return (
@@ -23,12 +25,12 @@ const MainView = () => {
       </Main.Container>
       <Main.Image.Container className="Main__img">
         <Main.Image.Inner>
-          {/* <AutoHeightImageView
+          <AutoHeightImageView
             src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/main/moon.png`}
-            alt='main image'
-            placeholder='blur'
+            alt="main image"
+            placeholder="blur"
             blurDataURL={blurDataUrl}
-          /> */}
+          />
         </Main.Image.Inner>
       </Main.Image.Container>
       <Main.ScrollDown.Container className="Main__scroll-down-container">

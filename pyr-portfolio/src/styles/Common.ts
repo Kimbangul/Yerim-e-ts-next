@@ -17,9 +17,10 @@ const Page = styled.section`
     padding-bottom: 7.2rem;
   }
   /* FUNCTION mb */
-  @media (${({ theme }) => theme.windowSize['mb-m']}) {
+  /* todo */
+  /* @media (${({ theme }) => theme.windowSize['mb-m']}) {
     height: 6rem;
-  }
+  } */
 `;
 
 const MaxWidthContainer = styled.div`

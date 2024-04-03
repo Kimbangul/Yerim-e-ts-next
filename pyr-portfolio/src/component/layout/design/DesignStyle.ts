@@ -21,7 +21,7 @@ const Design = {
     }
   `,
   Container: styled(MaxWidthContainer)`
-    opacity: 0;
+    // opacity: 0; // TODO
     transition: opacity 0.3s;
     @media (max-width: 1000px) {
       display: flex;
@@ -104,7 +104,7 @@ export const Item = {
     cursor: pointer;
     flex-basis: calc(20% - 3.2rem);
     .DesignListItem__title {
-      opacity: 0;
+      opacity: 0; // TODO
     }
     &:hover {
       img {

@@ -5,6 +5,18 @@ const nextConfig = {
     styledComponents: true,
   },
 
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'kimbangul.github.io',
+        port: '',
+        pathname: '/cdn/**',
+      },
+    ],
+  },
+
   // svg to component
   webpack(config, { isServer }) {
     config.module.rules.push({
