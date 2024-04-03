@@ -8,7 +8,7 @@ export type TagType = {
 
 // COMPONENT main component
 const Tag: React.FC<TagType> = props => {
-  return <TagItem>#{props.children}</TagItem>;
+  return <TagItem className="TagItem">#{props.children}</TagItem>;
 };
 
 // COMPONENT style

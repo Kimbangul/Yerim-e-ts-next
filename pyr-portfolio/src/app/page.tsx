@@ -5,6 +5,7 @@ import FooterContainer from '@/component/layout/footer/FooterContainer';
 import ContactContainer from '@/component/layout/contact/ContactContainer';
 import PostContainer from '@/component/layout/post/PostContainer';
 import DesignContainer from '@/component/layout/design/DesignContainer';
+import WorkContainer from '@/component/layout/work/WorkContainer';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <MainContainer />
       <AboutContainer />
       <TechContainer />
+      <WorkContainer />
       <DesignContainer />
       <PostContainer />
       <ContactContainer />
