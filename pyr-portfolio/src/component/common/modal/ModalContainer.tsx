@@ -4,6 +4,7 @@ import { useContext, useRef } from 'react';
 import { ModalContext } from '@/component/common/modal/ModalProvider';
 
 const ModalContainer = () => {
+  if (!document) return;
   const { isOpenModal, setIsOpenModal } = useContext(ModalContext);
   // PARAM dom
   const bodyDom = document.querySelector('body');
