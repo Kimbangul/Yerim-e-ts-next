@@ -4,7 +4,7 @@ import Work from '@/component/layout/work/WorkStyle';
 import WorkItem from '@/component/layout/work/WorkItem';
 import { WorkViewPropType } from '@/component/layout/work/type';
 
-const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
+const WorkView: React.FC<WorkViewPropType> = ({ list, isAbleLoad, onClickLoadBtn }) => {
   return (
     <Work.Page className="section" id="work_page">
       <SectionCategoryTitle>Work</SectionCategoryTitle>
@@ -23,7 +23,11 @@ const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
           {/* <WorkList setCurrentIdx={setCurrentIdx} /> */}
         </Work.Content.Container>
         <Work.Button.Container>
-          <Button as="Button">더보기</Button>
+          {isAbleLoad && (
+            <Button as="Button" onClick={onClickLoadBtn}>
+              더보기
+            </Button>
+          )}
         </Work.Button.Container>
       </Work.Container>
     </Work.Page>
