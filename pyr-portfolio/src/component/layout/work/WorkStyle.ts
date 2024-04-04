@@ -20,7 +20,7 @@ const Work = {
     }
   `,
   Container: styled(MaxWidthContainer)`
-    //  opacity: 0; //TODO
+    opacity: 0; //TODO
     transition: opacity 0.3s;
     @media (${({ theme }) => theme.windowSize['mb-m']}) {
       opacity: 1;

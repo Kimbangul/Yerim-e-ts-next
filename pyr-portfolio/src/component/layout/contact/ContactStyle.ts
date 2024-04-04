@@ -5,7 +5,7 @@ const Contact = {
   Page: styled(Page)`
     flex-direction: column;
     .Contact__profile-img {
-      // opacity: 0; // TODO
+      opacity: 0; // TODO
       transition: opacity 0.3s 0.3s;
     }
     /* FUNCTION pc */
@@ -95,7 +95,7 @@ const Contact = {
       font-size: ${({ theme }) => theme.fontSize.head.sm};
       color: ${({ theme }) => theme.color.text_head};
       font-weight: 600;
-      // opacity: 0; //TODO
+      opacity: 0; //TODO
       transition: font-size 0.3s, opacity 0.3s;
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
@@ -108,7 +108,7 @@ const Contact = {
       margin-top: 2.4rem;
       word-break: keep-all;
       line-height: 1.8;
-      // opacity: 0; //TODO
+      opacity: 0; //TODO
       transition: font-size 0.3s, opacity 0.3s;
       /* FUNCTION mb */
       @media (${props => props.theme.windowSize['mb-m']}) {
@@ -133,7 +133,7 @@ const Contact = {
       display: flex;
       align-items: center;
       gap: 1.2rem;
-      // opacity: 0; //TODO
+      opacity: 0; //TODO
       transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s;
       svg {
         width: ${({ theme }) => theme.fontSize.head.xs};

@@ -98,7 +98,7 @@ const Main = {
       top: 57%;
       left: 50%;
       transform: translateX(-50%) translateY(calc(-50% - 2.4rem));
-      // opacity: 0; // TODO
+      opacity: 0; // TODO
       transition: opacity 0.6s, top 1s;
       img {
         @keyframes imgAnimation {
@@ -145,7 +145,7 @@ const Main = {
       flex-direction: column;
       align-items: center;
       gap: 1.2rem;
-      // opacity: 0; // TODO
+      opacity: 0; // TODO
       transition: opacity 0.3s;
     `,
     Icon: styled.div`

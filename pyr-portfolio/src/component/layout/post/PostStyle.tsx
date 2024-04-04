@@ -20,7 +20,7 @@ const Post = {
     }
   `,
   Container: styled(MaxWidthContainer)`
-    //  opacity: 0;  // TODO
+    opacity: 0;  // TODO
     transition: opacity 0.3s;
     padding-bottom: 2.4rem;
 

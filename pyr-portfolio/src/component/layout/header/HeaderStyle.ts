@@ -73,7 +73,7 @@ const Header = {
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
         display: flex;
         visibility: hidden;
-        // opacity: 0; // TODO
+        opacity: 0; // TODO
         position: absolute;
         flex-direction: column;
         transform: none;

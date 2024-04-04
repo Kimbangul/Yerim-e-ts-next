@@ -20,11 +20,10 @@ const WorkView: React.FC<WorkViewPropType> = ({ list, isAbleLoad, onClickLoadBtn
           {list.map((el, idx) => (
             <WorkItem {...el} key={el.id} />
           ))}
-          {/* <WorkList setCurrentIdx={setCurrentIdx} /> */}
         </Work.Content.Container>
         <Work.Button.Container>
           {isAbleLoad && (
-            <Button as="Button" onClick={onClickLoadBtn}>
+            <Button as="button" onClick={onClickLoadBtn}>
               더보기
             </Button>
           )}

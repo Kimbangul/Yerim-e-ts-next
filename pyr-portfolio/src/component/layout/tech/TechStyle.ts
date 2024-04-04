@@ -19,7 +19,7 @@ export const Tech = {
         background-repeat: no-repeat;
         filter: contrast(0.5) grayscale(1) brightness(0.55);
         background-position: center top;
-        //  opacity: 0; TODO;
+        opacity: 0; // TODO;
         transition: opacity 0.3s;
         @media (${({ theme }) => theme.windowSize['mb-m']}) {
           opacity: 1;
@@ -48,7 +48,7 @@ export const Tech = {
     position: relative;
     z-index: 1;
     transition: margin 0.3s, opacity 0.3s;
-    // opacity: 0; TODO;
+   opacity: 0; // TODO;
     @media (${({ theme }) => theme.windowSize['mb-l']}) {
       padding-top: 32rem;
     }
