@@ -5,7 +5,7 @@ import { Item } from '@/component/layout/work/WorkStyle';
 import { Button } from '@/styles/Common';
 import Tag from '@/component/common/tag/Tag';
 
-const WorkItem: React.FC<WorkType> = ({ thumb, title, category, tag }) => {
+const WorkItem: React.FC<WorkType> = ({ thumb, title, category, tag, id }) => {
   // const router = useRouter();
   // // FUNCTION 링크 이동
   // const onClickDetailViewBtn = (param: number) => {
@@ -14,7 +14,7 @@ const WorkItem: React.FC<WorkType> = ({ thumb, title, category, tag }) => {
   // };
 
   return (
-    <Item.Container className="WorkListItem__container">
+    <Item.Container className="WorkListItem__container" href={`/work/${id}`}>
       <Item.Thumb>
         <AutoHeightImageView src={thumb} alt={title} placeholder="blur" blurDataURL={blurDataUrl} />
       </Item.Thumb>

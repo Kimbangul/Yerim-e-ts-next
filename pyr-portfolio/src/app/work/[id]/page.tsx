@@ -4,9 +4,9 @@ import { workList } from '@/util/data';
 
 export default function Detail({ params }: DetailContainerPropType) {
   const { id } = params;
-  console.log(id);
+  const work = workList.filter(el => el.id.toString() === id)[0];
   //return <></>;
-  return <DetailContainer data={workList[parseInt(id)] || null} />;
+  return <DetailContainer data={work || null} />;
 }
 
 export async function generateStaticParams() {

@@ -1,13 +1,16 @@
 'use client';
 import ModalView from '@/component/common/modal/ModalView';
-import { useContext, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { ModalContext } from '@/component/common/modal/ModalProvider';
 
 const ModalContainer = () => {
-  if (!document) return;
   const { isOpenModal, setIsOpenModal } = useContext(ModalContext);
-  // PARAM dom
-  const bodyDom = document.querySelector('body');
+  let bodyDom: HTMLBodyElement | null = null;
+
+  useEffect(() => {
+    bodyDom = document.querySelector('body');
+  }, []);
+
   // PARAM ref
   const dimmerRef = useRef<HTMLDivElement>(null);
 

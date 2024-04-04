@@ -92,7 +92,7 @@ const Work = {
 };
 
 export const Item = {
-  Container: styled.div`
+  Container: styled.a`
     /* display: flex;
     align-items: flex-start; */
     overflow: hidden;
@@ -105,10 +105,21 @@ export const Item = {
     @media (${({ theme }) => theme.windowSize['lt-s']}) {
       flex-direction: column;
     }
+
+    &:hover {
+      img {
+        transform: scale(1.12);
+      }
+    }
   `,
   Thumb: styled.div`
     overflow: hidden;
     border-radius: 0.8rem;
+
+    img {
+      transition: transform 0.3s;
+    }
+
     /* FUNCTION tablet size */
     @media (${({ theme }) => theme.windowSize['lt-s']}) {
       width: 100%;
