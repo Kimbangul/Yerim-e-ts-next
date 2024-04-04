@@ -12,12 +12,7 @@ const getWorkData = () => {
   return workList.filter(({ id }) => workId === id.toString())[0];
 };
 
-const onClickBackBtn = () => {
-  window.location.href = '/';
-};
-
 const DetailContainer = ({ data }: DetailType) => {
-  // const data = workList.filter(({ id }) => router.query.id === id.toString())[0];
   return <DetailView data={data} />;
 };
 

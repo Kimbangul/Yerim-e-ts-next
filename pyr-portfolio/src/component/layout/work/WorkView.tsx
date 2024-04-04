@@ -1,14 +1,10 @@
 'use client';
-import { useState } from 'react';
-import { SectionCategoryTitle } from '@/styles/Common';
+import { Button, SectionCategoryTitle } from '@/styles/Common';
 import Work from '@/component/layout/work/WorkStyle';
 import WorkItem from '@/component/layout/work/WorkItem';
 import { WorkViewPropType } from '@/component/layout/work/type';
 
 const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
-  // PARAM state
-  const [currentIdx, setCurrentIdx] = useState(0);
-
   return (
     <Work.Page className="section" id="work_page">
       <SectionCategoryTitle>Work</SectionCategoryTitle>
@@ -26,6 +22,9 @@ const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
           ))}
           {/* <WorkList setCurrentIdx={setCurrentIdx} /> */}
         </Work.Content.Container>
+        <Work.Button.Container>
+          <Button as="Button">더보기</Button>
+        </Work.Button.Container>
       </Work.Container>
     </Work.Page>
   );

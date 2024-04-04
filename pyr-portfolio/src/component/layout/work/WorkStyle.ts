@@ -1,4 +1,4 @@
-import { MaxWidthContainer, Page } from '@/styles/Common';
+import { Button, MaxWidthContainer, Page } from '@/styles/Common';
 import styled from 'styled-components';
 
 const Work = {
@@ -88,6 +88,17 @@ const Work = {
         grid-template-columns: 1fr 1fr;
       }
     `,
+  },
+  Button: {
+    Container: styled.div`
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: ${({ theme }) => theme.windowSize['mb-l']}) {
+        display: block;
+      }
+    `,
+    Button: styled(Button)``,
   },
 };
 

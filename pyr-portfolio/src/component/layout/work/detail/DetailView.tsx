@@ -3,6 +3,7 @@ import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import Tag from '@/component/common/tag/Tag';
 import Detail from '@/component/layout/work/detail/DetailStyle';
 import { DetailType } from '@/component/layout/work/detail/type';
+import { setPageToBack } from '@/util/location';
 
 const DetailView: React.FC<DetailType> = ({ data }) => {
   if (data === null) return;
@@ -62,7 +63,9 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
           </Detail.Desc.InfoList>
         </Detail.Desc.Container>
         <Detail.Button.Container className="Detail__button-container">
-          <Detail.Button.Button href="/">목록으로</Detail.Button.Button>
+          <Detail.Button.Button as="button" onClick={setPageToBack}>
+            목록으로
+          </Detail.Button.Button>
         </Detail.Button.Container>
       </Detail.Inner>
     </Detail.Container>
