@@ -3,31 +3,34 @@ import useIntersect, { onIntersectType } from '@/hook/useIntersect';
 import { ReactNode, useEffect, useRef } from 'react';
 
 const ObserverProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const sectionRef = useRef<null[] | Element[]>([]);
-
-  useEffect(() => {
-    if (typeof window === undefined) return;
-    const section = document.querySelectorAll('.section');
-
-    section.forEach((el, idx) => {
-      sectionRef.current[idx] = el;
-    });
-    console.log(sectionRef);
-  }, [typeof window]);
+  const CLASS_NAME = 'active';
 
   const onIntersectSection: onIntersectType = entry => {
-    console.log(entry);
+    // const section = target.current?.querySelector('.section');
+    // if (isView === true) {
+    //   section?.classList.add(CLASS_NAME);
+    // } else {
+    //   section?.classList.remove(CLASS_NAME);
+    // }
+    // console.log(entry);
   };
 
   const [target, isView] = useIntersect<HTMLDivElement>(onIntersectSection);
 
   useEffect(() => {
-    console.log(target, isView);
+    const section = target.current?.querySelector('.section');
+    if (isView === true) {
+      section?.classList.add(CLASS_NAME);
+    } else {
+      section?.classList.remove(CLASS_NAME);
+    }
   }, [target, isView]);
 
   return (
     <>
-      <div ref={target}>{children}</div>
+      <div className="Observer" ref={target}>
+        {children}
+      </div>
     </>
   );
 };

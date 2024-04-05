@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 const useIntersect = <T extends Element = Element>(
-  onIntersect: onIntersectType,
+  onIntersect?: onIntersectType,
   option?: IntersectionObserverInit
 ): [React.RefObject<T>, boolean] => {
   const target = useRef<T>(null);
@@ -12,7 +12,9 @@ const useIntersect = <T extends Element = Element>(
   const checkIntersect: IntersectionObserverCallback = useCallback(
     ([entry], observer) => {
       if (entry.isIntersecting) {
-        onIntersect(entry, observer);
+        if (onIntersect) {
+          onIntersect(entry, observer);
+        }
         setIsView(true);
       } else {
         setIsView(false);
@@ -36,7 +38,7 @@ const useIntersect = <T extends Element = Element>(
 };
 
 export type useIntersectType<T> = (
-  onIntersect: onIntersectType,
+  onIntersect?: onIntersectType,
   option?: IntersectionObserverInit
 ) => [React.RefObject<T>, boolean];
 

@@ -11,19 +11,22 @@ import ObserverProvider from '@/component/observer/ObserverProvider';
 // import FullPageProvider from '@/component/fullpage/FullPageProvider';
 
 export default function Home() {
+  const page = [
+    <MainContainer />,
+    <AboutContainer />,
+    <TechContainer />,
+    <WorkContainer />,
+    <DesignContainer />,
+    <PostContainer />,
+    <ContactContainer />,
+  ];
   return (
     <>
-      <ObserverProvider>
-        <MainContainer />
-        <AboutContainer />
-        <TechContainer />
-        <WorkContainer />
-        <DesignContainer />
-        <PostContainer />
-        <ContactContainer />
-        <FooterContainer />
-        <ModalContainer />
-      </ObserverProvider>
+      {page.map((el, idx) => {
+        return <ObserverProvider key={`section${idx}`}>{el}</ObserverProvider>;
+      })}
+      <FooterContainer />
+      <ModalContainer />
     </>
   );
 }
