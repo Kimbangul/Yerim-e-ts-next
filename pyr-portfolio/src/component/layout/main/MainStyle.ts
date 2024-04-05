@@ -13,6 +13,9 @@ const Main = {
     #tsparticles {
       canvas {
         max-height: 100vh;
+        position: absolute !important;
+        top: 0;
+        left: 0;
       }
     }
     .fp-overflow {

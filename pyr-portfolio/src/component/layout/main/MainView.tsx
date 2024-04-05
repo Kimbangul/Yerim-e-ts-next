@@ -4,13 +4,14 @@ import Main from '@/component/layout/main/MainStyle';
 import { SectionCategoryTitle } from '@/styles/Common';
 import { blurDataUrl } from '@/util/data';
 import MainVideo from '@/component/layout/main/MainVideo';
+import MainParticle from '@/component/layout/main/MainParticle';
 
 const MainView = () => {
   return (
     <Main.Page className="section">
       {/* TODO */}
       <MainVideo />
-      {/*    <MainParticle /> */}
+      <MainParticle />
       <Main.Container className="Main__container">
         <SectionCategoryTitle>Main</SectionCategoryTitle>
         <Main.Text.Container className="Main__text-container">
