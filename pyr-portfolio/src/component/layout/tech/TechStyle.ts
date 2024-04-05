@@ -3,7 +3,7 @@ import { MaxWidthContainer, Page } from '@/styles/Common';
 
 export const Tech = {
   Page: styled(Page)`
-    padding-top: 0;
+    /* padding-top: 0; */
     background-color: ${props => props.theme.color.secondBg};
     transition: opacity 0.3s;
     @media (${({ theme }) => theme.windowSize['mb-l']}) {
@@ -43,12 +43,12 @@ export const Tech = {
     }
   `,
   Container: styled(MaxWidthContainer)`
-    padding-top: 10.4rem;
-    padding-bottom: 7.2rem;
+    /* padding-top: 10.4rem; */
+    /* padding-bottom: 7.2rem; */
     position: relative;
     z-index: 1;
     transition: margin 0.3s, opacity 0.3s;
-   opacity: 0; // TODO;
+    opacity: 0; // TODO;
     @media (${({ theme }) => theme.windowSize['mb-l']}) {
       padding-top: 32rem;
     }
@@ -60,7 +60,7 @@ export const Tech = {
   Img: {
     Container: styled.div`
       width: 100%;
-      margin-top: 3.2rem;
+      /* margin-top: 3.2rem; */
       position: relative;
       filter: contrast(0.5) grayscale(1) brightness(0.55);
       border-radius: 0.4rem;

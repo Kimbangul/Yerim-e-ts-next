@@ -15,7 +15,7 @@ const ObserverProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     // console.log(entry);
   };
 
-  const [target, isView] = useIntersect<HTMLDivElement>(onIntersectSection);
+  const [target, isView] = useIntersect<HTMLDivElement>();
 
   useEffect(() => {
     const section = target.current?.querySelector('.section');

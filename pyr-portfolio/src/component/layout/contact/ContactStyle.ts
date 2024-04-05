@@ -9,9 +9,9 @@ const Contact = {
       transition: opacity 0.3s 0.3s;
     }
     /* FUNCTION pc */
-    @media (${props => props.theme.windowSize['lt-s']}) {
+    /* @media (${props => props.theme.windowSize['lt-s']}) {
       padding-bottom: 7.2rem;
-    }
+    } */
     .fp-overflow {
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         width: 100%;

@@ -4,7 +4,7 @@ import { Page, Button } from '@/styles/Common';
 const Detail = {
   Container: styled(Page)`
     margin: 0 auto;
-    padding-bottom: 7.2rem;
+    /* padding-bottom: 7.2rem; */
     height: auto;
     .Detail__InfoList-item {
       margin-top: 0.8rem;

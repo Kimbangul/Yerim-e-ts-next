@@ -14,11 +14,9 @@ const WorkView: React.FC = () => {
       <Work.Container className='Work__container'>
         <Work.Text.Container className='Work__text-container'>
           <Work.Text.Title className='Work__title'>
-            {
-              'Work'.split('').map((el,idx)=> 
-              <Work.Text.Word key={el+idx}>{el}</Work.Text.Word>
-              )
-            }
+            {'Work'.split('').map((el, idx) => (
+              <Work.Text.Word key={el + idx}>{el}</Work.Text.Word>
+            ))}
           </Work.Text.Title>
         </Work.Text.Container>
         <Work.Content.Container className='Work__Content'>

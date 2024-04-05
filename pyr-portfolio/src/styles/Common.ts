@@ -5,7 +5,7 @@ import theme from '@/styles/theme';
 const Page = styled.section`
   width: 100%;
   min-height: 100vh;
-  padding-top: 7.2rem;
+  padding: 8rem 0;
   /* overflow: hidden; */
   background: transparent;
   position: relative;
@@ -13,9 +13,9 @@ const Page = styled.section`
   justify-content: center;
   align-items: center;
   transition: padding 0.3s;
-  @media (${({ theme }) => theme.windowSize['lt-s']}) {
+  /* @media (${({ theme }) => theme.windowSize['lt-s']}) {
     padding-bottom: 7.2rem;
-  }
+  } */
   /* FUNCTION mb */
   /* todo */
   /* @media (${({ theme }) => theme.windowSize['mb-m']}) {

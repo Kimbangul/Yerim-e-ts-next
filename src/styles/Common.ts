@@ -81,10 +81,7 @@ const Button = styled.a<{ width?: string; bgColor?: string }>`
   background-color: ${({ theme }) => theme.color.point40};
   /* border: 0.2rem solid ${(props) => props.theme.color.point}; */
 
-  /* background-color: ${(props) =>
-    props.bgColor
-      ? handleColorType(props.bgColor)
-      : props.theme.color.pointPink}; */
+  /* background-color: ${(props) => (props.bgColor ? handleColorType(props.bgColor) : props.theme.color.pointPink)}; */
   color: ${({ theme }) => theme.color.point};
   transition: width 0.3s, background 0.3s, color 0.3s;
 
@@ -115,39 +112,32 @@ const ProfileImgContainer = styled.div`
 
 //COMPONENT title word
 const WordEffectGlow = styled.span<{ delay?: string }>`
-@keyframes anime_textup {
-  0% {
-    top: 0;
-    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
+  @keyframes anime_textup {
+    0% {
+      top: 0;
+      text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
+    }
+    20% {
+      /* top: -0.8rem; */
+      text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 2rem;
+    }
+    40% {
+      top: 0;
+      text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
+    }
+    60% {
+      top: 0;
+    }
+    80% {
+      top: 0;
+    }
+    100% {
+      top: 0;
+    }
   }
-  20% {
-    /* top: -0.8rem; */
-    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 2rem;
-  }
-  40% {
-    top: 0;
-    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
-  }
-  60% {
-    top: 0;
-  }
-  80% {
-    top: 0;
-  }
-  100% {
-    top: 0;
-  }
-}
-position: relative;
-animation: anime_textup 6s infinite;
-animation-delay: ${(props) => (props.delay ? props.delay : '0s')};
+  position: relative;
+  animation: anime_textup 6s infinite;
+  animation-delay: ${(props) => (props.delay ? props.delay : '0s')};
 `;
 
-export {
-  Container,
-  SectionCategoryTitle,
-  MaxWidthContainer,
-  Button,
-  ProfileImgContainer,
-  WordEffectGlow
-};
+export { Container, SectionCategoryTitle, MaxWidthContainer, Button, ProfileImgContainer, WordEffectGlow };

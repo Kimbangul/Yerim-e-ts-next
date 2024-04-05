@@ -5,6 +5,7 @@ const Post = {
   Page: styled(Page)`
     background-color: ${props => props.theme.color.secondBg};
     height: auto;
+    min-height: unset;
     .fp-overflow {
       /* FUNCTION pc*/
       @media (${({ theme }) => theme.windowSize['lt-l']}) {
@@ -20,7 +21,7 @@ const Post = {
     }
   `,
   Container: styled(MaxWidthContainer)`
-    opacity: 0;  // TODO
+    opacity: 0; // TODO
     transition: opacity 0.3s;
     padding-bottom: 2.4rem;
 
