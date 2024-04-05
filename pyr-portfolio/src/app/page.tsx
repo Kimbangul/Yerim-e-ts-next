@@ -7,19 +7,23 @@ import PostContainer from '@/component/layout/post/PostContainer';
 import DesignContainer from '@/component/layout/design/DesignContainer';
 import WorkContainer from '@/component/layout/work/WorkContainer';
 import ModalContainer from '@/component/common/modal/ModalContainer';
+import ObserverProvider from '@/component/observer/ObserverProvider';
+// import FullPageProvider from '@/component/fullpage/FullPageProvider';
 
 export default function Home() {
   return (
     <>
-      <MainContainer />
-      <AboutContainer />
-      <TechContainer />
-      <WorkContainer />
-      <DesignContainer />
-      <PostContainer />
-      <ContactContainer />
-      <FooterContainer />
-      <ModalContainer />
+      <ObserverProvider>
+        <MainContainer />
+        <AboutContainer />
+        <TechContainer />
+        <WorkContainer />
+        <DesignContainer />
+        <PostContainer />
+        <ContactContainer />
+        <FooterContainer />
+        <ModalContainer />
+      </ObserverProvider>
     </>
   );
 }
