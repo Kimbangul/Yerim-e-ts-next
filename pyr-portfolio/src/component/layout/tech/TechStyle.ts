@@ -50,11 +50,12 @@ export const Tech = {
     transition: margin 0.3s, opacity 0.3s;
     opacity: 0; // TODO;
     @media (${({ theme }) => theme.windowSize['mb-l']}) {
-      padding-top: 32rem;
+      padding-top: 24.5rem;
     }
     @media (${({ theme }) => theme.windowSize['mb-m']}) {
-      padding-top: 34rem;
-      opacity: 1;
+      /* padding-top: 34rem; */
+      padding-top: 26rem;
+      /* opacity: 1; */
     }
   `,
   Img: {

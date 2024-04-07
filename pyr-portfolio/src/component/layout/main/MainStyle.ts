@@ -100,9 +100,12 @@ const Main = {
       position: absolute;
       top: 57%;
       left: 50%;
-      transform: translateX(-50%) translateY(calc(-50% - 2.4rem));
+      transform: translateX(-50%) translateY(calc(-50% - 4rem));
       opacity: 0; // TODO
       transition: opacity 0.6s, top 1s;
+      @media (${({ theme }) => theme.windowSize['mb-l']}) {
+        transform: translateX(-50%) translateY(calc(-50% - 2.4rem));
+      }
       img {
         @keyframes imgAnimation {
           0% {

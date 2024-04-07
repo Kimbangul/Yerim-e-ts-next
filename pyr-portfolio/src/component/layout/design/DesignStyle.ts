@@ -27,9 +27,9 @@ const Design = {
       display: flex;
       flex-direction: column-reverse;
     }
-    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+    /* @media (${({ theme }) => theme.windowSize['mb-m']}) {
       opacity: 1;
-    }
+    } */
   `,
   List: styled.ul`
     width: 100%;

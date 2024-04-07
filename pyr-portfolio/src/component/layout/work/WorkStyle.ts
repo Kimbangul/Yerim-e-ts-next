@@ -22,9 +22,9 @@ const Work = {
   Container: styled(MaxWidthContainer)`
     opacity: 0; //TODO
     transition: opacity 0.3s;
-    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+    /* @media (${({ theme }) => theme.windowSize['mb-m']}) {
       opacity: 1;
-    }
+    } */
   `,
   Text: {
     Container: styled.div`
@@ -86,6 +86,10 @@ const Work = {
       margin-bottom: 4.8rem;
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         grid-template-columns: 1fr 1fr;
+        gap: 3.2rem 2.4rem;
+      }
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        grid-template-columns: 1fr;
       }
     `,
   },
