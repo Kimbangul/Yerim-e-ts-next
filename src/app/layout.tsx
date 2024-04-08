@@ -1,7 +1,7 @@
 import type { Viewport } from 'next';
 import type { Metadata } from 'next';
 
-import Header from '@/component/layout/header/HeaderContainer';
+import { Header, Footer } from '@/component/layout/index';
 import StylesProvider from '@/styles/provider/StyleProvider';
 import ReactClientProvider from '@/query/clientQueryProvider/ClientQueryProvider';
 import ModalContextProvider from '@/component/common/modal/ModalProvider';
@@ -19,6 +19,7 @@ export default function RootLayout({
             <body>
               <Header />
               {children}
+              <Footer />
             </body>
           </ModalContextProvider>
         </ReactClientProvider>

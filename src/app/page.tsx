@@ -1,32 +1,23 @@
-import MainContainer from '@/component/layout/main/MainContainer';
-import AboutContainer from '@/component/layout/about/AboutContainer';
-import TechContainer from '@/component/layout/tech/TechContainer';
-import FooterContainer from '@/component/layout/footer/FooterContainer';
-import ContactContainer from '@/component/layout/contact/ContactContainer';
-import PostContainer from '@/component/layout/post/PostContainer';
-import DesignContainer from '@/component/layout/design/DesignContainer';
-import WorkContainer from '@/component/layout/work/WorkContainer';
-import ModalContainer from '@/component/common/modal/ModalContainer';
-import ObserverProvider from '@/component/observer/ObserverProvider';
+import { Main, About, Tech, Contact, Post, Design, Work, Modal } from '@/component/layout/index';
+import ObserverProvider from '@/component//observer/ObserverProvider';
 // import FullPageProvider from '@/component/fullpage/FullPageProvider';
 
 export default function Home() {
   const page = [
-    <MainContainer />,
-    <AboutContainer />,
-    <TechContainer />,
-    <WorkContainer />,
-    <DesignContainer />,
-    <PostContainer />,
-    <ContactContainer />,
+    <Main key="main" />,
+    <About key="about" />,
+    <Tech key="tech" />,
+    <Work key="work" />,
+    <Design key="design" />,
+    <Post key="post" />,
+    <Contact key="contact" />,
   ];
   return (
     <>
-      {page.map((el, idx) => {
-        return <ObserverProvider key={`section${idx}`}>{el}</ObserverProvider>;
-      })}
-      <FooterContainer />
-      <ModalContainer />
+      {page.map((el, idx) => (
+        <ObserverProvider key={`section${idx}${el.key}`}>{el}</ObserverProvider>
+      ))}
+      <Modal />
     </>
   );
 }

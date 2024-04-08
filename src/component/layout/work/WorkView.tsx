@@ -20,7 +20,7 @@ const WorkView: React.FC<WorkViewPropType> = ({ work }) => {
   const [list, setList] = useState<WorkType[]>(getListItem(lastItem, []));
 
   // PARAM 불러온 페이지의 최대 갯수가 데이터의 총합보다 같거나 많은 경우, 더보기 버튼을 숨김
-  const isAbleLoad = useMemo(() => (lastItem >= workList.length ? false : true), [lastItem, workList.length]);
+  const isAbleLoad = useMemo(() => (lastItem >= workList.length ? false : true), [lastItem]);
 
   // FUNCTION lastItem이 바뀌면 리스트 가져오기 실행
   useEffect(() => {
