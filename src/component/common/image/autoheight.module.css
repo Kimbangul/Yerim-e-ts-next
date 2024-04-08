@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.container span {
+  position: unset !important;
+}
+
+.autoImage {
+  width: 100%;
+  object-fit: contain !important;
+  position: relative !important;
+  height: auto !important;
+}

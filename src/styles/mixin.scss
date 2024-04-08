@@ -1,0 +1,132 @@
+@use 'theme.scss' as *;
+
+@mixin Page() {
+  width: 100%;
+  min-height: 100vh;
+  padding: 8rem 0;
+  background: transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: padding 0.3s;
+}
+
+@mixin MaxWidthContainer() {
+  width: $maxWidth;
+  margin: 0 auto;
+  transition: padding 0.3s;
+
+  /* FUNCTION pc */
+  @media (max-width: #{$lt-m}) {
+    width: 100%;
+    padding: 0 6rem;
+  }
+  @media (max-width: #{$lt-s}) {
+    width: 100%;
+  }
+  /* FUNCTION mb */
+  @media (max-width: #{$mb-m}) {
+    padding: 0 3rem;
+  }
+  /* FUNCTION mb */
+  @media (max-width: #{$mb-s}) {
+    padding: 0 2rem;
+  }
+}
+
+// COMPONENT section title - sound only
+@mixin SectionCategoryTitle {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+  text-indent: -99999;
+  pointer-events: none;
+}
+
+@mixin Button($width: 18rem) {
+  font-family: 'Pretendard', 'sans-serif';
+  font-size: $body-md;
+  font-weight: 700;
+  cursor: pointer;
+  min-width: $width;
+  padding: 0 4.8rem;
+  height: 5.6rem;
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  background-color: $point40;
+  color: $point;
+  transition: width 0.3s, background 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: $point;
+    color: $main;
+  }
+
+  @media (max-width: #{$mb-l}px) {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@mixin ProfileImgContainer {
+  width: 34rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+
+  @media (max-width: 460px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+//COMPONENT title word
+@mixin WordEffectGlow($delay: 0s) {
+  @keyframes anime_textup {
+    0% {
+      top: 0;
+      text-shadow: $text 0rem 0rem 0rem;
+    }
+    20% {
+      /* top: -0.8rem; */
+      text-shadow: $text 0rem 0rem 2rem;
+    }
+    40% {
+      top: 0;
+      text-shadow: $text 0rem 0rem 0rem;
+    }
+    60% {
+      top: 0;
+    }
+    80% {
+      top: 0;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  position: relative;
+  animation: anime_textup 6s infinite;
+  animation-delay: $delay;
+}
+
+// @mixin handleColorType ($color) {
+//   @if ($color == $main){
+
+//   }
+// }
+
+@mixin makeSoundOnly {
+  visibility: hidden;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  pointer-events: none;
+}
