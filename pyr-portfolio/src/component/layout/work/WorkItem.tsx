@@ -1,4 +1,4 @@
-// import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
+import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import WithPlaceHolder from '@/component/common/image/WithPlaceHolder';
 import { blurDataUrl } from '@/util/data';
 import { WorkType } from '@/util/type';
@@ -17,7 +17,7 @@ const WorkItem: React.FC<WorkType> = ({ thumb, title, category, tag, id }) => {
   return (
     <Item.Container className="WorkListItem__container" href={`/work/${id}`}>
       <Item.Thumb>
-        <WithPlaceHolder src={thumb} alt={title} placeholder="blur" blurDataURL={blurDataUrl} />
+        <AutoHeightImageView src={thumb} alt={title} placeholder="blur" blurDataURL={blurDataUrl} />
       </Item.Thumb>
       <Item.Desc.Container className="WorkListItem__desc-container">
         <Item.Desc.Info>

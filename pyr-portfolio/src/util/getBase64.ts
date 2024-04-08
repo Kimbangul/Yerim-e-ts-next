@@ -1,6 +1,3 @@
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
-import fs from 'node:fs/promises';
-import path from 'node:path';
 import { getPlaiceholder } from 'plaiceholder';
 
 const getBase64 = async (src: string) => {

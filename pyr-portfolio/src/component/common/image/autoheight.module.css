@@ -8,6 +8,7 @@
 }
 
 .autoImage {
+  width: 100%;
   object-fit: contain !important;
   position: relative !important;
   height: auto !important;

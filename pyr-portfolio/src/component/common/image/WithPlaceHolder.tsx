@@ -6,20 +6,20 @@ import AutoHeightImage from '@/component/common/image/autoheight.module.css';
 import { blurDataUrl } from '@/util/data';
 
 const WithPlaceHolder = async ({ ...props }: WithPlaceHolderPropType) => {
-  // const { base64, img } = await getBase64(props.src);
-  // console.log(base64, img);
+  const { base64, img } = await getBase64(props.src);
+  console.log(base64, img);
 
   return (
     <div className={AutoHeightImage.container}>
       <Image
         {...props}
-        fill={true}
-        // width={img.width}
-        // height={img.height}
+        // fill={true}
+        width={img.width}
+        height={img.height}
         className={AutoHeightImage.autoImage}
         alt={props.alt}
-        // placeholder={props.placeholder || 'blur'}
-        // blurDataURL={blurDataUrl}
+        placeholder={props.placeholder || 'blur'}
+        blurDataURL={blurDataUrl}
       />
     </div>
   );
