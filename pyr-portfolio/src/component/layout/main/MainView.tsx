@@ -9,8 +9,8 @@ import MainParticle from '@/component/layout/main/MainParticle';
 
 // import Main from '@/component/layout/main/MainStyle.module.scss';
 
-// const MainView = ({ imgObj }: { imgObj: { [key: string]: JSX.Element } }) => {
-const MainView = () => {
+const MainView = ({ imgObj }: { imgObj: { [key: string]: JSX.Element } }) => {
+  // const MainView = () => {
   return (
     // <section className={`${Main.page} section`}>
     //   <div className={Main.container}>
@@ -56,13 +56,13 @@ const MainView = () => {
       </Main.Container>
       <Main.Image.Container className="Main__img">
         <Main.Image.Inner>
-          <AutoHeightImageView
+          {/* <AutoHeightImageView
             src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/main/moon.png`}
             alt="main image"
             placeholder="blur"
             blurDataURL={blurDataUrl}
-          />
-          {/* {imgObj.moon} */}
+          /> */}
+          {imgObj.moon}
         </Main.Image.Inner>
       </Main.Image.Container>
       <Main.ScrollDown.Container className="Main__scroll-down-container">
