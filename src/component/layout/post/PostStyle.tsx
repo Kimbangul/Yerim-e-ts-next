@@ -197,7 +197,7 @@ export const PostSkeleton = {
       font-size: ${props => props.theme.fontSize.body.rg};
     }
   `,
-  TagItem: styled.div<{ children?: React.FC }>`
+  TagItem: styled.li<{ children?: React.FC }>`
     min-width: 12rem;
     height: 3.2rem;
     border: none;

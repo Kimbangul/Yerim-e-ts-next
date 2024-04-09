@@ -27,7 +27,7 @@ const DesignItem: React.FC<DesignItemPropType> = ({ idx, title, link, detail, th
         <Item.Link href="#" onMouseEnter={onMouseEnter} onMouseOut={onMouseOut} onClick={onClickItem(link, detail)}>
           <Item.Hover className="DesignListItem__title">{title}</Item.Hover>
           <AutoHeightImageView
-            alt={title}
+            alt={`${title} 이미지`}
             src={thumb}
             placeholder="blur"
             blurDataURL={blurDataUrl}

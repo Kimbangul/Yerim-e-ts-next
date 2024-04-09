@@ -16,7 +16,7 @@ const WithPlaceHolder = async ({ ...props }: WithPlaceHolderPropType) => {
         alt={props.alt}
         placeholder={props.placeholder || 'blur'}
         blurDataURL={base64}
-        loading="lazy"
+        loading={props.loading || 'lazy'}
       />
     </div>
   );

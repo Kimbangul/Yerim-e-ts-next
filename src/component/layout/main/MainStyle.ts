@@ -181,13 +181,13 @@ const Main = {
         transition: width 0.3s, height 0.3s;
         @keyframes cursorAni {
           0% {
-            top: 0.8rem;
+            transform: translateX(-50%) translateY(0);
           }
           85% {
-            top: 1.6rem;
+            transform: translateX(-50%) translateY(1.6rem);
           }
           100% {
-            top: 1.6rem;
+            transform: translateX(-50%) translateY(1.6rem);
           }
         }
         animation: cursorAni 1.2s ease-in-out infinite;

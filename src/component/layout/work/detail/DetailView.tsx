@@ -5,7 +5,7 @@ import Detail from '@/component/layout/work/detail/DetailStyle';
 import { DetailType } from '@/component/layout/work/detail/type';
 import { setPageToBack } from '@/util/location';
 
-const DetailView: React.FC<DetailType> = ({ data }) => {
+const DetailView: React.FC<DetailType> = ({ data, imgObj }) => {
   if (data === null) return;
 
   return (
@@ -38,7 +38,8 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
             </Detail.Button.Container>
           </Detail.Title.TextContainer>
           <Detail.Image.Container className="Detail__image-container">
-            <AutoHeightImageView src={data?.thumb} alt={data?.title} priority loading="eager" />
+            {imgObj.thumb}
+            {/* <AutoHeightImageView src={data?.thumb} alt={data?.title} priority loading="eager" /> */}
           </Detail.Image.Container>
         </Detail.Title.Container>
         <Detail.Desc.Container className="Detail__desc-container">
