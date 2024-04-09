@@ -19,7 +19,7 @@ const WithPlaceHolder = async ({ ...props }: WithPlaceHolderPropType) => {
         className={AutoHeightImage.autoImage}
         alt={props.alt}
         placeholder={props.placeholder || 'blur'}
-        blurDataURL={blurDataUrl}
+        blurDataURL={base64}
       />
     </div>
   );
