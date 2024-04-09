@@ -194,7 +194,6 @@ const workList: WorkType[] = [
     title: 'Ripa Korea',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work05.jpg`,
     category: '기업 사이트 제작',
-    link: 'http://ripa.ltd/',
     tag: ['기획 100%', '디자인 100%', '그누보드', 'PC + Mobile'],
     desc: '코인과 서버, 클라우드 등 IT 기술을 다루는 회사의 이미지에 맞도록 블랙과 화이트의 대비, 그라데이션과 애니메이션 효과를 이용하여 세련된 느낌을 전달할 수 있도록 제작하고자 하였습니다.',
     duration: '2021.05 ~ 2021.06',
