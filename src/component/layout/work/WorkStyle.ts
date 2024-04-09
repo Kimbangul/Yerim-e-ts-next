@@ -3,14 +3,6 @@ import styled from 'styled-components';
 
 const Work = {
   Page: styled(Page)`
-    /* @media (${({ theme }) => theme.windowSize['lt-s']}) {
-      padding-top: 7.2rem;
-      padding-bottom: 7.2rem;
-    } */
-    /* FUNCTION mb */
-    /* @media (${({ theme }) => theme.windowSize['mb-m']}) {
-      height: 6rem;
-    } */
     /* FUNCTION section animation */
     &.active {
       .Work__container {
@@ -22,9 +14,6 @@ const Work = {
   Container: styled(MaxWidthContainer)`
     opacity: 0; //TODO
     transition: opacity 0.3s;
-    /* @media (${({ theme }) => theme.windowSize['mb-m']}) {
-      opacity: 1;
-    } */
   `,
   Text: {
     Container: styled.div`
@@ -108,10 +97,7 @@ const Work = {
 
 export const Item = {
   Container: styled.a`
-    /* display: flex;
-    align-items: flex-start; */
     overflow: hidden;
-    /* gap: 5.6rem; */
     span {
       border-radius: 0.8rem;
       overflow: hidden;
@@ -149,41 +135,46 @@ export const Item = {
     `,
     Info: styled.div``,
     Title: styled.h4`
-      font-size: ${({ theme }) => theme.fontSize.body.rg};
-      font-weight: 700;
+      font-size: ${({ theme }) => theme.fontSize.body.lg};
+      font-weight: 600;
       color: ${({ theme }) => theme.color.text_head};
       transition: font-size 0.3s;
       word-break: keep-all;
-      margin-top: 1.2rem;
+      margin-top: 1.4rem;
       /* FUNCTION pc */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
-        font-size: ${({ theme }) => theme.fontSize.body.sm};
+        font-size: ${({ theme }) => theme.fontSize.body.rg};
       }
       /* FUNCTION mb */
       /* @media (${({ theme }) => theme.windowSize['mb-m']}) {
-        font-size: ${({ theme }) => theme.fontSize.body.xs};
+        font-size: ${({ theme }) => theme.fontSize.body.sm};
       } */
     `,
     Category: styled.div`
-      font-size: ${({ theme }) => theme.fontSize.body.sm};
+      font-size: ${({ theme }) => theme.fontSize.body.rg};
       color: ${({ theme }) => theme.color.text_2};
       margin-top: 0.4rem;
       transition: font-size 0.3s;
 
       /* FUNCTION mb */
-      @media (${({ theme }) => theme.windowSize['mb-m']}) {
-        font-size: ${({ theme }) => theme.fontSize.body.xs};
+      @media (${({ theme }) => theme.windowSize['lt-s']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.sm};
       }
     `,
     TagList: styled.ul`
       display: flex;
-      margin-top: 1.6rem;
+      margin-top: 1.8rem;
       flex-wrap: wrap;
       gap: 0.4rem;
 
       .TagItem {
         padding: 0.2rem 0.8rem;
-        font-size: ${({ theme }) => theme.fontSize.body.xs};
+        font-size: ${({ theme }) => theme.fontSize.body.sm};
+
+        /* FUNCTION mb */
+        @media (${({ theme }) => theme.windowSize['mb-m']}) {
+          font-size: ${({ theme }) => theme.fontSize.body.xs};
+        }
       }
     `,
     Desc: styled.p`

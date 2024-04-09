@@ -20,7 +20,6 @@ const queryClient = new QueryClient({
 });
 
 const QueryProvider: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
-  // const myInfo = useMyInfo();
   return <>{children}</>;
 };
 

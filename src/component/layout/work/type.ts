@@ -6,8 +6,6 @@ export type WorkItemType = WorkType & {
 
 export interface WorkViewPropType {
   list: WorkItemType[];
-  // isAbleLoad: boolean;
-  // onClickLoadBtn: () => void;
 }
 
 export type GetListItemType = (page: number, allList: WorkItemType[], list: WorkItemType[]) => WorkItemType[];

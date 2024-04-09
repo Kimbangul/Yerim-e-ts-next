@@ -1,11 +1,8 @@
 'use client';
-import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import Main from '@/component/layout/main/MainStyle';
 import { SectionCategoryTitle } from '@/styles/Common';
 import MainVideo from '@/component/layout/main/MainVideo';
 import MainParticle from '@/component/layout/main/MainParticle';
-
-// import Main from '@/component/layout/main/MainStyle.module.scss';
 
 const MainView = ({ imgObj }: { imgObj: { [key: string]: JSX.Element } }) => {
   return (
@@ -27,15 +24,7 @@ const MainView = ({ imgObj }: { imgObj: { [key: string]: JSX.Element } }) => {
         </Main.Text.Container>
       </Main.Container>
       <Main.Image.Container className="Main__img">
-        <Main.Image.Inner>
-          {/* <AutoHeightImageView
-            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/main/moon.png`}
-            alt="main image"
-            placeholder="blur"
-            blurDataURL={blurDataUrl}
-          /> */}
-          {imgObj.moon}
-        </Main.Image.Inner>
+        <Main.Image.Inner>{imgObj.moon}</Main.Image.Inner>
       </Main.Image.Container>
       <Main.ScrollDown.Container className="Main__scroll-down-container">
         <Main.ScrollDown.Icon></Main.ScrollDown.Icon>

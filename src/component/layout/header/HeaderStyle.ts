@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import { MaxWidthContainer } from '@/styles/Common';
 import { makeSoundOnly } from '@/styles/util';
-import { HeadComponentPropType } from '@/component/layout/header/type';
 
 const Header = {
   Title: styled.h1`

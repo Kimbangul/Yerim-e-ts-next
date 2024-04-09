@@ -1,6 +1,3 @@
-import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
-import WithPlaceHolder from '@/component/common/image/WithPlaceHolder';
-import { blurDataUrl } from '@/util/data';
 import { WorkItemType } from '@/component/layout/work/type';
 import { Item } from '@/component/layout/work/WorkStyle';
 import Tag from '@/component/common/tag/Tag';
@@ -26,9 +23,6 @@ const WorkItem: React.FC<WorkItemType> = ({ thumb, title, category, tag, id, img
             })}
           </Item.Desc.TagList>
         </Item.Desc.Info>
-        {/* <Item.Button.Container className="WorkListItem__button-container"> */}
-        {/* <Button onClick={onClickDetailViewBtn.bind(this, props.id)}>상세보기</Button> */}
-        {/* </Item.Button.Container> */}
       </Item.Desc.Container>
     </Item.Container>
   );

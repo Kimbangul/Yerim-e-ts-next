@@ -1,12 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const FontStyle = createGlobalStyle`
-/* @font-face {
-  font-family: 'Pretendard';
-  font-style: normal;
-  font-weight: 300;
-  src: url(/fonts/Pretendard-Light.otf) format("opentype");
-} */
 @font-face {
   font-family: 'Pretendard';
   font-style: normal;
@@ -31,12 +25,6 @@ const FontStyle = createGlobalStyle`
   font-weight: 700;
   src: url(/fonts/Pretendard-Bold.otf) format("opentype");
 }
-/* @font-face {
-  font-family: 'Pretendard';
-  font-style: normal;
-  font-weight: 900;
-  src: url(/fonts/Pretendard-ExtraBold.otf) format("opentype");
-} */
 @font-face {
   font-family: 'Poppins';
   font-style: normal;

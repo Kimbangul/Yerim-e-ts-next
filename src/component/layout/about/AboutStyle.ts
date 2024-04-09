@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Page, SectionCategoryTitle, Button, ProfileImgContainer, MaxWidthContainer } from '@/styles/Common';
+import { Page, Button, MaxWidthContainer } from '@/styles/Common';
 
 const About = {
   Page: styled(Page)`
