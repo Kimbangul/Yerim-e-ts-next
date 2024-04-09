@@ -4,9 +4,9 @@ import { PostViewPropType } from '@/component/layout/post/type';
 import PostItem from '@/component/layout/post/PostItem';
 import PostSkeleton from '@/component/layout/post/PostSkeleton';
 
-const PostView: React.FC<PostViewPropType> = ({ list, isLoading }) => {
+const PostView: React.FC<PostViewPropType> = ({ list, isLoading, target }) => {
   return (
-    <Post.Page className="section">
+    <Post.Page className="section" ref={target}>
       <SectionCategoryTitle>Posts</SectionCategoryTitle>
       <Post.Container className="PostsView__container">
         <Post.Title className="PostsView__title">

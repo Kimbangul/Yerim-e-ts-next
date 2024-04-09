@@ -38,7 +38,7 @@ const DetailView: React.FC<DetailType> = ({ data }) => {
             </Detail.Button.Container>
           </Detail.Title.TextContainer>
           <Detail.Image.Container className="Detail__image-container">
-            <AutoHeightImageView src={data?.thumb} alt={data?.title} priority />
+            <AutoHeightImageView src={data?.thumb} alt={data?.title} priority loading="eager" />
           </Detail.Image.Container>
         </Detail.Title.Container>
         <Detail.Desc.Container className="Detail__desc-container">

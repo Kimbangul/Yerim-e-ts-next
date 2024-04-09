@@ -1,6 +1,9 @@
+import { RefObject } from 'react';
+
 export interface PostViewPropType {
   list: PostItemPropType[];
   isLoading?: boolean;
+  target: RefObject<HTMLDivElement>;
 }
 
 export interface PostItemPropType {
