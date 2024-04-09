@@ -8,4 +8,3 @@ export { default as Post } from '@/component/layout/post/PostContainer';
 export { default as Design } from '@/component/layout/design/DesignContainer';
 export { default as Work } from '@/component/layout/work/WorkContainer';
 export { default as Modal } from '@/component/common/modal/ModalContainer';
-export { default as ObserverProvider } from '@/component/observer/ObserverProvider';

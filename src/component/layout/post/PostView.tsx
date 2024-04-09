@@ -2,8 +2,9 @@ import { SectionCategoryTitle } from '@/styles/Common';
 import Post from '@/component/layout/post/PostStyle';
 import { PostViewPropType } from '@/component/layout/post/type';
 import PostItem from '@/component/layout/post/PostItem';
+import Loading from '@/component/common/loading/LoadingView';
 
-const PostView: React.FC<PostViewPropType> = ({ list }) => {
+const PostView: React.FC<PostViewPropType> = ({ list, isLoading }) => {
   return (
     <Post.Page className="section">
       <SectionCategoryTitle>Posts</SectionCategoryTitle>
@@ -15,6 +16,7 @@ const PostView: React.FC<PostViewPropType> = ({ list }) => {
             </Post.Word>
           ))}
         </Post.Title>
+        {isLoading && <Loading />}
         {list && (
           <Post.List className="PostsView__list">
             {list.map((el, idx) => {

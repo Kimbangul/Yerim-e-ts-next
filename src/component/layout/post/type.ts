@@ -1,5 +1,6 @@
 export interface PostViewPropType {
   list: PostItemPropType[];
+  isLoading?: boolean;
 }
 
 export interface PostItemPropType {
