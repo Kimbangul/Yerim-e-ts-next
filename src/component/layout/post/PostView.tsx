@@ -2,6 +2,7 @@ import { SectionCategoryTitle } from '@/styles/Common';
 import Post from '@/component/layout/post/PostStyle';
 import { PostViewPropType } from '@/component/layout/post/type';
 import PostItem from '@/component/layout/post/PostItem';
+import PostSkeleton from '@/component/layout/post/PostSkeleton';
 import Loading from '@/component/common/loading/LoadingView';
 
 const PostView: React.FC<PostViewPropType> = ({ list, isLoading }) => {
@@ -16,14 +17,16 @@ const PostView: React.FC<PostViewPropType> = ({ list, isLoading }) => {
             </Post.Word>
           ))}
         </Post.Title>
-        {isLoading && <Loading />}
-        {list && (
-          <Post.List className="PostsView__list">
-            {list.map((el, idx) => {
+        <Post.List className="PostsView__list">
+          {isLoading &&
+            Array(3)
+              .fill('')
+              .map((el, idx) => <PostSkeleton id={idx} />)}
+          {list &&
+            list.map((el, idx) => {
               return <PostItem key={`post${idx}`} {...el} />;
             })}
-          </Post.List>
-        )}
+        </Post.List>
       </Post.Container>
     </Post.Page>
   );

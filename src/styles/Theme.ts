@@ -35,6 +35,7 @@ const color = {
   header: 'rgba(0,0,0,0.24)',
   main: '#222',
   secondBg: '#1D1D1D',
+  skeletonBg: '#444',
   point: '#0ACDCE',
   point80: '#0ACDCE80',
   point40: '#0ACDCE40',

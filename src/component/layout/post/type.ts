@@ -17,3 +17,7 @@ export interface PostItemPropType {
   // tags?: string[];
   // context?: string;
 }
+
+export interface PostSkeletonPropType {
+  id: string | number;
+}

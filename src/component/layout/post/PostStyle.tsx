@@ -1,4 +1,5 @@
-import { MaxWidthContainer, Page } from '@/styles/Common';
+import Tag from '@/component/common/tag/Tag';
+import { MaxWidthContainer, Page, Shimmer } from '@/styles/Common';
 import styled from 'styled-components';
 
 const Post = {
@@ -151,6 +152,71 @@ export const PostItem = {
     gap: 0.8rem;
     margin-top: 2.4rem;
     flex-wrap: wrap;
+  `,
+};
+
+export const PostSkeleton = {
+  Item: PostItem.Item,
+  Title: PostItem.Title.Container,
+  Text: styled.div`
+    width: 40%;
+    height: 3.5rem;
+    background: ${({ theme }) => theme.color.skeletonBg};
+    border-radius: 5rem;
+    ${Shimmer('3.2s')}
+
+    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+      width: 80%;
+      font-size: ${props => props.theme.fontSize.body.lg};
+    }
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      width: 90%;
+      font-size: ${props => props.theme.fontSize.body.md};
+    }
+  `,
+  Date: styled(PostItem.Title.Date)`
+    width: 8.2rem;
+    height: 2rem;
+    background: ${({ theme }) => theme.color.skeletonBg};
+    border-radius: 5rem;
+    ${Shimmer('3s')}
+
+    @media (max-width: 1000px) {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  `,
+  Context: styled(PostItem.Context)`
+    width: 60%;
+    height: 2.8rem;
+    background: ${({ theme }) => theme.color.skeletonBg};
+    border-radius: 5rem;
+    ${Shimmer('2s')}
+
+    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+      font-size: ${props => props.theme.fontSize.body.rg};
+    }
+  `,
+  TagItem: styled.div<{ children?: React.FC }>`
+    min-width: 12rem;
+    height: 3.2rem;
+    border: none;
+    border-radius: 8rem;
+    background: ${({ theme }) => theme.color.skeletonBg};
+    border-radius: 5rem;
+    ${Shimmer('2.5s')}
+
+    @media (${({ theme }) => theme.windowSize['mb-l']}) {
+      min-width: 8rem;
+      height: 2.4rem;
+    }
+    &:nth-child(2n) {
+      min-width: 6rem;
+
+      @media (${({ theme }) => theme.windowSize['mb-l']}) {
+        min-width: 4rem;
+      }
+    }
   `,
 };
 
