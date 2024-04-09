@@ -36,7 +36,7 @@ const useIntersect = <T extends Element = Element>(
       observer.observe(target.current);
     }
     return () => observer && observer.disconnect();
-  }, [target, option, option?.root, option?.threshold, option?.rootMargin, checkIntersect]);
+  }, [target, option, option?.root, option?.threshold, option?.rootMargin, checkIntersect, once]);
 
   return [target, isView];
 };

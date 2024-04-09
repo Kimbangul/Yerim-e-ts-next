@@ -5,18 +5,16 @@ import usePostQuery from '@/query/usePostQuery';
 import { useEffect } from 'react';
 
 const PostContainer = () => {
+  const { isLoading, isIdle, data, refetch } = usePostQuery('kimbangul', 3);
   const [target, isView] = useIntersect<HTMLDivElement>(undefined, undefined, true);
-  const postquery = usePostQuery('kimbangul', 3);
 
   useEffect(() => {
     if (isView) {
-      postquery.refetch();
+      refetch();
     }
-  }, [isView]);
+  }, [isView, refetch]);
 
-  return (
-    <PostView target={target} list={postquery.data?.posts || []} isLoading={postquery.isLoading || postquery.isIdle} />
-  );
+  return <PostView target={target} list={data?.posts || []} isLoading={isLoading || isIdle} />;
 };
 
 export default PostContainer;

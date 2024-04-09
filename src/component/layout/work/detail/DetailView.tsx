@@ -2,10 +2,10 @@
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import Tag from '@/component/common/tag/Tag';
 import Detail from '@/component/layout/work/detail/DetailStyle';
-import { DetailType } from '@/component/layout/work/detail/type';
+import { DetailViewPropType } from '@/component/layout/work/detail/type';
 import { setPageToBack } from '@/util/location';
 
-const DetailView: React.FC<DetailType> = ({ data, imgObj }) => {
+const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
   if (data === null) return;
 
   return (
