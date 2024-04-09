@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import theme from 'src/styles/Theme';
+import theme from '@/styles/theme';
 
 const GlobalStyle = createGlobalStyle`
  html{
@@ -42,31 +42,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', 'Pretendard', 'sans-serif';
   }
 
-  /* NOTE fullpage setting */
-  /* @media (min-width: 1001px) {
-.fullpage-wrapper {
-	width: 100%!important;
-	transform: none!important;
-}
-
-.fp-section {
-	width: 100%!important;
-	position: absolute;
-	left: 0;
-	top: 0;
-	visibility: hidden;
-	opacity: 0;
-	z-index: 0;
-	transition: opacity 0.7s, visibility 0s 0.7s;
-}
-
-.fp-section.active {
-	visibility: visible;
-	opacity: 1;
-	z-index: 1;
-  transition: opacity 0.7s, visibility 0s 0.7s;
-}
-  } */
 
 .fp-overflow{
   overflow-x: hidden;

@@ -1,35 +1,16 @@
-import styled from 'styled-components';
-import theme from 'src/styles/Theme';
+import styled, { css } from 'styled-components';
 
-// FUNCTION prop color type
-const handleColorType = (color: string) => {
-  switch (color) {
-    case 'mainColor':
-      return theme.color.main;
-    default:
-      return theme.color.point;
-  }
-};
-
-// COMPONENT section container
-const Container = styled.section`
+// COMPONENT fullpage Page
+const Page = styled.section`
   width: 100%;
   min-height: 100vh;
-  padding-top: 7.2rem;
-  /* overflow: hidden; */
+  padding: 8rem 0;
   background: transparent;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: padding 0.3s;
-  @media (${({ theme }) => theme.windowSize['lt-s']}) {
-    padding-bottom: 7.2rem;
-  }
-  /* FUNCTION mb */
-  @media (${({ theme }) => theme.windowSize['mb-m']}) {
-    height: 6rem;
-  }
 `;
 
 const MaxWidthContainer = styled.div`
@@ -49,7 +30,7 @@ const MaxWidthContainer = styled.div`
     padding: 0 3rem;
   }
   /* FUNCTION mb */
-  @media (${(props) => props.theme.windowSize['mb-s']}) {
+  @media (${props => props.theme.windowSize['mb-s']}) {
     padding: 0 2rem;
   }
 `;
@@ -65,12 +46,12 @@ const SectionCategoryTitle = styled.h2`
 `;
 
 // COMPONENT button
-const Button = styled.a<{ width?: string; bgColor?: string }>`
+const Button = styled.a<{ width?: string; $bgColor?: string }>`
   font-family: 'Pretendard', 'sans-serif';
   font-size: ${({ theme }) => theme.fontSize.body.md};
   font-weight: 700;
   cursor: pointer;
-  min-width: ${(props) => (props.width ? props.width : '18rem')};
+  min-width: ${props => (props.width ? props.width : '18rem')};
   padding: 0 4.8rem;
   height: 5.6rem;
   border-radius: 0.4rem;
@@ -79,12 +60,6 @@ const Button = styled.a<{ width?: string; bgColor?: string }>`
   align-items: center;
   border-radius: 10rem;
   background-color: ${({ theme }) => theme.color.point40};
-  /* border: 0.2rem solid ${(props) => props.theme.color.point}; */
-
-  /* background-color: ${(props) =>
-    props.bgColor
-      ? handleColorType(props.bgColor)
-      : props.theme.color.pointPink}; */
   color: ${({ theme }) => theme.color.point};
   transition: width 0.3s, background 0.3s, color 0.3s;
 
@@ -114,40 +89,64 @@ const ProfileImgContainer = styled.div`
 `;
 
 //COMPONENT title word
-const WordEffectGlow = styled.span<{ delay?: string }>`
-@keyframes anime_textup {
-  0% {
-    top: 0;
-    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
+const WordEffectGlow = styled.span<{ $delay?: string }>`
+  @keyframes anime_textup {
+    0% {
+      top: 0;
+      text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
+    }
+    20% {
+      /* top: -0.8rem; */
+      text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 2rem;
+    }
+    40% {
+      top: 0;
+      text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
+    }
+    60% {
+      top: 0;
+    }
+    80% {
+      top: 0;
+    }
+    100% {
+      top: 0;
+    }
   }
-  20% {
-    /* top: -0.8rem; */
-    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 2rem;
-  }
-  40% {
-    top: 0;
-    text-shadow: ${({ theme }) => theme.color.text} 0rem 0rem 0rem;
-  }
-  60% {
-    top: 0;
-  }
-  80% {
-    top: 0;
-  }
-  100% {
-    top: 0;
-  }
-}
-position: relative;
-animation: anime_textup 6s infinite;
-animation-delay: ${(props) => (props.delay ? props.delay : '0s')};
+  position: relative;
+  animation: anime_textup 6s infinite;
+  animation-delay: ${props => (props.$delay ? props.$delay : '0s')};
 `;
 
-export {
-  Container,
-  SectionCategoryTitle,
-  MaxWidthContainer,
-  Button,
-  ProfileImgContainer,
-  WordEffectGlow
-};
+// COMPONENT skeleton shimmer
+const Shimmer = (delay: string) => css`
+  @keyframes shimmer {
+    100% {
+      transform: translateX(70%);
+    }
+  }
+
+  & {
+    position: relative;
+    overflow: hidden;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    animation: shimmer ${delay} infinite;
+    content: '';
+  }
+`;
+
+export { Page, SectionCategoryTitle, MaxWidthContainer, Button, ProfileImgContainer, WordEffectGlow, Shimmer };
