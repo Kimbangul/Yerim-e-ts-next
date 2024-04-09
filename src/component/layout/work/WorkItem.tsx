@@ -1,23 +1,16 @@
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import WithPlaceHolder from '@/component/common/image/WithPlaceHolder';
 import { blurDataUrl } from '@/util/data';
-import { WorkType } from '@/util/type';
+import { WorkItemType } from '@/component/layout/work/type';
 import { Item } from '@/component/layout/work/WorkStyle';
-import { Button } from '@/styles/Common';
 import Tag from '@/component/common/tag/Tag';
 
-const WorkItem: React.FC<WorkType> = ({ thumb, title, category, tag, id }) => {
-  // const router = useRouter();
-  // // FUNCTION 링크 이동
-  // const onClickDetailViewBtn = (param: number) => {
-  //   router.push(`detail/${param}`);
-  //   return;
-  // };
-
+const WorkItem: React.FC<WorkItemType> = ({ thumb, title, category, tag, id, imgObj }) => {
   return (
     <Item.Container className="WorkListItem__container" href={`/work/${id}`}>
       <Item.Thumb>
-        <AutoHeightImageView src={thumb} alt={title} placeholder="blur" blurDataURL={blurDataUrl} />
+        {imgObj}
+        {/* <AutoHeightImageView src={thumb} alt={title} placeholder="blur" blurDataURL={blurDataUrl} /> */}
       </Item.Thumb>
       <Item.Desc.Container className="WorkListItem__desc-container">
         <Item.Desc.Info>
@@ -33,9 +26,9 @@ const WorkItem: React.FC<WorkType> = ({ thumb, title, category, tag, id }) => {
             })}
           </Item.Desc.TagList>
         </Item.Desc.Info>
-        <Item.Button.Container className="WorkListItem__button-container">
-          {/* <Button onClick={onClickDetailViewBtn.bind(this, props.id)}>상세보기</Button> */}
-        </Item.Button.Container>
+        {/* <Item.Button.Container className="WorkListItem__button-container"> */}
+        {/* <Button onClick={onClickDetailViewBtn.bind(this, props.id)}>상세보기</Button> */}
+        {/* </Item.Button.Container> */}
       </Item.Desc.Container>
     </Item.Container>
   );

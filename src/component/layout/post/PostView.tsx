@@ -3,7 +3,6 @@ import Post from '@/component/layout/post/PostStyle';
 import { PostViewPropType } from '@/component/layout/post/type';
 import PostItem from '@/component/layout/post/PostItem';
 import PostSkeleton from '@/component/layout/post/PostSkeleton';
-import Loading from '@/component/common/loading/LoadingView';
 
 const PostView: React.FC<PostViewPropType> = ({ list, isLoading }) => {
   return (
@@ -21,7 +20,7 @@ const PostView: React.FC<PostViewPropType> = ({ list, isLoading }) => {
           {isLoading &&
             Array(3)
               .fill('')
-              .map((el, idx) => <PostSkeleton id={idx} />)}
+              .map((el, idx) => <PostSkeleton id={idx} key={`skeleton__${idx}`} />)}
           {list &&
             list.map((el, idx) => {
               return <PostItem key={`post${idx}`} {...el} />;

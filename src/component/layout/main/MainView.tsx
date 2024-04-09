@@ -1,9 +1,7 @@
 'use client';
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
-import WithPlaceHolder from '@/component/common/image/WithPlaceHolder';
 import Main from '@/component/layout/main/MainStyle';
 import { SectionCategoryTitle } from '@/styles/Common';
-import { blurDataUrl } from '@/util/data';
 import MainVideo from '@/component/layout/main/MainVideo';
 import MainParticle from '@/component/layout/main/MainParticle';
 

@@ -1,9 +1,13 @@
 import { WorkType } from '@/util/type';
 
+export type WorkItemType = WorkType & {
+  imgObj: JSX.Element;
+};
+
 export interface WorkViewPropType {
-  work: WorkType[];
+  work: WorkItemType[];
   // isAbleLoad: boolean;
   // onClickLoadBtn: () => void;
 }
 
-export type GetListItemType = (page: number, list: WorkType[]) => WorkType[];
+export type GetListItemType = (page: number, allList: WorkType[], list: WorkType[]) => WorkType[];

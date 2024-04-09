@@ -4,27 +4,27 @@ import { Button, SectionCategoryTitle } from '@/styles/Common';
 import Work from '@/component/layout/work/WorkStyle';
 import WorkItem from '@/component/layout/work/WorkItem';
 import { WorkViewPropType } from '@/component/layout/work/type';
-import { workList } from '@/util/data';
 import { WorkType } from '@/util/type';
 import { GetListItemType } from '@/component/layout/work/type';
 
 // FUNCTION 리스트 가져오기
-const getListItem: GetListItemType = (lastPage: number, list: WorkType[]) => {
-  const newList = workList.slice(list.length, lastPage);
+const getListItem: GetListItemType = (lastPage: number, allList: WorkType[], list: WorkType[]) => {
+  const newList = allList.slice(list.length, lastPage);
+  console.log(newList);
   return [...list, ...newList];
 };
 
 const WorkView: React.FC<WorkViewPropType> = ({ work }) => {
   // PARAM state
   const [lastItem, setLastItem] = useState(6);
-  const [list, setList] = useState<WorkType[]>(getListItem(lastItem, []));
+  const [list, setList] = useState<WorkType[]>(getListItem(lastItem, work, []));
 
   // PARAM 불러온 페이지의 최대 갯수가 데이터의 총합보다 같거나 많은 경우, 더보기 버튼을 숨김
-  const isAbleLoad = useMemo(() => (lastItem >= workList.length ? false : true), [lastItem]);
+  const isAbleLoad = useMemo(() => (lastItem >= work.length ? false : true), [lastItem]);
 
   // FUNCTION lastItem이 바뀌면 리스트 가져오기 실행
   useEffect(() => {
-    setList(prev => getListItem(lastItem, prev));
+    setList(prev => getListItem(lastItem, work, prev));
   }, [lastItem]);
 
   // FUNCTION 더보기 버튼 클릭 시 실행
@@ -44,7 +44,7 @@ const WorkView: React.FC<WorkViewPropType> = ({ work }) => {
           </Work.Text.Title>
         </Work.Text.Container>
         <Work.Content.Container className="Work__Content">
-          {list.map((el, idx) => (
+          {work.map((el, idx) => (
             <WorkItem {...el} key={el.id} />
           ))}
         </Work.Content.Container>

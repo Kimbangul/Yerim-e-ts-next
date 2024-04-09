@@ -3,22 +3,14 @@ import { workList } from '@/util/data';
 import { WorkType } from '@/util/type';
 import { GetListItemType } from '@/component/layout/work/type';
 import getBase64 from '@/util/getBase64';
+import WithPlaceHolder from '@/component/common/image/WithPlaceHolder';
 
-const getList = async () => {
-  // const newList = await workList.map(async el => {
-  //   const size = await getBase64(el.thumb);
-  //   return { ...el, width: size.img.width, height: size.img.height };
-  // });
+const newList = workList.map(el => {
+  return { ...el, imgObj: <WithPlaceHolder src={el.thumb} alt={`${el.title} 이미지`} /> };
+});
 
-  return workList;
-
-  // console.log(newList);
-  // return newList;
-};
-
-const WorkContainer = async () => {
-  const list = await getList();
-  return <WorkView work={list} />;
+const WorkContainer = () => {
+  return <WorkView work={newList} />;
 };
 
 export default WorkContainer;

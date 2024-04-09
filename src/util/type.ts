@@ -11,8 +11,6 @@ export interface WorkType {
   duration: string;
   section: string;
   tool: string;
-  width?: string;
-  height?: string;
 }
 
 // PARAM designList type
