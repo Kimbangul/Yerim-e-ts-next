@@ -1,7 +1,7 @@
 import { MainVideo } from '@/component/layout/main/MainStyle';
 
 const MainVideoView: React.FC = () => {
-  const videoLink = `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/video/main_video.mp4`;
+  const videoLink = `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/video/main_video.webm`;
 
   return (
     <MainVideo.Container
@@ -14,7 +14,7 @@ const MainVideoView: React.FC = () => {
       muted={true}
       data-keepplaying
     >
-      <source src={videoLink} type="video/mp4" />
+      <source src={videoLink} type="video/webm" />
     </MainVideo.Container>
   );
 };

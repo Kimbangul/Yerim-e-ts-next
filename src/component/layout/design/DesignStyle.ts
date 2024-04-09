@@ -103,6 +103,7 @@ export const Item = {
     border-radius: 0.4rem;
     cursor: pointer;
     flex-basis: calc(20% - 3.2rem);
+    aspect-ratio: 1 / 1;
     .DesignListItem__title {
       opacity: 0; // TODO
     }
@@ -143,13 +144,15 @@ export const Item = {
     }
     position: relative;
     margin: 0 auto;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     border-radius: 0.8rem;
-    box-shadow: 0rem 0rem 24rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0rem 0rem 2.4rem rgba(0, 0, 0, 0.5);
+    background-color: ${props => props.theme.color.skeletonBg};
     animation: up-down-ani 1.7s ease-in-out 0s infinite alternate both;
 
     img {
-      border-radius: 0.8rem;
       transition: transform 0.3s, filter 0.3s;
       filter: saturate(0);
     }

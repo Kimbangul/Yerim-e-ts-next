@@ -2,9 +2,11 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+//  FUNCTION main hook
 const useIntersect = <T extends Element = Element>(
   onIntersect?: onIntersectType,
-  option?: IntersectionObserverInit
+  option?: IntersectionObserverInit,
+  once = false
 ): [React.RefObject<T>, boolean] => {
   const target = useRef<T>(null);
   const [isView, setIsView] = useState(false);
@@ -26,9 +28,11 @@ const useIntersect = <T extends Element = Element>(
   useEffect(() => {
     let observer: IntersectionObserver;
     if (target.current) {
-      observer = new IntersectionObserver(checkIntersect, {
-        ...option,
-      });
+      if (once) observer = new IntersectionObserver(onIntersectOnce<T>(checkIntersect, once, target), { ...option });
+      else
+        observer = new IntersectionObserver(checkIntersect, {
+          ...option,
+        });
       observer.observe(target.current);
     }
     return () => observer && observer.disconnect();
@@ -37,6 +41,21 @@ const useIntersect = <T extends Element = Element>(
   return [target, isView];
 };
 
+const onIntersectOnce = <T extends Element = Element>(
+  callback: IntersectionObserverCallback,
+  triggerOnce: boolean,
+  target: React.RefObject<T>
+) => {
+  return (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+    callback(entries, observer);
+
+    if (target.current && triggerOnce && !!entries?.some(entry => entry.isIntersecting)) {
+      observer.unobserve(target.current);
+    }
+  };
+};
+
+// PARAM type
 export type useIntersectType<T> = (
   onIntersect?: onIntersectType,
   option?: IntersectionObserverInit

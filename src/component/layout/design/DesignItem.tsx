@@ -26,7 +26,13 @@ const DesignItem: React.FC<DesignItemPropType> = ({ idx, title, link, detail, th
       <Item.Container $duration={idx}>
         <Item.Link href="#" onMouseEnter={onMouseEnter} onMouseOut={onMouseOut} onClick={onClickItem(link, detail)}>
           <Item.Hover className="DesignListItem__title">{title}</Item.Hover>
-          <AutoHeightImageView alt={title} src={thumb} placeholder="blur" blurDataURL={blurDataUrl} />
+          <AutoHeightImageView
+            alt={title}
+            src={thumb}
+            placeholder="blur"
+            blurDataURL={blurDataUrl}
+            sizes="(max-width: 480px) 50vw, (max-width: 1024px) 33vw, (max-width: 1200px) 25vw, (min-width: 1201px) 240px"
+          />
         </Item.Link>
       </Item.Container>
     </>
