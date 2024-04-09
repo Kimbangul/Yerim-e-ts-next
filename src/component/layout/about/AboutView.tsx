@@ -10,7 +10,7 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
       <About.Container className="About__container">
         <ProfileImgContainer className="About__profile-img">
           <AutoHeightImageView
-            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/about/profile.jpg`}
+            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/about/profile.webp`}
             alt="profile image"
             placeholder="blur"
           />

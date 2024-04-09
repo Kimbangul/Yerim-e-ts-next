@@ -9,7 +9,6 @@ import { GetListItemType } from '@/component/layout/work/type';
 // FUNCTION 리스트 가져오기
 const getListItem: GetListItemType = (lastPage, allList, list) => {
   const newList = allList.slice(list.length, lastPage);
-  console.log(newList);
   return [...list, ...newList];
 };
 

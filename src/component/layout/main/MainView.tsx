@@ -8,33 +8,7 @@ import MainParticle from '@/component/layout/main/MainParticle';
 // import Main from '@/component/layout/main/MainStyle.module.scss';
 
 const MainView = ({ imgObj }: { imgObj: { [key: string]: JSX.Element } }) => {
-  // const MainView = () => {
   return (
-    // <section className={`${Main.page} section`}>
-    //   <div className={Main.container}>
-    //     <div className={Main.text_container}>
-    //       <h2 className={Main.text_title}>
-    //         {'YERIM.e'.split('').map((el, idx) => (
-    //           <span className={Main.text_word} key={el + idx} data-delay={`${0.1 * idx}s`}>
-    //             {el}
-    //           </span>
-    //         ))}
-    //       </h2>
-    //       <p className={Main.text_desc}>Web Developer Portfolio</p>
-    //     </div>
-    //   </div>
-
-    //   <div className={`${Main.image_container} img-container`}>
-    //     <div className={Main.image_inner}>
-    //       <AutoHeightImageView
-    //         src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/main/moon.png`}
-    //         alt="main image"
-    //         placeholder="blur"
-    //         blurDataURL={blurDataUrl}
-    //       />
-    //     </div>
-    //   </div>
-    // </section>
     <Main.Page className="section">
       {/* TODO */}
       <MainVideo />

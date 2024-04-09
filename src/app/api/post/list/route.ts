@@ -3,7 +3,7 @@ import getHtml from '@/app/api/post/list/getHtml';
 
 export async function POST(req: Request, res: Response) {
   const param = await req.json();
-  console.log(param.name, param.limit);
+  // console.log(param.name, param.limit);
   const html = await getHtml(param.name, param.limit);
 
   console.log(html);
