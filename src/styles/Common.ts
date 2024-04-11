@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 // COMPONENT fullpage Page
-const Page = styled.section`
+export const Page = styled.section`
   width: 100%;
   min-height: 100vh;
   padding: 8rem 0;
@@ -13,7 +13,7 @@ const Page = styled.section`
   transition: padding 0.3s;
 `;
 
-const MaxWidthContainer = styled.div`
+export const MaxWidthContainer = styled.div`
   width: ${({ theme }) => theme.maxWidth};
   margin: 0 auto;
   transition: padding 0.3s;
@@ -36,7 +36,7 @@ const MaxWidthContainer = styled.div`
 `;
 
 // COMPONENT section title - sound only
-const SectionCategoryTitle = styled.h2`
+export const SectionCategoryTitle = styled.h2`
   visibility: hidden;
   width: 0;
   height: 0;
@@ -46,7 +46,7 @@ const SectionCategoryTitle = styled.h2`
 `;
 
 // COMPONENT button
-const Button = styled.a<{ width?: string; $bgColor?: string }>`
+export const Button = styled.a<{ width?: string; $bgColor?: string }>`
   font-family: 'Pretendard', 'sans-serif';
   font-size: ${({ theme }) => theme.fontSize.body.md};
   font-weight: 700;
@@ -75,7 +75,7 @@ const Button = styled.a<{ width?: string; $bgColor?: string }>`
 `;
 
 // COMPONENT profile image container
-const ProfileImgContainer = styled.div`
+export const ProfileImgContainer = styled.div`
   width: 34rem;
   position: relative;
   overflow: hidden;
@@ -89,7 +89,7 @@ const ProfileImgContainer = styled.div`
 `;
 
 //COMPONENT title word
-const WordEffectGlow = styled.span<{ $delay?: string }>`
+export const WordEffectGlow = styled.span<{ $delay?: string }>`
   @keyframes anime_textup {
     0% {
       top: 0;
@@ -118,8 +118,38 @@ const WordEffectGlow = styled.span<{ $delay?: string }>`
   animation-delay: ${props => (props.$delay ? props.$delay : '0s')};
 `;
 
+export const SectionTitleAni = ($wordLength: number, $duration?: string) => {
+  const animateTiming = 100 / $wordLength;
+  return css`
+    @keyframes titleWordAni-${$wordLength} {
+      0% {
+        top: 0;
+      }
+      ${animateTiming + '%'} {
+        top: -0.4rem;
+      }
+      ${2 * animateTiming + '%'} {
+        top: 0;
+      }
+      100% {
+        top: 0;
+      }
+    }
+    position: relative;
+    animation: titleWordAni-${$wordLength} ${$duration ? $duration : `${0.3 * $wordLength}s`} infinite;
+    ${Array($wordLength)
+      .fill('')
+      .map(
+        (_, index) => `&:nth-of-type(${index + 1}){
+      animation-delay: ${0.3 * index}s;
+    }`
+      )
+      .join('')}
+  `;
+};
+
 // COMPONENT skeleton shimmer
-const Shimmer = (delay: string) => css`
+export const Shimmer = (delay: string) => css`
   @keyframes shimmer {
     100% {
       transform: translateX(70%);
@@ -148,5 +178,3 @@ const Shimmer = (delay: string) => css`
     content: '';
   }
 `;
-
-export { Page, SectionCategoryTitle, MaxWidthContainer, Button, ProfileImgContainer, WordEffectGlow, Shimmer };

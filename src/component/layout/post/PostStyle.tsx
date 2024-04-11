@@ -1,5 +1,5 @@
 import Tag from '@/component/common/tag/Tag';
-import { MaxWidthContainer, Page, Shimmer } from '@/styles/Common';
+import { MaxWidthContainer, Page, Shimmer, SectionTitleAni } from '@/styles/Common';
 import styled from 'styled-components';
 
 const Post = {
@@ -44,35 +44,7 @@ const Post = {
     }
   `,
   Word: styled.span`
-    @keyframes titleWordAni {
-      0% {
-        top: 0;
-      }
-      20% {
-        top: -0.4rem;
-      }
-      40% {
-        top: 0;
-      }
-      60% {
-        top: 0;
-      }
-      80% {
-        top: 0;
-      }
-      100% {
-        top: 0;
-      }
-    }
-    position: relative;
-    animation: titleWordAni 1.8s infinite;
-    ${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-      .map(
-        (_, index) => `&:nth-of-type(${index}){
-      animation-delay: calc(0.3s * ${index});
-    }`
-      )
-      .join('')}
+    ${SectionTitleAni(13)}
   `,
   List: styled.ul`
     margin-top: 4.8rem;

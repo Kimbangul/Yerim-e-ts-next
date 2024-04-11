@@ -7,4 +7,5 @@ export { default as Contact } from '@/component/layout/contact/ContactContainer'
 export { default as Post } from '@/component/layout/post/PostContainer';
 export { default as Design } from '@/component/layout/design/DesignContainer';
 export { default as Work } from '@/component/layout/work/WorkContainer';
+export { default as Custom404 } from '@/component/layout/404/404View';
 export { default as Modal } from '@/component/common/modal/ModalContainer';
