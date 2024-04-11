@@ -1,4 +1,4 @@
-import { MaxWidthContainer, Page } from '@/styles/Common';
+import { MaxWidthContainer, Page, SectionTitleAni } from '@/styles/Common';
 import styled from 'styled-components';
 
 export const Custom404 = {
@@ -25,6 +25,9 @@ export const Custom404 = {
     }
     @media (${props => props.theme.windowSize['mb-s']}) {
       font-size: ${({ theme }) => theme.fontSize.head.lg};
+    }
+    span {
+      ${SectionTitleAni(4)}
     }
   `,
   Sub: styled.p`
