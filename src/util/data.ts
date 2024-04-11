@@ -136,10 +136,10 @@ const workList: WorkType[] = [
     category: '포트폴리오 사이트',
     link: 'https://yerim-e.com/',
     tag: ['디자인 100%', '구현 100%', '반응형', 'Next.js', 'Styled-Component'],
-    desc: '감각적이고 모던한 느낌을 전달하기 위해 전반적으로 흑백의 컬러를 차용하며, 메인은 우주 컨셉으로 디자인하였습니다. TypeScript와 Styled-Component를 사용하였으며 CSS transition 및 animation 효과를 활용하여 감각적으로 모션을 부여하고자 하였습니다.',
+    desc: '감각적이고 모던한 느낌을 전달하기 위해 전반적으로 흑백의 컬러를 차용하며, 메인은 우주 컨셉으로 디자인하였습니다. TypeScript와 Styled-Component를 사용하였으며 CSS transition 및 animation 효과를 활용하여 감각적으로 모션을 부여하고자 하였습니다.\n\n2024년 4월에 Next.js 14버전으로 리뉴얼을 진행하였으며, 프로젝트 경량화, 이미지 최적화, lazy load 구현 등 최적화 작업을 진행했습니다.',
     duration: '2022.10 ~ 2022.10',
     section: '사이트 전반 디자인 및 구현',
-    tool: 'Figma, Next.js, SCSS, TypeScript, Node.js, Git',
+    tool: 'Figma, Next.js, Styled-component, TypeScript, Node.js, Git',
   },
   {
     id: 16,

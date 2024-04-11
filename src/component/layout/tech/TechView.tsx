@@ -12,9 +12,10 @@ const TechView: React.FC<TechViewPropType> = ({ list }) => {
       <Tech.Container className="Tech__container">
         <Tech.Img.Container className="Tech__img-container">
           <AutoHeightImageView
-            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/tech/tech_design.jpg`}
+            src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/tech/tech_design.webp`}
             alt=""
             placeholder="blur"
+            sizes="(max-width: 1200px) 85vw, (min-width: 1201px) 1200px"
           />
         </Tech.Img.Container>
         <Tech.Text.Container className="Tech__text-container">

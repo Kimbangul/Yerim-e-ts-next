@@ -11,6 +11,7 @@ const MainContainer = async () => {
         src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/main/moon.webp`}
         alt="main image"
         sizes="(max-width: 480px) 90vw, (max-width: 768px) 700px, (min-width: 769px) 1000px"
+        loading="eager"
       />
     ),
   };

@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { MaxWidthContainer } from '@/styles/Common';
-import { makeSoundOnly } from '@/styles/util';
 
 const Header = {
   Title: styled.h1`
@@ -123,7 +122,12 @@ const Header = {
       }
     `,
     SoundOnly: styled.span`
-      ${makeSoundOnly()}
+      visibility: hidden;
+      font-size: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+      pointer-events: none;
     `,
   },
   Mb: {

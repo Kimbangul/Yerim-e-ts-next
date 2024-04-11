@@ -15,7 +15,7 @@ export const Tech = {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/tech/tech_design.jpg);
+        background-image: url(${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/tech/tech_design.webp);
         background-repeat: no-repeat;
         filter: contrast(0.5) grayscale(1) brightness(0.55);
         background-position: center top;
