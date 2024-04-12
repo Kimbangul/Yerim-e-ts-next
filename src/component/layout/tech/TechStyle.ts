@@ -129,7 +129,7 @@ export const TechList = {
     }
   `,
   Item: styled.li`
-    font-size: ${({ theme }) => theme.fontSize.body.md};
+    font-size: ${({ theme }) => theme.fontSize.body.rg};
     line-height: 2;
     font-weight: 400;
     color: ${({ theme }) => theme.color.text_4};
@@ -146,9 +146,9 @@ export const TechList = {
       margin-bottom: 0;
     }
     /* FUNCTION mb */
-    @media (${props => props.theme.windowSize['mb-m']}) {
-      font-size: ${({ theme }) => theme.fontSize.body.rg};
-    }
+    /* @media (${props => props.theme.windowSize['mb-m']}) {
+      font-size: ${({ theme }) => theme.fontSize.body.sm};
+    } */
     &:first-child {
       margin-top: 0;
     }
