@@ -8,8 +8,8 @@ export default function Home() {
     <About key="about" />,
     <Tech key="tech" />,
     <Work key="work" />,
-    <Design key="design" />,
     <Post key="post" />,
+    <Design key="design" />,
     <Contact key="contact" />,
   ];
   return (

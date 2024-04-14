@@ -36,13 +36,7 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
             <About.Text.Desc.Point className="About__desc--point">flexible</About.Text.Desc.Point>한 사람이 되겠습니다.
           </About.Text.Desc.Text>
           <About.Button.Container className="About__button-wrap">
-            <About.Button.Button
-              className="About__button"
-              $bgColor="secondaryBlue"
-              href={link}
-              target="_blank"
-              // onClick={onClickLinkBtn.bind(this, link.resume, '_blank')}
-            >
+            <About.Button.Button className="About__button" $bgColor="secondaryBlue" href={link} target="_blank">
               이력 & 경력 보기
             </About.Button.Button>
           </About.Button.Container>
