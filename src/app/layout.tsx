@@ -5,7 +5,7 @@ import { Header, Footer } from '@/component/layout/index';
 import StylesProvider from '@/styles/provider/StyleProvider';
 import ReactClientProvider from '@/query/clientQueryProvider/ClientQueryProvider';
 import ModalContextProvider from '@/component/common/modal/ModalProvider';
-import AnalyticsProvider from '@/component/analytic/AnalyticProvider';
+import Cursor from '@/component/cursor/Cursor';
 
 export default function RootLayout({
   children,
@@ -19,6 +19,7 @@ export default function RootLayout({
           <ModalContextProvider>
             {/* <AnalyticsProvider /> */}
             <body>
+              <Cursor />
               <Header />
               {children}
               <Footer />
