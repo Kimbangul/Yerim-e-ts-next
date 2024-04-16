@@ -5,6 +5,7 @@ import { Header, Footer } from '@/component/layout/index';
 import StylesProvider from '@/styles/provider/StyleProvider';
 import ReactClientProvider from '@/query/clientQueryProvider/ClientQueryProvider';
 import ModalContextProvider from '@/component/common/modal/ModalProvider';
+import AnalyticsProvider from '@/component/analytic/AnalyticProvider';
 
 export default function RootLayout({
   children,
@@ -16,6 +17,7 @@ export default function RootLayout({
       <StylesProvider>
         <ReactClientProvider>
           <ModalContextProvider>
+            {/* <AnalyticsProvider /> */}
             <body>
               <Header />
               {children}
@@ -30,8 +32,8 @@ export default function RootLayout({
 
 export const metadata: Metadata = {
   title: 'YERIM.e',
-  description: '프론트엔드 개발자, 웹 퍼블리셔, 웹 개발자, UI 개발자 박예림 포트폴리오입니다.',
-  keywords: ['프론트엔드 개발자, 프론트엔드 포트폴리오, 웹 퍼블리셔 포트폴리오, UI 개발자, 웹 퍼블리셔'],
+  description: '프론트엔드 개발자, 웹 퍼블리셔, 웹 개발자, UX/UI 개발자 박예림 포트폴리오입니다.',
+  keywords: ['프론트엔드 개발자, 프론트엔드 포트폴리오, 웹 퍼블리셔 포트폴리오, UX 엔지니어, UI 개발자, 웹 퍼블리셔'],
   icons: {
     icon: {
       url: '/favicon.png',
