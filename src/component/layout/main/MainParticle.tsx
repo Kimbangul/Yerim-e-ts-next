@@ -20,13 +20,14 @@ const particleOption: ISourceOptions = {
     detectsOn: 'canvas',
     events: {
       onHover: {
-        enable: true,
-        mode: 'repulse',
-        parallax: { enable: true, force: 50, smooth: 30 },
+        enable: false,
+        mode: 'grab',
+        parallax: { enable: true, force: 150, smooth: 30 },
+        // attract: { distance: 200, duration: 0.4, factor: 5 }
       },
       onClick: {
         enable: true,
-        mode: 'push',
+        mode: 'emitter',
       },
       resize: { enable: true },
     },
@@ -38,7 +39,7 @@ const particleOption: ISourceOptions = {
         size: 2,
         speed: 3,
       },
-      grab: { distance: 200, line_linked: { opacity: 0.8 } },
+      grab: { distance: 800, line_linked: { opacity: 0.8 } },
       push: { particles_nb: 4 },
       remove: { particles_nb: 2 },
       repulse: { distance: 30, duration: 0.4 },
@@ -64,7 +65,7 @@ const particleOption: ISourceOptions = {
       straight: false,
       outModes: 'out',
       attract: {
-        enable: false,
+        enable: true,
         rotate: {
           x: 600,
           y: 1200,
@@ -84,7 +85,7 @@ const particleOption: ISourceOptions = {
       type: 'circle',
     },
     size: {
-      value: { min: 1, max: 1.6 },
+      value: { min: 1.2, max: 1.8 },
       animation: {
         enable: true,
         speed: 1,
