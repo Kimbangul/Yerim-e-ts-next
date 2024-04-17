@@ -31,7 +31,7 @@ const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
             <br /> <br />
             오늘보다 내일 더 멋진 사람이 되도록 노력하는,
             <br />
-            프론트엔드 개발자 <Contact.Text.Point>박예림</Contact.Text.Point>
+            UI 개발자 <Contact.Text.Point>박예림</Contact.Text.Point>
             입니다.
             <br />
             포트폴리오를 봐주셔서 감사합니다 :&#41;

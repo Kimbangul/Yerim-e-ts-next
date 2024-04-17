@@ -20,7 +20,7 @@ const MainView = ({ imgObj }: { imgObj: { [key: string]: JSX.Element } }) => {
               </Main.Text.Word>
             ))}
           </Main.Text.Title>
-          <Main.Text.Desc className="Main__desc">Web Developer Portfolio</Main.Text.Desc>
+          <Main.Text.Desc className="Main__desc">UI Developer Portfolio</Main.Text.Desc>
         </Main.Text.Container>
       </Main.Container>
       <Main.Image.Container className="Main__img">

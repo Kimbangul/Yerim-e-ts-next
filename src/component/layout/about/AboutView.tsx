@@ -21,7 +21,7 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
             <About.Text.Title.Light className="About__title--light">be</About.Text.Title.Light> flexible.
           </About.Text.Title.Text>
           <About.Text.Desc.Text className="About__desc">
-            안녕하세요, 프론트엔드 개발자 박예림입니다.
+            안녕하세요, 프론트엔드 및 UI 개발자 박예림입니다.
             <br />
             저는 멋진 디자인과 상호작용을 웹과 모바일 등의 플랫폼에 구현하고 <About.LineBreak.Pc />
             문제를 해결하여 사용자의 니즈를 충족시키는 것에서 보람을 느낍니다.
