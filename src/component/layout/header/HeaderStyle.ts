@@ -18,7 +18,7 @@ const Header = {
     left: 0;
     color: #fff;
     background: transparent;
-    z-index: 99999;
+    z-index: 999;
     transition: background-color 0.3s, height 0.3s;
     &:hover {
       background: ${({ theme }) => theme.color.header};

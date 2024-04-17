@@ -1,6 +1,5 @@
 import { Main, About, Tech, Contact, Post, Design, Work, Modal } from '@/component/layout/index';
 import ObserverProvider from '@/component//observer/ObserverProvider';
-// import FullPageProvider from '@/component/fullpage/FullPageProvider';
 
 export default function Home() {
   const page = [
