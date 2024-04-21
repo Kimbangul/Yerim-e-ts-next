@@ -18,17 +18,7 @@ const particleOption: ISourceOptions = {
   interactivity: {
     detectsOn: 'window',
     events: {
-      // onHover: {
-      //   enable: true,
-      //   mode: 'grab',
-      //   parallax: { enable: true, force: 150, smooth: 30 },
-      //   // attract: { distance: 200, duration: 0.4, factor: 5 }
-      // },
       onHover: { enable: true, mode: 'trail', parallax: { enable: true, force: 70, smooth: 10 } },
-      onClick: {
-        enable: true,
-        mode: 'push',
-      },
       resize: { enable: true },
     },
     modes: {
