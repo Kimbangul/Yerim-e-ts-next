@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { Button, MaxWidthContainer, Page, SectionTitleAni } from '@/styles/Common';
 import styled from 'styled-components';
 
@@ -34,7 +35,7 @@ const Work = {
     `,
   },
   Content: {
-    Container: styled.div`
+    Container: styled(motion.ul)`
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 3.2rem;
@@ -63,8 +64,12 @@ const Work = {
 };
 
 export const Item = {
-  Container: styled.a`
+  Container: styled(motion.li)`
     overflow: hidden;
+    a {
+      width: 100%;
+      height: 100%;
+    }
     span {
       border-radius: 0.8rem;
       overflow: hidden;

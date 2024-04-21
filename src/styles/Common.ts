@@ -79,8 +79,11 @@ export const ProfileImgContainer = styled.div`
   width: 34rem;
   position: relative;
   overflow: hidden;
-  border-radius: 0.4rem;
   flex-shrink: 0;
+
+  img {
+    border-radius: 0.8rem;
+  }
 
   @media (max-width: 460px) {
     width: 100%;
