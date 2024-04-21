@@ -129,7 +129,7 @@ export const TechList = {
     }
   `,
   Item: styled.li`
-    font-size: ${({ theme }) => theme.fontSize.body.rg};
+    font-size: ${({ theme }) => theme.fontSize.body.md};
     line-height: 2;
     font-weight: 400;
     color: ${({ theme }) => theme.color.text_4};
