@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Particles, initParticlesEngine } from '@tsparticles/react';
-import { loadFull } from 'tsparticles';
-import { Engine, IOptions, ISourceOptions, RecursivePartial } from '@tsparticles/engine';
+import { ISourceOptions } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim';
 
 const particleOption: ISourceOptions = {
@@ -17,30 +16,38 @@ const particleOption: ISourceOptions = {
   },
   fpsLimit: 60,
   interactivity: {
-    detectsOn: 'canvas',
+    detectsOn: 'window',
     events: {
-      onHover: {
-        enable: false,
-        mode: 'grab',
-        parallax: { enable: true, force: 150, smooth: 30 },
-        // attract: { distance: 200, duration: 0.4, factor: 5 }
-      },
+      // onHover: {
+      //   enable: true,
+      //   mode: 'grab',
+      //   parallax: { enable: true, force: 150, smooth: 30 },
+      //   // attract: { distance: 200, duration: 0.4, factor: 5 }
+      // },
+      onHover: { enable: true, mode: 'trail', parallax: { enable: true, force: 70, smooth: 10 } },
       onClick: {
         enable: true,
-        mode: 'emitter',
+        mode: 'push',
       },
       resize: { enable: true },
     },
     modes: {
+      connect: {
+        enable: false,
+      },
       bubble: {
-        distance: 500,
+        distance: 800,
         duration: 0.3,
         opacity: 1,
         size: 2,
         speed: 3,
       },
-      grab: { distance: 800, line_linked: { opacity: 0.8 } },
-      push: { particles_nb: 4 },
+      trail: {
+        delay: 1,
+        pauseOnStop: false,
+        quantity: 1,
+      },
+      push: { default: true, quantity: 10 },
       remove: { particles_nb: 2 },
       repulse: { distance: 30, duration: 0.4 },
     },
@@ -50,31 +57,21 @@ const particleOption: ISourceOptions = {
       value: ['#ffffff20', '#0ACDCE80', '#0ACDCE40'],
     },
     links: {
-      color: '#ffffff',
-      distance: 60,
-      enable: true,
-      opacity: 0.04,
-      width: 1,
+      enable: false,
     },
     move: {
       enable: true,
+      angle: { offset: 0, value: 90 },
       speed: 0.7,
       direction: 'none',
       random: true,
       size: true,
       straight: false,
       outModes: 'out',
-      attract: {
-        enable: true,
-        rotate: {
-          x: 600,
-          y: 1200,
-        },
-      },
     },
     number: { density: { enable: true }, value: 80 },
     opacity: {
-      value: { min: 0.2, max: 0.64 },
+      value: { min: 0, max: 0.64 },
       animation: {
         enable: true,
         speed: 1,
@@ -84,8 +81,9 @@ const particleOption: ISourceOptions = {
     shape: {
       type: 'circle',
     },
+    remove: { quantity: 2 },
     size: {
-      value: { min: 1.2, max: 1.8 },
+      value: { min: 0.8, max: 1.8 },
       animation: {
         enable: true,
         speed: 1,
@@ -96,6 +94,7 @@ const particleOption: ISourceOptions = {
     },
   },
   detectRetina: true,
+  zLayers: 100,
 };
 
 const MainParticle: React.FC = () => {
