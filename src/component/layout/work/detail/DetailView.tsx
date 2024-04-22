@@ -3,7 +3,25 @@ import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import Tag from '@/component/common/tag/Tag';
 import Detail from '@/component/layout/work/detail/DetailStyle';
 import { DetailViewPropType } from '@/component/layout/work/detail/type';
+import { animateSpringButton } from '@/styles/motion';
 import { setPageToBack } from '@/util/location';
+
+const animateImg = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+    y: -40,
+    borderRadius: '2.4rem',
+  },
+  visible: {
+    opacity: 1,
+    borderRadius: '1.6rem',
+    y: 0,
+    transition: { type: 'spring', stiffness: 250, damping: 20, duration: 0.35 },
+    scale: 1,
+    // transition: { duration: 0.7 },
+  },
+};
 
 const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
   if (data === null) return;
@@ -26,18 +44,33 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
             </Detail.Tag.List>
             <Detail.Button.Container className="Detail__button-container">
               {data?.link ? (
-                <Detail.Button.Button target="_blank" href={data.link}>
+                <Detail.Button.Button
+                  target="_blank"
+                  href={data.link}
+                  initial={animateSpringButton.initial}
+                  whileHover={animateSpringButton.hover}
+                >
                   사이트 바로가기
                 </Detail.Button.Button>
               ) : null}
               {data?.github ? (
-                <Detail.Button.Button target="_blank" href={data.github}>
+                <Detail.Button.Button
+                  target="_blank"
+                  href={data.github}
+                  initial={animateSpringButton.initial}
+                  whileHover={animateSpringButton.hover}
+                >
                   Github 바로가기
                 </Detail.Button.Button>
               ) : null}
             </Detail.Button.Container>
           </Detail.Title.TextContainer>
-          <Detail.Image.Container className="Detail__image-container">
+          <Detail.Image.Container
+            className="Detail__image-container"
+            variants={animateImg}
+            whileInView="visible"
+            initial="hidden"
+          >
             {imgObj.thumb}
             {/* <AutoHeightImageView src={data?.thumb} alt={data?.title} priority loading="eager" /> */}
           </Detail.Image.Container>
@@ -64,7 +97,11 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
           </Detail.Desc.InfoList>
         </Detail.Desc.Container>
         <Detail.Button.Container className="Detail__button-container">
-          <Detail.Button.Button as="button" onClick={setPageToBack}>
+          <Detail.Button.Button
+            onClick={setPageToBack}
+            initial={animateSpringButton.initial}
+            whileHover={animateSpringButton.hover}
+          >
             목록으로
           </Detail.Button.Button>
         </Detail.Button.Container>
