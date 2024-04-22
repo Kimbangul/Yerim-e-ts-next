@@ -5,6 +5,7 @@ import Work from '@/component/layout/work/WorkStyle';
 import WorkItem from '@/component/layout/work/WorkItem';
 import { WorkViewPropType, WorkItemType } from '@/component/layout/work/type';
 import { GetListItemType } from '@/component/layout/work/type';
+import { useAnimationControls } from 'framer-motion';
 
 // FUNCTION 리스트 가져오기
 const getListItem: GetListItemType = (lastPage, allList, list) => {
@@ -32,36 +33,25 @@ const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
   };
 
   // PARAM framer
+  const controls = useAnimationControls();
+
   const animateList = {
-    initial: {},
-    whileInView: {
+    hidden: {
+      opacity: 1,
+    },
+    visible: {
+      opacity: 1,
       transition: {
         when: 'beforeChildren',
+        delayChildren: 0,
         staggerChildren: 0.2,
       },
     },
   };
 
-  const animateItem = {
-    hidden: { opacity: 0, y: 100, rotateY: 300 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      rotateY: 0,
-      transition: {
-        rotateY: {
-          duration: 0.3,
-        },
-        y: {
-          type: 'spring',
-          damping: 3,
-          stiffness: 50,
-          restDelta: 0.01,
-          duration: 0.3,
-        },
-      },
-    },
-  };
+  useEffect(() => {
+    controls.start('visible');
+  }, [pageList]);
 
   return (
     <Work.Page className="section" id="work_page">
@@ -74,9 +64,16 @@ const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
             ))}
           </Work.Text.Title>
         </Work.Text.Container>
-        <Work.Content.Container className="Work__Content" variants={animateList} ref={viewRef}>
+        <Work.Content.Container
+          className="Work__Content"
+          variants={animateList}
+          ref={viewRef}
+          initial="hidden"
+          whileInView="visible"
+          animate={controls}
+        >
           {pageList.map((el, idx) => (
-            <WorkItem {...el} key={el.id} delay={idx} variants={animateItem} viewRef={viewRef} />
+            <WorkItem {...el} key={el.id} />
           ))}
         </Work.Content.Container>
         <Work.Button.Container>
