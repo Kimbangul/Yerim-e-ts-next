@@ -1,15 +1,16 @@
+import { motion } from 'framer-motion';
 import { styled } from 'styled-components';
 
 const Modal = {
-  Page: styled.div`
-    @keyframes modalAni {
+  Page: styled(motion.div)`
+    /* @keyframes modalAni {
       from {
         opacity: 0;
       }
       to {
         opacity: 1;
       }
-    }
+    } */
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -20,8 +21,8 @@ const Modal = {
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.6);
-    transition: padding 0.3s;
-    animation: modalAni 0.3s ease-in-out;
+    /* transition: padding 0.3s; */
+    /* animation: modalAni 0.3s ease-in-out; */
 
     /* FUNCTION pc */
     @media (${props => props.theme.windowSize['lt-s']}) {
@@ -37,12 +38,12 @@ const Modal = {
       padding: 0 2rem;
     }
   `,
-  Container: styled.div`
+  Container: styled(motion.div)`
     width: 100rem;
     height: 70vh;
     position: relative;
   `,
-  Inner: styled.div`
+  Inner: styled(motion.div)`
     width: 100%;
     height: 100%;
     border-radius: 1.6rem;

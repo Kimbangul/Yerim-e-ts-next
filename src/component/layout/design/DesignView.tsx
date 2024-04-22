@@ -3,6 +3,7 @@ import { SectionCategoryTitle } from '@/styles/Common';
 import Design from '@/component/layout/design/DesignStyle';
 import DesignItem from '@/component/layout/design/DesignItem';
 import { DesignViewPropType } from '@/component/layout/design/type';
+import { animateSpringList } from '@/styles/motion';
 
 const DesignView: React.FC<DesignViewPropType> = ({
   focusItem,
@@ -14,7 +15,7 @@ const DesignView: React.FC<DesignViewPropType> = ({
     <Design.Page className="section">
       <SectionCategoryTitle>Design</SectionCategoryTitle>
       <Design.Container className="Design__container">
-        <Design.List className="Design__list">
+        <Design.List className="Design__list" variants={animateSpringList} initial="hidden" whileInView="visible">
           {list.map((el, idx) => {
             return (
               <DesignItem

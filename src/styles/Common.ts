@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 
 // COMPONENT fullpage Page
@@ -46,7 +47,7 @@ export const SectionCategoryTitle = styled.h2`
 `;
 
 // COMPONENT button
-export const Button = styled.a<{ width?: string; $bgColor?: string }>`
+export const Button = styled(motion.a)<{ width?: string; $bgColor?: string }>`
   font-family: 'Pretendard', 'sans-serif';
   font-size: ${({ theme }) => theme.fontSize.body.md};
   font-weight: 700;
@@ -75,12 +76,15 @@ export const Button = styled.a<{ width?: string; $bgColor?: string }>`
 `;
 
 // COMPONENT profile image container
-export const ProfileImgContainer = styled.div`
+export const ProfileImgContainer = styled(motion.div)`
   width: 34rem;
   position: relative;
   overflow: hidden;
-  border-radius: 0.4rem;
   flex-shrink: 0;
+
+  img {
+    border-radius: 0.8rem;
+  }
 
   @media (max-width: 460px) {
     width: 100%;

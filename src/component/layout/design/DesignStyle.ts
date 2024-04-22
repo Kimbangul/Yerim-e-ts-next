@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Page, MaxWidthContainer } from '@/styles/Common';
+import { motion } from 'framer-motion';
 
 const Design = {
   Page: styled(Page)`
@@ -31,7 +32,7 @@ const Design = {
       opacity: 1;
     } */
   `,
-  List: styled.ul`
+  List: styled(motion.ul)`
     width: 100%;
     display: flex;
 
@@ -98,7 +99,7 @@ const Design = {
 };
 
 export const Item = {
-  Container: styled.li<{ $duration: number }>`
+  Container: styled(motion.li)<{ $duration: number }>`
     width: 100%;
     border-radius: 0.4rem;
     cursor: pointer;

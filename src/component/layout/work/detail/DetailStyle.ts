@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Page, Button } from '@/styles/Common';
+import { motion } from 'framer-motion';
 
 const Detail = {
   Container: styled(Page)`
@@ -125,7 +126,7 @@ const Detail = {
     `,
   },
   Image: {
-    Container: styled.div`
+    Container: styled(motion.div)`
       position: relative;
       width: 100%;
       border-radius: 0.8rem;
@@ -144,7 +145,7 @@ const Detail = {
       align-items: self-end;
     `,
     Button: styled(Button)`
-      transition: all 0.3s, width 0.3s;
+      //  transition: all 0.3s, width 0.3s;
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         width: auto;
       }

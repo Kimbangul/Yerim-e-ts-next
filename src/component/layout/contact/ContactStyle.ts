@@ -39,13 +39,13 @@ const Contact = {
       .Contact__button {
         opacity: 1;
         &:nth-child(1) {
-          transition: all 0.3s, opacity 0.3s 2s;
+          transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 2s;
         }
         &:nth-child(2) {
-          transition: all 0.3s, opacity 0.3s 2.2s;
+          transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 2.2s;
         }
         &:nth-child(3) {
-          transition: all 0.3s, opacity 0.3s 2.4s;
+          transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 2.4s;
         }
       }
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
@@ -60,13 +60,13 @@ const Contact = {
         .Contact__button {
           opacity: 1;
           &:nth-child(1) {
-            transition: all 0.3s, opacity 0.3s 1.2s;
+            transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 1.2s;
           }
           &:nth-child(2) {
-            transition: all 0.3s, opacity 0.3s 1.4s;
+            transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 1.4s;
           }
           &:nth-child(3) {
-            transition: all 0.3s, opacity 0.3s 1.6s;
+            transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 1.6s;
           }
         }
       }
@@ -134,7 +134,7 @@ const Contact = {
       align-items: center;
       gap: 1.2rem;
       opacity: 0; //TODO
-      transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s;
+      // transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s;
       svg {
         width: ${({ theme }) => theme.fontSize.head.xs};
         /* margin-left: calc(${({ theme }) => theme.fontSize.head.sm} / -2); */

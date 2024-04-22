@@ -4,6 +4,7 @@ import Contact from '@/component/layout/contact/ContactStyle';
 import { ProfileImgContainer, SectionCategoryTitle } from '@/styles/Common';
 import { ContactViewPropType } from '@/component/layout/contact/type';
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
+import { animateSpringButton } from '@/styles/motion';
 
 const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
   return (
@@ -44,6 +45,8 @@ const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
                   key={el.text}
                   className="Contact__button"
                   $bgColor="secondaryBlue"
+                  initial={animateSpringButton.initial}
+                  whileHover={animateSpringButton.hover}
                   // onClick={onClickLinkBtn.bind(this, el.link, el.linkOption)}
                 >
                   <FontAwesomeIcon icon={el.icon} />
