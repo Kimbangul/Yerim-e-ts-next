@@ -6,6 +6,7 @@ import WorkItem from '@/component/layout/work/WorkItem';
 import { WorkViewPropType, WorkItemType } from '@/component/layout/work/type';
 import { GetListItemType } from '@/component/layout/work/type';
 import { useAnimationControls } from 'framer-motion';
+import { animateSpringButton, animateSpringList } from '@/styles/motion';
 
 // FUNCTION 리스트 가져오기
 const getListItem: GetListItemType = (lastPage, allList, list) => {
@@ -34,23 +35,9 @@ const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
 
   // PARAM framer
   const controls = useAnimationControls();
-
-  const animateList = {
-    hidden: {
-      opacity: 1,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        when: 'beforeChildren',
-        delayChildren: 0,
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
   useEffect(() => {
     controls.start('visible');
+    console.log('visible');
   }, [pageList]);
 
   return (
@@ -66,7 +53,7 @@ const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
         </Work.Text.Container>
         <Work.Content.Container
           className="Work__Content"
-          variants={animateList}
+          variants={animateSpringList}
           ref={viewRef}
           initial="hidden"
           whileInView="visible"
@@ -78,7 +65,12 @@ const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
         </Work.Content.Container>
         <Work.Button.Container>
           {isAbleLoad && (
-            <Button as="button" onClick={onClickLoadBtn}>
+            <Button
+              // as="button"
+              onClick={onClickLoadBtn}
+              initial={animateSpringButton.initial}
+              whileHover={animateSpringButton.hover}
+            >
               더보기
             </Button>
           )}

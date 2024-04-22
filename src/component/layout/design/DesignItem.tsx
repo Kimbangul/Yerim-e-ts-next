@@ -4,6 +4,7 @@ import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import { ModalContext } from '@/component/common/modal/ModalProvider';
 import { Item } from '@/component/layout/design/DesignStyle';
 import { DesignItemPropType } from '@/component/layout/design/type';
+import { animateSpringButton, animateSpringItem } from '@/styles/motion';
 
 import { blurDataUrl } from '@/util/data';
 import { useContext } from 'react';
@@ -23,7 +24,11 @@ const DesignItem: React.FC<DesignItemPropType> = ({ idx, title, link, detail, th
 
   return (
     <>
-      <Item.Container $duration={idx}>
+      <Item.Container
+        $duration={idx}
+        variants={animateSpringItem}
+        whileHover={{ scale: 0.9, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
+      >
         <Item.Link href="#" onMouseEnter={onMouseEnter} onMouseOut={onMouseOut} onClick={onClickItem(link, detail)}>
           <Item.Hover className="DesignListItem__title">{title}</Item.Hover>
           <AutoHeightImageView

@@ -1,19 +1,11 @@
 import { WorkItemType } from '@/component/layout/work/type';
 import { Item } from '@/component/layout/work/WorkStyle';
 import Tag from '@/component/common/tag/Tag';
+import { animateSpringItem } from '@/styles/motion';
 
 const WorkItem: React.FC<WorkItemType> = ({ title, category, tag, id, imgObj }) => {
-  const animateItem = {
-    hidden: { scale: 0.9, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: { type: 'spring', stiffness: 40, damping: 10 },
-    },
-  };
-
   return (
-    <Item.Container className="WorkListItem__container" variants={animateItem}>
+    <Item.Container className="WorkListItem__container" variants={animateSpringItem}>
       <a href={`/work/${id}`}>
         <Item.Thumb>
           {imgObj}

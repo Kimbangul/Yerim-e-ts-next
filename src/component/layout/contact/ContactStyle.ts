@@ -39,13 +39,13 @@ const Contact = {
       .Contact__button {
         opacity: 1;
         &:nth-child(1) {
-          transition: all 0.3s, opacity 0.3s 2s;
+          transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 2s;
         }
         &:nth-child(2) {
-          transition: all 0.3s, opacity 0.3s 2.2s;
+          transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 2.2s;
         }
         &:nth-child(3) {
-          transition: all 0.3s, opacity 0.3s 2.4s;
+          transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 2.4s;
         }
       }
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
