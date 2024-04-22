@@ -37,7 +37,6 @@ const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
   const controls = useAnimationControls();
   useEffect(() => {
     controls.start('visible');
-    console.log('visible');
   }, [pageList]);
 
   return (

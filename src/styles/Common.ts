@@ -76,7 +76,7 @@ export const Button = styled(motion.a)<{ width?: string; $bgColor?: string }>`
 `;
 
 // COMPONENT profile image container
-export const ProfileImgContainer = styled.div`
+export const ProfileImgContainer = styled(motion.div)`
   width: 34rem;
   position: relative;
   overflow: hidden;

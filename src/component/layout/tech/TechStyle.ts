@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MaxWidthContainer, Page, SectionTitleAni } from '@/styles/Common';
+import { motion } from 'framer-motion';
 
 export const Tech = {
   Page: styled(Page)`
@@ -48,7 +49,7 @@ export const Tech = {
     position: relative;
     z-index: 1;
     transition: margin 0.3s, opacity 0.3s;
-    opacity: 0; // TODO;
+    // opacity: 0; // TODO;
     @media (${({ theme }) => theme.windowSize['mb-l']}) {
       padding-top: 24.5rem;
     }
@@ -59,7 +60,7 @@ export const Tech = {
     }
   `,
   Img: {
-    Container: styled.div`
+    Container: styled(motion.div)`
       width: 100%;
       /* margin-top: 3.2rem; */
       position: relative;
@@ -107,7 +108,7 @@ export const TechList = {
     Container: styled.div`
       margin-top: 1.6rem;
     `,
-    List: styled.ul`
+    List: styled(motion.ul)`
       margin-top: 1.6rem;
       line-height: 1.7;
       word-break: keep-all;
@@ -128,7 +129,7 @@ export const TechList = {
       font-size: ${({ theme }) => theme.fontSize.head.xs};
     }
   `,
-  Item: styled.li`
+  Item: styled(motion.li)`
     font-size: ${({ theme }) => theme.fontSize.body.md};
     line-height: 2;
     font-weight: 400;
