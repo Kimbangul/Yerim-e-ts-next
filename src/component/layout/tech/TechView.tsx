@@ -14,9 +14,6 @@ const TechView: React.FC<TechViewPropType> = ({ list }) => {
     offset: ['-1 -1', '-0.5 -0.5'],
   });
   const opacity = useSpring(scrollYProgress);
-  useEffect(() => {
-    console.log(scrollYProgress);
-  }, [scrollYProgress]);
 
   return (
     <Tech.Page className="section" ref={containerRef}>
