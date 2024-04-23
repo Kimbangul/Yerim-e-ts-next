@@ -5,15 +5,14 @@ import { Tech } from '@/component/layout/tech/TechStyle';
 import { TechViewPropType } from '@/component/layout/tech/type';
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import { useScroll, useSpring } from 'framer-motion';
-import {  useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const TechView: React.FC<TechViewPropType> = ({ list }) => {
   const containerRef = useRef<HTMLElement>(null);
   const { scrollYProgress, scrollY } = useScroll({
     target: containerRef,
-    offset: ['-1 -1', '-0.5 -0.5'],
+    offset: ['-0.5 -0.5', '0.5 0.5'],
   });
-  const opacity = useSpring(scrollYProgress);
 
   return (
     <Tech.Page className="section" ref={containerRef}>
@@ -21,7 +20,8 @@ const TechView: React.FC<TechViewPropType> = ({ list }) => {
       <Tech.Container className="Tech__container">
         <Tech.Img.Container
           className="Tech__img-container"
-          style={{ opacity: opacity, transform: `translateY(${scrollY}px)` }}
+          initial={{ opacity: 1 }}
+          style={{ opacity: scrollYProgress, transform: `translateY(${scrollY}px)` }}
         >
           <AutoHeightImageView
             src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/tech/tech_design.webp`}

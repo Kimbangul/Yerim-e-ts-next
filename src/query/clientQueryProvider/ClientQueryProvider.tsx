@@ -3,14 +3,7 @@ import { PropsWithChildren } from 'react';
 import { QueryCache, QueryClient, QueryClientProvider } from 'react-query';
 
 const queryClient = new QueryClient({
-  queryCache: new QueryCache({
-    // onError: (error) => {
-    //   console.log('onError', error);
-    // },
-    // onSuccess: (data) => {
-    //   console.log('onSuccess', data);
-    // },
-  }),
+  queryCache: new QueryCache({}),
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false,

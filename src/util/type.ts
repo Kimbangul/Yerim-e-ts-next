@@ -11,6 +11,7 @@ export interface WorkType {
   duration: string;
   section: string;
   tool: string;
+  notion?: string;
 }
 
 // PARAM designList type

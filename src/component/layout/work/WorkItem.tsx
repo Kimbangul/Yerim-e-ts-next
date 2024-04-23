@@ -1,13 +1,32 @@
 import { WorkItemType } from '@/component/layout/work/type';
 import { Item } from '@/component/layout/work/WorkStyle';
 import Tag from '@/component/common/tag/Tag';
-import { animateSpringItem } from '@/styles/motion';
+import { animateSpringButton, animateSpringItem } from '@/styles/motion';
+import { useState } from 'react';
 
 const WorkItem: React.FC<WorkItemType> = ({ title, category, tag, id, imgObj }) => {
+  const [isHover, setIsHover] = useState(false);
   return (
-    <Item.Container className="WorkListItem__container" variants={animateSpringItem}>
+    <Item.Container
+      className="WorkListItem__container"
+      variants={animateSpringItem}
+      onMouseEnter={() => {
+        setIsHover(true);
+      }}
+      onMouseLeave={() => {
+        setIsHover(false);
+      }}
+    >
       <a href={`/work/${id}`}>
-        <Item.Thumb>
+        <Item.Thumb
+          className="WorkListItem__thumb"
+          // layout
+          transition={{ duration: 0.3 }}
+          variants={animateSpringButton}
+          initial="initial"
+          animate={isHover ? 'hover' : 'initial'}
+          whileTap="hover"
+        >
           {imgObj}
           {/* <AutoHeightImageView src={thumb} alt={title} placeholder="blur" blurDataURL={blurDataUrl} /> */}
         </Item.Thumb>

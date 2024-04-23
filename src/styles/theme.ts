@@ -39,6 +39,7 @@ const color = {
   point: '#0ACDCE',
   point80: '#0ACDCE80',
   point40: '#0ACDCE40',
+  secondPoint: '#FFDB7E',
   text_head: '#fff',
   text: '#fffffff0',
   text_2: '#ffffffca',

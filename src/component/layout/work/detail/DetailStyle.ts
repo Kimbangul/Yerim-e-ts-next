@@ -34,7 +34,33 @@ const Detail = {
       padding: 0 3rem;
     }
   `,
+  BackBtn: styled(motion.a)`
+    display: inline-flex;
+    align-items: center;
+    gap: 0 0.8rem;
+    font-size: ${({ theme }) => theme.fontSize.body.md};
+    color: ${({ theme }) => theme.color.text_5};
+    align-self: flex-start;
+    margin-bottom: 2.4rem;
+    .Detail__back {
+      transform: translateX(0);
+      transition: transform 0.3s;
+    }
+    svg {
+      width: 1.4rem;
+    }
+    &:hover {
+      .Detail__back {
+        transform: translateX(-0.6rem);
+      }
+    }
+  `,
+
   Title: {
+    Wrap: styled.div`
+      display: flex;
+      gap: 0 1.2rem;
+    `,
     Text: styled.h2`
       font-size: ${({ theme }) => theme.fontSize.head.xl};
       font-weight: 700;

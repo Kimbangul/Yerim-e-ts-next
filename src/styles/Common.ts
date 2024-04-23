@@ -69,6 +69,15 @@ export const Button = styled(motion.a)<{ width?: string; $bgColor?: string }>`
     color: ${({ theme }) => theme.color.main};
   }
 
+  ${({ $bgColor }) => css`
+    background-color: ${$bgColor}40;
+    color: ${$bgColor};
+
+    &:hover {
+      background-color: ${$bgColor};
+    }
+  `}
+
   @media (${({ theme }) => theme.windowSize['mb-l']}) {
     width: 100%;
     min-width: unset;

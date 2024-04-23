@@ -2,14 +2,23 @@
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import About from '@/component/layout/about/AboutStyle';
 import { ProfileImgContainer, SectionCategoryTitle } from '@/styles/Common';
-import { animateSpringButton } from '@/styles/motion';
+import { animateSpringButton, animateProfileImg } from '@/styles/motion';
 
 const AboutView: React.FC<{ link: string }> = ({ link }) => {
   return (
     <About.Page className="section">
       <SectionCategoryTitle>About me</SectionCategoryTitle>
       <About.Container className="About__container">
-        <ProfileImgContainer className="About__profile-img">
+        <ProfileImgContainer
+          className="About__profile-img"
+          variants={animateProfileImg}
+          initial="initial"
+          whileInView="active"
+          transition={{
+            opacity: { ease: 'linear', duration: 0.35, delay: 0.35 },
+            transform: { type: 'linear', duration: 0.45, delay: 0.35 },
+          }}
+        >
           <AutoHeightImageView
             src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/about/profile.webp`}
             alt="profile image"
@@ -24,13 +33,14 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
           <About.Text.Desc.Text className="About__desc">
             안녕하세요, 프론트엔드 및 UI 개발자 박예림입니다.
             <br />
-            저는 멋진 디자인과 상호작용을 웹과 모바일 등의 플랫폼에 구현하고 <About.LineBreak.Pc />
+            저는 견고한 마크업을 바탕으로, 서비스에 멋진 UI와 인터랙션을 구현하고 <About.LineBreak.Pc />
             문제를 해결하여 사용자의 니즈를 충족시키는 것에서 보람을 느낍니다.
             <br />
             기억에 남아 오래 사용하고 싶은 플랫폼을 만드는 것, <About.LineBreak.Pc />
-            그리고 개발을 통해 더 많은 사람들의 문제를 해결하는 것이 목표입니다. <br />
+            그리고 개발을 통해 더 많은 사람들의 문제를 해결하는 것이 목표입니다.
             <br />
-            개발은 혼자 하는 일이 아니라고 생각하며 동료와의 의사소통과 협력에 가치를 두고 있습니다. <br />
+            <br />
+            개발 업무는 혼자 이루어지지 않는 것을 인지하며 동료와의 의사소통과 협력에 가치를 두고 있습니다. <br />
             그리고 이를 통해 개개인의 합보다 더 큰 시너지를 만들 수 있다고 믿고 있습니다.
             <br />
             시너지를 만들 수 있도록, 항상 경청하고 열린 자세로 임하며 성장해나가는{' '}
