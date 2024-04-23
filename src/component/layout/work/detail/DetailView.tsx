@@ -49,6 +49,7 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
                   href={data.link}
                   initial={animateSpringButton.initial}
                   whileHover={animateSpringButton.hover}
+                  whileTap={animateSpringButton.hover}
                 >
                   사이트 바로가기
                 </Detail.Button.Button>
@@ -59,6 +60,7 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
                   href={data.github}
                   initial={animateSpringButton.initial}
                   whileHover={animateSpringButton.hover}
+                  whileTap={animateSpringButton.hover}
                 >
                   Github 바로가기
                 </Detail.Button.Button>
@@ -101,6 +103,7 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
             onClick={setPageToBack}
             initial={animateSpringButton.initial}
             whileHover={animateSpringButton.hover}
+            whileTap={animateSpringButton.hover}
           >
             목록으로
           </Detail.Button.Button>

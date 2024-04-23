@@ -69,6 +69,7 @@ const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
               onClick={onClickLoadBtn}
               initial={animateSpringButton.initial}
               whileHover={animateSpringButton.hover}
+              whileTap={animateSpringButton.hover}
             >
               더보기
             </Button>

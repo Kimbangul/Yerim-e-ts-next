@@ -85,7 +85,7 @@ export const Item = {
       }
     }
   `,
-  Thumb: styled.div`
+  Thumb: styled(motion.div)`
     overflow: hidden;
     border-radius: 0.8rem;
 
