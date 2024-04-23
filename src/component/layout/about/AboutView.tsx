@@ -15,8 +15,8 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
           initial="initial"
           whileInView="active"
           transition={{
-            opacity: { ease: 'linear', duration: 0.5, delay: 0.3 },
-            transform: { type: 'spring', stiffness: 500, damping: 20, duration: 0.4, delay: 0.3 },
+            opacity: { ease: 'linear', duration: 0.35, delay: 0.35 },
+            transform: { type: 'linear', duration: 0.45, delay: 0.35 },
           }}
         >
           <AutoHeightImageView

@@ -8,10 +8,6 @@ const About = {
         width: 100%;
       }
     }
-    .About__profile-img {
-      opacity: 0; // TODO
-      transition: opacity 0.3s 0.3s;
-    }
     /* FUNCTION section animation */
     &.active {
       .About__title {

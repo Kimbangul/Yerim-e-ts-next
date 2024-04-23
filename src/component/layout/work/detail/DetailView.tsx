@@ -1,10 +1,12 @@
 'use client';
-import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import Tag from '@/component/common/tag/Tag';
 import Detail from '@/component/layout/work/detail/DetailStyle';
 import { DetailViewPropType } from '@/component/layout/work/detail/type';
 import { animateSpringButton } from '@/styles/motion';
+import theme from '@/styles/theme';
 import { setPageToBack } from '@/util/location';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const animateImg = {
   hidden: {
@@ -31,7 +33,14 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
       <Detail.Inner>
         <Detail.Title.Container className="Detail__title-container">
           <Detail.Title.TextContainer className="Detail__title__text-container">
+            <Detail.BackBtn href="/" onClick={setPageToBack}>
+              <span className="Detail__back">
+                <FontAwesomeIcon className="Detail__back-icon" icon={faArrowLeft} />
+              </span>
+              <span>목록으로 돌아가기</span>
+            </Detail.BackBtn>
             <Detail.Title.Text className="Detail__title">{data?.title}</Detail.Title.Text>
+
             <Detail.Category className="Detail__category">{data?.category}</Detail.Category>
             <Detail.Tag.List className="Detail__tag-list">
               {data?.tag.map(el => {
@@ -43,7 +52,7 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
               })}
             </Detail.Tag.List>
             <Detail.Button.Container className="Detail__button-container">
-              {data?.link ? (
+              {data?.link && (
                 <Detail.Button.Button
                   target="_blank"
                   href={data.link}
@@ -53,18 +62,31 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
                 >
                   사이트 바로가기
                 </Detail.Button.Button>
-              ) : null}
-              {data?.github ? (
+              )}
+              {data?.github && (
                 <Detail.Button.Button
                   target="_blank"
                   href={data.github}
                   initial={animateSpringButton.initial}
                   whileHover={animateSpringButton.hover}
                   whileTap={animateSpringButton.hover}
+                  $bgColor={theme.color.secondPoint}
                 >
                   Github 바로가기
                 </Detail.Button.Button>
-              ) : null}
+              )}
+              {data?.notion && (
+                <Detail.Button.Button
+                  target="_blank"
+                  href={data.notion}
+                  initial={animateSpringButton.initial}
+                  whileHover={animateSpringButton.hover}
+                  whileTap={animateSpringButton.hover}
+                  $bgColor={theme.color.secondPoint}
+                >
+                  작업과정 보기
+                </Detail.Button.Button>
+              )}
             </Detail.Button.Container>
           </Detail.Title.TextContainer>
           <Detail.Image.Container
