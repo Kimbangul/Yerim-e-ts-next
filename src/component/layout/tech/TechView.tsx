@@ -5,7 +5,7 @@ import { Tech } from '@/component/layout/tech/TechStyle';
 import { TechViewPropType } from '@/component/layout/tech/type';
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import { useScroll, useSpring } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import {  useRef } from 'react';
 
 const TechView: React.FC<TechViewPropType> = ({ list }) => {
   const containerRef = useRef<HTMLElement>(null);
@@ -44,6 +44,7 @@ const TechView: React.FC<TechViewPropType> = ({ list }) => {
         <Tech.List.Container className="Tech__tech-list-container">
           <TechList techName={list.develop} />
           <TechList techName={list.design} />
+          <TechList techName={list.coWork} />
         </Tech.List.Container>
       </Tech.Container>
     </Tech.Page>

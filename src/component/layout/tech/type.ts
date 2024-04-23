@@ -7,6 +7,7 @@ export interface TechListItemType {
 export interface TechListType {
   develop: TechListItemType;
   design: TechListItemType;
+  coWork: TechListItemType;
 }
 
 export interface TechListPropType {
