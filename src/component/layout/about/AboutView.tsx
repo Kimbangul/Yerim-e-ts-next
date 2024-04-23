@@ -2,14 +2,23 @@
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import About from '@/component/layout/about/AboutStyle';
 import { ProfileImgContainer, SectionCategoryTitle } from '@/styles/Common';
-import { animateSpringButton } from '@/styles/motion';
+import { animateSpringButton, animateProfileImg } from '@/styles/motion';
 
 const AboutView: React.FC<{ link: string }> = ({ link }) => {
   return (
     <About.Page className="section">
       <SectionCategoryTitle>About me</SectionCategoryTitle>
       <About.Container className="About__container">
-        <ProfileImgContainer className="About__profile-img">
+        <ProfileImgContainer
+          className="About__profile-img"
+          variants={animateProfileImg}
+          initial="initial"
+          whileInView="active"
+          transition={{
+            opacity: { ease: 'linear', duration: 0.5, delay: 0.3 },
+            transform: { type: 'spring', stiffness: 500, damping: 20, duration: 0.4, delay: 0.3 },
+          }}
+        >
           <AutoHeightImageView
             src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/about/profile.webp`}
             alt="profile image"

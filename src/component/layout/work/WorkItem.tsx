@@ -2,15 +2,10 @@ import { WorkItemType } from '@/component/layout/work/type';
 import { Item } from '@/component/layout/work/WorkStyle';
 import Tag from '@/component/common/tag/Tag';
 import { animateSpringButton, animateSpringItem } from '@/styles/motion';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const WorkItem: React.FC<WorkItemType> = ({ title, category, tag, id, imgObj }) => {
   const [isHover, setIsHover] = useState(false);
-
-  useEffect(() => {
-    console.log(isHover);
-  }, [isHover]);
-
   return (
     <Item.Container
       className="WorkListItem__container"

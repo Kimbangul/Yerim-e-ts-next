@@ -29,3 +29,8 @@ export const animateSpringButton = {
     transition: { type: 'spring', stiffness: 800, damping: 10 },
   },
 };
+
+export const animateProfileImg = {
+  initial: { opacity: 0, transform: `translateY(4rem)`, transition: { delay: 0 } },
+  active: { opacity: 1, transform: `translateY(0rem)` },
+};

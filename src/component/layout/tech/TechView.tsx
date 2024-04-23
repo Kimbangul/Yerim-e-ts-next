@@ -13,10 +13,6 @@ const TechView: React.FC<TechViewPropType> = ({ list }) => {
     target: containerRef,
     offset: ['-0.5 -0.5', '0.5 0.5'],
   });
-  // const opacity = useSpring(scrollYProgress);
-  useEffect(() => {
-    console.log(scrollY);
-  }, [scrollY]);
 
   return (
     <Tech.Page className="section" ref={containerRef}>

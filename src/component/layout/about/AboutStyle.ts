@@ -14,9 +14,6 @@ const About = {
     }
     /* FUNCTION section animation */
     &.active {
-      .About__profile-img {
-        opacity: 1;
-      }
       .About__title {
         opacity: 1;
         transition: font-size 0.3s, margin 0.3s, opacity 0.3s 0.8s;
