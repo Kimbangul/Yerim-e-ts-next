@@ -150,6 +150,9 @@ export const TechList = {
     /* @media (${props => props.theme.windowSize['mb-m']}) {
       font-size: ${({ theme }) => theme.fontSize.body.sm};
     } */
+    @media (${props => props.theme.windowSize['mb-m']}) {
+      font-size: ${({ theme }) => theme.fontSize.body.rg};
+    }
     &:first-child {
       margin-top: 0;
     }
