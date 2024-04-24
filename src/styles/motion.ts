@@ -43,7 +43,7 @@ export const animateSpringUpContainer = {
       type: 'linear',
       when: 'beforeChildren',
       delayChildren: 0,
-      staggerChildren: 0.05,
+      staggerChildren: 0.03,
     },
   },
 };
@@ -63,5 +63,5 @@ export const animateSpringUpTextTransition = {
   opacity: { type: 'linear' },
   type: 'spring',
   stiffness: 800,
-  damping: 10,
+  damping: 25,
 };

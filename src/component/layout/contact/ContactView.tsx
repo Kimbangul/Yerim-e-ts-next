@@ -5,6 +5,7 @@ import { ProfileImgContainer, SectionCategoryTitle } from '@/styles/Common';
 import { ContactViewPropType } from '@/component/layout/contact/type';
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import { animateSpringButton } from '@/styles/motion';
+import MotionText, { motionTextContainerOption } from '@/component/common/motion/MotionText';
 
 const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
   return (
@@ -20,9 +21,14 @@ const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
           />
         </ProfileImgContainer>
         <Contact.Text.Container className="Contact__text-container">
-          <Contact.Text.Blockquote className="Contact__blockquote">
-            A genius cannot win over one who tries, <br />
-            and one who tries cannot win one who enjoys.
+          <Contact.Text.Blockquote
+            className="Contact__blockquote"
+            {...motionTextContainerOption}
+            transition={{ duration: 0, delay: 0.1, staggerChildren: 0.01 }}
+          >
+            <MotionText text={`A genius cannot win over one who tries,`} transition={{ duration: 0.1 }} />
+            <br />
+            <MotionText text={`and one who tries cannot win one who enjoys.`} transition={{ duration: 0.1 }} />
           </Contact.Text.Blockquote>
           <Contact.Text.Desc className="Contact__desc">
             즐기는 자를 이길 수 있는 사람은 없습니다. <br />

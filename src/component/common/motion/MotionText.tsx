@@ -11,12 +11,13 @@ export const motionTextContainerOption = {
   variants: animateSpringUpContainer,
   initial: 'initial',
   whileInView: 'active',
-  transition: { delay: 0.6 },
 };
 
+// COMPONENT component
 const MotionText: React.FC<MotionTextPropType> = props => {
   const { text } = props;
   const words = text.split('');
+  console.log(words);
   const motionOption = {
     ...initialMotion,
     ...props,
@@ -37,9 +38,18 @@ const MotionTextStyle = styled(motion.span)<{ $text: string }>`
   display: inline-block;
 
   ${({ $text }) =>
-    $text.length === 0 &&
+    $text === ' ' &&
     css`
       min-width: 1rem;
+    `}
+
+  ${({ $text }) =>
+    $text === ' \n' &&
+    css`
+      &::after {
+        content: 'ff';
+        display: inline-block;
+      }
     `}
 `;
 

@@ -28,7 +28,7 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
           />
         </ProfileImgContainer>
         <About.Text.Container className="About__text-container">
-          <About.Text.Title.Text className="About__title" {...motionTextContainerOption}>
+          <About.Text.Title.Text className="About__title" {...motionTextContainerOption} transition={{ delay: 0.6 }}>
             <MotionText text="be" className="About__title--light" /> <MotionText text="flexible." />
           </About.Text.Title.Text>
           <About.Text.Desc.Text className="About__desc">
