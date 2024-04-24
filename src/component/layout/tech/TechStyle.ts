@@ -117,7 +117,7 @@ export const TechList = {
       }
     `,
   },
-  Title: styled.h4`
+  Title: styled(motion.h4)`
     width: 32rem;
     color: ${({ theme }) => theme.color.text_3};
     font-size: ${({ theme }) => theme.fontSize.head.sm};
@@ -157,7 +157,7 @@ export const TechList = {
       margin-top: 0;
     }
     span {
-      color: ${({ theme }) => theme.color.secondPoint};
+      color: ${({ theme }) => theme.color.point};
     }
   `,
   Tag: {

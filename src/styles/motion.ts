@@ -34,3 +34,34 @@ export const animateProfileImg = {
   initial: { opacity: 0, transform: `translateY(4rem)`, transition: { delay: 0 } },
   active: { opacity: 1, transform: `translateY(0rem)` },
 };
+
+export const animateSpringUpContainer = {
+  initial: { opacity: 0 },
+  active: {
+    opacity: 1,
+    transition: {
+      type: 'linear',
+      when: 'beforeChildren',
+      delayChildren: 0,
+      staggerChildren: 0.03,
+    },
+  },
+};
+
+export const animateSpringUpText = {
+  initial: { opacity: 0, rotate: 20, y: '2rem', origin: 'right bottom' },
+  active: { opacity: 1, rotate: 0, y: '0rem' },
+  // transition: {
+  //   opacity: { type: 'linear' },
+  //   type: 'spring',
+  //   stiffness: 800,
+  //   damping: 10,
+  // },
+};
+
+export const animateSpringUpTextTransition = {
+  opacity: { type: 'linear' },
+  type: 'spring',
+  stiffness: 800,
+  damping: 25,
+};

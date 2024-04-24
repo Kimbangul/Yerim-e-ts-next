@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Page, Button, MaxWidthContainer } from '@/styles/Common';
+import { motion } from 'framer-motion';
 
 const Contact = {
   Page: styled(Page)`
@@ -91,12 +92,11 @@ const Contact = {
       flex-direction: column;
       justify-content: space-between;
     `,
-    Blockquote: styled.blockquote`
+    Blockquote: styled(motion.blockquote)`
       font-size: ${({ theme }) => theme.fontSize.head.sm};
       color: ${({ theme }) => theme.color.text_head};
       font-weight: 600;
-      opacity: 0; //TODO
-      transition: font-size 0.3s, opacity 0.3s;
+      transition: font-size 0.3s;
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.head.xs};

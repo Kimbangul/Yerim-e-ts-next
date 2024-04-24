@@ -120,6 +120,7 @@ export const Item = {
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.body.lg};
+        margin-top: 1.2rem;
       }
     `,
     Category: styled.div`
@@ -135,6 +136,7 @@ export const Item = {
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.body.rg};
+        margin-top: 0.2rem;
       }
     `,
     TagList: styled.ul`

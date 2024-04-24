@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Page, Button, MaxWidthContainer } from '@/styles/Common';
+import { motion } from 'framer-motion';
 
 const About = {
   Page: styled(Page)`
@@ -49,11 +50,11 @@ const About = {
       width: 100%;
     `,
     Title: {
-      Text: styled.h3`
+      Text: styled(motion.h3)`
         font-size: ${({ theme }) => theme.fontSize.head.xl};
         text-transform: uppercase;
         color: ${({ theme }) => theme.color.text_head};
-        opacity: 0; //TODO
+        // opacity: 0; //TODO
         transition: font-size 0.3s, margin 0.3s, opacity 0.3s;
 
         /* FUNCTION mb */
@@ -61,10 +62,14 @@ const About = {
           margin-top: 3.2rem;
           font-size: ${({ theme }) => theme.fontSize.head.md};
         }
+
+        & .About__title--light {
+          font-weight: 300;
+        }
       `,
-      Light: styled.span`
-        font-weight: 300;
-      `,
+      // Light: styled.span`
+      //   font-weight: 300;
+      // `,
     },
     Desc: {
       Text: styled.p`
