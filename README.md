@@ -4,7 +4,7 @@
 
 - 제작 기간 : 2022.10 ~ 2022.10
 - 리뉴얼 기간: 2024.4 ~ 2024.4
-- 사용 기술스택 : Next.js, TypeScript, Styled-components, ~~axios~~, tsparticles, ~~swiper.js~~, ~~Fullpage.js~~, react-query
+- 사용 기술스택 : Next.js, TypeScript, Styled-components, ~~axios~~, tsparticles, ~~swiper.js~~, ~~Fullpage.js~~, react-query, Framer-motion
 - 구현 페이지: 메인 페이지, 작업물 상세 페이지
 
 ## 📝설명
@@ -13,6 +13,7 @@
 
 Next.js 12버전으로 제작하였던 포트폴리오 사이트를 Next.js 14 버전으로 재구축 하였습니다.<br />
 기존 사용하던 라이브러리를 최대한 줄여 프로젝트를 경량화하고 이미지 최적화, lazy load 구현, layout shift 방지 등의 최적화 작업을 진행하였습니다.
+Framer-motion을 활용하여 모션을 추가하면서 성능을 최적화하고자 하였습니다.
 
 ### v1
 
