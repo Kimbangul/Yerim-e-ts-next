@@ -17,7 +17,6 @@ export const motionTextContainerOption = {
 const MotionText: React.FC<MotionTextPropType> = props => {
   const { text } = props;
   const words = text.split('');
-  console.log(words);
   const motionOption = {
     ...initialMotion,
     ...props,
