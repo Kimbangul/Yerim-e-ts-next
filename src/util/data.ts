@@ -22,7 +22,7 @@ const techList = {
       '디자인 가이드를 세우고, 그에 따라 통일성 있고 일관적인 UI를 제작하여 재활용이 가능하고 빠른 개발이 가능하도록 하는 것을 지향하고 있습니다.',
       '레이아웃 배치, 컬러 사용 시 사용자 입장에서의 사용성을 고려하며 불편함이 없도록 디자인하고자 노력합니다.',
       '여러 사람의 의견을 반영하고 더 나은 결과물을 만들기 위해, 여러 시안을 가지고 팀원들과 논의하여 최종 결과물을 도출합니다.',
-      'Photoshop, Illustrator를 이용한 디자인 및 편집 작업과 XD, Figma를 이용한 UX/UI 설계와 프로토타이핑이 가능합니다.',
+      'Photoshop, Illustrator를 이용한 디자인 및 편집 작업과 XD, Figma를 이용한 <span>UX/UI 설계와 프로토타이핑</span>이 가능합니다.',
       'After effects를 이용한 모션그래픽 제작 및 영상 편집을 할 수 있습니다.',
     ],
     tag: ['Photoshop', 'Illustrator', 'XD', 'Figma', 'After Effects'],
@@ -30,10 +30,10 @@ const techList = {
   develop: {
     title: 'Develop Tech.',
     content: [
-      '페이지 구조와 태그의 의미를 고려한 시맨틱 마크업을 지향하며 웹 표준과 웹 접근성에 대해 이해하고 있습니다.',
-      '디자인 시안을 빠르게 웹에 구현해 낼 수 있으며 다양한 디바이스를 대응하는 반응형 웹 퍼블리싱이 가능합니다.',
-      'CSS Animation, Framer-motion, GSAP을 이용한 애니메이션과 모션 구현이 가능합니다.',
-      'HTML, CSS, SCSS, CSS-in-JS, JavaScript를 포함하여 TypeScript, React.js, Next.js 환경에서도 원활한 퍼블리싱 및 프론트 개발을 수행할 수 있습니다.',
+      '페이지 구조와 태그의 의미를 고려한 <u>시맨틱 마크업</u>을 지향하며 <span>웹 표준</span>과 <span>웹 접근성</span>에 대해 이해하고 있습니다.',
+      `디자인 시안을 빠르게 웹에 구현해 낼 수 있으며 다양한 디바이스를 대응하는 반응형 <span>웹 퍼블리싱</span>이 가능합니다.`,
+      'CSS Animation, Framer-motion, GSAP을 이용한 <span>애니메이션과 모션 구현</span>이 가능합니다.',
+      '<span>HTML, CSS, SCSS, CSS-in-JS, JavaScript</span>를 포함하여 <span>TypeScript, React.js, Next.js</span> 환경에서도 원활한 퍼블리싱 및 프론트 개발을 수행할 수 있습니다.',
       'UX/UI 및 FrontEnd에 대한 이해도뿐만 아닌 BackEnd 직무, SQL, DB에 대한 이해도도 보유하고 있습니다.',
     ],
     tag: [
@@ -53,7 +53,7 @@ const techList = {
     content: [
       'Git, Bitbucket 등의 분산 형상관리를 활용하며 Jira, Confluence 등의 협업 툴을 사용한 경험이 있습니다.',
       'PhotoShop, Figma 등 프로토타이핑 툴에 대한 능숙한 활용이 가능합니다.',
-      '협업 경험과 직무 이해도를 바탕으로 기획자, 디자이너, 백엔드와 서버, 인프라 담당자 등 여러 직군의 사람들과 원활한 의사소통이 가능합니다.',
+      '협업 경험과 직무 이해도를 바탕으로 기획자, 디자이너, 백엔드와 서버, 인프라 담당자 등 여러 직군의 사람들과 <span>원활한 의사소통</span>이 가능합니다.',
     ],
     tag: ['Git', 'Bitbucket', 'Photoshop', 'Figma', 'Jira', 'Confluence'],
   },

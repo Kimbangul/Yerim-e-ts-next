@@ -7,7 +7,10 @@ const GlobalStyle = createGlobalStyle`
   @media (${theme.windowSize['mb-l']}){
       font-size: 58%;
     }
-  @media (max-width: 500px){
+    @media (max-width: 500px){
+      font-size: 56.5%;
+    }
+    @media (${theme.windowSize['mb-s']}){
       font-size: 55.125%;
     }
  }
@@ -39,6 +42,9 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
   }
   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Pretendard', 'sans-serif';
+  }
+  pre{
     font-family: 'Poppins', 'Pretendard', 'sans-serif';
   }
 

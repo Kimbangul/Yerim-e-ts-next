@@ -54,6 +54,11 @@ const Detail = {
         transform: translateX(-0.6rem);
       }
     }
+
+    /* FUNCTION mb */
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      font-size: ${({ theme }) => theme.fontSize.body.rg};
+    }
   `,
 
   Title: {
@@ -169,11 +174,18 @@ const Detail = {
       gap: 1.6rem;
       flex-grow: 1;
       align-items: self-end;
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        flex-direction: column;
+      }
     `,
+
     Button: styled(Button)`
       //  transition: all 0.3s, width 0.3s;
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         width: auto;
+      }
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        width: 100%;
       }
     `,
   },

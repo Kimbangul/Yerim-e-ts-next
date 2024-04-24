@@ -28,9 +28,8 @@ const TechListView: React.FC<TechListPropType> = ({ techName }) => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-              >
-                {el}
-              </TechList.Item>
+                dangerouslySetInnerHTML={{ __html: el }}
+              ></TechList.Item>
             );
           })}
         </TechList.Contents.List>

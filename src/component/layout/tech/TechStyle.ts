@@ -156,6 +156,9 @@ export const TechList = {
     &:first-child {
       margin-top: 0;
     }
+    span {
+      color: ${({ theme }) => theme.color.secondPoint};
+    }
   `,
   Tag: {
     List: styled.ul`

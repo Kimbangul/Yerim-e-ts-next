@@ -117,6 +117,10 @@ export const Item = {
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         font-size: ${({ theme }) => theme.fontSize.body.rg};
       }
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.lg};
+      }
     `,
     Category: styled.div`
       font-size: ${({ theme }) => theme.fontSize.body.rg};
@@ -124,9 +128,13 @@ export const Item = {
       margin-top: 0.4rem;
       transition: font-size 0.3s;
 
-      /* FUNCTION mb */
+      /* FUNCTION pc */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         font-size: ${({ theme }) => theme.fontSize.body.sm};
+      }
+      /* FUNCTION mb */
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        font-size: ${({ theme }) => theme.fontSize.body.rg};
       }
     `,
     TagList: styled.ul`
