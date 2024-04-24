@@ -157,7 +157,7 @@ export const TechList = {
       margin-top: 0;
     }
     span {
-      color: ${({ theme }) => theme.color.secondPoint};
+      color: ${({ theme }) => theme.color.point};
     }
   `,
   Tag: {
