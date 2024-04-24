@@ -41,9 +41,13 @@ const Work = {
       gap: 3.2rem;
       margin-top: 4.8rem;
       margin-bottom: 4.8rem;
-      @media (${({ theme }) => theme.windowSize['mb-l']}) {
+      @media (${({ theme }) => theme.windowSize['lt-s']}) {
         grid-template-columns: 1fr 1fr;
         gap: 3.2rem 2.4rem;
+      }
+      @media (${({ theme }) => theme.windowSize['mb-l']}) {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.2rem 1.6rem;
       }
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
         grid-template-columns: 1fr;

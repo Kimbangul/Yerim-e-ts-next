@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
 // COMPONENT fullpage Page
 export const Page = styled.section`
@@ -69,15 +69,6 @@ export const Button = styled(motion.a)<{ width?: string; $bgColor?: string }>`
     color: ${({ theme }) => theme.color.main};
   }
 
-  ${({ $bgColor }) => css`
-    background-color: ${$bgColor}40;
-    color: ${$bgColor};
-
-    &:hover {
-      background-color: ${$bgColor};
-    }
-  `}
-
   @media (${({ theme }) => theme.windowSize['mb-l']}) {
     width: 100%;
     min-width: unset;
@@ -89,11 +80,8 @@ export const ProfileImgContainer = styled(motion.div)`
   width: 34rem;
   position: relative;
   overflow: hidden;
+  border-radius: 0.4rem;
   flex-shrink: 0;
-
-  img {
-    border-radius: 0.8rem;
-  }
 
   @media (max-width: 460px) {
     width: 100%;
