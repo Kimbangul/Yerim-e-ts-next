@@ -1,6 +1,6 @@
 import { animateSpringUpContainer, animateSpringUpText, animateSpringUpTextTransition } from '@/styles/motion';
 import { HTMLMotionProps, motion } from 'framer-motion';
-import { styled } from 'styled-components';
+import { css, styled } from 'styled-components';
 
 const initialMotion = {
   variants: animateSpringUpText,
