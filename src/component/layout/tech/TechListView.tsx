@@ -1,4 +1,5 @@
 'use client';
+import MotionText, { motionTextContainerOption } from '@/component/common/motion/MotionText';
 import Tag from '@/component/common/tag/Tag';
 import { TechList } from '@/component/layout/tech/TechStyle';
 import { TechListPropType } from '@/component/layout/tech/type';
@@ -6,7 +7,9 @@ import { TechListPropType } from '@/component/layout/tech/type';
 const TechListView: React.FC<TechListPropType> = ({ techName }) => {
   return (
     <TechList.Category className="Tech__tech-list-category">
-      <TechList.Title className="Tech__tech-list-category-name">{techName.title}</TechList.Title>
+      <TechList.Title className="Tech__tech-list-category-name" {...motionTextContainerOption}>
+        <MotionText text={techName.title} />
+      </TechList.Title>
       <TechList.Contents.Container className="Tech__tech-list-contents">
         <TechList.Contents.List
           className="Tech__tech-list"

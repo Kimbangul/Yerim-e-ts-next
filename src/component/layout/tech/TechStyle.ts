@@ -117,7 +117,7 @@ export const TechList = {
       }
     `,
   },
-  Title: styled.h4`
+  Title: styled(motion.h4)`
     width: 32rem;
     color: ${({ theme }) => theme.color.text_3};
     font-size: ${({ theme }) => theme.fontSize.head.sm};

@@ -1,5 +1,6 @@
 'use client';
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
+import MotionText, { motionTextContainerOption } from '@/component/common/motion/MotionText';
 import About from '@/component/layout/about/AboutStyle';
 import { ProfileImgContainer, SectionCategoryTitle } from '@/styles/Common';
 import { animateSpringButton, animateProfileImg } from '@/styles/motion';
@@ -27,8 +28,8 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
           />
         </ProfileImgContainer>
         <About.Text.Container className="About__text-container">
-          <About.Text.Title.Text className="About__title">
-            <About.Text.Title.Light className="About__title--light">be</About.Text.Title.Light> flexible.
+          <About.Text.Title.Text className="About__title" {...motionTextContainerOption}>
+            <MotionText text="be" className="About__title--light" /> <MotionText text="flexible." />
           </About.Text.Title.Text>
           <About.Text.Desc.Text className="About__desc">
             안녕하세요, 프론트엔드 및 UI 개발자 박예림입니다.
