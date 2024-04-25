@@ -17,7 +17,7 @@ const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
             src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/contact/profile.webp`}
             alt="profile image"
             placeholder="blur"
-            sizes="(max-width: 460px) 90vw, (max-width: 768px) 60vw, (min-width: 768px) 340px"
+            sizes="(max-width: 460px) 90vw, (max-width: 768px) 60vw, (min-width: 768px) 34rem"
           />
         </ProfileImgContainer>
         <Contact.Text.Container className="Contact__text-container">

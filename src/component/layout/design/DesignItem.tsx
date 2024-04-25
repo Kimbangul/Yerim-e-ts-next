@@ -36,7 +36,7 @@ const DesignItem: React.FC<DesignItemPropType> = ({ idx, title, link, detail, th
             src={thumb}
             placeholder="blur"
             blurDataURL={blurDataUrl}
-            sizes="(max-width: 480px) 50vw, (max-width: 1024px) 33vw, (max-width: 1200px) 25vw, (min-width: 1201px) 240px"
+            sizes="(max-width: 480px) 50vw, (max-width: 1024px) 33vw, (max-width: 1200px) 25vw, (min-width: 1201px) 24rem"
           />
         </Item.Link>
       </Item.Container>

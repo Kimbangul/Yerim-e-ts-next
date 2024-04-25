@@ -27,7 +27,8 @@ const fontSize = {
   },
 };
 
-const maxWidth = '1440px';
+// const maxWidth = '1440px';
+const maxWidth = '1200px';
 
 const padding = '3.2rem';
 

@@ -3,10 +3,11 @@ import theme from '@/styles/theme';
 
 const GlobalStyle = createGlobalStyle`
  html{
-  font-size: 68.9%; 
+  /* font-size: 68.9%; 
   @media (${theme.windowSize['lt-l']}){
     font-size: 62.5%; 
-    }  
+    }   */
+    font-size: 62.5%; 
   @media (${theme.windowSize['mb-l']}){
       font-size: 58%;
     }

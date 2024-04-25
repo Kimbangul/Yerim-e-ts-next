@@ -24,7 +24,7 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
             src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/about/profile.webp`}
             alt="profile image"
             placeholder="blur"
-            sizes="(max-width: 460px) 90vw, (max-width: 768px) 60vw, (min-width: 768px) 340px"
+            sizes="(max-width: 460px) 90vw, (max-width: 768px) 60vw, (min-width: 768px) 34rem"
           />
         </ProfileImgContainer>
         <About.Text.Container className="About__text-container">
