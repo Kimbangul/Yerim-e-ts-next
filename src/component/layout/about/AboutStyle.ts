@@ -46,7 +46,7 @@ const About = {
         font-size: ${({ theme }) => theme.fontSize.head.xl};
         text-transform: uppercase;
         color: ${({ theme }) => theme.color.text_head};
-        transition: font-size 0.3s, margin 0.3s, opacity 0.3s;
+        /* transition: font-size 0.3s, margin 0.3s, opacity 0.3s; */
 
         /* FUNCTION mb */
         @media (${({ theme }) => theme.windowSize['mb-l']}) {
@@ -66,7 +66,7 @@ const About = {
         font-weight: 400;
         color: ${({ theme }) => theme.color.text_4};
         word-break: keep-all;
-        transition: font-size 0.3s, opacity 0.3s;
+        /* transition: font-size 0.3s, opacity 0.3s; */
         @media (${props => props.theme.windowSize['mb-m']}) {
           font-size: ${({ theme }) => theme.fontSize.body.rg};
         }

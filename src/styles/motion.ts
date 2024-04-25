@@ -23,9 +23,11 @@ export const animateSpringList = {
 };
 
 export const animateSpringButton = {
-  initial: { scale: 1 },
+  initial: { opacity: 0, scale: 1 },
+  active: { opacity: 1 },
   hover: {
     scale: 0.95,
+    opacity: 1,
     transition: { type: 'spring', stiffness: 800, damping: 10 },
   },
 };

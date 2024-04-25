@@ -56,9 +56,11 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
                 <Detail.Button.Button
                   target="_blank"
                   href={data.link}
-                  initial={animateSpringButton.initial}
-                  whileHover={animateSpringButton.hover}
-                  whileTap={animateSpringButton.hover}
+                  variants={animateSpringButton}
+                  initial="initial"
+                  animate="active"
+                  whileHover="hover"
+                  whileTap="hover"
                 >
                   사이트 바로가기
                 </Detail.Button.Button>
@@ -67,9 +69,11 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
                 <Detail.Button.Button
                   target="_blank"
                   href={data.github}
-                  initial={animateSpringButton.initial}
-                  whileHover={animateSpringButton.hover}
-                  whileTap={animateSpringButton.hover}
+                  variants={animateSpringButton}
+                  initial="initial"
+                  animate="active"
+                  whileHover="hover"
+                  whileTap="hover"
                   $bgColor={theme.color.secondPoint}
                 >
                   Github 바로가기
@@ -79,9 +83,11 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
                 <Detail.Button.Button
                   target="_blank"
                   href={data.notion}
-                  initial={animateSpringButton.initial}
-                  whileHover={animateSpringButton.hover}
-                  whileTap={animateSpringButton.hover}
+                  variants={animateSpringButton}
+                  initial="initial"
+                  animate="active"
+                  whileHover="hover"
+                  whileTap="hover"
                   $bgColor={theme.color.secondPoint}
                 >
                   작업과정 보기
@@ -123,9 +129,11 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
         <Detail.Button.Container className="Detail__button-container">
           <Detail.Button.Button
             onClick={setPageToBack}
-            initial={animateSpringButton.initial}
-            whileHover={animateSpringButton.hover}
-            whileTap={animateSpringButton.hover}
+            variants={animateSpringButton}
+            initial="initial"
+            animate="active"
+            whileHover="hover"
+            whileTap="hover"
           >
             목록으로
           </Detail.Button.Button>

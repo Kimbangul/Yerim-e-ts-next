@@ -13,7 +13,13 @@ import {
 
 const AboutView: React.FC<{ link: string }> = ({ link }) => {
   return (
-    <About.Page className="section">
+    <About.Page
+      className="section"
+      variants={animateSpringUpContainer(1)}
+      whileInView="active"
+      initial="initial"
+      transition={{ delay: 0.35, type: 'linear', when: 'beforeChildren', delayChildren: 0, staggerChildren: 0.2 }}
+    >
       <SectionCategoryTitle>About me</SectionCategoryTitle>
       <About.Container className="About__container">
         <ProfileImgContainer
@@ -38,14 +44,12 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
           variants={animateSpringUpContainer(1)}
           whileInView="active"
           initial="initial"
+          transition={{ delay: 0.6, type: 'linear', when: 'beforeChildren', delayChildren: 0, staggerChildren: 1 }}
         >
-          <About.Text.Title.Text className="About__title" {...motionTextContainerOption} transition={{ delay: 1 }}>
+          <About.Text.Title.Text className="About__title" {...motionTextContainerOption}>
             <MotionText text="be" className="About__title--light" /> <MotionText text="flexible." />
           </About.Text.Title.Text>
-          <About.Text.Desc.Text
-            variants={animateEaseUpText}
-            transition={{ ...animateEaseUpTextTransition, delay: 0.3 }}
-          >
+          <About.Text.Desc.Text variants={animateEaseUpText} transition={animateEaseUpTextTransition}>
             안녕하세요, 프론트엔드 및 UI 개발자 박예림입니다.
             <br />
             저는 견고한 마크업을 바탕으로, 서비스에 멋진 UI와 인터랙션을 구현하고 <About.LineBreak.Pc />
@@ -69,10 +73,8 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
               $bgColor="secondaryBlue"
               href={link}
               target="_blank"
-              initial={{ ...animateSpringButton.initial, opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              variants={animateSpringButton}
               whileHover={animateSpringButton.hover}
-              transition={{ opacity: { delay: 1.6 } }}
             >
               이력 & 경력 보기
             </About.Button.Button>

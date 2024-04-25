@@ -44,15 +44,18 @@ const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
             포트폴리오를 봐주셔서 감사합니다 :&#41;
           </Contact.Text.Desc>
           <Contact.Button.Container className="Contact__button-wrap">
-            {linkData.map(el => {
+            {linkData.map((el, idx) => {
               return (
                 <Contact.Button.Item
                   href={el.link}
                   key={el.text}
                   className="Contact__button"
                   $bgColor="secondaryBlue"
-                  initial={animateSpringButton.initial}
-                  whileHover={animateSpringButton.hover}
+                  variants={animateSpringButton}
+                  initial="initial"
+                  whileInView={{ ...animateSpringButton.active, transition: { delay: 0.2 * (idx + 1) } }}
+                  whileHover="hover"
+                  whileTap="hover"
                   // onClick={onClickLinkBtn.bind(this, el.link, el.linkOption)}
                 >
                   <FontAwesomeIcon icon={el.icon} />

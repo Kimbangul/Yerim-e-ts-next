@@ -24,7 +24,7 @@ const WorkItem: React.FC<WorkItemType> = ({ title, category, tag, id, imgObj }) 
           transition={{ duration: 0.3 }}
           variants={animateSpringButton}
           initial="initial"
-          animate={isHover ? 'hover' : 'initial'}
+          animate={isHover ? 'hover' : 'active'}
           whileTap="hover"
         >
           {imgObj}

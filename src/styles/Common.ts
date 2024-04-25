@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 // COMPONENT fullpage Page
-export const Page = styled.section`
+export const Page = styled(motion.section)`
   width: 100%;
   min-height: 100vh;
   padding: 8rem 0;
@@ -68,6 +68,16 @@ export const Button = styled(motion.a)<{ width?: string; $bgColor?: string }>`
     background-color: ${({ theme }) => theme.color.point};
     color: ${({ theme }) => theme.color.main};
   }
+
+  ${({ $bgColor }) => css`
+    color: ${$bgColor};
+    background: ${$bgColor}40;
+
+    &:hover {
+      background: ${$bgColor};
+      color: ${({ theme }) => theme.color.main};
+    }
+  `}
 
   @media (${({ theme }) => theme.windowSize['mb-l']}) {
     width: 100%;

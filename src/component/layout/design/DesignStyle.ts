@@ -22,7 +22,7 @@ const Design = {
     }
   `,
   Container: styled(MaxWidthContainer)`
-    opacity: 0; // TODO
+    /* opacity: 0; // TODO */
     transition: opacity 0.3s;
     @media (max-width: 1000px) {
       display: flex;
