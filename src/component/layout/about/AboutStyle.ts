@@ -11,18 +11,10 @@ const About = {
     }
     /* FUNCTION section animation */
     &.active {
-      .About__title {
-        opacity: 1;
-        transition: font-size 0.3s, margin 0.3s, opacity 0.3s 0.8s;
-      }
-      .About__desc {
-        opacity: 1;
-        transition: font-size 0.3s, opacity 0.3s 1.4s;
-      }
-      .About__button-wrap {
+      /* .About__button-wrap {
         opacity: 1;
         transition: opacity 0.3s 2s;
-      }
+      } */
     }
   `,
   Container: styled(MaxWidthContainer)`
@@ -54,7 +46,6 @@ const About = {
         font-size: ${({ theme }) => theme.fontSize.head.xl};
         text-transform: uppercase;
         color: ${({ theme }) => theme.color.text_head};
-        // opacity: 0; //TODO
         transition: font-size 0.3s, margin 0.3s, opacity 0.3s;
 
         /* FUNCTION mb */
@@ -67,9 +58,6 @@ const About = {
           font-weight: 300;
         }
       `,
-      // Light: styled.span`
-      //   font-weight: 300;
-      // `,
     },
     Desc: {
       Text: styled(motion.p)`
@@ -78,7 +66,6 @@ const About = {
         font-weight: 400;
         color: ${({ theme }) => theme.color.text_4};
         word-break: keep-all;
-        //opacity: 0; //TODO
         transition: font-size 0.3s, opacity 0.3s;
         @media (${props => props.theme.windowSize['mb-m']}) {
           font-size: ${({ theme }) => theme.fontSize.body.rg};
@@ -99,8 +86,6 @@ const About = {
       display: flex;
       margin-top: 4.8rem;
       gap: 1.6rem;
-      opacity: 0; //TODO
-      transition: opacity 0.3s;
 
       @media (${props => props.theme.windowSize['lt-s']}) {
         flex-direction: column;

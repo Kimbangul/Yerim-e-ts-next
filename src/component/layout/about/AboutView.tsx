@@ -39,7 +39,7 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
           whileInView="active"
           initial="initial"
         >
-          <About.Text.Title.Text className="About__title" {...motionTextContainerOption} transition={{ delay: 0.6 }}>
+          <About.Text.Title.Text className="About__title" {...motionTextContainerOption} transition={{ delay: 1 }}>
             <MotionText text="be" className="About__title--light" /> <MotionText text="flexible." />
           </About.Text.Title.Text>
           <About.Text.Desc.Text
@@ -69,9 +69,10 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
               $bgColor="secondaryBlue"
               href={link}
               target="_blank"
-              initial={animateSpringButton.initial}
+              initial={{ ...animateSpringButton.initial, opacity: 0 }}
               whileInView={{ opacity: 1 }}
               whileHover={animateSpringButton.hover}
+              transition={{ opacity: { delay: 1.6 } }}
             >
               이력 & 경력 보기
             </About.Button.Button>
