@@ -35,17 +35,19 @@ export const animateProfileImg = {
   active: { opacity: 1, transform: `translateY(0rem)` },
 };
 
-export const animateSpringUpContainer = {
-  initial: { opacity: 0 },
-  active: {
-    opacity: 1,
-    transition: {
-      type: 'linear',
-      when: 'beforeChildren',
-      delayChildren: 0,
-      staggerChildren: 0.03,
+export const animateSpringUpContainer = (stagger: number = 0.03) => {
+  return {
+    initial: { opacity: 0 },
+    active: {
+      opacity: 1,
+      transition: {
+        type: 'linear',
+        when: 'beforeChildren',
+        delayChildren: 0,
+        staggerChildren: stagger,
+      },
     },
-  },
+  };
 };
 
 export const animateSpringUpText = {
@@ -64,4 +66,13 @@ export const animateSpringUpTextTransition = {
   type: 'spring',
   stiffness: 800,
   damping: 25,
+};
+
+export const animateEaseUpText = {
+  initial: { opacity: 0, y: '1.6rem' },
+  active: { opacity: 1, y: '0rem' },
+};
+export const animateEaseUpTextTransition = {
+  type: 'linear',
+  duration: 0.35,
 };

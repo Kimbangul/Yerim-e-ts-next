@@ -3,7 +3,13 @@ import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import MotionText, { motionTextContainerOption } from '@/component/common/motion/MotionText';
 import About from '@/component/layout/about/AboutStyle';
 import { ProfileImgContainer, SectionCategoryTitle } from '@/styles/Common';
-import { animateSpringButton, animateProfileImg } from '@/styles/motion';
+import {
+  animateSpringButton,
+  animateProfileImg,
+  animateEaseUpText,
+  animateSpringUpContainer,
+  animateEaseUpTextTransition,
+} from '@/styles/motion';
 
 const AboutView: React.FC<{ link: string }> = ({ link }) => {
   return (
@@ -27,11 +33,19 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
             sizes="(max-width: 460px) 90vw, (max-width: 768px) 60vw, (min-width: 768px) 34rem"
           />
         </ProfileImgContainer>
-        <About.Text.Container className="About__text-container">
+        <About.Text.Container
+          className="About__text-container"
+          variants={animateSpringUpContainer(1)}
+          whileInView="active"
+          initial="initial"
+        >
           <About.Text.Title.Text className="About__title" {...motionTextContainerOption} transition={{ delay: 0.6 }}>
             <MotionText text="be" className="About__title--light" /> <MotionText text="flexible." />
           </About.Text.Title.Text>
-          <About.Text.Desc.Text className="About__desc">
+          <About.Text.Desc.Text
+            variants={animateEaseUpText}
+            transition={{ ...animateEaseUpTextTransition, delay: 0.3 }}
+          >
             안녕하세요, 프론트엔드 및 UI 개발자 박예림입니다.
             <br />
             저는 견고한 마크업을 바탕으로, 서비스에 멋진 UI와 인터랙션을 구현하고 <About.LineBreak.Pc />
@@ -39,8 +53,10 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
             <br />
             기억에 남아 오래 사용하고 싶은 플랫폼을 만드는 것, <About.LineBreak.Pc />
             그리고 개발을 통해 더 많은 사람들의 문제를 해결하는 것이 목표입니다.
-            <br />
-            <br />
+          </About.Text.Desc.Text>
+          <br />
+          <br />
+          <About.Text.Desc.Text variants={animateEaseUpText}>
             개발 업무는 혼자 이루어지지 않는 것을 인지하며 동료와의 의사소통과 협력에 가치를 두고 있습니다. <br />
             그리고 이를 통해 개개인의 합보다 더 큰 시너지를 만들 수 있다고 믿고 있습니다.
             <br />
@@ -54,6 +70,7 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
               href={link}
               target="_blank"
               initial={animateSpringButton.initial}
+              whileInView={{ opacity: 1 }}
               whileHover={animateSpringButton.hover}
             >
               이력 & 경력 보기

@@ -42,7 +42,7 @@ const About = {
     }
   `,
   Text: {
-    Container: styled.div`
+    Container: styled(motion.div)`
       color: ${({ theme }) => theme.color.text_head};
       display: flex;
       flex-direction: column;
@@ -72,17 +72,20 @@ const About = {
       // `,
     },
     Desc: {
-      Text: styled.p`
+      Text: styled(motion.p)`
         font-size: ${({ theme }) => theme.fontSize.body.md};
         line-height: 1.8;
         font-weight: 400;
         color: ${({ theme }) => theme.color.text_4};
-        margin-top: 2.4rem;
         word-break: keep-all;
-        opacity: 0; //TODO
+        //opacity: 0; //TODO
         transition: font-size 0.3s, opacity 0.3s;
         @media (${props => props.theme.windowSize['mb-m']}) {
           font-size: ${({ theme }) => theme.fontSize.body.rg};
+        }
+
+        &:first-of-type {
+          margin-top: 2.4rem;
         }
       `,
       Point: styled.span`

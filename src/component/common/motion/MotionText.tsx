@@ -8,7 +8,7 @@ const initialMotion = {
 };
 
 export const motionTextContainerOption = {
-  variants: animateSpringUpContainer,
+  variants: animateSpringUpContainer(),
   initial: 'initial',
   whileInView: 'active',
 };
