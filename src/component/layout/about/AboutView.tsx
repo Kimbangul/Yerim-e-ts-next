@@ -74,7 +74,8 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
               href={link}
               target="_blank"
               variants={animateSpringButton}
-              whileHover={animateSpringButton.hover}
+              whileHover="hover"
+              whileTap="hover"
             >
               이력 & 경력 보기
             </About.Button.Button>
