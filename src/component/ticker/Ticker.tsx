@@ -8,21 +8,24 @@ interface TickerProps {
 const Ticker: React.FC<TickerProps> = ({ children }) => {
   return (
     <TICKER.Container>
-      <motion.ul
+      <TICKER.Inner
         className="ticker-list"
         transition={{ duration: 5, ease: 'linear', repeat: Infinity }}
-        initial={{ y: 0 }}
-        animate={{ y: -innerHeight }}
+        initial={{ x: 0 }}
+        animate={{ x: '-100%' }}
       >
         {children}
         {children}
-      </motion.ul>
+      </TICKER.Inner>
     </TICKER.Container>
   );
 };
 
 export const TICKER = {
   Container: styled.div``,
+  Inner: styled(motion.ul)`
+    display: flex;
+  `,
 };
 
 export default Ticker;

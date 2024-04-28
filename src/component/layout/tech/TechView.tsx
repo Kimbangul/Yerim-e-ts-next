@@ -6,6 +6,7 @@ import { TechViewPropType } from '@/component/layout/tech/type';
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import { useScroll } from 'framer-motion';
 import { useRef } from 'react';
+import Ticker from '@/component/ticker/Ticker';
 
 const TechView: React.FC<TechViewPropType> = ({ list }) => {
   const containerRef = useRef<HTMLElement>(null);
@@ -18,6 +19,12 @@ const TechView: React.FC<TechViewPropType> = ({ list }) => {
     <Tech.Page className="section" ref={containerRef}>
       <SectionCategoryTitle>Tech Stack</SectionCategoryTitle>
       <Tech.Container className="Tech__container">
+        <Ticker>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+        </Ticker>
+
         <Tech.Img.Container
           className="Tech__img-container"
           initial={{ opacity: 1 }}
