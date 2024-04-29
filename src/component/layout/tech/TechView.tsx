@@ -19,11 +19,11 @@ const TechView: React.FC<TechViewPropType> = ({ list }) => {
     <Tech.Page className="section" ref={containerRef}>
       <SectionCategoryTitle>Tech Stack</SectionCategoryTitle>
       <Tech.Container className="Tech__container">
-        {/* <Ticker>
+        <Ticker>
           <li>test</li>
           <li>test</li>
           <li>test</li>
-        </Ticker> */}
+        </Ticker>
 
         <Tech.Img.Container
           className="Tech__img-container"

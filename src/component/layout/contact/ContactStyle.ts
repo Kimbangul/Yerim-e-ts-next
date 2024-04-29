@@ -6,7 +6,7 @@ const Contact = {
   Page: styled(Page)`
     flex-direction: column;
     .Contact__profile-img {
-      opacity: 0; // TODO
+      //opacity: 0; // TODO
       transition: opacity 0.3s 0.3s;
     }
     /* FUNCTION pc */
@@ -25,7 +25,7 @@ const Contact = {
     }
 
     /* FUNCTION section animation */
-    &.active {
+    /* &.active {
       .Contact__profile-img {
         opacity: 1;
       }
@@ -38,7 +38,6 @@ const Contact = {
         transition: font-size 0.3s, opacity 0.3s 1.4s;
       }
       .Contact__button {
-        opacity: 1;
         &:nth-child(1) {
           transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 2s;
         }
@@ -59,7 +58,6 @@ const Contact = {
           transition: font-size 0.3s, opacity 0.3s 0.9s;
         }
         .Contact__button {
-          opacity: 1;
           &:nth-child(1) {
             transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 1.2s;
           }
@@ -71,7 +69,7 @@ const Contact = {
           }
         }
       }
-    }
+    } */
   `,
   Container: styled(MaxWidthContainer)`
     display: flex;
@@ -102,13 +100,13 @@ const Contact = {
         font-size: ${({ theme }) => theme.fontSize.head.xs};
       }
     `,
-    Desc: styled.p`
+    Desc: styled(motion.p)`
       font-size: ${({ theme }) => theme.fontSize.body.md};
       color: ${({ theme }) => theme.color.text_4};
       margin-top: 2.4rem;
       word-break: keep-all;
       line-height: 1.8;
-      opacity: 0; //TODO
+      //opacity: 0; //TODO
       transition: font-size 0.3s, opacity 0.3s;
       /* FUNCTION mb */
       @media (${props => props.theme.windowSize['mb-m']}) {
@@ -133,7 +131,6 @@ const Contact = {
       display: flex;
       align-items: center;
       gap: 1.2rem;
-      opacity: 0; //TODO
       // transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s;
       svg {
         width: ${({ theme }) => theme.fontSize.head.xs};
