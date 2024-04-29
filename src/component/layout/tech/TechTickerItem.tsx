@@ -34,4 +34,13 @@ const TechTickerItem = () => {
   return item.map((el, idx) => <li key={`ticker_item_${idx}`}>{el}</li>);
 };
 
+export const TechTicker = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+  border-radius: 1.2rem;
+  background: ${({ theme }) => theme.color.main};
+`;
+
 export default TechTickerItem;

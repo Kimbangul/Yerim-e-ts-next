@@ -3,14 +3,15 @@ import { styled } from 'styled-components';
 
 interface TickerProps {
   children: React.ReactNode;
+  duration: number;
 }
 
-const Ticker: React.FC<TickerProps> = ({ children }) => {
+const Ticker: React.FC<TickerProps> = ({ children, duration }) => {
   return (
     <TICKER.Container>
       <TICKER.Inner
         className="ticker-list"
-        transition={{ duration: 5, ease: 'linear', repeat: Infinity }}
+        transition={{ duration: duration, ease: 'linear', repeat: Infinity }}
         initial={{ x: 0 }}
         animate={{ x: '-100%' }}
       >

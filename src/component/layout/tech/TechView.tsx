@@ -20,7 +20,7 @@ const TechView: React.FC<TechViewPropType> = ({ list }) => {
     <Tech.Page className="section" ref={containerRef}>
       <SectionCategoryTitle>Tech Stack</SectionCategoryTitle>
       <Tech.Container className="Tech__container">
-        <Ticker>
+        <Ticker duration={60}>
           <TechTickerItem />
         </Ticker>
 
