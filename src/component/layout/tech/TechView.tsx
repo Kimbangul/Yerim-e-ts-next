@@ -2,6 +2,7 @@
 import { SectionCategoryTitle } from '@/styles/Common';
 import TechList from '@/component/layout/tech/TechListView';
 import { Tech } from '@/component/layout/tech/TechStyle';
+import TechTickerItem from '@/component/layout/tech/TechTickerItem';
 import { TechViewPropType } from '@/component/layout/tech/type';
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import { useScroll } from 'framer-motion';
@@ -20,9 +21,7 @@ const TechView: React.FC<TechViewPropType> = ({ list }) => {
       <SectionCategoryTitle>Tech Stack</SectionCategoryTitle>
       <Tech.Container className="Tech__container">
         <Ticker>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
+          <TechTickerItem />
         </Ticker>
 
         <Tech.Img.Container
