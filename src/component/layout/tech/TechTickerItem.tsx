@@ -31,16 +31,22 @@ const TechTickerItem = () => {
     <FIGMA_40 />,
     <GIT_40 />,
   ];
-  return item.map((el, idx) => <li key={`ticker_item_${idx}`}>{el}</li>);
+  return item.map((el, idx) => <TechTicker key={`ticker_item_${idx}`}>{el}</TechTicker>);
 };
 
 export const TechTicker = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
+  aspect-ratio: 1 / 1;
   padding: 1.6rem;
   border-radius: 1.2rem;
+  min-width: 8rem;
   background: ${({ theme }) => theme.color.main};
+  svg{
+    height: 100%;
+  }
 `;
 
 export default TechTickerItem;

@@ -26,6 +26,7 @@ export const TICKER = {
   Container: styled.div``,
   Inner: styled(motion.ul)`
     display: flex;
+    gap: 0 2.4rem;
   `,
 };
 
