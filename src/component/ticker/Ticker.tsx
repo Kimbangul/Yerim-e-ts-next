@@ -25,6 +25,9 @@ const Ticker: React.FC<TickerProps> = ({ children, duration }) => {
 
 export const TICKER = {
   Container: styled(motion.div)`
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
   `,
   Inner: styled(motion.ul)`
