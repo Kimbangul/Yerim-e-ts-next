@@ -49,20 +49,20 @@ export const TechTicker = styled(motion.li)`
   aspect-ratio: 1 / 1;
   padding: 2.4rem;
   border-radius: 2.4rem;
-  min-width: 9.6rem;
+  width: 9.6rem;
   background: ${({ theme }) => theme.color.main};
   svg{
     height: 100%;
   }
 
   @media (${({theme}) => theme.windowSize['mb-l']}) {
-    min-width: 8rem;
+    width: 8rem;
     padding: 1.8rem;
     border-radius: 1.8rem;
   }
 
   @media (${({theme}) => theme.windowSize['mb-m']}) {
-    min-width: 6rem;
+    width: 6rem;
     padding: 1.4rem;
     border-radius: 1.4rem;
   }
