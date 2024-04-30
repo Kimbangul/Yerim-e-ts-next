@@ -36,7 +36,7 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
             src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/about/profile.webp`}
             alt="profile image"
             placeholder="blur"
-            sizes="(max-width: 460px) 90vw, (max-width: 768px) 60vw, (min-width: 768px) 34rem"
+            sizes="(max-width: 460px) 90vw, (max-width: 768px) 60vw, (max-width: 1440px) 34rem, (min-width: 1441px) 38rem"
           />
         </ProfileImgContainer>
         <About.Text.Container
@@ -74,7 +74,8 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
               href={link}
               target="_blank"
               variants={animateSpringButton}
-              whileHover={animateSpringButton.hover}
+              whileHover="hover"
+              whileTap="hover"
             >
               이력 & 경력 보기
             </About.Button.Button>

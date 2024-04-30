@@ -4,20 +4,41 @@ import Contact from '@/component/layout/contact/ContactStyle';
 import { ProfileImgContainer, SectionCategoryTitle } from '@/styles/Common';
 import { ContactViewPropType } from '@/component/layout/contact/type';
 import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
-import { animateSpringButton } from '@/styles/motion';
+import {
+  animateEaseUpText,
+  animateEaseUpTextTransition,
+  animateProfileImg,
+  animateSpringButton,
+  animateSpringUpContainer,
+} from '@/styles/motion';
 import MotionText, { motionTextContainerOption } from '@/component/common/motion/MotionText';
 
 const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
   return (
-    <Contact.Page className="section">
+    <Contact.Page
+      className="section"
+      variants={animateSpringUpContainer(1)}
+      whileInView="active"
+      initial="initial"
+      transition={{ duration: 0, staggerChildren: 0.3 }}
+    >
       <SectionCategoryTitle>Contact</SectionCategoryTitle>
       <Contact.Container className="Contact__container">
-        <ProfileImgContainer className="Contact__profile-img">
+        <ProfileImgContainer
+          className="Contact__profile-img"
+          variants={animateProfileImg}
+          // initial="initial"
+          // whileInView="active"
+          transition={{
+            opacity: { ease: 'linear', duration: 0.35, delay: 0.35 },
+            transform: { type: 'linear', duration: 0.45, delay: 0.35 },
+          }}
+        >
           <AutoHeightImageView
             src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/contact/profile.webp`}
             alt="profile image"
             placeholder="blur"
-            sizes="(max-width: 460px) 90vw, (max-width: 768px) 60vw, (min-width: 768px) 34rem"
+            sizes="(max-width: 460px) 90vw, (max-width: 768px) 60vw, (max-width: 1440px) 34rem, (min-width: 1441px) 38rem"
           />
         </ProfileImgContainer>
         <Contact.Text.Container className="Contact__text-container">
@@ -30,7 +51,11 @@ const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
             <br />
             <MotionText text={`and one who tries cannot win one who enjoys.`} transition={{ duration: 0.1 }} />
           </Contact.Text.Blockquote>
-          <Contact.Text.Desc className="Contact__desc">
+          <Contact.Text.Desc
+            className="Contact__desc"
+            variants={animateEaseUpText}
+            transition={animateEaseUpTextTransition}
+          >
             즐기는 자를 이길 수 있는 사람은 없습니다. <br />
             저에게는 플랫폼을 만들고, 개발을 통해 문제를 해결하는 업무가 즐겁습니다. <br />
             그리고 좋아하는 일을 잘 해내고 싶은 욕심이 있습니다. <br />
