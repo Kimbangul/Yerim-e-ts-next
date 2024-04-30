@@ -7,26 +7,7 @@ export const Tech = {
     /* padding-top: 0; */
     background-color: ${props => props.theme.color.secondBg};
     transition: opacity 0.3s;
-    @media (${({ theme }) => theme.windowSize['mb-l']}) {
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url(${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/tech/tech_design.webp);
-        background-repeat: no-repeat;
-        filter: contrast(0.5) grayscale(1) brightness(0.55);
-        background-position: center top;
-        opacity: 0; // TODO;
-        transition: opacity 0.3s;
-        @media (${({ theme }) => theme.windowSize['mb-m']}) {
-          opacity: 1;
-        }
-      }
-    }
+    display: block;
 
     .fp-overflow {
       width: 100%;
@@ -49,15 +30,6 @@ export const Tech = {
     position: relative;
     z-index: 1;
     transition: margin 0.3s, opacity 0.3s;
-    // opacity: 0; // TODO;
-    @media (${({ theme }) => theme.windowSize['mb-l']}) {
-      padding-top: 24.5rem;
-    }
-    @media (${({ theme }) => theme.windowSize['mb-m']}) {
-      /* padding-top: 34rem; */
-      padding-top: 26rem;
-      /* opacity: 1; */
-    }
   `,
   Img: {
     Container: styled(motion.div)`
@@ -77,11 +49,13 @@ export const Tech = {
     Container: styled.div`
       color: ${({ theme }) => theme.color.text_head};
       transform: translateY(-50%);
+      margin-top: 2.4rem;
     `,
     Title: styled.h3`
       font-size: ${({ theme }) => theme.fontSize.head.xl};
       color: ${({ theme }) => theme.color.text_head};
       transition: font-size 0.3s;
+      margin-top: 8rem;
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.head.md};

@@ -13,7 +13,8 @@ const Ticker: React.FC<TickerProps> = ({ children, duration }) => {
         className="ticker-list"
         transition={{ duration: duration, ease: 'linear', repeat: Infinity }}
         initial={{ x: 0 }}
-        animate={{ x: '-100%' }}
+        animate={{ x: '-50%' }}
+        whileHover={{ x: 0, transition: {duration: duration * 0.5} }}
       >
         {children}
         {children}
@@ -23,10 +24,17 @@ const Ticker: React.FC<TickerProps> = ({ children, duration }) => {
 };
 
 export const TICKER = {
-  Container: styled.div``,
+  Container: styled(motion.div)`
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+  `,
   Inner: styled(motion.ul)`
     display: flex;
-    gap: 0 2.4rem;
+    width: fit-content;
+    gap: 0 3.2rem;
+
+    @media (${({ theme }) => theme.windowSize['mb-l']}){
+      gap: 0 1.6rem;
+    }
   `,
 };
 

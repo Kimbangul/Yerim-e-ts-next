@@ -19,11 +19,11 @@ export const MaxWidthContainer = styled.div`
   margin: 0 auto;
   transition: padding 0.3s;
   /* FUNCTION pc */
-  @media (${({ theme }) => theme.windowSize['lt-m']}) {
+  @media (${({ theme }) => theme.windowSize['lt-l']}) {
     width: 100%;
     padding: 0 6rem;
   }
-  @media (${({ theme }) => theme.windowSize['lt-s']}) {
+  @media (${({ theme }) => theme.windowSize['lt-m']}) {
     width: 100%;
   }
   /* FUNCTION mb */

@@ -24,7 +24,7 @@ const MotionText: React.FC<MotionTextPropType> = props => {
 
   return words.map((el, idx) => (
     <MotionTextStyle {...motionOption} key={`${el}_${idx}`} $text={el}>
-      {el}
+       {el !== ' ' ? el : `${'\u00A0'}`}
     </MotionTextStyle>
   ));
 };
@@ -35,21 +35,6 @@ export interface MotionTextPropType extends HTMLMotionProps<'span'> {
 
 const MotionTextStyle = styled(motion.span)<{ $text: string }>`
   display: inline-block;
-
-  ${({ $text }) =>
-    $text === ' ' &&
-    css`
-      min-width: 1rem;
-    `}
-
-  ${({ $text }) =>
-    $text === ' \n' &&
-    css`
-      &::after {
-        content: 'ff';
-        display: inline-block;
-      }
-    `}
 `;
 
 export default MotionText;
