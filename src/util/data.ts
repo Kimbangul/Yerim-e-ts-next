@@ -131,7 +131,7 @@ const workList: WorkType[] = [
     title: '대아정보시스템  홈페이지 리뉴얼',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work18.jpg`,
     category: '기업 사이트 제작',
-    link: 'https://daea.vercel.app/',
+    link: 'http://daeainfosys.co.kr/',
     tag: ['디자인 100%', '구현 100%', 'Next.js', '반응형', 'SCSS'],
     desc: '기존 노코드 툴로 제작되었던 홈페이지를 자유롭게 커스텀 및 관리할 수 있도록 Next.js 프레임워크를 이용하여 제작하였습니다. 의료IT기업의 이미지에 맞게끔 기존 사이트를 더 현대적이고 깔끔하게 리디자인하고자 하였습니다.\nInterSection Observer API로 스크롤 애니메이션을 구현하였으며 모바일 환경에서도 이용이 용이하도록 반응형 웹을 구축하였습니다.\n리뉴얼 후 검색엔진 노출 순위의 증가로 페이지 방문수 증대에 기여하였습니다.',
     duration: '2023.11 ~ 2023.12',
