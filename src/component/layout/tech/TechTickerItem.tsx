@@ -45,11 +45,12 @@ export const TechTicker = styled(motion.li)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
-  aspect-ratio: 1 / 1;
   padding: 2.4rem;
   border-radius: 2.4rem;
   width: 9.6rem;
+  height: 9.6rem; 
+  
+
   background: ${({ theme }) => theme.color.main};
   svg{
     height: 100%;
@@ -57,12 +58,14 @@ export const TechTicker = styled(motion.li)`
 
   @media (${({theme}) => theme.windowSize['mb-l']}) {
     width: 8rem;
+    height: 8rem;
     padding: 1.8rem;
     border-radius: 1.8rem;
   }
 
   @media (${({theme}) => theme.windowSize['mb-m']}) {
     width: 6rem;
+    height: 6rem;
     padding: 1.4rem;
     border-radius: 1.4rem;
   }
