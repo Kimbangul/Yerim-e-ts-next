@@ -1,4 +1,4 @@
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { styled } from 'styled-components';
 
 interface TickerProps {
@@ -25,16 +25,17 @@ const Ticker: React.FC<TickerProps> = ({ children, duration }) => {
 
 export const TICKER = {
   Container: styled(motion.div)`
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
   `,
   Inner: styled(motion.ul)`
     display: flex;
+    justify-content: center;
     width: fit-content;
     gap: 0 3.2rem;
 
-    @media (${({ theme }) => theme.windowSize['mb-l']}){
+    /* @media (${({ theme }) => theme.windowSize['mb-l']}){
       gap: 0 1.6rem;
-    }
+    } */
   `,
 };
 

@@ -18,20 +18,20 @@ import { animateSpringButton } from '@/styles/motion';
 
 const TechTickerItem = () => {
   const item = [
-    <HTML_40 />,
-    <CSS_40 />,
-    <SASS_40 />,
-    <SC_40 />,
-    <JS_40 />,
-    <JQUERY_40 />,
-    <TS_40 />,
-    <REACT_40 />,
-    <NEXT_40 />,
-    <PS_40 />,
-    <ILLUSRATOR_40 />,
-    <AE_40 />,
-    <FIGMA_40 />,
-    <GIT_40 />,
+    <HTML_40 key='ico_html'/>,
+    <CSS_40 key='ico_css'/>,
+    <SASS_40 key='ico_sass'/>,
+    <SC_40 key='icon_sc'/>,
+    <JS_40 key='ico_js'/>,
+    <JQUERY_40 key='ico_jq'/>,
+    <TS_40 key='ico_ts'/>,
+    <REACT_40 key='ico_react'/>,
+    <NEXT_40 key='ico_next'/>,
+    <PS_40 key='ico_ps'/>,
+    <ILLUSRATOR_40 key='ico_ill'/>,
+    <AE_40 key='ico_ae'/>,
+    <FIGMA_40 key='ico_figma'/>,
+    <GIT_40 key='ico_git'/>,
   ];
   return item.map((el, idx) => <TechTicker
   variants={animateSpringButton}

@@ -4,7 +4,7 @@ import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
 import { ModalContext } from '@/component/common/modal/ModalProvider';
 import { Item } from '@/component/layout/design/DesignStyle';
 import { DesignItemPropType } from '@/component/layout/design/type';
-import { animateSpringButton, animateSpringItem } from '@/styles/motion';
+import { animateSpringItem } from '@/styles/motion';
 
 import { blurDataUrl } from '@/util/data';
 import { useContext } from 'react';

@@ -4,20 +4,12 @@ import TechList from '@/component/layout/tech/TechListView';
 import { Tech } from '@/component/layout/tech/TechStyle';
 import TechTickerItem from '@/component/layout/tech/TechTickerItem';
 import { TechViewPropType } from '@/component/layout/tech/type';
-import AutoHeightImageView from '@/component/common/image/AutoHeightImageView';
-import { motion, useScroll } from 'framer-motion';
-import { useRef } from 'react';
 import Ticker from '@/component/ticker/Ticker';
 
 const TechView: React.FC<TechViewPropType> = ({ list }) => {
-  const containerRef = useRef<HTMLElement>(null);
-  const { scrollYProgress, scrollY } = useScroll({
-    target: containerRef,
-    offset: ['-0.8 -0', '0.5 0.5'],
-  });
 
   return (
-    <Tech.Page className="section" ref={containerRef}>
+    <Tech.Page className="section">
       <SectionCategoryTitle>Tech Stack</SectionCategoryTitle>
       <Ticker 
             duration={60}>
