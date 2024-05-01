@@ -4,7 +4,7 @@ import Tag from '@/component/common/tag/Tag';
 import { animateSpringButton, animateSpringItem } from '@/styles/motion';
 import { useState } from 'react';
 
-const WorkItem: React.FC<WorkItemType> = ({ title, category, tag, id, imgObj }) => {
+const WorkItem: React.FC<WorkItemType> = ({ isProgress, title, category, tag, id, imgObj }) => {
   const [isHover, setIsHover] = useState(false);
   return (
     <Item.Container
@@ -28,11 +28,13 @@ const WorkItem: React.FC<WorkItemType> = ({ title, category, tag, id, imgObj }) 
           whileTap="hover"
         >
           {imgObj}
-          {/* <AutoHeightImageView src={thumb} alt={title} placeholder="blur" blurDataURL={blurDataUrl} /> */}
         </Item.Thumb>
         <Item.Desc.Container className="WorkListItem__desc-container">
           <Item.Desc.Info>
-            <Item.Desc.Title className="WorkListItem__title">{title}</Item.Desc.Title>
+            <Item.Desc.Title className="WorkListItem__title">
+              {isProgress && <span className="progress">진행 중</span>}
+              {title}
+            </Item.Desc.Title>
             <Item.Desc.Category className="WorkListItem__category">{category}</Item.Desc.Category>
             <Item.Desc.TagList className="WorkListItem__tag-list">
               {tag.map((el: string) => {

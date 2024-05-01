@@ -12,6 +12,7 @@ export interface WorkType {
   section: string;
   tool: string;
   notion?: string;
+  isProgress?: boolean;
 }
 
 // PARAM designList type
