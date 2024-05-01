@@ -18,27 +18,33 @@ import { animateSpringButton } from '@/styles/motion';
 
 const TechTickerItem = () => {
   const item = [
-    <HTML_40 key='ico_html'/>,
-    <CSS_40 key='ico_css'/>,
-    <SASS_40 key='ico_sass'/>,
-    <SC_40 key='icon_sc'/>,
-    <JS_40 key='ico_js'/>,
-    <JQUERY_40 key='ico_jq'/>,
-    <TS_40 key='ico_ts'/>,
-    <REACT_40 key='ico_react'/>,
-    <NEXT_40 key='ico_next'/>,
-    <PS_40 key='ico_ps'/>,
-    <ILLUSRATOR_40 key='ico_ill'/>,
-    <AE_40 key='ico_ae'/>,
-    <FIGMA_40 key='ico_figma'/>,
-    <GIT_40 key='ico_git'/>,
+    <HTML_40 key="ico_html" />,
+    <CSS_40 key="ico_css" />,
+    <SASS_40 key="ico_sass" />,
+    <SC_40 key="icon_sc" />,
+    <JS_40 key="ico_js" />,
+    <JQUERY_40 key="ico_jq" />,
+    <TS_40 key="ico_ts" />,
+    <REACT_40 key="ico_react" />,
+    <NEXT_40 key="ico_next" />,
+    <PS_40 key="ico_ps" />,
+    <ILLUSRATOR_40 key="ico_ill" />,
+    <AE_40 key="ico_ae" />,
+    <FIGMA_40 key="ico_figma" />,
+    <GIT_40 key="ico_git" />,
   ];
-  return item.map((el, idx) => <TechTicker
-  variants={animateSpringButton}
-                  initial="active"
-                  whileHover="hover"
-                  whileTap="hover"
-  key={`ticker_item_${idx}`}>{el}</TechTicker>);
+  return item.map((el, idx) => (
+    <TechTicker
+      tabIndex={-1}
+      variants={animateSpringButton}
+      initial="active"
+      whileHover="hover"
+      whileTap="hover"
+      key={`ticker_item_${idx}`}
+    >
+      {el}
+    </TechTicker>
+  ));
 };
 
 export const TechTicker = styled(motion.li)`
@@ -48,22 +54,21 @@ export const TechTicker = styled(motion.li)`
   padding: 2.4rem;
   border-radius: 2.4rem;
   width: 9.6rem;
-  height: 9.6rem; 
-  
+  height: 9.6rem;
 
   background: ${({ theme }) => theme.color.main};
-  svg{
+  svg {
     height: 100%;
   }
 
-  @media (${({theme}) => theme.windowSize['mb-l']}) {
+  @media (${({ theme }) => theme.windowSize['mb-l']}) {
     width: 8rem;
     height: 8rem;
     padding: 1.8rem;
     border-radius: 1.8rem;
   }
 
-  @media (${({theme}) => theme.windowSize['mb-m']}) {
+  @media (${({ theme }) => theme.windowSize['mb-m']}) {
     width: 6rem;
     height: 6rem;
     padding: 1.4rem;
