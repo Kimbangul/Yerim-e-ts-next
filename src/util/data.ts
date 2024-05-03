@@ -115,20 +115,6 @@ const designList: DesignListItemType[] = [
 
 const workList: WorkType[] = [
   {
-    id: 18,
-    title: 'DRINKLE',
-    thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work19.jpg`,
-    category: '주류 칵테일 플랫폼 개발 사이드 프로젝트',
-    // link: 'https://hosp.ajoumc.or.kr/',
-    notion: 'https://meadow-touch-c48.notion.site/DRINKLE-5188ca8da8784e848a68702cdb80726c',
-    tag: ['기획 30%', '구현 50%', 'Next.js', 'Styled-Component', 'Framer-motion'],
-    desc: `편의점에서 쉽게 구할 수 있는 재료들로 칵테일을 제조할 수 있는 여러 가지 방법을 소개하여 칵테일에 대한 진입 장벽을 낮추고, 주류 문화의 다양화에 기여하고자 제작 중인 사이드 프로젝트입니다.\n디자이너 2명, 프론트엔드 2명, 백엔드 2명의 인원으로 개발하고 있으며 프론트엔드 및 UI 개발을 담당하고 있습니다.\n주 1회 디스코드 회의를 진행하며 기획 및 개발에 참여하고 있으며, Github를 통한 이슈 관리 및 코드 리뷰를 수행하고 있습니다.`,
-    duration: '2024.01 ~ 진행중',
-    section: '사이트 기획 및 Front-end 개발 담당',
-    tool: 'Next.js, Redux, Styled-components, Framer-motion, react-query, storybook',
-    isProgress: true,
-  },
-  {
     id: 17,
     title: '아주대의료원 산하 웹사이트 운영 및 유지보수',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work17.jpg`,
@@ -196,7 +182,7 @@ const workList: WorkType[] = [
     title: 'FUNCHY',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work11.jpg`,
     category: '온라인 P2P 플랫폼 서비스 구축',
-    link: 'https://funchy.vercel.app/',
+    // link: 'https://funchy.vercel.app/',
     notion: 'https://meadow-touch-c48.notion.site/FUNCHY-P2P-00f2f5c02e5e403f831814c23bb2274b',
     tag: ['디자인 40%', '구현 40%', 'Next.js', 'SCSS'],
     desc: "핀테크 기반 온라인 P2P 플랫폼 'FUNCHY'의 사용자 및 관리자 사이트 디자인 및 Front-end 개발을 담당하였습니다. 페이지 간 통일성을 맞추는 것을 우선으로, 서비스 아이덴티티 구축을 위한 컬러 선정과 더 좋은 UX/UI적 표현 방식에 대해 팀원들과 논의하며 긴밀히 소통하였습니다.",

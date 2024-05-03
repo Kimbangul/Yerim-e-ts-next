@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 export const Page = styled(motion.section)`
   width: 100%;
   min-height: 100vh;
+  min-height: 100lvh;
   padding: 8rem 0;
   background: transparent;
   position: relative;
