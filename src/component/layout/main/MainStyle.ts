@@ -3,6 +3,7 @@ import { Page, MaxWidthContainer, WordEffectGlow } from '@/styles/Common';
 
 const Main = {
   Page: styled(Page)`
+    min-height: 100dvh;
     background-size: 70%;
     background-repeat: no-repeat;
     background-blend-mode: lighten;

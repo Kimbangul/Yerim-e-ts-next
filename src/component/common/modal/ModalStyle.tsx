@@ -14,7 +14,7 @@ const Modal = {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    height: 100lvh;
+    height: 100dvh;
     z-index: 99999;
     top: 0;
     left: 0;
