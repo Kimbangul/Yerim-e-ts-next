@@ -1,6 +1,7 @@
 import { WorkItemType } from '@/component/layout/work/type';
 import { Item } from '@/component/layout/work/WorkStyle';
 import Tag from '@/component/common/tag/Tag';
+import { IsProgressTag } from '@/styles/Common';
 import { animateSpringButton, animateSpringItem } from '@/styles/motion';
 import { useState } from 'react';
 
@@ -32,7 +33,7 @@ const WorkItem: React.FC<WorkItemType> = ({ isProgress, title, category, tag, id
         <Item.Desc.Container className="WorkListItem__desc-container">
           <Item.Desc.Info>
             <Item.Desc.Title className="WorkListItem__title">
-              {isProgress && <span className="progress">진행 중</span>}
+              {isProgress && <IsProgressTag>진행 중</IsProgressTag>}
               {title}
             </Item.Desc.Title>
             <Item.Desc.Category className="WorkListItem__category">{category}</Item.Desc.Category>

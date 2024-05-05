@@ -39,7 +39,11 @@ const DetailView: React.FC<DetailViewPropType> = ({ data, imgObj }) => {
               </span>
               <span>목록으로 돌아가기</span>
             </Detail.BackBtn>
-            <Detail.Title.Text className="Detail__title">{data?.title}</Detail.Title.Text>
+            <Detail.Title.Text className="Detail__title">
+              {' '}
+              {data?.isProgress && <Detail.Title.IsProgress>진행 중</Detail.Title.IsProgress>}
+              {data?.title}
+            </Detail.Title.Text>
 
             <Detail.Category className="Detail__category">{data?.category}</Detail.Category>
             <Detail.Tag.List className="Detail__tag-list">

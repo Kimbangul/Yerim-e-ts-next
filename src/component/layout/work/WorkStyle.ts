@@ -74,10 +74,6 @@ export const Item = {
       width: 100%;
       height: 100%;
     }
-    span {
-      border-radius: 0.8rem;
-      overflow: hidden;
-    }
     /* FUNCTION tablet size */
     @media (${({ theme }) => theme.windowSize['lt-s']}) {
       flex-direction: column;
@@ -119,6 +115,7 @@ export const Item = {
       margin-top: 1.4rem;
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       /* FUNCTION pc */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         font-size: ${({ theme }) => theme.fontSize.body.rg};
@@ -127,15 +124,6 @@ export const Item = {
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.body.lg};
         margin-top: 1.2rem;
-      }
-
-      .progress {
-        padding: 0.2rem 0.8rem;
-        font-size: ${({ theme }) => theme.fontSize.body.sm};
-        margin-right: 0.8rem;
-        border-radius: 0.2rem;
-        color: ${({ theme }) => theme.color.secondPoint};
-        background-color: ${({ theme }) => theme.color.secondPoint}40;
       }
     `,
     Category: styled.div`

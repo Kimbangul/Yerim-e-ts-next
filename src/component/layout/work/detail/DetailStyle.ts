@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Page, Button } from '@/styles/Common';
+import { Page, Button, IsProgressTag } from '@/styles/Common';
 import { motion } from 'framer-motion';
 
 const Detail = {
@@ -72,6 +72,11 @@ const Detail = {
       color: ${({ theme }) => theme.color.text_head};
       transition: font-size 0.3s;
       word-break: keep-all;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      line-height: 1.2;
+
       /* FUNCTION pc */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         font-size: ${({ theme }) => theme.fontSize.head.md};
@@ -80,6 +85,12 @@ const Detail = {
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.head.rg};
       }
+    `,
+    IsProgress: styled(IsProgressTag)`
+      padding: 0.4rem 1.2rem;
+      font-size: ${({ theme }) => theme.fontSize.body.md};
+      margin-right: 1.2rem;
+      /* border-radius: 0.2rem; */
     `,
     Container: styled.div`
       gap: 5.6rem;
@@ -131,6 +142,7 @@ const Detail = {
       font-weight: 600;
       transition: font-size 0.3s;
       margin-bottom: 1.6rem;
+
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.head.xs};

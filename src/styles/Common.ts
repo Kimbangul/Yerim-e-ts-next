@@ -133,6 +133,15 @@ export const WordEffectGlow = styled.span<{ $delay?: string }>`
   animation-delay: ${props => (props.$delay ? props.$delay : '0s')};
 `;
 
+export const IsProgressTag = styled.span`
+  padding: 0.2rem 0.8rem;
+  font-size: ${({ theme }) => theme.fontSize.body.sm};
+  margin-right: 0.8rem;
+  border-radius: 0.2rem;
+  color: ${({ theme }) => theme.color.secondPoint};
+  background-color: ${({ theme }) => theme.color.secondPoint}40;
+`;
+
 export const SectionTitleAni = ($wordLength: number, $duration?: string) => {
   const animateTiming = 100 / $wordLength;
   return css`
