@@ -115,11 +115,10 @@ const designList: DesignListItemType[] = [
 
 const workList: WorkType[] = [
   {
-    id: 18,
+    id: 19,
     title: 'DRINKLE',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/work/work19.jpg`,
     category: '주류 칵테일 플랫폼 개발 사이드 프로젝트',
-    // link: 'https://hosp.ajoumc.or.kr/',
     notion: 'https://meadow-touch-c48.notion.site/DRINKLE-5188ca8da8784e848a68702cdb80726c',
     tag: ['기획 30%', '구현 50%', 'Next.js', 'Styled-Component', 'Framer-motion'],
     desc: `편의점에서 쉽게 구할 수 있는 재료들로 칵테일을 제조할 수 있는 여러 가지 방법을 소개하여 칵테일에 대한 진입 장벽을 낮추고, 주류 문화의 다양화에 기여하고자 제작 중인 사이드 프로젝트입니다.\n디자이너 2명, 프론트엔드 2명, 백엔드 2명의 인원으로 개발하고 있으며 프론트엔드 및 UI 개발을 담당하고 있습니다.\n주 1회 디스코드 회의를 진행하며 기획 및 개발에 참여하고 있으며, Github를 통한 이슈 관리 및 코드 리뷰를 수행하고 있습니다.`,
