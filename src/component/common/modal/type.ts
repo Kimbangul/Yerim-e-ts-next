@@ -1,8 +1,12 @@
 import { RefObject } from 'react';
 
+export type isOpenModalType = false | string;
+export type prevFocusType = HTMLElement | null;
 export interface ModalContextType {
-  isOpenModal: false | string;
-  setIsOpenModal: React.Dispatch<React.SetStateAction<false | string>>;
+  isOpenModal: isOpenModalType;
+  setIsOpenModal: React.Dispatch<React.SetStateAction<isOpenModalType>>;
+  prevFocus: prevFocusType;
+  setPrevFocus: React.Dispatch<React.SetStateAction<prevFocusType>>;
 }
 
 export interface ModalViewType {

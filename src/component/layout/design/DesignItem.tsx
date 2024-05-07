@@ -10,7 +10,7 @@ import { blurDataUrl } from '@/util/data';
 import { useContext } from 'react';
 
 const DesignItem: React.FC<DesignItemPropType> = ({ idx, title, link, detail, thumb, onMouseEnter, onMouseOut }) => {
-  const { setIsOpenModal } = useContext(ModalContext);
+  const { setIsOpenModal, setPrevFocus } = useContext(ModalContext);
 
   // FUNCTION 클릭 시 팝업 핸들러
   const onClickItem = (link: string | undefined, detail: string | undefined) => (e: React.MouseEvent<HTMLElement>) => {
@@ -18,6 +18,7 @@ const DesignItem: React.FC<DesignItemPropType> = ({ idx, title, link, detail, th
     if (link) {
       window.open(link);
     } else {
+      setPrevFocus(e.currentTarget);
       setIsOpenModal(detail ? detail : false);
     }
   };
