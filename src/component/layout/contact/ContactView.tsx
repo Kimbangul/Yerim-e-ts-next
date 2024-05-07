@@ -27,8 +27,6 @@ const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
         <ProfileImgContainer
           className="Contact__profile-img"
           variants={animateProfileImg}
-          // initial="initial"
-          // whileInView="active"
           transition={{
             opacity: { ease: 'linear', duration: 0.35, delay: 0.35 },
             transform: { type: 'linear', duration: 0.45, delay: 0.35 },
@@ -81,7 +79,7 @@ const ContactView: React.FC<ContactViewPropType> = ({ linkData }) => {
                   whileInView={{ ...animateSpringButton.active, transition: { delay: 0.2 * (idx + 1) } }}
                   whileHover="hover"
                   whileTap="hover"
-                  // onClick={onClickLinkBtn.bind(this, el.link, el.linkOption)}
+                  title={el.title}
                 >
                   <FontAwesomeIcon icon={el.icon} />
                   {el.text}
