@@ -65,16 +65,19 @@ const designList: DesignListItemType[] = [
     title: "밴드 'Poision Infector' 앨범 커버 디자인",
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design01.png`,
     detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design01_2.png`,
+    alt: `2019년 2월 포토샵과 일러스트레이터를 이용해 인디 밴드 'Poison Infector' 의 앨범 커버를 디자인하였습니다. 멜론에서 Poison Infector의 앨범을 확인하실 수 있으며, 4개의 시안을 도출하였습니다.`,
   },
   {
     title: "'뻐끔뻐끔 뽀모도로' UXUI 기획 및 디자인",
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design02.png`,
     detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design02_2.png`,
+    alt: `2020년 11월부터 2020년 12월까지 포토샵, 일러스트레이터, 피그마, 에프터 이펙트로 '뻐끔뻐끔 뽀모도로' 의 UXUI 기획 및 디자인을 진행하였습니다.`,
   },
   {
     title: "'꿈상점' UXUI 기획 및 색채 계획",
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design03.png`,
     detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design03_2.png`,
+    alt: `2020년 11월부터 2020년 12월까지 포토샵, 일러스트레이터, 피그마로 수면 기록 및 ASMR 기능이 있는 '꿈상점'의 UXUI 기획 및 컬러 플래닝을 진행하였습니다.`,
   },
   {
     title: "'심연의 장송곡' 키네틱타이포 MV",
@@ -85,21 +88,25 @@ const designList: DesignListItemType[] = [
     title: "교내 동아리 '가리워진 길' 공연 홍보 포스터 제작",
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design05.png`,
     detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design05_2.png`,
+    alt: `2019년 9월부터 2019년 11월까지 포토샵, 일러스트레이터로 교내 동아리인 '가리워진 길'의 공연 홍보 포스터와 리플렛을 제작하였습니다. 컨텐츠에 포스터 목업 사진과 4종의 포스터 시안, 앞면과 뒷면으로 이루어진 리플렛 사진이 포함되어 있습니다.`,
   },
   {
     title: "교내 동아리 '오키드' 홍보 포스터 제작",
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design06.png`,
     detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design06_2.png`,
+    alt: `2018년 8월 포토샵, 일러스트레이터로 교내 동아리 '오키드'의 신입생 모집 포스터를 제작하였습니다. 컨텐츠에 포스터 목업 사진, 도트 컨셉으로 작업한 포스터와 도트 리소스 사진이 포함되어 있습니다.`,
   },
   {
     title: '게임 UI 디자인 제작',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design07.png`,
     detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design07_2.png`,
+    alt: `2020년 12월 포토샵을 이용해 모바일 게임 UI 디자인을 제작했습니다. 컨텐츠에 로비 화면, 인게임 화면, 일시정지 모달이 띄워진 화면과 작업한 UI 에셋 사진이 포함되어 있습니다. 모바일 리듬 게임을 컨셉으로 UI를 제작하였으며, 로비 화면, 인게임, 팝업창 UI를 제작했습니다. 배경화면과 캐릭터 일러스트는 외부 소스를 가져와 사용했습니다.`,
   },
   {
     title: '게임 UI 디자인 제작',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design08.png`,
     detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design08_2.png`,
+    alt: `2021년 6월 포토샵을 이용해 모바일 게임 UI 디자인을 제작했습니다. 컨텐츠에 캐릭터 정보 화면, 인게임 필드 화면, 작업한 UI 에셋 사진이 포함되어 있습니다. 캐주얼 MMORPG 모바일게임을 컨셉으로 UI를 제작했습니다. 인게임, 캐릭터 정보 창 UI를 작업했습니다. 배경화면과 캐릭터 일러스트는 외부 소스를 가져와 사용했습니다.`,
   },
   {
     title: "홍익대학교 게임그래픽디자인 졸업전시 '프로젝트! 미니어처'",
@@ -110,6 +117,7 @@ const designList: DesignListItemType[] = [
     title: '근로장학생 디자인 작업',
     thumb: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design010.png`,
     detail: `${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/design/design010_2.png`,
+    alt: `2020년 9월부터 2021년 2월까지 홍익대학교 세종캠퍼스 봉사근로장학생으로 근무하며 포토샵, 일러스트레이터를 이용해 디자인 작업을 하였습니다. 컨텐츠에 A4용지 지참 안내문 목업, 홍익대학교 홈페이지 팝업 디자인 적용 시안, 홍익대학교 무선랜 접속 메뉴얼의 사진이 포함되어 있습니다. 첫 번째, 홍익대학교 홈페이지의 팝업 디자인을 제작하였으며, 홈페이지의 기존 요소들과 이질감이 들지 않도록 디자인하였습니다. 두 번째, 홍익대학교 무선랜 접속 메뉴얼을 제작했습니다. 기존의 노후화된 WIFI 사용 방법 메뉴얼의 내용을 수정하고, 확인하기 쉽도록 깔끔하게 리디자인하였습니다. 세 번째, 프린트를 목적으로 홍익대학교 전산실을 이용하는 학생들을 위해 A4용지 본인 지참 안내문을 제작했습니다.`,
   },
 ];
 

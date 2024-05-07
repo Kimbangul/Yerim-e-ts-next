@@ -9,7 +9,16 @@ import { animateSpringItem } from '@/styles/motion';
 import { blurDataUrl } from '@/util/data';
 import { useContext } from 'react';
 
-const DesignItem: React.FC<DesignItemPropType> = ({ idx, title, link, detail, thumb, onMouseEnter, onMouseOut }) => {
+const DesignItem: React.FC<DesignItemPropType> = ({
+  idx,
+  title,
+  link,
+  detail,
+  thumb,
+  alt,
+  onMouseEnter,
+  onMouseOut,
+}) => {
   const { setIsOpenModal, setPrevFocus } = useContext(ModalContext);
 
   // FUNCTION 클릭 시 팝업 핸들러
@@ -19,7 +28,7 @@ const DesignItem: React.FC<DesignItemPropType> = ({ idx, title, link, detail, th
       window.open(link);
     } else {
       setPrevFocus(e.currentTarget);
-      setIsOpenModal(detail ? detail : false);
+      setIsOpenModal(detail ? { detail: detail, alt: alt || '' } : false);
     }
   };
 

@@ -1,6 +1,10 @@
 import { RefObject } from 'react';
 
-export type isOpenModalType = false | string;
+export interface modalDataType {
+  detail: string;
+  alt: string;
+}
+export type isOpenModalType = false | modalDataType;
 export type prevFocusType = HTMLElement | null;
 export interface ModalContextType {
   isOpenModal: isOpenModalType;
@@ -10,7 +14,7 @@ export interface ModalContextType {
 }
 
 export interface ModalViewType {
-  modalImg: string | false;
+  modalImg: isOpenModalType;
   setCloseModal: () => void;
   handleClickOutSide: (e: React.MouseEvent) => void;
   setBodyPreventScroll: () => void;

@@ -70,7 +70,7 @@ const ModalView: React.FC<ModalViewType> = ({
               variants={animateModalInner}
               transition={{ type: 'spring', stiffness: 600, damping: 30, duration: 0.3 }}
             >
-              <AutoHeightImageView alt={'design detail'} src={modalImg || ''} />
+              <AutoHeightImageView alt={modalImg.alt} src={modalImg.detail || ''} />
             </Modal.Inner>
             <Modal.Button.Close
               className="Modal__close-btn"

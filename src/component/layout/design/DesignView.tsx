@@ -25,6 +25,7 @@ const DesignView: React.FC<DesignViewPropType> = ({
                 thumb={el.thumb}
                 detail={el.detail}
                 link={el.link}
+                alt={el.alt}
                 onMouseEnter={onMouseEnterDesignItem.bind(this, el.title)}
                 onMouseOut={onMouseOutDesginItem}
                 focusItem={focusItem}

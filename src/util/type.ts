@@ -21,4 +21,5 @@ export interface DesignListItemType {
   link?: string;
   thumb: string;
   detail?: string;
+  alt?: string;
 }
