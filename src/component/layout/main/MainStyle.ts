@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { Page, MaxWidthContainer, WordEffectGlow } from '@/styles/Common';
+import { motion } from 'framer-motion';
 
 const Main = {
   Page: styled(Page)`
     min-height: 100vh;
-    min-height: 100lvh;
+    min-height: 100svh;
     background-size: 70%;
     background-repeat: no-repeat;
     background-blend-mode: lighten;
@@ -12,6 +13,9 @@ const Main = {
     background-position: 100% center;
     position: relative;
     overflow: hidden;
+
+    background: linear-gradient(0deg, rgba(34, 34, 34, 1) 20%, rgba(30, 78, 69, 0.4) 100%);
+
     #tsparticles {
       canvas {
         max-height: 100vh;
@@ -25,11 +29,6 @@ const Main = {
     }
     /* FUNCTION section animation */
     &.active {
-      .Main__img {
-        opacity: 0.2;
-        top: 50%;
-        transition: opacity 0.6s 0.3s, top 1s 0s;
-      }
       .Main__scroll-down-container {
         opacity: 1;
         transition: opacity 0.3s 1s;
@@ -57,11 +56,15 @@ const Main = {
       width: 24rem;
       margin: -1.2rem auto;
       transform: translateX(-0.8rem);
-      rect {
+      /* rect {
         fill: none;
+      } */
+
+      @media (${({ theme }) => theme.windowSize['mb-m']}) {
+        width: 18rem;
       }
     `,
-    Title: styled.h3`
+    Title: styled(motion.h3)`
       color: ${({ theme }) => theme.color.text_head};
       font-size: 6.4rem;
       font-weight: 900;
@@ -82,7 +85,10 @@ const Main = {
         font-size: ${({ theme }) => theme.fontSize.head.lg};
       }
     `,
-    Word: styled(WordEffectGlow)``,
+    Word: styled(motion.span)`
+      display: inline-block;
+      transform-origin: bottom;
+    `,
     Desc: styled.p`
       color: ${({ theme }) => theme.color.text_head};
       font-size: ${({ theme }) => theme.fontSize.body.md};
@@ -106,32 +112,16 @@ const Main = {
     `,
   },
   Image: {
-    Container: styled.div`
+    Container: styled(motion.div)`
       position: absolute;
       width: 170%;
-      top: 57%;
-      left: 50%;
-      transform: translateX(-50%) translateY(calc(-50% - 4rem));
-      opacity: 0; // TODO
-      transition: opacity 0.6s, top 1s;
-      @media (${({ theme }) => theme.windowSize['mb-l']}) {
-        transform: translateX(-50%) translateY(calc(-50% - 2.4rem));
+
+      & > div {
+        height: 100%;
       }
-      img {
-        @keyframes imgAnimation {
-          0% {
-            transform: rotate(0deg);
-            opacity: 0.2;
-          }
-          50% {
-            opacity: 0.4;
-          }
-          100% {
-            transform: rotate(360deg);
-            opacity: 0.2;
-          }
-        }
-        animation: imgAnimation 320s infinite linear;
+
+      @media (orientation: portrait) {
+        width: 150vh;
       }
     `,
     Inner: styled.div`
