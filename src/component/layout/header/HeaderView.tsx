@@ -18,11 +18,6 @@ const HeaderView: React.FC<HeadComponentPropType> = ({ isOpen, onClickMbMenuBtn,
             <LOGO />
           </a>
         </Header.Logo>
-        <Header.Mb.Logo className="Header__logo--mb">
-          <a href="/">
-            <LOGO_MB />
-          </a>
-        </Header.Mb.Logo>
         {/* Menu */}
         <Header.Mb.Menu href="#" $isOpen={isOpen} onClick={onClickMbMenuBtn}>
           Menu

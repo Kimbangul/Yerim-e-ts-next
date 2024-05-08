@@ -77,16 +77,17 @@ const Main = {
       font-weight: 900;
       letter-spacing: 0.4rem;
       transition: font-size 0.3s, letter-spacing 0.3s;
+      letter-spacing: 0.2em;
+      font-family: 'Lilita One', 'Pretendard', sans-serif;
 
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.head.ul};
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.1em;
       }
       /* FUNCTION mb */
       @media (${props => props.theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.head.xl};
-        letter-spacing: 0rem;
       }
       @media (${props => props.theme.windowSize['mb-s']}) {
         font-size: ${({ theme }) => theme.fontSize.head.lg};

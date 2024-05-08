@@ -37,9 +37,7 @@ const Header = {
     align-items: center;
   `,
   Logo: styled.div`
-    @media (${({ theme }) => theme.windowSize['mb-m']}) {
-      display: none;
-    }
+    width: 10rem;
     path {
       transition: fill 0.3s;
     }
@@ -48,6 +46,9 @@ const Header = {
         fill: ${({ theme }) => theme.color.point};
       }
     }
+    /* @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      width: 6rem;
+    } */
   `,
   Social: {
     List: styled.ul<{ $isOpen: boolean }>`
@@ -132,20 +133,20 @@ const Header = {
     `,
   },
   Mb: {
-    Logo: styled.h1`
-      display: none;
-      @media (${({ theme }) => theme.windowSize['mb-m']}) {
-        display: block;
-      }
-      path {
-        transition: fill 0.3s;
-      }
-      &:hover {
-        path {
-          fill: ${({ theme }) => theme.color.point};
-        }
-      }
-    `,
+    // Logo: styled.h1`
+    //   display: none;
+    //   @media (${({ theme }) => theme.windowSize['mb-m']}) {
+    //     display: block;
+    //   }
+    //   path {
+    //     transition: fill 0.3s;
+    //   }
+    //   &:hover {
+    //     path {
+    //       fill: ${({ theme }) => theme.color.point};
+    //     }
+    //   }
+    // `,
     Menu: styled.a<{ $isOpen: boolean }>`
       display: none;
       background: transparent;
