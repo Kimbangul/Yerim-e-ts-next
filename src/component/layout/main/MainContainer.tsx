@@ -1,16 +1,13 @@
 import MainView from '@/component/layout/main/MainView';
-import WithPlaceHolder from '@/component/common/image/WithPlaceHolder';
+import { imgObjType } from '@/component/layout/main/type';
 
-const MainContainer = async () => {
-  const imgObj: { [key: string]: JSX.Element } = {
-    moon: (
-      <WithPlaceHolder
-        src={`${process.env.NEXT_PUBLIC_CDN_LINK}/portfolio/image/main/moon.webp`}
-        alt="main image"
-        sizes="(max-width: 480px) 90vw, (max-width: 768px) 700px, (min-width: 769px) 1000px"
-        loading="eager"
-      />
-    ),
+const charJson = require('/public/lottie/space2.json');
+const lottieJson = require('/public/lottie/space.json');
+
+const MainContainer = () => {
+  const imgObj: imgObjType = {
+    char: charJson,
+    lottie: lottieJson,
   };
 
   return <MainView imgObj={imgObj} />;

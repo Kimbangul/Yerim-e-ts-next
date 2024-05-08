@@ -10,7 +10,7 @@ import { HeadComponentPropType } from '@/component/layout/header/type';
 const HeaderView: React.FC<HeadComponentPropType> = ({ isOpen, onClickMbMenuBtn, socialList }) => {
   return (
     <Header.Container>
-      <Header.Title>YERIM.e :: Front-end Developer 박예림 포트폴리오</Header.Title>
+      <Header.Title>YERIM.e :: UI Developer 박예림 포트폴리오</Header.Title>
       <Header.Inner className="Header__inner">
         {/* LOGO */}
         <Header.Logo className="Header__logo">
@@ -18,11 +18,6 @@ const HeaderView: React.FC<HeadComponentPropType> = ({ isOpen, onClickMbMenuBtn,
             <LOGO />
           </a>
         </Header.Logo>
-        <Header.Mb.Logo className="Header__logo--mb">
-          <a href="/">
-            <LOGO_MB />
-          </a>
-        </Header.Mb.Logo>
         {/* Menu */}
         <Header.Mb.Menu href="#" $isOpen={isOpen} onClick={onClickMbMenuBtn}>
           Menu

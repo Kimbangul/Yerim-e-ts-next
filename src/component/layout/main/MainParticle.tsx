@@ -18,7 +18,7 @@ const particleOption: ISourceOptions = {
   interactivity: {
     detectsOn: 'window',
     events: {
-      onHover: { enable: true, mode: 'trail', parallax: { enable: true, force: 70, smooth: 10 } },
+      onHover: { enable: true, mode: 'trail', parallax: { enable: true, force: 90, smooth: 10 } },
       resize: { enable: true },
     },
     modes: {
@@ -59,9 +59,9 @@ const particleOption: ISourceOptions = {
       straight: false,
       outModes: 'out',
     },
-    number: { density: { enable: true }, value: 80 },
+    number: { density: { enable: true }, value: 100 },
     opacity: {
-      value: { min: 0, max: 0.64 },
+      value: { min: 0, max: 0.7 },
       animation: {
         enable: true,
         speed: 1,
@@ -73,7 +73,7 @@ const particleOption: ISourceOptions = {
     },
     remove: { quantity: 2 },
     size: {
-      value: { min: 0.8, max: 1.8 },
+      value: { min: 0.8, max: 2 },
       animation: {
         enable: true,
         speed: 1,

@@ -16,10 +16,15 @@ const About = {
         transition: opacity 0.3s 2s;
       } */
     }
+
+    .About__profile-img {
+      overflow: visible;
+    }
   `,
   Container: styled(MaxWidthContainer)`
     display: flex;
     gap: 5.6rem;
+    align-items: flex-start;
     /* FUNCTION pc */
     @media (${({ theme }) => theme.windowSize['lt-m']}) {
       align-items: center;
@@ -31,6 +36,18 @@ const About = {
     }
     @media (${({ theme }) => theme.windowSize['mb-l']}) {
       gap: 0;
+    }
+  `,
+  Lottie: styled.div`
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 16rem;
+    transform: translateX(40%) translateY(40%);
+
+    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+      width: 14rem;
+      transform: translateX(30%) translateY(40%);
     }
   `,
   Text: {

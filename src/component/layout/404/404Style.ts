@@ -8,6 +8,8 @@ export const Custom404 = {
   `,
   Title: styled.h1`
     color: ${({ theme }) => theme.color.text_head};
+    font-family: 'Lilita One', 'Pretendard', sans-serif;
+    letter-spacing: 0.1em;
     font-size: 7rem;
     font-weight: 900;
     letter-spacing: 0.4rem;
