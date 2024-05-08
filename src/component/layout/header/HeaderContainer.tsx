@@ -15,9 +15,9 @@ const HeaderContainer = () => {
 
   // PARAM 소셜 메뉴 파라미터
   const socialList: socialItem[] = [
-    { title: 'Github', href: link.github, icon: <FontAwesomeIcon icon={faGithub} /> },
-    { title: 'Mail', href: link.mail, icon: <FontAwesomeIcon icon={faEnvelope} /> },
-    { title: 'Velog', href: link.velog, icon: <VELOG_24 /> },
+    { title: 'Github', href: link.github, icon: <FontAwesomeIcon icon={faGithub} />, alt: '메일 보내기' },
+    { title: 'Mail', href: link.mail, icon: <FontAwesomeIcon icon={faEnvelope} />, alt: '전화 걸기' },
+    { title: 'Velog', href: link.velog, icon: <VELOG_24 />, alt: '벨로그 바로가기' },
   ];
 
   // FUNCTION 메뉴 버튼 클릭시 실행

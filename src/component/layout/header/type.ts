@@ -4,6 +4,7 @@ export interface socialItem {
   title: string;
   href: string;
   icon: ReactNode;
+  alt: string;
 }
 
 export interface HeadComponentPropType {

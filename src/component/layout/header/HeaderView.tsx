@@ -2,7 +2,6 @@
 import React from 'react';
 
 import LOGO from '/public/image/logo.svg';
-import LOGO_MB from '/public/image/logo_mb.svg';
 
 import Header from '@/component/layout/header/HeaderStyle';
 import { HeadComponentPropType } from '@/component/layout/header/type';
@@ -30,7 +29,7 @@ const HeaderView: React.FC<HeadComponentPropType> = ({ isOpen, onClickMbMenuBtn,
         <Header.Social.List $isOpen={isOpen} className="Header__social">
           {socialList.map((el, idx) => (
             <Header.Social.Item className="Header__social-item" key={`social-${el.title}`}>
-              <a href={el.href} target="_blank" rel="noreferrer">
+              <a href={el.href} target="_blank" rel="noreferrer" title={el.alt}>
                 <Header.Social.SoundOnly className="Header__social-item--sound-only">
                   {el.title}
                 </Header.Social.SoundOnly>
