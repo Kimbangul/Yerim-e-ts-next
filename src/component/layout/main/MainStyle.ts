@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Page, MaxWidthContainer, WordEffectGlow } from '@/styles/Common';
+import { Page, MaxWidthContainer } from '@/styles/Common';
 import { motion } from 'framer-motion';
 
 const Main = {
@@ -51,15 +51,25 @@ const Main = {
       align-items: center;
       flex-direction: column;
       /* FUNCTION pc */
-      @media (${({ theme }) => theme.windowSize['lt-s']}) {
+      /* @media (${({ theme }) => theme.windowSize['lt-s']}) {
         padding-bottom: 6rem;
-      }
+      } */
     `,
     Lottie: styled(motion.div)`
-      width: 32rem;
+      width: 36rem;
       margin: -1.2rem 0;
       margin-left: -1.2rem;
       transform: translateX(-0.8rem);
+      cursor: grab;
+      @media (${props => props.theme.windowSize['lt-s']}) {
+        width: 32rem;
+        margin-left: 0;
+      }
+      /* FUNCTION mb */
+      @media (${props => props.theme.windowSize['mb-m']}) {
+        width: 26rem;
+        margin-left: 0;
+      }
     `,
     Title: styled(motion.h3)`
       color: ${({ theme }) => theme.color.text_head};

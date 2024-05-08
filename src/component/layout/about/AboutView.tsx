@@ -10,6 +10,9 @@ import {
   animateSpringUpContainer,
   animateEaseUpTextTransition,
 } from '@/styles/motion';
+import Lottie from 'react-lottie-player';
+
+const lottieJson = require('/public/lottie/rocket.json');
 
 const AboutView: React.FC<{ link: string }> = ({ link }) => {
   return (
@@ -38,6 +41,9 @@ const AboutView: React.FC<{ link: string }> = ({ link }) => {
             placeholder="blur"
             sizes="(max-width: 460px) 90vw, (max-width: 768px) 60vw, (max-width: 1440px) 34rem, (min-width: 1441px) 38rem"
           />
+          <About.Lottie>
+            <Lottie loop animationData={lottieJson} play />
+          </About.Lottie>
         </ProfileImgContainer>
         <About.Text.Container
           className="About__text-container"

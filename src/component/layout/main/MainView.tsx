@@ -7,9 +7,6 @@ import MainParticle from '@/component/layout/main/MainParticle';
 import { animateSpringUpContainer } from '@/styles/motion';
 import { MainViewPropType } from '@/component/layout/main/type';
 
-// const charJson = require('/public/lottie/space2.json');
-// const lottieJson = require('/public/lottie/space.json');
-
 const titleTextAni = {
   parents: animateSpringUpContainer(0.05),
   child: {
@@ -26,11 +23,12 @@ const MainView: React.FC<MainViewPropType> = ({ imgObj }) => {
         <SectionCategoryTitle>Main</SectionCategoryTitle>
         <Main.Text.Container className="Main__text-container">
           <Main.Text.Lottie
+            initial={{ scale: 1 }}
             drag
             dragElastic={0.2}
             dragSnapToOrigin={true}
             dragTransition={{ bounceStiffness: 150, bounceDamping: 10 }}
-            whileHover={{ scaleY: [1, 0.8, 1], transition: { type: 'spring', stiffness: 100, damping: 5 } }}
+            whileTap={{ scale: [null, 0.95, 1], transition: { duration: 0.2, times: [0, 0.7, 1] } }}
           >
             <Lottie loop animationData={imgObj.char} play />
           </Main.Text.Lottie>
