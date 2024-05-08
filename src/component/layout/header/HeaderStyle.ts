@@ -24,9 +24,9 @@ const Header = {
       background: ${({ theme }) => theme.color.header};
     }
     /* FUNCTION mb */
-    @media (${({ theme }) => theme.windowSize['mb-m']}) {
+    /* @media (${({ theme }) => theme.windowSize['mb-m']}) {
       height: 6rem;
-    }
+    } */
   `,
   Inner: styled(MaxWidthContainer)`
     margin: 0 auto;
@@ -75,9 +75,9 @@ const Header = {
         position: absolute;
         flex-direction: column;
         transform: none;
-        top: calc(100% + 0.8rem);
+        top: calc(100% + 1.6rem);
         right: 3rem;
-        gap: 2.4rem;
+        gap: 3rem;
         transition: opacity 0.3s, visibility 0s 0.3s;
         ${props =>
           props.$isOpen &&
@@ -109,6 +109,7 @@ const Header = {
           }
         }
         @media (${({ theme }) => theme.windowSize['mb-m']}) {
+          width: 3rem;
           margin: 0;
         }
         svg {
@@ -149,8 +150,8 @@ const Header = {
       display: none;
       background: transparent;
       border: none;
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 3rem;
+      height: 3rem;
       font-size: 0;
       text-indent: -99999;
       padding: 0.2rem 0;

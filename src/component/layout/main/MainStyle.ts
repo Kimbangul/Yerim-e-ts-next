@@ -44,25 +44,22 @@ const Main = {
   `,
   Text: {
     Container: styled.div`
-      display: inline-block;
       padding-bottom: 5.6rem;
       transition: padding 0.3s;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       /* FUNCTION pc */
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
-        padding-bottom: 4rem;
+        padding-bottom: 6rem;
       }
     `,
-    Lottie: styled.div`
-      width: 24rem;
-      margin: -1.2rem auto;
+    Lottie: styled(motion.div)`
+      width: 32rem;
+      margin: -1.2rem 0;
+      margin-left: -1.2rem;
       transform: translateX(-0.8rem);
-      /* rect {
-        fill: none;
-      } */
-
-      @media (${({ theme }) => theme.windowSize['mb-m']}) {
-        width: 18rem;
-      }
     `,
     Title: styled(motion.h3)`
       color: ${({ theme }) => theme.color.text_head};
@@ -87,7 +84,7 @@ const Main = {
     `,
     Word: styled(motion.span)`
       display: inline-block;
-      transform-origin: bottom;
+      // transform-origin: bottom;
     `,
     Desc: styled.p`
       color: ${({ theme }) => theme.color.text_head};
@@ -121,7 +118,7 @@ const Main = {
       }
 
       @media (orientation: portrait) {
-        width: 150vh;
+        width: 140vh;
       }
     `,
     Inner: styled.div`

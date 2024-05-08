@@ -1,30 +1,38 @@
 'use client';
+import React from 'react';
 import Lottie from 'react-lottie-player';
 import Main from '@/component/layout/main/MainStyle';
 import { SectionCategoryTitle } from '@/styles/Common';
 import MainParticle from '@/component/layout/main/MainParticle';
 import { animateSpringUpContainer } from '@/styles/motion';
+import { MainViewPropType } from '@/component/layout/main/type';
 
-const charJson = require('/public/lottie/space2.json');
-const lottieJson = require('/public/lottie/space.json');
+// const charJson = require('/public/lottie/space2.json');
+// const lottieJson = require('/public/lottie/space.json');
 
 const titleTextAni = {
   parents: animateSpringUpContainer(0.05),
   child: {
-    initial: { scaleY: 0.65 },
-    active: { scaleY: 1 },
+    initial: { scale: 0.65 },
+    active: { scale: 1 },
   },
 };
 
-const MainView = () => {
+const MainView: React.FC<MainViewPropType> = ({ imgObj }) => {
   return (
     <Main.Page className="section">
       <MainParticle />
       <Main.Container className="Main__container">
         <SectionCategoryTitle>Main</SectionCategoryTitle>
         <Main.Text.Container className="Main__text-container">
-          <Main.Text.Lottie>
-            <Lottie loop animationData={charJson} play />
+          <Main.Text.Lottie
+            drag
+            dragElastic={0.2}
+            dragSnapToOrigin={true}
+            dragTransition={{ bounceStiffness: 150, bounceDamping: 10 }}
+            whileHover={{ scaleY: [1, 0.8, 1], transition: { type: 'spring', stiffness: 100, damping: 5 } }}
+          >
+            <Lottie loop animationData={imgObj.char} play />
           </Main.Text.Lottie>
           <Main.Text.Title
             className="Main__title"
@@ -55,9 +63,9 @@ const MainView = () => {
         className="Main__img"
         initial={{ scale: 0.5, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 0.3 }}
-        transition={{ mode: 'linear', duration: 0.7, delay: 0.3 }}
+        transition={{ mode: 'linear', duration: 0.7, delay: 0.5 }}
       >
-        <Lottie loop animationData={lottieJson} play />
+        <Lottie loop animationData={imgObj.lottie} play />
       </Main.Image.Container>
       <Main.ScrollDown.Container className="Main__scroll-down-container">
         <Main.ScrollDown.Icon></Main.ScrollDown.Icon>
