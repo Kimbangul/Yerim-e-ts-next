@@ -3,7 +3,8 @@ import { Page, MaxWidthContainer, WordEffectGlow } from '@/styles/Common';
 
 const Main = {
   Page: styled(Page)`
-    min-height: 100dvh;
+    min-height: 100vh;
+    min-height: 100lvh;
     background-size: 70%;
     background-repeat: no-repeat;
     background-blend-mode: lighten;
@@ -25,7 +26,7 @@ const Main = {
     /* FUNCTION section animation */
     &.active {
       .Main__img {
-        opacity: 1;
+        opacity: 0.2;
         top: 50%;
         transition: opacity 0.6s 0.3s, top 1s 0s;
       }
@@ -52,9 +53,17 @@ const Main = {
         padding-bottom: 4rem;
       }
     `,
+    Lottie: styled.div`
+      width: 24rem;
+      margin: -1.2rem auto;
+      transform: translateX(-0.8rem);
+      rect {
+        fill: none;
+      }
+    `,
     Title: styled.h3`
       color: ${({ theme }) => theme.color.text_head};
-      font-size: 7rem;
+      font-size: 6.4rem;
       font-weight: 900;
       letter-spacing: 0.4rem;
       transition: font-size 0.3s, letter-spacing 0.3s;
@@ -99,6 +108,7 @@ const Main = {
   Image: {
     Container: styled.div`
       position: absolute;
+      width: 170%;
       top: 57%;
       left: 50%;
       transform: translateX(-50%) translateY(calc(-50% - 4rem));

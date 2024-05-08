@@ -26,6 +26,7 @@
     "plaiceholder": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-lottie-player": "^2.0.0",
     "react-query": "^3.39.3",
     "sharp": "^0.33.3",
     "styled-components": "^6.1.8",
