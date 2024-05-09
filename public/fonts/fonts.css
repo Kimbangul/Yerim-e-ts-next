@@ -1,60 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@font-face {
+  font-family: 'Lilita One';
+  src: local('Lilita One'), local('LilitaOne'),      
+      url('/fonts/LilitaOne.woff2') format('woff2'),
+      url('/fonts/LilitaOne.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @font-face {
   font-family: 'Pretendard';
-  src: url(/fonts/PretendardVariable.woff2) format('woff2');
+  src: local('Pretendard'), url(/fonts/PretendardVariable.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  src: url(/fonts/Poppins-Regular.woff2) format('woff2'), url(/fonts/Poppins-Regular.woff) format('woff');
+  src: local('Poppins'), url(/fonts/Poppins-Regular.woff2) format('woff2'), url(/fonts/Poppins-Regular.woff) format('woff');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  src: url(/fonts/Poppins-Medium.woff2) format('woff2'), url(/fonts/Poppins-Medium.woff) format('woff');
+  src: local('Poppins'), url(/fonts/Poppins-Medium.woff2) format('woff2'), url(/fonts/Poppins-Medium.woff) format('woff');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  src: url(/fonts/Poppins-Bold.woff2) format('woff2'), url(/fonts/Poppins-Bold.woff) format('woff');
+  src: local('Poppins'), url(/fonts/Poppins-Bold.woff2) format('woff2'), url(/fonts/Poppins-Bold.woff) format('woff');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  src: url(/fonts/Poppins-ExtraBold.woff2) format('woff2'), url(/fonts/Poppins-ExtraBold.woff) format('woff');
+  src: local('Poppins'), url(/fonts/Poppins-ExtraBold.woff2) format('woff2'), url(/fonts/Poppins-ExtraBold.woff) format('woff');
 }
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 900;
-  src: url(/fonts/Poppins-Black.woff2) format('woff2'),url(/fonts/Poppins-Black.woff) format('woff');
+  src: local('Poppins'), url(/fonts/Poppins-Black.woff2) format('woff2'),url(/fonts/Poppins-Black.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 400;
-  src: url(/fonts/Pretendard-Regular.woff) format('woff');
+  src: local('Pretendard'), url(/fonts/Pretendard-Regular.woff) format('woff');
 }
 @font-face {
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 500;
-  src: url(/fonts/Pretendard-Medium.woff) format('woff');
+  src: local('Pretendard'), url(/fonts/Pretendard-Medium.woff) format('woff');
 }
 @font-face {
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 600;
-  src: url(/fonts/Pretendard-SemiBold.woff) format('woff');
+  src: local('Pretendard'), url(/fonts/Pretendard-SemiBold.woff) format('woff');
 }
 @font-face {
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 700;
-  src: url(/fonts/Pretendard-Bold.woff) format('woff');
+  src: local('Pretendard'), url(/fonts/Pretendard-Bold.woff) format('woff');
 }

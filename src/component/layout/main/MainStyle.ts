@@ -57,17 +57,20 @@ const Main = {
     `,
     Lottie: styled(motion.div)`
       width: 36rem;
+      min-height: 36rem;
       margin: -1.2rem 0;
       margin-left: -1.2rem;
       transform: translateX(-0.8rem);
       cursor: grab;
       @media (${props => props.theme.windowSize['lt-s']}) {
         width: 32rem;
+        min-height: 32rem;
         margin-left: 0;
       }
       /* FUNCTION mb */
       @media (${props => props.theme.windowSize['mb-m']}) {
         width: 26rem;
+        min-height: 26rem;
         margin-left: 0;
       }
     `,
