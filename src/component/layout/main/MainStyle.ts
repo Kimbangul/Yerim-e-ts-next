@@ -102,7 +102,6 @@ const Main = {
       @media (${({ theme }) => theme.windowSize['mb-l']}) {
         font-size: ${({ theme }) => theme.fontSize.body.rg};
         letter-spacing: 0.4rem;
-        top: -0.4rem;
       }
       @media (${({ theme }) => theme.windowSize['mb-m']}) {
         font-size: ${({ theme }) => theme.fontSize.body.sm};
