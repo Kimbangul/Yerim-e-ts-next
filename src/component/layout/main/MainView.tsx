@@ -2,7 +2,6 @@
 import React from 'react';
 import Lottie from 'react-lottie-player';
 import Main from '@/component/layout/main/MainStyle';
-import { SectionCategoryTitle } from '@/styles/Common';
 import MainParticle from '@/component/layout/main/MainParticle';
 import { animateSpringUpContainer } from '@/styles/motion';
 import { MainViewPropType } from '@/component/layout/main/type';
@@ -13,6 +12,11 @@ const titleTextAni = {
     initial: { scale: 0.65 },
     active: { scale: 1 },
   },
+};
+
+const opacityAni = {
+  initial: { opacity: 0 },
+  active: { opacity: 1, transition: { delay: 0.8 } },
 };
 
 const MainView: React.FC<MainViewPropType> = ({ imgObj }) => {
@@ -58,13 +62,21 @@ const MainView: React.FC<MainViewPropType> = ({ imgObj }) => {
       </Main.Container>
       <Main.Image.Container
         className="Main__img"
-        initial={{ scale: 0.5, opacity: 0 }}
+        initial={{ scale: 0.3, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 0.3 }}
-        transition={{ mode: 'linear', duration: 0.7, delay: 0.5 }}
+        transition={{ ease: 'easeInOut', duration: 1, delay: 0.3 }}
       >
         <Lottie loop animationData={imgObj.lottie} play />
       </Main.Image.Container>
-      <Main.ScrollDown.Container className="Main__scroll-down-container">
+      <Main.ScrollDown.Container
+        className="Main__scroll-down-container"
+        variants={opacityAni}
+        initial="initial"
+        whileInView="active"
+        transition={{
+          duration: 0.3,
+        }}
+      >
         <Main.ScrollDown.Icon></Main.ScrollDown.Icon>
         <Main.ScrollDown.Text>Scroll Down</Main.ScrollDown.Text>
       </Main.ScrollDown.Container>

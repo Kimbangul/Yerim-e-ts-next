@@ -6,13 +6,8 @@ const Contact = {
   Page: styled(Page)`
     flex-direction: column;
     .Contact__profile-img {
-      //opacity: 0; // TODO
       transition: opacity 0.3s 0.3s;
     }
-    /* FUNCTION pc */
-    /* @media (${props => props.theme.windowSize['lt-s']}) {
-      padding-bottom: 7.2rem;
-    } */
     .fp-overflow {
       @media (${({ theme }) => theme.windowSize['lt-s']}) {
         width: 100%;
@@ -23,53 +18,6 @@ const Contact = {
         display: none;
       }
     }
-
-    /* FUNCTION section animation */
-    /* &.active {
-      .Contact__profile-img {
-        opacity: 1;
-      }
-      .Contact__blockquote {
-        opacity: 1;
-        transition: font-size 0.3s, opacity 0.3s 0.8s;
-      }
-      .Contact__desc {
-        opacity: 1;
-        transition: font-size 0.3s, opacity 0.3s 1.4s;
-      }
-      .Contact__button {
-        &:nth-child(1) {
-          transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 2s;
-        }
-        &:nth-child(2) {
-          transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 2.2s;
-        }
-        &:nth-child(3) {
-          transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 2.4s;
-        }
-      }
-      @media (${({ theme }) => theme.windowSize['lt-s']}) {
-        .Contact__blockquote {
-          opacity: 1;
-          transition: font-size 0.3s, opacity 0.3s 0.3s;
-        }
-        .Contact__desc {
-          opacity: 1;
-          transition: font-size 0.3s, opacity 0.3s 0.9s;
-        }
-        .Contact__button {
-          &:nth-child(1) {
-            transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 1.2s;
-          }
-          &:nth-child(2) {
-            transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 1.4s;
-          }
-          &:nth-child(3) {
-            transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s 1.6s;
-          }
-        }
-      }
-    } */
   `,
   Container: styled(MaxWidthContainer)`
     display: flex;
@@ -106,7 +54,6 @@ const Contact = {
       margin-top: 2.4rem;
       word-break: keep-all;
       line-height: 1.8;
-      //opacity: 0; //TODO
       transition: font-size 0.3s, opacity 0.3s;
       /* FUNCTION mb */
       @media (${props => props.theme.windowSize['mb-m']}) {
@@ -131,7 +78,7 @@ const Contact = {
       display: flex;
       align-items: center;
       gap: 1.2rem;
-      // transition: width 0.3s, background 0.3s, color 0.3s, opacity 0.3s;
+
       svg {
         width: ${({ theme }) => theme.fontSize.head.xs};
         /* margin-left: calc(${({ theme }) => theme.fontSize.head.sm} / -2); */

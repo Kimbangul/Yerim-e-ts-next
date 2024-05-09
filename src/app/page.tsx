@@ -1,10 +1,8 @@
 import { Main, About, Tech, Contact, Post, Design, Work, Modal } from '@/component/layout/index';
-import ObserverProvider from '@/component//observer/ObserverProvider';
+import ObserverProvider from '@/component/observer/ObserverProvider';
 
 const page = [
-  <ObserverProvider key="main">
-    <Main />
-  </ObserverProvider>,
+  <Main key="Main" />,
   <About key="about" />,
   <Tech key="tech" />,
   <Work key="work" />,
@@ -12,9 +10,7 @@ const page = [
   <ObserverProvider key="post">
     <Post />
   </ObserverProvider>,
-  <ObserverProvider key="contact">
-    <Contact />
-  </ObserverProvider>,
+  <Contact key="contact" />,
 ];
 
 export default function Home() {

@@ -28,13 +28,6 @@ const Main = {
     .fp-overflow {
       overflow-y: visible !important;
     }
-    /* FUNCTION section animation */
-    &.active {
-      .Main__scroll-down-container {
-        opacity: 1;
-        transition: opacity 0.3s 1s;
-      }
-    }
   `,
   Container: styled(MaxWidthContainer)`
     position: relative;
@@ -150,7 +143,7 @@ const Main = {
     `,
   },
   ScrollDown: {
-    Container: styled.div`
+    Container: styled(motion.div)`
       left: 50%;
       bottom: 3.2rem;
       transform: translateX(-50%);
@@ -160,8 +153,6 @@ const Main = {
       flex-direction: column;
       align-items: center;
       gap: 1.2rem;
-      opacity: 0; // TODO
-      transition: opacity 0.3s;
     `,
     Icon: styled.div`
       width: 3.6rem;
@@ -211,22 +202,6 @@ const Main = {
       font-size: ${({ theme }) => theme.fontSize.body.xs};
     `,
   },
-};
-
-export const MainVideo = {
-  Container: styled.video`
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
-    overflow: hidden;
-    pointer-events: none;
-    opacity: 0.34;
-  `,
 };
 
 export default Main;
