@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Page, MaxWidthContainer } from '@/styles/Common';
 import { motion } from 'framer-motion';
+import { LILITA_ONE, PRETENDARD } from '@/styles/Fonts';
 
 const Main = {
   Page: styled(Page)`
@@ -77,7 +78,7 @@ const Main = {
       letter-spacing: 0.4rem;
       transition: font-size 0.3s, letter-spacing 0.3s;
       letter-spacing: 0.2em;
-      font-family: 'Lilita One', 'Pretendard', sans-serif;
+      font-family: ${LILITA_ONE}, ${PRETENDARD}, sans-serif;
 
       /* FUNCTION mb */
       @media (${({ theme }) => theme.windowSize['mb-l']}) {

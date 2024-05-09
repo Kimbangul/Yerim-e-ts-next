@@ -1,4 +1,5 @@
 import { MaxWidthContainer, Page, SectionTitleAni } from '@/styles/Common';
+import { LILITA_ONE, PRETENDARD } from '@/styles/Fonts';
 import styled from 'styled-components';
 
 export const Custom404 = {
@@ -8,7 +9,7 @@ export const Custom404 = {
   `,
   Title: styled.h1`
     color: ${({ theme }) => theme.color.text_head};
-    font-family: 'Lilita One', 'Pretendard', sans-serif;
+    font-family: ${LILITA_ONE}, ${PRETENDARD}, sans-serif;
     letter-spacing: 0.1em;
     font-size: 7rem;
     font-weight: 900;

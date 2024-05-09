@@ -5,7 +5,7 @@ import Work from '@/component/layout/work/WorkStyle';
 import WorkItem from '@/component/layout/work/WorkItem';
 import { WorkViewPropType, WorkItemType } from '@/component/layout/work/type';
 import { GetListItemType } from '@/component/layout/work/type';
-import { useAnimationControls } from 'framer-motion';
+import { motion, useAnimationControls } from 'framer-motion';
 import { animateSpringButton, animateSpringList } from '@/styles/motion';
 
 // FUNCTION 리스트 가져오기
@@ -64,7 +64,7 @@ const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
         <Work.Button.Container>
           {isAbleLoad && (
             <Button
-              // as="button"
+              as={motion.button}
               onClick={onClickLoadBtn}
               variants={animateSpringButton}
               initial="initial"

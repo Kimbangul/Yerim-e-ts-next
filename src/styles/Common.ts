@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
+import { PRETENDARD } from '@/styles/Fonts';
 
 // COMPONENT fullpage Page
 export const Page = styled(motion.section)`
@@ -49,7 +50,7 @@ export const SectionCategoryTitle = styled.h2`
 
 // COMPONENT button
 export const Button = styled(motion.a)<{ width?: string; $bgColor?: string }>`
-  font-family: 'Pretendard', 'sans-serif';
+  font-family: ${PRETENDARD}, 'sans-serif';
   font-size: ${({ theme }) => theme.fontSize.body.md};
   font-weight: 700;
   cursor: pointer;

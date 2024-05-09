@@ -1,7 +1,5 @@
-import type { Viewport } from 'next';
-import type { Metadata } from 'next';
+import type { Viewport, Metadata } from 'next';
 
-import '/public/fonts/fonts.css';
 import { Header, Footer } from '@/component/layout/index';
 import StylesProvider from '@/styles/provider/StyleProvider';
 import ReactClientProvider from '@/query/clientQueryProvider/ClientQueryProvider';

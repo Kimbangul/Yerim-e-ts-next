@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import theme from '@/styles/theme';
+import { POPPINS, PRETENDARD } from '@/styles/Fonts';
 
 const GlobalStyle = createGlobalStyle`
  html{
@@ -39,17 +40,17 @@ const GlobalStyle = createGlobalStyle`
     border: none;
   }
   body{
-    font-family: 'Poppins', 'Pretendard', 'sans-serif';
+    font-family: ${POPPINS}, ${PRETENDARD}, 'sans-serif';
     font-size: ${theme.fontSize.body.sm};
     background-color: ${theme.color.main};
     min-width: 280px;
     position: relative;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', 'Pretendard', 'sans-serif';
+    font-family: ${POPPINS}, ${PRETENDARD}, 'sans-serif';
   }
   pre{
-    font-family: 'Poppins', 'Pretendard', 'sans-serif';
+    font-family: ${POPPINS}, ${PRETENDARD}, 'sans-serif';
   }
 
 

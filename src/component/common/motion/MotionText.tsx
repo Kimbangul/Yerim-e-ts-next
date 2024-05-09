@@ -1,6 +1,6 @@
 import { animateSpringUpContainer, animateSpringUpText, animateSpringUpTextTransition } from '@/styles/motion';
 import { HTMLMotionProps, motion } from 'framer-motion';
-import { css, styled } from 'styled-components';
+import { styled } from 'styled-components';
 
 const initialMotion = {
   variants: animateSpringUpText,
@@ -19,12 +19,12 @@ const MotionText: React.FC<MotionTextPropType> = props => {
   const words = text.split('');
   const motionOption = {
     ...initialMotion,
-    ...props,
+    className: props.className,
   };
 
   return words.map((el, idx) => (
-    <MotionTextStyle {...motionOption} key={`${el}_${idx}`} $text={el}>
-       {el !== ' ' ? el : `${'\u00A0'}`}
+    <MotionTextStyle {...motionOption} key={`${el}_${idx}`}>
+      {el !== ' ' ? el : `${'\u00A0'}`}
     </MotionTextStyle>
   ));
 };
@@ -33,7 +33,7 @@ export interface MotionTextPropType extends HTMLMotionProps<'span'> {
   text: string;
 }
 
-const MotionTextStyle = styled(motion.span)<{ $text: string }>`
+const MotionTextStyle = styled(motion.span)`
   display: inline-block;
 `;
 
