@@ -54,13 +54,7 @@ export const animateSpringUpContainer = (stagger: number = 0.03) => {
 
 export const animateSpringUpText = {
   initial: { opacity: 0, rotate: 20, y: '2rem', origin: 'right bottom' },
-  active: { opacity: 1, rotate: 0, y: '0rem' },
-  // transition: {
-  //   opacity: { type: 'linear' },
-  //   type: 'spring',
-  //   stiffness: 800,
-  //   damping: 10,
-  // },
+  active: { opacity: 1, rotate: 0, y: 0 },
 };
 
 export const animateSpringUpTextTransition = {
@@ -72,7 +66,7 @@ export const animateSpringUpTextTransition = {
 
 export const animateEaseUpText = {
   initial: { opacity: 0, y: '1.6rem' },
-  active: { opacity: 1, y: '0rem' },
+  active: { opacity: 1, y: 0 },
 };
 export const animateEaseUpTextTransition = {
   type: 'linear',
