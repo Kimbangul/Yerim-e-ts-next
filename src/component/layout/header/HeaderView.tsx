@@ -13,7 +13,7 @@ const HeaderView: React.FC<HeadComponentPropType> = ({ isOpen, onClickMbMenuBtn,
       <Header.Inner className="Header__inner">
         {/* LOGO */}
         <Header.Logo className="Header__logo">
-          <a href="/">
+          <a href="/" title="메인 페이지로 이동">
             <LOGO />
           </a>
         </Header.Logo>
@@ -27,7 +27,7 @@ const HeaderView: React.FC<HeadComponentPropType> = ({ isOpen, onClickMbMenuBtn,
           </Header.Mb.MenuInner>
         </Header.Mb.Menu>
         <Header.Social.List $isOpen={isOpen} className="Header__social">
-          {socialList.map((el, idx) => (
+          {socialList.map(el => (
             <Header.Social.Item className="Header__social-item" key={`social-${el.title}`}>
               <a href={el.href} target="_blank" rel="noreferrer" title={el.alt}>
                 <Header.Social.SoundOnly className="Header__social-item--sound-only">

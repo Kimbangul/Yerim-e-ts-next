@@ -33,7 +33,7 @@ const Footer = {
   Copy: styled.span`
     margin-top: 1.6rem;
     font-size: ${({ theme }) => theme.fontSize.body.xs};
-    color: ${({ theme }) => theme.color.text_6};
+    color: ${({ theme }) => theme.color.text_5};
   `,
 };
 

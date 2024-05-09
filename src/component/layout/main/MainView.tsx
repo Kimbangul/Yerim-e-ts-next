@@ -18,9 +18,9 @@ const titleTextAni = {
 const MainView: React.FC<MainViewPropType> = ({ imgObj }) => {
   return (
     <Main.Page className="section">
+      <SectionCategoryTitle>Main</SectionCategoryTitle>
       <MainParticle />
       <Main.Container className="Main__container">
-        <SectionCategoryTitle>Main</SectionCategoryTitle>
         <Main.Text.Container className="Main__text-container">
           <Main.Text.Lottie
             initial={{ scale: 1 }}
