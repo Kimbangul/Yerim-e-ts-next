@@ -34,7 +34,7 @@ const Post = {
       opacity: 1;
     }
   `,
-  Title: styled.h3`
+  Title: styled.h2`
     font-size: ${({ theme }) => theme.fontSize.head.xl};
     color: ${({ theme }) => theme.color.text_head};
     transition: font-size 0.3s;

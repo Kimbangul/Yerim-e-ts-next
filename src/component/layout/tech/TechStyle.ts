@@ -47,7 +47,7 @@ export const Tech = {
       transform: translateY(-50%);
       margin-top: 2.4rem;
     `,
-    Title: styled.h3`
+    Title: styled.h2`
       font-size: ${({ theme }) => theme.fontSize.head.xl};
       color: ${({ theme }) => theme.color.text_head};
       transition: font-size 0.3s;
@@ -87,7 +87,7 @@ export const TechList = {
       }
     `,
   },
-  Title: styled(motion.h4)`
+  Title: styled(motion.h3)`
     width: 32rem;
     color: ${({ theme }) => theme.color.text_3};
     font-size: ${({ theme }) => theme.fontSize.head.sm};

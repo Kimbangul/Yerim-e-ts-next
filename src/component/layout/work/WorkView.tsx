@@ -41,7 +41,6 @@ const WorkView: React.FC<WorkViewPropType> = ({ list }) => {
 
   return (
     <Work.Page className="section" id="work_page">
-      <SectionCategoryTitle>Work</SectionCategoryTitle>
       <Work.Container className="Work__container">
         <Work.Text.Container className="Work__text-container">
           <Work.Text.Title className="Work__title">

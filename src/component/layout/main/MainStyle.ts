@@ -50,10 +50,6 @@ const Main = {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      /* FUNCTION pc */
-      /* @media (${({ theme }) => theme.windowSize['lt-s']}) {
-        padding-bottom: 6rem;
-      } */
     `,
     Lottie: styled(motion.div)`
       width: 36rem;
@@ -74,7 +70,7 @@ const Main = {
         margin-left: 0;
       }
     `,
-    Title: styled(motion.h3)`
+    Title: styled(motion.h2)`
       color: ${({ theme }) => theme.color.text_head};
       font-size: 6.4rem;
       font-weight: 900;

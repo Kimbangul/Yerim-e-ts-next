@@ -7,14 +7,11 @@ import { TechViewPropType } from '@/component/layout/tech/type';
 import Ticker from '@/component/ticker/Ticker';
 
 const TechView: React.FC<TechViewPropType> = ({ list }) => {
-
   return (
     <Tech.Page className="section">
-      <SectionCategoryTitle>Tech Stack</SectionCategoryTitle>
-      <Ticker 
-            duration={60}>
-            <TechTickerItem />
-          </Ticker>
+      <Ticker duration={60}>
+        <TechTickerItem />
+      </Ticker>
       <Tech.Container className="Tech__container">
         <Tech.Text.Container className="Tech__text-container">
           <Tech.Text.Title className="Tech__title">

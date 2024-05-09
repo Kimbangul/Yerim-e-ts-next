@@ -21,7 +21,7 @@ const Work = {
       width: 100%;
       color: ${({ theme }) => theme.color.text_head};
     `,
-    Title: styled.h3`
+    Title: styled.h2`
       font-size: ${({ theme }) => theme.fontSize.head.xl};
       color: ${({ theme }) => theme.color.text_head};
       transition: font-size 0.3s;
@@ -106,7 +106,7 @@ export const Item = {
       justify-content: space-between;
     `,
     Info: styled.div``,
-    Title: styled.h4`
+    Title: styled.h3`
       font-size: ${({ theme }) => theme.fontSize.body.lg};
       font-weight: 600;
       color: ${({ theme }) => theme.color.text_head};
