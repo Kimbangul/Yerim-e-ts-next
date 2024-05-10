@@ -11,4 +11,12 @@ const LoadingView: React.FC<LoadingPropType> = ({ width, height }) => {
   );
 };
 
+export const FullScreenLoading = () => {
+  return (
+    <Loading.Wrap>
+      <LoadingView width="100%" height="100%" />
+    </Loading.Wrap>
+  );
+};
+
 export default LoadingView;

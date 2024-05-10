@@ -1,7 +1,12 @@
+import Loading from '@/app/loading';
 import dynamic from 'next/dynamic';
 
+export const Main = dynamic(() => import('@/component/layout/main/MainContainer'), {
+  loading: Loading,
+  ssr: false,
+});
 export { default as Header } from '@/component/layout/header/HeaderContainer';
-export { default as Main } from '@/component/layout/main/MainContainer';
+// export { default as Main } from '@/component/layout/main/MainContainer';
 export const About = dynamic(() => import('@/component/layout/about/AboutContainer'));
 // export { default as About } from '@/component/layout/about/AboutContainer';
 export const Tech = dynamic(() => import('@/component/layout/tech/TechContainer'));

@@ -10,6 +10,16 @@ const DotCommonStyle = css`
 `;
 
 const Loading = {
+  Wrap: styled.div`
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+    background:  ${({ theme }) => theme.color.main};
+    top: 0;
+    left: 0;
+    z-index: 10;
+  `,
   Container: styled.div<LoadingStylePropType>`
     width: ${props => props.$width || '100%'};
     height: ${props => props.$height || '100%'};
